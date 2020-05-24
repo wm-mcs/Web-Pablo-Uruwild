@@ -1,0 +1,68 @@
+.contiene-direcciones{
+   width:95%;
+   @include flexbox;       
+   @include flex-direction(row);
+   @include align-items(center); 
+   @include flex-wrap(wrap); 
+   @include justify-content(space-around); 
+
+ } 
+
+  .contiene-datos-direcciones{
+    padding: 10px;
+    border-radius: 4px;
+    background-color:$color-grey0;
+    @include flexbox;       
+    @include flex-direction(column);
+    @include align-items(center); 
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+    .contiene-direccion-titulo{
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 24px;
+        color:$color-3;
+    }
+
+    .contiene-direccion-direccion{
+      text-align: center;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+
+    .contiene-direccion-horarios{
+      text-align: center;
+      margin-bottom: 5px;
+      font-size: 12px
+    }
+
+
+
+
+
+ @media (min-width: $BrackPoint-Secundario){
+
+    .contiene-direcciones{   
+      width: 800px;
+    }
+
+   .contiene-datos-direcciones{
+    
+    width: 49%;
+  }
+
+  
+}
+
+
+@media (min-width: $BrackPoint-Tercer){
+
+  .contiene-datos-direcciones{
+    
+    width: 300px;
+  }
+
+  
+}

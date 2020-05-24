@@ -1,0 +1,121 @@
+
+
+
+
+
+
+
+
+.cv-preview{
+ 
+
+}
+
+.cv-title{
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color:$color-black;
+
+}
+
+.cv-subtitle{
+  font-weight: 300;
+  margin: 0 0 10px;
+  font-size: 24px;
+  color:$color-black;
+}
+
+
+.cv-meta{
+
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 0px;
+  line-height: 1.5;
+  margin: 30px 0px;
+
+}
+
+
+.cv-hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+
+//pagina-de-cv-individual
+
+//clase que ajuste el tamañao de la imagen
+.cv-img-slider-size{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+ }
+
+
+ .cv-individual-p{
+    line-height: 1.5;
+    margin: 30px 0;
+    font-size: 20px;
+ }
+
+ .cv-individual-section-titulo{
+   font-size: 36px;
+   font-weight: 700;
+   margin-top: 60px;
+
+ }
+
+ .cv-img-secundarias{
+  max-width: 100%;
+  height:auto;
+ }
+
+ .cv-img-texto{
+    font-size: 14px;
+    font-style: italic;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: $color-gris-text;
+ }
+
+
+
+
+@media (min-width: $BrackPoint-Primario){}
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+
+  .contenedor-listado-noticias{
+    width: 80%;
+  }
+
+  .cv-img-slider-size {
+    height: 80vh;
+  }
+}
+
+
+
+
+@media (min-width: $BrackPoint-Tercer){
+
+
+  .contenedor-listado-noticias{
+    width: 65%;
+  }
+
+  .cv-title{
+    font-size: 36px;
+  }
+}

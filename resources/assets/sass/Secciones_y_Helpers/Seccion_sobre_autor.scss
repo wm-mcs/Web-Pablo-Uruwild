@@ -1,0 +1,72 @@
+.contiene-sobre-el-author{
+  width: 100%;
+  padding: 10px;
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(center); 
+}
+
+   .sobre-el-author-imagen{
+    width: 250px;
+    height: auto;    
+    margin-bottom: 20px;
+    border-radius: 100%;
+   }
+
+   .contiene-textos-wraper{
+
+   }
+
+
+
+   .sobre-el-autor-titulo{
+    @include Parrafo_Titulo_Style;
+    font-weight: bold;
+    color:$color-3;
+    margin-bottom: 20px;
+    
+   }
+
+   .sobre-el-author-texto{
+    @include Parrafo_Style;
+    color:$color-grey2;
+    
+   }
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+
+.contiene-sobre-el-author{
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(flex-start); 
+}
+
+  .sobre-el-author-imagen{
+    
+    margin-bottom: 0;
+    margin-right: 20px;
+   }
+
+
+
+   
+
+  
+}
+
+@media (min-width: $BrackPoint-Tercer){
+
+
+
+  
+}

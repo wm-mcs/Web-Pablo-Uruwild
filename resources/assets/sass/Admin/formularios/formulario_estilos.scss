@@ -1,0 +1,127 @@
+.formulario-contenedor{
+      @include flexbox; 
+      @include flex-direction(row);
+      @include align-items(flex-start);
+      @include justify-content(space-around);
+      @include flex-wrap(wrap);      
+      margin-top: 30px;
+      width:100%;
+}
+
+ .contenedor-grupo-datos{
+      @include flexbox; 
+      @include flex-direction(column);
+      @include align-items(flex-start);
+      margin-bottom: 20px;  
+      border-collapse: collapse;
+      border:solid 1px $color-grey-1;
+      padding:20px;
+
+   }
+    .contenedor-grupo-datos-titulo{
+     
+     margin-bottom: 8px;
+     font-size: 16px;     
+     color:$color-black;     
+     width: 100%;     
+     font-weight: bold;
+     font-family: $font-secondary;
+    }
+
+
+.contenedor-formulario-label-fiel{
+  @include flexbox; 
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  width:100%;
+}
+
+           .formulario-label-fiel{
+             @include flexbox; 
+             @include flex-direction(column);
+             @include align-items(flex-start);
+             width:100%;
+             padding: 4px;             
+             border:solid 1px transparent;             
+             margin-top: 4px;
+             
+             font-family: $font-secondary;
+           }
+
+           .aclaracion-de-etiquetas{
+            width: 100%;
+            margin:3px 0;
+            padding: 10px;
+            background-color: $color-grey0;
+            @include flexbox; 
+            @include flex-direction(column);
+            @include align-items(flex-start);  
+            border-radius:4px;    
+            font-family: $font-secondary;
+            }
+
+            .aclaracion-de-etiquetas-linea{
+              font-size: 12px;
+              margin-top: 2px;
+              padding:2px;
+              
+            }
+           
+           
+
+
+              .formulario-label{                
+                padding:2px 6px;                
+                color: $color-3;                              
+                text-align: center;
+                font-family: $font-secondary;
+                font-size: 12px;
+                font-weight: bold;
+                margin:0;
+                
+                border-radius:8px;
+
+
+              }
+
+
+              .formulario-field{
+                @include InputGeneral;
+                border-radius:0;
+                border:solid 2px $color-grey0;
+                color:$color-grey3;
+                font-size:12px !important;
+              }
+
+              .formulario-field::placeholder{
+                  color: lighten( $color-grey3, 30% );
+              }
+              .formulario-field:focus {    
+                box-shadow: none !important;
+                outline: 0 none !important;
+                border-color:$color-grey3;
+              }
+
+              
+
+
+              .admin-boton-editar{
+                @include Boton-Normal($color-3)
+              }
+              .admin-boton-editar:hover{
+                background-color:$color-3light;
+              }
+
+
+
+
+              .admin-img-section-img{
+                width: 100%;
+                padding:10px;
+                margin-top: 10px;
+              }
+
+
+
+
+              

@@ -1,0 +1,34 @@
+
+
+
+@import "resources/assets/sass/credo_scss/style";
+@import "resources/assets/sass/plugins/Flickity"; 
+@import "resources/assets/sass/plugins/Plug-bootstrap-fileinput";
+@import "resources/assets/sass/Secciones_y_Helpers/Helper_Plug-flex"; 
+
+
+
+
+
+@import "resources/assets/sass/Admin/formularios/formulario_estilos";
+@import "resources/assets/sass/Admin/formularios/estilo_de_listas";
+
+@import "resources/assets/sass/Admin/Home_Entidades/layoute_general";
+@import "resources/assets/sass/Admin/Home_Entidades/Empresa";
+@import "resources/assets/sass/Admin/Home_Entidades/home";
+/*@import "resources/assets/sass/Admin/Home_Entidades/marcas";*/
+@import "resources/assets/sass/Admin/Home_Entidades/principal";
+@import "resources/assets/sass/Admin/Home_Entidades/Users";
+
+
+
+
+//Errores
+@import "resources/assets/sass/Estilo/Errores/Errores";
+
+
+//Alerts
+@import "resources/assets/sass/Estilo/Alerts/aviso_Verifica_Email";
+@import "resources/assets/sass/Estilo/Alerts/alert_status";
+
+

@@ -1,0 +1,111 @@
+$Color-fuxia-oscuro:#952464 ;
+$Color-Propuesto-por-Laura:#00d4e1; /*Segerencia #10777d*/
+$color-3:$Color-fuxia-oscuro;  /* institucional PRINCIPAL */
+$color-3-primary_hover: lighten( $color-3, 5% );
+$color-2:darken( $color-3, 10% );
+
+
+$color-2semilight:#eb6367;
+$color-2light:#ed767a; /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
+$color-2superlight:#f07f83;
+
+
+$color-3dark:#917e4b; /* para interacciones dinámicas del color-3 como [hover] o [active] */
+/*$color-3light:#e5d8bd;*/ /* para interacciones dinámicas del color-3 como [hover] o [active] */
+$color-3light:$color-3-primary_hover; /* probando uno mas oscurito */
+$color-3superlight:$color-3-primary_hover; /* para backgrounds de bloques de texto en instancia de hover) */
+$color-3hyperlight:$color-3-primary_hover;
+
+
+
+
+
+/* COLORES GENERALES */
+$color-white:white; /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
+$color-black:black; /*misma razón, pero para el negro */
+
+$color-grey-1:darken($color-white, 5% );
+$color-grey0:darken($color-white, 10% ); /*gris SUPER claro (solo para líneas divisoras de relevancia baja o backgrounds de bloques de texto)*/
+$color-grey1:darken($color-white, 25% ); /*gris más claro (para párrafos y otras cosas)*/
+$color-grey2:darken($color-white, 50% ); /*gris medio (para títulos por ejemplo)*/
+$color-grey3:darken($color-white, 75% ); /*gris más oscuro (para backgrounds por ejemplo)*/
+
+
+$color-gris-text:$color-grey2 ;
+$color-gris-background: $color-grey0;
+
+$color-gris-lineas: $color-grey1;
+
+
+$Color-texto-gris-Mercadolibre: $color-gris-text;
+$Color-Gris-Claro-Para-Bordes:  $color-gris-lineas;
+
+$Color-Gris-Claro: #EFEEEE;
+$Color-Gris-CasiBlanco:#FDF9F9;
+
+$Color-Gris-Plata: #c2c2c2 ;
+$Color-Gris-Claro-Para-Bordes: #dfdfdf;
+
+$color-negro-para-textos:#5b5b5b;
+
+/*verdes*/
+$color-verde-texto-success:#4BB543;
+
+
+/*Colores Rojos*/
+$Color-Rojo-Oferta-MercadoLibre: #900;
+$Color-Rojo-Cancelar: #FF0000;
+$Color-Rojo-Texto-Error: #B40404;
+$Color-Errors-BG: #FCB6B6;
+$Color-Rosado-Active-Cancelar-Bg:#FDB6BF ;
+$Color-Verde-Super-Claro:#DFF2BF ;
+
+
+/*alertas y errores*/
+$Color-Amarill-warning: #fff0ba;
+
+$Color-Texto-Warning:#aa8749;
+
+$Color-Verde-Google: #006621; 
+
+
+/* G o o g l e   f o n t s  */
+$Lato: 'Lato', sans-serif;
+$Raleway:  'Raleway', sans-serif;
+$Petit-Formal-Script: 'Petit Formal Script', cursive;
+$Great-Vibes:'Great Vibes', cursive;
+
+
+
+
+
+
+/* $font-primary:'Merriweather', 'Helvetica Neue', Arial, sans-serif ; */
+$font-primary: $Great-Vibes;
+$font-secondary: 'Raleway', sans-serif;
+
+
+
+
+
+
+//border-radius
+
+$Border-radius: 8px;
+
+
+
+
+/* fuente sociales */
+
+@font-face {
+font-family: 'Social-Media-Circled'; /* Nombre que va a tener esa font*/
+font-style: normal;
+font-weight: normal;
+src: local('../fonts/Social-Media-Circled'), url('../fonts/Social-Media-Circled.otf') format('truetype');
+} 
+
+
+
+
+

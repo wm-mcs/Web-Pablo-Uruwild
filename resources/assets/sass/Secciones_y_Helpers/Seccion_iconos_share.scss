@@ -1,0 +1,35 @@
+.contenedor-iconos-share{
+  position: fixed;
+  bottom:0;
+  left: 0;
+   @include flexbox;       
+    @include flex-direction(column);
+    @include align-items(flex-end); 
+   
+}
+
+
+  .sub-contenedor-iconos-share{
+    background-color:rgba(255,247,245,0.1);    
+    padding:8px;
+    border-radius:4px;
+  }
+
+.iconos-share-titulo{
+  font-size: 14px;
+  color:$color-gris-text;
+  margin-right: 10px;
+}
+.iconos-share-formato{
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 30px;
+  color:$color-gris-text;
+  margin-right: 5px;
+  
+}
+
+.iconos-share-formato:hover{
+  background-color: $color-3;
+  color:white;
+}

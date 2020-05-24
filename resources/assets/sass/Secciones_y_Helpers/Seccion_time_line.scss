@@ -1,0 +1,83 @@
+// ----------------  LAYOUT
+
+.time-container{
+  width: 94%;
+}
+
+// ----------------  THE FONTS
+
+$border-color: $color-3;
+
+.contenedor-lineas-de-tiempo{
+    background-color: #f8f9fa!important;
+    border: thin solid #efeeee;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.contiene-linea-de-tiempo-img{
+  width: 100%;
+  padding: 8px;
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(center); 
+}
+
+ .img-linea-de-tiempo{
+  height: 50px;
+  margin-right: 6px;
+  border-radius: 8px;
+ }
+
+.timeline-item {
+  padding: 3em 2em 2em;
+  position: relative;
+  color: rgba(black, .7);
+  border-left: 2px solid $border-color;
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  &::before {
+    content: attr(date-is);
+    position: absolute;
+    left: 2em;
+    font-weight: bold;
+    top: 1em;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: .785rem;
+  }
+
+  &::after {
+    width: 10px;
+    height: 10px;
+    display: block;
+    top: 1em;
+    position: absolute;
+    left: -7px;
+    border-radius: 10px;
+    content: '';
+    border: 2px solid $border-color;
+    background: white;
+  }
+
+  &:last-child {
+    border-image: linear-gradient(
+      to bottom,
+      $border-color 60%,
+      rgba($border-color, 0)) 1 100%
+    ;
+  }
+}
+
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+  .time-container{
+  width: 80%;
+}
+}

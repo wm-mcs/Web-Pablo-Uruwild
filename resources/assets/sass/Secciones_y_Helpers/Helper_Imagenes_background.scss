@@ -1,0 +1,58 @@
+/*  I M Á G E N E S  */
+
+.background_img{
+ 
+ width: 100%;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.background_img_fixed{
+ background-attachment: fixed; 
+}
+
+.imagen-portada-altura-100vh{
+	display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+
+
+
+/*  B a c k g r o u n d s  */
+
+.background-primary{
+  background-color: $color-3;
+}
+
+.background-white{
+  background-color: $color-white;
+}
+
+
+.background-gris-0{
+  background-color: $color-grey-1;
+}
+.background-gris-1{
+  background-color: $color-grey0;
+}
+
+.background-gris-2{
+  background-color: $color-grey1;
+}
+
+.background-gris-3{
+  background-color: $color-grey2;
+}
+
+.background-gris-4{
+  background-color: $color-grey3;
+}
+
+.background-black{
+  background-color: $color-black;
+}

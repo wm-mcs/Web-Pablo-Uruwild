@@ -1,0 +1,139 @@
+.contenedor-grande-de-seccion{
+  width: 100%;
+  padding:20px;
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(center); 
+} 
+
+
+  .sub-contenedor-grande-de-seccion{
+    @include flexbox;       
+    @include flex-direction(row);
+    @include align-items(center);
+    @include flex-wrap(wrap);  
+
+     @include justify-content(space-around); 
+    margin-top: 30px;
+
+  }
+
+  .whastapp-titulo{
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+    background-color:white;
+    padding: 10px;
+    border-radius:6px;
+  }
+
+
+
+
+.contiene-whatasapp-flotante{
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(center);  
+  
+  background-color:transparent;  
+  position:fixed;
+  bottom: 6px;
+  right: 6px;  
+  cursor:pointer;
+  z-index: 100;  
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1pt 12pt rgba(0, 0, 0, .15);    
+}
+
+
+
+.contacto-whatsapp-contenedor{
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(center); 
+  padding:8px;
+  border-radius:8px;
+  background-color: white;
+  border:solid 4px transparent;
+  position:relative;
+
+}
+.contacto-whatsapp-contenedor:hover{
+  border-color: $color-3;
+}
+
+
+.contacto-whatsapp-img{
+  width: 150px;
+  height: auto;
+  border-radius:100%;
+  margin-right: 30px;
+}
+
+.contiene-aclaracio-y-resouesta{
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(flex-start); 
+  
+}
+
+.aclaracion-de-respuesta{
+  color: rgba(0, 0, 0, .50);
+  font-size: 8pt;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  
+  
+}
+
+.contacto-whatsapp-texto{
+  
+  color: $Color-texto-gris-Mercadolibre;
+  padding: 8px 12px; 
+  border-radius:8px;
+  font-size: 12px;  
+  background-color: #f1f0f0;
+}
+
+.contacto-whatsapp-icono{
+  font-size: 38px; 
+  padding:8px; 
+}
+
+.contacto-whatsapp-cerra{
+  position:absolute;
+  top:0px;
+  right: 0px;
+  font-size: 16px;
+  color: #eae3e3;
+  padding:16px;
+  z-index: 200;
+}
+
+
+
+
+@media (min-width: $BrackPoint-Tercer){
+
+.aclaracion-de-respuesta{
+ 
+  
+}
+
+.contacto-whatsapp-texto{
+  
+}
+
+
+
+
+
+ .whastapp-titulo{
+  margin-bottom: 0;
+  margin-right: 30px;
+  width: 300px;
+  text-align: left;
+ }
+
+}  

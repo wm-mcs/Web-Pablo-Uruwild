@@ -1,0 +1,15 @@
+
+.contiene-pais-nav{
+	margin:0 0 0 20px;
+}
+
+.pais-img-show{
+	height: 40px;
+	border-radius: 100%;
+	cursor:pointer;
+	border:solid 3px transparent;
+}
+
+.pais-img-show:hover{
+	border-color: $color-3;
+}

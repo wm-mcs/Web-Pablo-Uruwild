@@ -1,0 +1,86 @@
+.contiene-precios-nuevo{  
+  border-radius: 6px;
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(center);     
+  border: 1px solid #eee;
+  background-color:white ;
+  padding: 28px 40px;
+  width: 75%;
+  margin-top: 30px;
+}
+
+
+   .contiene-precio-nombre{
+    border-bottom: 1px solid #cbd6e2;
+    margin-bottom: 1.75rem;
+    padding: 1rem 0 2rem 0;
+    font-weight: 1000;
+    line-height: 1.6;
+    font-family: arial;
+    font-size: 20px;
+   }
+
+   .contiene-ul-precio-nuevo{
+    list-style: none;
+    min-height: 300px;
+    margin-bottom: 20px;
+    padding:0 10px;
+    width: 100%;
+   }
+
+     .contiene-li-precio-nuevo{
+      margin-bottom: 5px;
+     }
+
+.contiene-precios-precios{
+  padding:6px;
+  margin-bottom: 20px;
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(flex-start);  
+}
+
+
+.contiene-precio-dato{
+  width: 100%;
+  padding:2px;
+}
+
+.Seccion_precio_aclaracion{
+  font-size:12px;
+  margin-top:60px;  
+  color: $color-gris-text;
+  padding:0 20px;
+  font-family:$font-secondary;
+  width: 98%;
+  
+}
+
+.img-atencion-precios{
+  height: 50px;
+  width: auto;
+  margin-right: 15px;
+  border-radius:100%;
+}
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Tercer){
+
+.contiene-precios-nuevo{
+  width: 350px;
+  margin-top: 0px;
+  
+}
+
+.Seccion_precio_aclaracion{
+ 
+  width: 70%;
+  
+}
+
+}

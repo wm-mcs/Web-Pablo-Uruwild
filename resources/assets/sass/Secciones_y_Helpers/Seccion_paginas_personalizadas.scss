@@ -1,0 +1,79 @@
+ 
+/* L O G O   F L O T A N T E   E N   I M A G E N E S */
+ .logo-float{
+  height: 60px;
+  position: absolute;
+  bottom: 5%;
+  right: 5%; 
+  display: block;
+}
+
+
+/*  L o g o  N A V */
+.logo-nav{
+  font-size:30px;
+  font-family:$font-primary;
+  letter-spacing: 1.7px;  
+  font-weight: normal !important;
+}
+.logo-nav:hover{
+  color:$color-3-primary_hover;
+  font-weight: normal !important;
+}
+
+
+/* I M Á G E N E S   B A C K G R O U N D */
+.img_home_primera{  
+  background-image: url("../../imagenes/Home/imagen-libro-laura-jodral.jpg");
+  height: 600px;
+}
+
+
+.img_Laura-Jodral-Campo{
+  background-image: url("../../imagenes/Home/Laura-Jodral-Hoja.jpg");
+  
+}
+
+.img_contacto-home{  
+  background-image: url("../../imagenes/Contacto/Laura-Jodral-contacto-terapias.jpg");
+  min-height: 100vh;
+}
+
+.img_help-quien{  
+  background-image: url("../../imagenes/Quien/Lara-Jodral-Help.jpg");
+  min-height: 500px;
+}
+
+.img_Laura-Jodral-Minimalista{
+  background-image: url("../../imagenes/Quien/Laura-Jodral-Minimalista.jpg");
+  min-height: 500px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+ 
+
+
+}
+
+@media (min-width: $BrackPoint-Tercer){
+
+.logo-float{
+  height: 80px;
+}
+
+}

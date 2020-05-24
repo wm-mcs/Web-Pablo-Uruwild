@@ -1,0 +1,76 @@
+
+
+$Fuente-titulo:$font-primary;
+$Color-textos-titulo:$color-3;
+$Color-parrafos:$color-3;
+$color-iconos:$color-3;
+
+
+
+.footer-titulo-columna{
+  font-size: 26px;
+  letter-spacing: 1.6px;
+  font-family:$Fuente-titulo;
+  color:$Color-textos-titulo;
+  font-weight: bold;
+
+}
+
+
+ .contiene-p-linea{
+  @include Parrafo_Style;
+  font-size: 14px !important;
+  margin-bottom: 4px;
+  font-style: normal;
+  color:$Color-parrafos;
+ }
+
+  .contiene-link-linea{
+    font-weight: normal !important;
+    color:$Color-parrafos;
+  }
+  .contiene-link-linea:hover{
+    font-weight: bold !important;
+  }
+
+  .color-iconos-footer{
+    color:$color-iconos;
+    font-size:16px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Primario){
+
+
+
+       
+
+}
+
+@media (min-width: $BrackPoint-Secundario){
+
+    
+  
+}
+
+@media (min-width: $BrackPoint-Tercer){
+
+
+
+  
+}

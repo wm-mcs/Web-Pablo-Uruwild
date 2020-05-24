@@ -1,0 +1,91 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .logo-float-easy-socio-portada{
+  height: 60px;
+  position: absolute;
+  bottom: 5%;
+  right: 5%; 
+  display: block;
+}
+
+.imagen-medio-de-web{
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position:relative;
+}
+
+
+    .contiene-todo-image-centrada{
+      width: 100%;
+      position:relative;
+    }
+   
+
+       .sub-contiene-texto-imagen-medio{
+         @include flexbox;       
+         @include flex-direction(column);
+         @include align-items(flex-start);
+         width: 80%;
+         position:absolute;
+         position: absolute;
+         bottom: 40px;
+         left: 40px; 
+       }
+
+
+           .contiene-texto-imagen-medio-texto{
+            font-size: 14px;
+            /* margin-bottom: 40px; */
+            text-align: left;
+            color: #fff;
+            width: 300px;
+           }
+
+              .contiene-texto-imagen-medio-logo{
+                height: 80px;
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+ 
+
+
+}
+
+@media (min-width: $BrackPoint-Tercer){
+
+.logo-float-easy-socio-portada{
+  height: 80px;
+  
+  
+}
+
+}

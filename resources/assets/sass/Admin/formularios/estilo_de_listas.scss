@@ -1,0 +1,60 @@
+.contiene-listado-entidad{
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(center); 
+  background-color:white;
+  border-radius: 0 0 4px 4px;
+  border: solid thin $Color-Gris-Claro; 
+  margin-top: 6px;
+  width: 350px;
+} 
+
+
+  .contiene-listado-entidad-sub-contenedor{
+    padding:15px;
+    width: 100%;
+    @include flexbox;       
+    @include flex-direction(column);
+    @include align-items(flex-start); 
+   }
+
+      .cintiene-listado-entidad-name{
+        font-size: 15px;
+        margin-bottom: 10px;
+        width: 100%;
+        color:$color-3;
+        font-weight: bold;
+       }
+
+       .cintiene-listado-entidad-fecha{
+        font-size: 12px;
+        color:$Color-texto-gris-Mercadolibre;
+        margin-bottom: 8px;
+       }
+
+       .cintiene-listado-entidad-leer-mas{
+        font-size: 12px;
+        margin-top: 20px;
+       } 
+
+
+
+       .atributo-con-distincion{
+        padding: 4px;
+        border-radius:4px;
+        margin-bottom: 6px;
+        margin-top: 3px; 
+        font-size: 12px;
+       }
+
+         .atributo-distinguido{
+          background-color:$color-2;
+          color:$color-white ;
+         }
+
+         .atributo-distinguido-2{
+          background-color:$color-gris-text;
+          color:$color-white ;
+         }
+
+

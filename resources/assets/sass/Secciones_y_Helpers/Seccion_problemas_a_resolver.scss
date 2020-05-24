@@ -1,0 +1,76 @@
+.section-problemas{
+
+    padding-top: 65px;
+    padding-bottom: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+    @include flexbox;       
+    @include flex-direction(column);
+    @include align-items(center); 
+
+}
+
+ .titulo-problema{
+  padding: 20px 20px;
+  font-size: 26px;
+  color:$color-3;
+ }
+
+
+  .contiene-problemas{
+    width: 90%;
+    @include flexbox;       
+    @include flex-direction(row);
+    @include align-items(flex-start); 
+    @include justify-content(space-around);
+    @include flex-wrap(wrap);
+  }
+
+     .contiene-li-problemas{
+      padding:30px 10px;
+      border-radius:6px;
+      margin-top: 8px;
+      font-size: 24px;
+      color:$color-3;
+      width: 100%;
+      list-style-type: none;
+
+     }
+
+.contiene-llama-a-la-accion{
+  width: 100%;
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(center); 
+  padding:30px 0;
+  background-color:white;
+
+}
+
+
+@media (min-width: $BrackPoint-Secundario){
+
+.contiene-li-problemas{      
+      font-size: 28px;     
+      width: 49%;
+
+}
+
+}
+
+
+
+
+@media (min-width: $BrackPoint-Tercer){
+  
+  .titulo-problema{  
+   font-size: 32px;
+   }
+  .contiene-li-problemas{ 
+      width: 33%;
+      padding:30px 20px;
+  }
+
+  
+
+}
