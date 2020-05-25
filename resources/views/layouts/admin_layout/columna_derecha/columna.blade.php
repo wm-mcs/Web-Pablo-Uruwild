@@ -1,20 +1,14 @@
 <div class="admin-columna-contenedor background-gris-4 pt-2">
-
- {{-- imagen logo --}}
- <a href="{{route('get_home')}}">
-
-  @if(file_exists($Empresa->path_img_logo_cuadrado_blanco))
-  <div class="col-11">
-    <img class="p-4 img-fluid" src="{{$Empresa->img_logo_cuadrado_blanco}}">
-  </div>
-  
-  
-  @else
-  <span class="text-color-primary">{{$Empresa->name}}</span>
-  @endif
-
-
- </a>
+ <div class="col-11">
+   {{-- imagen logo --}}
+   <a href="{{route('get_home')}}">
+    @if(file_exists($Empresa->path_img_logo_cuadrado_blanco))  
+      <img class="p-4 img-fluid" src="{{$Empresa->img_logo_cuadrado_blanco}}">  
+    @else
+    <span class="text-color-primary">{{$Empresa->name}}</span>
+    @endif
+   </a>
+ </div>
 
  <ul>
    @if(Auth::user()->role === 'adminMcos522')
