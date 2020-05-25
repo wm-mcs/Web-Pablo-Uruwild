@@ -35,7 +35,7 @@
 
 
            <span class="helper-relative" id="app">             
-             <div class="flex-row-column get_width_100{{-- wraper-content-principal-con-nav --}}">
+             <div class="d-flex align-items-center flex-column get_width_100{{-- wraper-content-principal-con-nav --}}">
                   @yield('content')  
              </div>
            </span>
