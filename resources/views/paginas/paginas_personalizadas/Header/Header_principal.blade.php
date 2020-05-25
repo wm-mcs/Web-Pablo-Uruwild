@@ -7,9 +7,13 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto ">
                 <li>
-                  <a  href="{{url()}}" class="logo-nav">                    
-                    <span class="text-color-primary" v-if="scrolled > 0">Laura Jodral Garcia</span>
-                    <span class="" v-else>Laura Jodral Garcia</span>                    
+                  <a  href="{{url()}}" >  
+
+                    
+                    <img class="logo-nav" v-if="scrolled > 0" src="{{$Empresa->img_logo_horizontal_blanco}}">  
+                    <img class="logo-nav" v-else src="{{$Empresa->img_logo_horizontal_color}}">                 
+                    
+                   
                   </a>
                 </li>
                 
@@ -24,7 +28,7 @@
 
             <nav class="site-navigation position-relative" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">               
-                <li><a href="{{route('get_pagina_quien_es')}}" class="text-uppercase">Sobre Laura Jodral</a></li>
+                <li><a href="{{route('get_pagina_quien_es')}}" class="text-uppercase">Sobre Uruwild</a></li>
                 <li><a href="{{route('get_pagina_servicios')}}" class="text-uppercase">Servicios</a></li>
                 <li><a href="{{route('get_pagina_contacto')}}" class="text-uppercase">Contacto</a></li>
                 @if(!Auth::guest())
