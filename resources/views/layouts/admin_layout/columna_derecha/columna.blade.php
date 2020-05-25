@@ -4,7 +4,7 @@
  <a href="{{route('get_home')}}">
 
   @if(file_exists($Empresa->path_img_logo_cuadrado_blanco))
-  <img class="admin-header-logo" src="{{$Empresa->img_logo_cuadrado_blanco}}">
+  <img class="p-4 img-fluid" src="{{$Empresa->img_logo_cuadrado_blanco}}">
   
   @else
   <span class="text-color-primary">{{$Empresa->name}}</span>
