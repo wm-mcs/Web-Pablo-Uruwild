@@ -1,7 +1,7 @@
 @extends('layouts.admin_layout.admin_layout')
 
 @section('miga-de-pan') 
-  <h1 class="titulos-class  text-color-primary font-secondary">Mis datos</h1>
+  <h1 class="titulos-class  text-color-secondary font-secondary">Mis datos</h1>
 @stop
 
 @section('content')
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Primario-Relleno disparar-este-form">
+      <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Secondary disparar-este-form">
      Editar mis datos <i class="fas fa-angle-double-right"></i>
      </div>  
           

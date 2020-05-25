@@ -61,7 +61,7 @@
   border-color:darken( $color-3, 10% );
 }
 .Boton-Primario-Relleno:hover{
-  background-color: lighten( $color-3, 10% );
+  background-color: darken( $color-3, 10% );
   color:$color-white;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .Boton-Secondary-Relleno:hover{
-  background-color: $color-3;
+  background-color: darken( $color-3, 10% );
   color:$color-white;
 }
 

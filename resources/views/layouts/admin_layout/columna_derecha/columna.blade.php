@@ -1,13 +1,13 @@
-<div class="admin-columna-contenedor">
+<div class="admin-columna-contenedor background-gris-4">
 
  {{-- imagen logo --}}
  <a href="{{route('get_home')}}">
 
-  @if(file_exists($Empresa->_path_img_logo_horizontal))
-  <img class="admin-header-logo" src="{{$Empresa->img_logo_cuadrado}}">
+  @if(file_exists($Empresa->path_img_logo_cuadrado_blanco))
+  <img class="admin-header-logo" src="{{$Empresa->img_logo_cuadrado_blanco}}">
   
   @else
-  <span class="text-color-primary">Laura Jodral Garcia</span>
+  <span class="text-color-primary">{{$Empresa->name}}</span>
   @endif
 
 
@@ -42,6 +42,9 @@
           <li class="admin-columna-li mi-float-right"><i class="fas fa-user-tie"></i> CV</li>
         </a>  
 
+          <a href="{{route('get_admin_noticias')}}">
+          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Blog</li>
+        </a>  
          
 
         
@@ -56,9 +59,7 @@
             <li class="admin-columna-li mi-float-right"><i class="fas fa-building"></i> Mis datos</li>
         </a>  
 
-        <a href="{{route('get_admin_noticias')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Blog</li>
-        </a>   
+       
         
     </div>
 
