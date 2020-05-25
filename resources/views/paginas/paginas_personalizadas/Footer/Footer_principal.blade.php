@@ -1,4 +1,4 @@
-<footer class="site-section background-gris-3 ">
+<footer class="site-section background-gris-4 ">
       <div class="container">
 
 
