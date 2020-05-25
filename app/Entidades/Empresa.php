@@ -48,7 +48,7 @@ class Empresa extends Model
 
      public function getPathImgLogoCuadradoColorAttribute()
      {        
-        return url().'/imagenes/Empresa/logo-uruwild-cuadrado-color.png';
+        return public_path().'/imagenes/Empresa/logo-uruwild-cuadrado-color.png';
      }
 
     public function getImgLogoCuadradoBlancoAttribute()
@@ -58,7 +58,7 @@ class Empresa extends Model
 
      public function getPathImgLogoCuadradoBlancoAttribute()
      {        
-        return url().'/imagenes/Empresa/logo-uruwild-cuadrado-blanco.png';
+        return public_path().'/imagenes/Empresa/logo-uruwild-cuadrado-blanco.png';
      }
 
 

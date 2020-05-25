@@ -1,4 +1,4 @@
-<div class="admin-columna-contenedor background-gris-4">
+<div class="admin-columna-contenedor background-gris-4 pt-5">
 
  {{-- imagen logo --}}
  <a href="{{route('get_home')}}">
