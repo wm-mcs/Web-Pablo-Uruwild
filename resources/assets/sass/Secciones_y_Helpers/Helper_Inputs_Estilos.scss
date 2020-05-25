@@ -35,7 +35,7 @@
 }
 
    .input-text-class-secondary::placeholder{
-        color: lighten( $Color-secondary, 20% );
+        color: $color-3;
     }
     .input-text-class-secondary:focus {    
       box-shadow: none !important;
