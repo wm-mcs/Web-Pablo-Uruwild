@@ -10,8 +10,8 @@
                   <a  href="{{url()}}" >  
 
                     
-                    <img class="logo-nav" v-if="scrolled > 0" src="{{$Empresa->img_logo_horizontal_blanco}}">  
-                    <img class="logo-nav" v-else src="{{$Empresa->img_logo_horizontal_color}}">                 
+                    <img class="logo-nav" v-if="scrolled > 0" src="{{$Empresa->img_logo_horizontal_color}}">  
+                    <img class="logo-nav" v-else src="{{$Empresa->img_logo_horizontal_blanco}}">                 
                     
                    
                   </a>
