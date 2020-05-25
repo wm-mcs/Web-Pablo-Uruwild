@@ -1,4 +1,4 @@
-<footer class="site-section background-gris-1 ">
+<footer class="site-section background-gris-3 ">
       <div class="container">
 
 
@@ -8,7 +8,7 @@
           {{-- P r i m e r    b l o q u e   --}}
           <div class="col-md-3 p-4">
             <h3 class="footer-titulo-columna mb-5 ">@{{empresa.name}}</h3>
-            <p  class="contiene-p-linea">Lo que piensas es lo que atraes</p>           
+            <p  class="contiene-p-linea">Te invitamos a conocer paisajes y entornos fascinantes del Uruguay. Rincones perdidos e inexplorados, lugares únicos para contemplar, relajarse y disfrutar en contacto directo con la naturaleza a través de la pesca deportiva, birdwatching y otras actividades.</p>           
           </div>
 
           {{-- S e g u n d o   B l o q u e     --}}  
@@ -17,9 +17,9 @@
             
 
              
-               <p class="contiene-p-linea">
+               {{-- <p class="contiene-p-linea">
                  <a class="contiene-link-linea" href="{{route('get_pagina_contacto')}}" >Contacto</a>
-               </p >
+               </p > --}}
                 
 
                @if(Auth::guest())
