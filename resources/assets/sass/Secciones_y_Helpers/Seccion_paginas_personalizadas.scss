@@ -11,14 +11,16 @@
 
 /*  L o g o  N A V */
 .logo-nav{
-  font-size:30px;
-  font-family:$font-primary;
-  letter-spacing: 1.7px;  
-  font-weight: normal !important;
+  height:40px;
+  width:auto;
+  transition: height 0.3s linear; /* vendorless fallback */
+  -o-transition: height 0.3s linear; /* opera */
+  -ms-transition: height 0.3s linear; /* IE 10 */
+  -moz-transition: height 0.3s linear; /* Firefox */
+  -webkit-transition: height 0.3s linear; /*safari and chrome */
 }
 .logo-nav:hover{
-  color:$color-3-primary_hover;
-  font-weight: normal !important;
+  height:43px;
 }
 
 

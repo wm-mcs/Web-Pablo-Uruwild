@@ -1,6 +1,6 @@
 $Color-fuxia-oscuro:#952464 ;
 $Color-Propuesto-por-Laura:#00d4e1; /*Segerencia #10777d*/
-$color-3:$Color-fuxia-oscuro;  /* institucional PRINCIPAL */
+$color-3:#ffb900;  /* institucional PRINCIPAL */
 $color-3-primary_hover: lighten( $color-3, 5% );
 $color-2:darken( $color-3, 10% );
 
@@ -74,6 +74,11 @@ $Lato: 'Lato', sans-serif;
 $Raleway:  'Raleway', sans-serif;
 $Petit-Formal-Script: 'Petit Formal Script', cursive;
 $Great-Vibes:'Great Vibes', cursive;
+$Exo: 'Exo', sans-serif;
+$Open-Sans:'Open Sans', sans-serif;
+
+
+
 
 
 
@@ -81,8 +86,8 @@ $Great-Vibes:'Great Vibes', cursive;
 
 
 /* $font-primary:'Merriweather', 'Helvetica Neue', Arial, sans-serif ; */
-$font-primary: $Great-Vibes;
-$font-secondary: 'Raleway', sans-serif;
+$font-primary: $Exo;
+$font-secondary: $Open-Sans;
 
 
 

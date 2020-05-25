@@ -3,16 +3,16 @@
 
 
 
-{{--*/ $ImagenPortada         = url() . '/imagenes/Portadas/laura-jodral-home-imagen-principal.jpg'/*--}}
+{{--*/ $ImagenPortada         = url() . '/imagenes/Portadas/portada-uruwild.jpg'/*--}}
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/PaginasPersonalizadas/Socios/easy-socio-el-software-para-administrar-gimnasios-academias-de-baile-institutos-de-ingles-y-mucho-más.jpg'/*--}}
-{{--*/ $Titulo                = 'Laura Jodral' /*--}}
+{{--*/ $Titulo                = 'Uruwild' /*--}}
 {{--*/ $DescriptionEtiqueta   = '' /*--}}
 {{--*/ $PalabrasClaves        = '' /*--}}
 {{--*/ $UrlDeLaPagina         = route('get_home') /*--}}
 
 
 @section('favicon')
-<link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}"> 
+<link rel="shortcut icon" href="{{ asset('imagenes/Favicon/favicon.ico') }}"> 
 @stop
 
 @section('og-tags')
@@ -102,14 +102,14 @@
           <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
             <div class="row">
               <div class="col-lg-8 " style="max-width: 550px;">
-                <h1  class="titulos-class text-white font-secondary">Aprende como tomar las riendas de tu vida</h1>
-                <h2 class="sub-titulos-class text-white no-mostrar-en-mobil">Mejora tus conflictos emocionales, miedos, autoestima e inseguridad.
-</h2>
-                <p class="parrafo-class text-white"> Soy Laura Jodral y estoy aquí para acompañarte en tu proceso de desarrollo personal.</p>
+                <h1  class="titulos-class text-white font-secondary">Tours de pesca profesioanl</h1>
+                <h2 class="sub-titulos-class text-white no-mostrar-en-mobil">Te invitamos a vivir una experiencia que te hará renacer.
+                </h2>
+                
                
                 
            
-                <p><a href="#sobre-mi" class="Boton-Fuente-Chico Boton-Blanco"> Aprende como ahora mismo <i class="fas fa-chevron-right"></i> </a></p>
+                <p><a href="#sobre-mi" class="Boton-Fuente-Chico Boton-Blanco"> Conocé nuestros tours de pesca ahora <i class="fas fa-chevron-right"></i> </a></p>
               </div>
             </div>
           </div>

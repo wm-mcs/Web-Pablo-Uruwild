@@ -18,13 +18,11 @@ class Empresa extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
-    protected $appends  = ['imagen_portada_url',
-                           'img_atencion',
-                           'imagen_quien_soy_url',
-                           'imagen_quien_soy_url2',
-                           'link_whatsapp_send',
-                           'logo_easy_color',
-                           'logo_easy_blanco'];
+    protected $appends  = ['img_logo_horizontal_color',
+                           'img_logo_horizontal_blanco',
+                           'img_logo_cuadrado_blanco',
+                           'img_logo_cuadrado_color'
+                           ];
 
     /**
      * para verificar si no es null o no es cadena vacia
@@ -43,80 +41,55 @@ class Empresa extends Model
 
 
     //imagenes
-    public function getImgLogoCuadradoAttribute()
-    {
-        
-        return url().'/imagenes/'.$this->logo_cuadrado;
+    public function getImgLogoCuadradoColorAttribute()
+    {        
+        return url().'/imagenes/Empresa/logo-uruwild-cuadrado-color.png';
     }
 
+     public function getPathImgLogoCuadradoColorAttribute()
+     {        
+        return url().'/imagenes/Empresa/logo-uruwild-cuadrado-color.png';
+     }
 
-    public function getImagenPortadaUrlAttribute()
-    {
-        return url().'/imagenes/Empresa/home_imagen_portada.jpg';
-    }  
-
-    public function getImagenQuienSoyUrlAttribute()
-    {
-        return url().'/imagenes/Empresa/home_imagen_queien_soy.jpg';
+    public function getImgLogoCuadradoBlancoAttribute()
+    {        
+        return url().'/imagenes/Empresa/logo-uruwild-cuadrado-blanco.png';
     }
 
-    public function getImagenQuienSoyUrl2Attribute()
-    {
-        return url().'/imagenes/Empresa/home_imagen_queien_soy2.jpg';
+     public function getPathImgLogoCuadradoBlancoAttribute()
+     {        
+        return url().'/imagenes/Empresa/logo-uruwild-cuadrado-blanco.png';
+     }
+
+
+   
+
+    public function getImgLogoHorizontalColorAttribute()
+    {        
+       return url().'/imagenes/Empresa/logo-uruwild-horizonatal-color.png';
     }
 
-    public function getImgLogoHorizontalAttribute()
-    {
-        
-        return url().'/imagenes/'.$this->logo_horizontal;
-    }
-
-      public function getPathImgLogoHorizontalAttribute()
+      public function getPathImgLogoHorizontalColorAttribute()
       {
-        return public_path(). '/imagenes/'.$this->logo_horizontal;
+        return public_path(). '/imagenes/Empresa/logo-uruwild-horizonatal-color.png';
       }
 
-    public function getImgLogoVerticalAttribute()
-    {
-        
-        return url().'/imagenes/'.$this->logo_vertical;
+     public function getImgLogoHorizontalBlancoAttribute()
+    {        
+       return url().'/imagenes/Empresa/logo-uruwild-horizonatal-blanco.png';
     }
 
-    public function getImgCvPatchAttribute()
-    {
-        
-        return url().'/imagenes/Cv/'.str_replace(' ' ,'-', $this->name ).'-cv-';
-    }
+      public function getPathImgLogoHorizontalBlancoAttribute()
+      {
+        return public_path(). '/imagenes/Empresa/logo-uruwild-horizonatal-blanco.png';
+      }
 
-    public function getImgAtencionAttribute()
-    {
-        
-        return url().'/imagenes/Empresa/atencion.jpg';
-    }
 
-    public function getLogoEasyColorAttribute()
-    {
-        
-        return url().'/imagenes/Empresa/logo-rectangular-easysocio-color.png';
-    }
+ 
 
-    public function getLogoEasyBlancoAttribute()
-    {
-        
-        return url().'/imagenes/Empresa/logo-rectangular-easysocio-blanco.png';
-    }
+ 
 
-    public function getIsoLogoEasyColorAttribute()
-    {
-        
-        return url().'/imagenes/Empresa/atencion.jpg';
-    }
-
-    public function getIsoLogoEasyBlancoAttribute()
-    {
-        
-        return url().'/imagenes/Empresa/atencion.jpg';
-    }
+ 
 
     //datos
     public function getTelefonoEmpresaAttribute()
@@ -212,50 +185,13 @@ class Empresa extends Model
 
 
 
-    public function getContenidoCvRenderAttribute()
-    {
-        $cadena = $this->cv_text;
-
-        //parrafos
-        $cadena = str_replace('(P)' ,'<p class="cv-individual-p">', $cadena);
-        $cadena = str_replace('(/P)' ,'</p>', $cadena);
-
-        //titulos
-        $cadena = str_replace('(T)' ,'<h2 class="cv-individual-section-titulo">', $cadena);
-        $cadena = str_replace('(/T)' ,'</h2>', $cadena);
-
-        //links
-        $cadena = str_replace('(A)' ,'<a href="', $cadena);
-        $cadena = str_replace('(/A)' ,'">', $cadena);
-        $cadena = str_replace('(AT)' ,'', $cadena);
-        $cadena = str_replace('(/AT)' ,'</a>', $cadena);
-
-        //img
-        $cadena = str_replace('(IMG)' ,'<img class="cv-img-secundarias" src="', $cadena);
-        $cadena = str_replace('(/IMG)' ,'">', $cadena);
-
-        $cadena = str_replace('(IMGT)' ,'<span class="cv-img-texto" >', $cadena);
-        $cadena = str_replace('(/IMGT)' ,'</span>', $cadena);
-
-         $cadena = str_replace('(YOU)' ,'<div class="video-responsive" > <iframe  src="https://www.youtube.com/embed/', $cadena);
-        $cadena = str_replace('(/YOU)' ,'" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>', $cadena);
-
-        
-
-        return htmlentities($cadena, ENT_QUOTES | ENT_IGNORE, "UTF-8"); 
-    }
+    
 
 
 
-    public function getUrlImgCvPortadaAttribute()
-    {
-        return url().'/imagenes/Cv/'.str_replace(' ' ,'-', $this->name ).'-cv-1.jpg';
-    }
+ 
 
-    public function getCvAttribute()
-    {        
-        return $this->helper_verificar_nulidad($this->cv_text);
-    }
+    
 
 
     public function getNumeroWhatsappYaArregladoAttribute()
@@ -265,10 +201,7 @@ class Empresa extends Model
 
 
 
-    public function getPathUrlImgAttribute()
-    {
-        return public_path().'/imagenes/Empresa/'.$this->id.'-logo_empresa_socios'.'.png';
-    }
+   
 
 
 
