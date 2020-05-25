@@ -7,7 +7,7 @@
                             ])               !!}
 
             
-<div class="col-12 d-flex flex-column align-items-center">
+<div class="col-12 d-flex flex-column align-items-center background-gris-0 p-3">
 <div class="col-11 col-lg-5 p-2 p-lg-5 ">
             <div class="form-group mb-4">
               
@@ -37,7 +37,7 @@
 
             
               <button type="submit" class="Boton-Fuente-Chica
-Boton-Secondary-Relleno:hover mt-4">Ingresar</button>
+Boton-Secondary-Relleno mt-4">Ingresar</button>
            
             
 
