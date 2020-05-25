@@ -87,6 +87,18 @@
   color:$color-white;
 }
 
+.Boton-Secondary-Relleno{
+  @include Boton-base;
+  color:$color-white;
+  background-color: $Color-secondary;
+  border-color:darken( $Color-secondary, 10% );
+}
+
+.Boton-Secondary-Relleno:hover{
+  background-color: $color-3;
+  color:$color-white;
+}
+
 .Boton-Blanco{
   @include Boton-base;
   color:$color-white;

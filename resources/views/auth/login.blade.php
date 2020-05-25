@@ -20,8 +20,8 @@
 
 
  
-<div class="col-12 p-5 d-flex align-items-center flex-column align-items-center background-black ">
-      <h1 class="m-5 text-color-primary text-center titulos-class">Inicio de sesión</h1>     
+<div class="col-12 p-5 d-flex align-items-center flex-column align-items-center  ">
+      <h1 class="m-5 text-color-secondary text-center titulos-class">Inicio de sesión</h1>     
       
       @include('formularios.auth.login_form')
         

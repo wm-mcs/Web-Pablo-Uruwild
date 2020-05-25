@@ -8,7 +8,7 @@
 
             
 <div class="col-12 d-flex flex-column align-items-center">
-<div class="col-11 col-lg-5 p-2 p-lg-5 background-gris-4">
+<div class="col-11 col-lg-5 p-2 p-lg-5 ">
             <div class="form-group mb-4">
               
               <div class="cols-sm-10">
@@ -16,7 +16,7 @@
                   
                   
                   
-                  {!! Form::text('email', null ,['class'       => 'input-text-class-primary',
+                  {!! Form::text('email', null ,['class'       => 'input-text-class-secondary',
                                                  'id'          => 'username',
                                                  'placeholder' => 'Escribe tu email']) !!}
                 </div>
@@ -28,7 +28,7 @@
               <div class="cols-sm-10">
                 <div class="flex-row-center">
                               
-                  {!! Form::password('password', [ 'class'       => 'input-text-class-primary',
+                  {!! Form::password('password', [ 'class'       => 'input-text-class-secondary',
                                                    'id'          => 'password',
                                                    'placeholder' => 'Escribe tu contraseña']) !!}
                 </div>
@@ -37,7 +37,7 @@
 
             
               <button type="submit" class="Boton-Fuente-Chica
-Boton-Primario-Relleno mt-4">Ingresar</button>
+Boton-Secondary-Relleno:hover mt-4">Ingresar</button>
            
             
 

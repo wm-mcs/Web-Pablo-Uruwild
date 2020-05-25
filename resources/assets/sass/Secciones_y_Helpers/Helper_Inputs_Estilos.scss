@@ -22,10 +22,25 @@
    .input-text-class-primary::placeholder{
         color: lighten( $color-3, 20% );
     }
-    .input-text-class-primary:focus {    
+    .input-text-class-primary::focus {    
       box-shadow: none !important;
       outline: 0 none !important;
       border-color:$color-3;
+    }
+
+.input-text-class-secondary{
+  @include InputGeneral;
+  border-bottom-color: $Color-secondary;
+  color:$Color-secondary;
+}
+
+   .input-text-class-secondary::placeholder{
+        color: lighten( $Color-secondary, 20% );
+    }
+    .input-text-class-secondary:focus {    
+      box-shadow: none !important;
+      outline: 0 none !important;
+      border-color:$Color-secondary;
     }
 
 .input-text-class-white{
