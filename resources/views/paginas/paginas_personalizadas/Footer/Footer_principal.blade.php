@@ -68,7 +68,7 @@
           
           {{-- C u a r t o   B l o q u e     --}}
           <div class="col-md-3 p-4">
-            <h3 class="footer-titulo-columna mb-5 text-color-primary text-bold">Sígueme en mis redes</h3>
+            <h3 class="footer-titulo-columna mb-5  text-bold">Sígueme en mis redes</h3>
             <p class="contiene-p-linea" v-if="se_muestra(empresa.twitter_url)">
              <a class="contiene-link-linea" :href="empresa.twitter_url">
                <span class="icon-twitter mr-2 color-iconos-footer"></span> Twitter

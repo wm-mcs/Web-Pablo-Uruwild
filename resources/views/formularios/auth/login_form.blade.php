@@ -8,7 +8,7 @@
 
             
 <div class="col-12 d-flex flex-column align-items-center">
-<div class="col-11 col-lg-5 p-2 p-lg-5 background-gris-0">
+<div class="col-11 col-lg-5 p-2 p-lg-5 background-gris-2">
             <div class="form-group mb-4">
               
               <div class="cols-sm-10">
