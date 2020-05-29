@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Cache;
 
 
 
-class ServiciosDeEntidades extends ServiceProvider
+class ServiciosDeEntidades 
 {
 
 	
