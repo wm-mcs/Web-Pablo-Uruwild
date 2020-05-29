@@ -104,6 +104,8 @@ return array(
                              '5'     => '5 Cuotas',
                              '6'     => '6 Cuotas',
                              '12'    => '12 Cuotas'      
-                        ]                          
+                        ],
+
+                                                
 
 );

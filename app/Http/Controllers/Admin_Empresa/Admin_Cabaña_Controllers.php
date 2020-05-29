@@ -28,7 +28,7 @@ class Admin_Cabaña_Controllers extends Controller
 
   public function getPropiedades()
   {
-    return ['name','description','estado','fecha_inicio','fecha_fin','hasta_hoy','tipo','link'];
+    return ['name','descripcion_breve','ubicacion','description','cantidad_maxima_de_personas','estado','rank','tags'];
   }
 
   //home admin User

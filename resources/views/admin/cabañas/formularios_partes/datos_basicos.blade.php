@@ -17,9 +17,18 @@
   {!! Form::text('tags', null ,['class' => 'formulario-field']) !!}
 </div>
 
+
+
 <div class="formulario-label-fiel">
   {!! Form::label('estado', 'Estado', array('class' => 'formulario-label ')) !!}
   {!! Form::select('estado',['si' => 'Activo',
-                             'no' => 'Desactivar'] , null )          !!}
+                             'no' => 'Desactivar'] , ['class' => 'formulario-field'] )          !!}
+</div>
+
+<div class="formulario-label-fiel">
+{!! Form::label('rank', 'Calidad / Rank', array('class' => 'formulario-label ')) !!}
+  {!! Form::select('rank',  [1 => '1 - Normal',
+                             2 => '2 - Alta ',
+                             3 => '3 - Elite'] , null, ['class' => 'formulario-field'] )          !!}
 </div>
 
