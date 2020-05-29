@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Repositorios\CabañaRepo;
 use App\Repositorios\ImagenRepo;
+use App\Managers\CabañaManager;
+use App\Helpers\HelpersGenerales;
 
 
 
@@ -49,23 +51,45 @@ class Admin_Cabaña_Controllers extends Controller
   public function set_admin_cabañas_crear(Request $Request)
   {     
 
-      //propiedades para crear
+      
       $Propiedades = $this->getPropiedades();
-
-      //traigo la entidad
+      
       $Entidad = $this->CabañaRepo->getEntidad();
+      //
+      $manager = new CabañaManager(null, $Request->all());
 
-      //grabo todo las propiedades
+      if(!$manager->isValid())
+      {
+         return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
+      }
+
+      // G u a r d o  l o s   d a t o s 
       $this->CabañaRepo->setEntidadDato($Entidad,$Request,$Propiedades);   
 
-/*
-      if($Request->hasFile('img'))
-      {
-        
+      // S i  e l  a r r a y   d e   i m á g e n e s   n o   e s t á   v a c i o   
+      $files = $Request->file('img');      
+      
+      if($files[0] != null )
+      {        
 
-        //para la imagen
-        $this->ImagenRepo->setImagen(null,$Request,'img','Trayectoria/', $TrayectoriaImg->img,'.jpg'); 
-      }   */
+        foreach($files as $file)
+        { 
+
+          // C r e o   l a   i m a g e n   e n   l a   b a s e   d e   d a t o s 
+          $Imagen = $this->ImagenRepo->setUnaImagenEnBaseDeDatos($Entidad->name, 'Cabañas/', 'cabaña_id', $Entidad->id);
+
+          // G u a r d o   l a   i m a g e n   f í s i c a   e n   e l   s i s t e m a   d e   a r c h i v o s 
+          $Nombre_de_la_imagen = HelpersGenerales::helper_convertir_cadena_para_url($Imagen->name).'-'.$Imagen->id;
+
+            // I m a g e n   g r a n d e 
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'jpg');
+
+            // I m a g e n   c h i c a 
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','jpg',300);
+        }
+        
+      }
+      
       
 
      return redirect()->route('get_admin_cabañas')->with('alert', 'Trayectoria creada correctamente');

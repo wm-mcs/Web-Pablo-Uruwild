@@ -18,7 +18,18 @@ class ImagenRepo extends BaseRepo
   }
 
 
- 
+ public function setUnaImagenEnBaseDeDatos($name,$path,$Nombre_del_campo_id,$Valor_id)
+ {
+  $Entidad = $this->getEntidad();
+  $Entidad->name = $name;
+  $Entidad->path = $path;
+  $Entidad->$Nombre_del_campo_id = $Valor_id;
+  $Entidad->save();
+
+  return $Entidad;
+
+
+ }
 
 
   

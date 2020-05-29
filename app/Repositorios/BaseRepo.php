@@ -200,6 +200,22 @@ abstract class BaseRepo
         return $Entidad;
     }
 
+    public function setImagenEnStorage($file,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = null)
+    {
+      $nombre = $carpetaDelArchivo.$nombreDelArchivo.$ExtensionDelArchivo;
+      if($redimencionar_a != null)
+        {
+            $imagen_insert = Image::make(File::get($file))->resize($redimencionar_a, null, function ($constraint) {
+                                                                           $constraint->aspectRatio();
+                                                                       })->save('imagenes/'.$nombre,70);
+        }
+        else
+        {
+           $imagen_insert = Image::make(File::get($file)); 
+           $imagen_insert->save('imagenes/'.$nombre,70);   
+        }   
+    }
+
 
     public function setImagen($Entidad,$request,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = null)
     {
