@@ -36,7 +36,7 @@ class ServiciosDeEntidades
 		          
 
 		        return   $Imagenes;
-		   }
+		   
 
         });
 	}
