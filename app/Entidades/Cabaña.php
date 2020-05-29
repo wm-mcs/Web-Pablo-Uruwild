@@ -3,6 +3,7 @@
 namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Servicios\ServiciosDeEntidades;
 
 
 
@@ -10,21 +11,54 @@ use Illuminate\Database\Eloquent\Model;
 class Cabaña extends Model
 {
 
-    protected $table ='cabañas';
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    protected $table    ='cabañas';    
     protected $fillable = ['name'];
+    protected $appends  = ['imagen_principal'];
+
+
+
+
+    // A t r i b u t o s   m u t a d o s
+
+
+    public function getImagenesAttribute()
+    {
+        return ServiciosDeEntidades::getImagenes('cabaña_id',$this->id);
+    }
+
+    public function getImagenPrincipalAttribute()
+    {
+        return ServiciosDeEntidades::getFotoPrincipal('cabaña_id',$this->id);
+    }
+
+     public function getUrlImgFotoPrincipalAttribute()
+     {
+        return $this->imagen_principal->url_img;
+     }
+
+     public function getUrlImgFotoPrincipalChicaAttribute()
+     {
+        return $this->imagen_principal->url_img_chica;
+     }
+
+
+     public function getRouteAdminAttribute()
+     {        
+        return route('get_admin_cabaña_editar', $this->id);
+     }
+
+     public function getRouteAttribute()
+     {        
+        return url();
+     }
+
+
+
+    //  S c o p e s ///////////////////////
 
     public function scopeName($query, $name)
     {
-        //si el paramatre(campo busqueda) esta vacio ejecutamos el codigo
-        /// trim() se utiliza para eliminar los espacios.
-        ////Like se usa para busqueda incompletas
-        /////%% es para los espacios adelante y atras
+        
         if (trim($name) !="")
         {                        
            $query->where('name', "LIKE","%$name%"); 

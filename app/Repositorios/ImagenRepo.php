@@ -18,17 +18,25 @@ class ImagenRepo extends BaseRepo
   }
 
 
+
+ // G e t t e r s 
+ public function getImagenes($nombre_del_campo,$valor_id)
+ {
+   return $this->getEntidad()
+               ->where($nombre_del_campo,$valor_id)
+               ->orderBy('foto_principal','asc')
+               ->get();
+ } 
+
+ // S e t t e r s
  public function setUnaImagenEnBaseDeDatos($name,$path,$Nombre_del_campo_id,$Valor_id)
  {
-  $Entidad = $this->getEntidad();
-  $Entidad->name = $name;
-  $Entidad->path = $path;
-  $Entidad->$Nombre_del_campo_id = $Valor_id;
-  $Entidad->save();
-
-  return $Entidad;
-
-
+    $Entidad = $this->getEntidad();
+    $Entidad->name = $name;
+    $Entidad->path = $path;
+    $Entidad->$Nombre_del_campo_id = $Valor_id;
+    $Entidad->save();
+    return $Entidad;
  }
 
 

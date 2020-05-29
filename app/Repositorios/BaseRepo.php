@@ -266,7 +266,7 @@ abstract class BaseRepo
 
 
     /**
-     * De vuelve las imagenes segun el campo e id a buscar de la entidad
+     *  L a   u s o   p a r a   b u s c a r   l a   i m a g e n   p r i n c i p a l 
      */
     public function get_imagen_principal_de_entidad_especifica($atributo_name,$id_del_atributo)
     {
@@ -302,19 +302,19 @@ abstract class BaseRepo
        
     
 
-    //base Repo. Ahorro codigo
+    /**
+     *  L a   u s o   p a r a   c a m b i a r   a  l a   i m a g e n   p r i n c i p a l  
+     */
     public function cambio_a_imagen_principal_desde_base_repo($imagen_pricipal,$imagen)
     {
-      //cuento si es que hay
+      
       if($imagen_pricipal->count() > 0)
       {
-        //agarro la imagen
+        
         $imagen_principal_efectiva = $imagen_pricipal->first();
         $imagen_principal_efectiva->foto_principal = null;
         $imagen_principal_efectiva->save();
-
-
-        //le indico que es la imagen pricnipal 
+         
         $imagen->foto_principal = 'si';
         $imagen->save();
       }

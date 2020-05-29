@@ -12,8 +12,8 @@ class Imagen extends Model
 {
 
     protected $table    ='imagenes';
-
     protected $fillable = ['name'];
+    protected $appends  = ['url_img'];
 
     
     public function getUrlImgAttribute()
@@ -30,17 +30,17 @@ class Imagen extends Model
     }
 
 
-    public function getUrlImgAttribute()
+    public function getPathUrlImgAttribute()
     {
         
-        return url().'/imagenes/'. $this->path . HelpersGenerales::helper_convertir_cadena_para_url($this->name) . '-'.$this->id . '.jpg';
+        return public_path().'/imagenes/'. $this->path . HelpersGenerales::helper_convertir_cadena_para_url($this->name) . '-'.$this->id . '.jpg';
     }
 
 
-    public function getUrlImgChicaAttribute()
+    public function getPathUrlImgChicaAttribute()
     {
         
-        return url().'/imagenes/'. $this->path . HelpersGenerales::helper_convertir_cadena_para_url($this->name) . '-'.$this->id . '-chica.jpg';
+        return public_path().'/imagenes/'. $this->path . HelpersGenerales::helper_convertir_cadena_para_url($this->name) . '-'.$this->id . '-chica.jpg';
     }
     
 }
