@@ -1,8 +1,8 @@
 
 <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
   <div class="blog_entry">
-    <a href="{{$Entidad->url_img_foto_principal_chica}}">
-      <img src="{{$Entidad->url_img_portada}}" alt="Image" class="img-de-blog-miniatura">  
+    <a href="{{$Entidad->route_admin}}">
+      <img src="{{$Entidad->url_img_foto_principal_chica}}" alt="Image" class="img-de-blog-miniatura">  
     </a>
     <div class="p-4 bg-white">
       <h3><a href=" {{$Entidad->route_admin}}">{{$Entidad->name}}</a></h3>
