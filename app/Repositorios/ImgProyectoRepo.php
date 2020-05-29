@@ -2,7 +2,7 @@
 
 namespace App\Repositorios;
 
-use App\Entidades\ImgProyecto;
+use App\Entidades\I;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 

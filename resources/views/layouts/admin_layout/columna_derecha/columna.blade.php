@@ -35,8 +35,8 @@
           <li class="admin-columna-li mi-float-right"><i class="fas fa-user-tie"></i> Trayectoria</li>
         </a>   
 
-        <a href="{{route('get_cv')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-user-tie"></i> CV</li>
+        <a href="{{route('get_admin_cabañas')}}">
+          <li class="admin-columna-li mi-float-right"> Cabañas</li>
         </a>  
 
           <a href="{{route('get_admin_noticias')}}">

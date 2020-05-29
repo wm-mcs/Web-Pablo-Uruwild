@@ -222,26 +222,7 @@ abstract class BaseRepo
         {
            $imagen_insert = Image::make(File::get($file)); 
            $imagen_insert->save('imagenes/'.$nombre,70);   
-        }
-           
-
-
-        /* $imagen = $imagen_insert->resize(200, null, function ($constraint) {
-                                                                           $constraint->aspectRatio();
-                                                                       })->save('imagenes/'.$carpetaDelArchivo.$nombreDelArchivo.'-chica' .$ExtensionDelArchivo, 70);    */
-
-         //guardo_el_img
-         if($Entidad != null)
-         {
-           try
-           {
-            $this->setAtributoEspecifico($Entidad,'img',$Entidad->name_slug);
-           }
-           catch (Exception $e){}
-           
-         }
-         
-         
+        }        
          
          
        }

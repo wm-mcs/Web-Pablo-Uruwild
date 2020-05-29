@@ -18,4 +18,6 @@ require __DIR__ . '/CV/Ruta_Cv.php';
 
 require __DIR__ . '/Trayectoria/Rutas_Trayectoria.php';
 
+require __DIR__ . '/Cabañas/Rutas_cabañas.php';
+
 
