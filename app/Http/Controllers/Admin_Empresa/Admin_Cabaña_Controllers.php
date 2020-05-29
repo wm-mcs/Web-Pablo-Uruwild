@@ -86,7 +86,12 @@ class Admin_Cabaña_Controllers extends Controller
 
             // I m a g e n   c h i c a 
             $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',300);
+
         }
+
+        // M a r c o   u n a   i m a g e n   c o  m o   p r i n c i p a l
+        $Imagen = $this->ImagenRepo->getImagenes('cabaña_id',$Entidad->id)->first();
+        $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si');
         
       }
       
