@@ -28,6 +28,17 @@
      font-family: $font-secondary;
     }
 
+    .contiene-aclaracion-label{
+      margin-top: 3px;
+      width: 100%;
+      padding:6px;
+      background-color: $color-grey0;
+      font-family: $font-secondary;
+      color: $color-grey3;
+      font-size: 12px;
+
+    }
+
 
 .contenedor-formulario-label-fiel{
   @include flexbox; 

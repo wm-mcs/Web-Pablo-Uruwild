@@ -11,6 +11,14 @@
 
   ]) !!}
 </div>
+<div class="formulario-label-fiel">
+  {!! Form::label('ubicacion', 'Ubicación', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('ubicacion', null ,['class' => 'formulario-field']) !!}
+</div>
+<div class="formulario-label-fiel">
+  {!! Form::label('cantidad_maxima_de_personas', 'Cantidad de personas', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('cantidad_maxima_de_personas', null ,['class' => 'formulario-field']) !!}
+</div>
 
 <div class="formulario-label-fiel">
   {!! Form::label('tags', 'Tags', array('class' => 'formulario-label ')) !!}
@@ -27,6 +35,9 @@
 
 <div class="formulario-label-fiel">
 {!! Form::label('rank', 'Calidad / Rank', array('class' => 'formulario-label ')) !!}
+<div class="contiene-aclaracion-label">
+  Es para luego poder ordenar o destacar según su relevancia.
+</div>
   {!! Form::select('rank',  [1 => '1 - Normal',
                              2 => '2 - Alta ',
                              3 => '3 - Elite'] , null, ['class' => 'formulario-field'] )          !!}
