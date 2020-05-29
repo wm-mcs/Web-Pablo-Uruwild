@@ -1,13 +1,15 @@
 
 <div class="formulario-label-fiel">
-{!! Form::label('img', 'Portada', array('class' => 'formulario-label ')) !!}
-{!! Form::file('img',['class' => 'formulario-field']) !!}   
+{!! Form::label('img', 'Imágenes', array('class' => 'formulario-label ')) !!}
+{!! Form::file('img[]',['class'            => 'file',
+                       'id'                => 'imagenes-field',
+                       'multiple'          => true,
+                       'data-show-upload'  =>'false',
+                       'data-show-caption' => 'true' 
+                          ]) !!}   
 </div>
 
-<div class="formulario-label-fiel">
-{!! Form::label('img2', 'Imagen Secundaria', array('class' => 'formulario-label ')) !!}
-{!! Form::file('img2',['class' => 'formulario-field']) !!}   
-</div> 
+
 
 @if(isset($Entidad))
 <div class="row" >
