@@ -19,7 +19,7 @@ class Admin_Cabaña_Controllers extends Controller
   protected $CabañaRepo;
   protected $ImagenRepo;
 
-  public function __construct(CabañaRepo     $CabañaRepo,
+  public function __construct(CabañaRepo  $CabañaRepo,
                               ImagenRepo  $ImagenRepo )
   {
     $this->CabañaRepo    = $CabañaRepo;
@@ -34,8 +34,9 @@ class Admin_Cabaña_Controllers extends Controller
   //home admin User
   public function get_admin_cabañas(Request $Request)
   { 
-    $Trayectorias = $this->CabañaRepo->getTrayectoriasOrdenedasPorFecha();
-    return view('admin.cabañas.cabañas_home', compact('Trayectorias'));
+    $Entidades = $this->CabañaRepo->getEntidadesAllPaginadas( $Request,10);
+
+    return view('admin.cabañas.cabañas_home', compact('Entidades'));
   }
 
   //get Crear admin User
@@ -57,14 +58,14 @@ class Admin_Cabaña_Controllers extends Controller
       //grabo todo las propiedades
       $this->CabañaRepo->setEntidadDato($Entidad,$Request,$Propiedades);   
 
-
+/*
       if($Request->hasFile('img'))
       {
-        $TrayectoriaImg = $this->ImagenRepo->setImgTrayectoria($Entidad);
+        
 
         //para la imagen
         $this->ImagenRepo->setImagen(null,$Request,'img','Trayectoria/', $TrayectoriaImg->img,'.jpg'); 
-      }   
+      }   */
       
 
      return redirect()->route('get_admin_cabañas')->with('alert', 'Trayectoria creada correctamente');
@@ -90,14 +91,14 @@ class Admin_Cabaña_Controllers extends Controller
     //grabo todo las propiedades
     $this->CabañaRepo->setEntidadDato($Entidad,$Request,$Propiedades);
 
-    
+    /*
       if($Request->hasFile('img'))
       {
-        $TrayectoriaImg = $this->ImagenRepo->setImgTrayectoria($Entidad);
+        
 
-        //para la imagen
+        
         $this->ImagenRepo->setImagen(null,$Request,'img','Trayectoria/', $TrayectoriaImg->img,'.jpg'); 
-      }   
+      }   */
 
     return redirect()->back()->with('alert', 'Trayectoria Editado Correctamente');  
   }
