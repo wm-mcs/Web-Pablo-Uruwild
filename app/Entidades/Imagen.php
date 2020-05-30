@@ -13,7 +13,7 @@ class Imagen extends Model
 
     protected $table    ='imagenes';
     protected $fillable = ['name'];
-    protected $appends  = ['url_img'];
+    protected $appends  = ['url_img','url_img_chica','path_url_img','path_url_img_chica'];
 
     
     public function getUrlImgAttribute()
