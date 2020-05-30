@@ -36,8 +36,16 @@ class Cabaña extends Model
      }
 
      public function getUrlImgFotoPrincipalChicaAttribute()
-     {dd($this->imagen_principal->url_img_chica);
-        return $this->imagen_principal->url_img_chica;
+     {
+        if($this->imagen_principal->count() > 0)
+        {
+            return $this->imagen_principal->first()->url_img_chica;
+        }
+        else
+        {
+            return '';
+        }
+        
      }
 
 
