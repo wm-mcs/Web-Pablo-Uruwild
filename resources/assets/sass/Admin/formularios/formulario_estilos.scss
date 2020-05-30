@@ -114,10 +114,10 @@
               /* I m á g e n e s: se usa en entidades que tengan imagenes múltiples*/
               
               .img-border-grosor{
-                border:2px solid transparent;
+                border:4px solid transparent;
               }
               .img-principal{
-                border:2px solid $color-3;
+                border-color: $color-3;
               }
 
               .img-element-bottom-left{

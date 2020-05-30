@@ -1,8 +1,7 @@
 
 <div class="formulario-label-fiel">
 {!! Form::label('img', 'Imágenes', array('class' => 'formulario-label ')) !!}
-{!! Form::file('img[]',['class'            => 'file',
-                       'id'                => 'imagenes-field',
+{!! Form::file('img[]',['class'            => 'file',                       
                        'multiple'          => true,
                        'data-show-upload'  =>'false',
                        'data-show-caption' => 'true' 
@@ -17,12 +16,14 @@
 	<div class="row  p-3 mt-4" >
 
 		@foreach($Entidad->imagenes as $Imagen)
-		 <div class="col-6 mt-3 position-relative img-border-grosor  @if($Imagen->es_imagen_principal) img-principal  @endif ">
-			<img class="img-fluid img-cover img-altura-normal" src="{{$Imagen->url_img_chica}}">
+		<div class="col-6">
 			
+		
+		 <div class="mt-3 position-relative img-border-grosor  @if($Imagen->es_imagen_principal) img-principal  @endif ">
+			<img class="img-fluid img-cover img-altura-chica" src="{{$Imagen->url_img}}">		
 
 		    @if($Imagen->es_imagen_principal)
-		    <span class="img-element-bottom-left">
+		    <span class="img-element-bottom-left text-color-primary">
 		      <i class="fas fa-star"></i>
 		    </span>
 		    @else
@@ -38,6 +39,7 @@
 		@endforeach
 
 			
+	</div>
 	</div>
 	@else
 	<p class="p-2 mt-4 mb-3 text-center color-text-gris parrafo-class">
