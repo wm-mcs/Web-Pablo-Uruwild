@@ -14,7 +14,7 @@
 @if(isset($Entidad))
 
 	@if($Entidad->imagenes->count() > 0)
-	<div class="row col-12 p-3 mt-4" >
+	<div class="row  p-3 mt-4" >
 
 		@foreach($Entidad->imagenes as $Imagen)
 		 <div class="col-6 mt-3 position-relative img-border-grosor  @if($Imagen->es_imagen_principal) img-principal  @endif ">
