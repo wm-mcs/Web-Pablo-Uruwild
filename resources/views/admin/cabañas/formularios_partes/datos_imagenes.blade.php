@@ -4,10 +4,8 @@
 <div class="contiene-aclaracion-label">
   Cargar imágenes en formato wide (Rectangular). Mínimo 1920px de ancho.  No es necesario que las compriman, la web se encargará de optimizarlas. <i class="far fa-smile-wink"></i>. Se puede subir de a múltiples imágenes.
 </div>
-{!! Form::file('img[]',['class'            => 'file',                       
+{!! Form::file('img[]',['class'            => 'formulario-field',                       
                        'multiple'          => true,
-                       'data-show-upload'  =>'false',
-                       'data-show-caption' => 'true' 
                           ]) !!}   
 </div>
 
@@ -16,7 +14,7 @@
 @if(isset($Entidad))
 
 <p class="p-2 mt-4 mb-3 text-center color-text-gris parrafo-class">
- Administrar imágenes <i class="fas fa-hand-point-down"></i> 
+ Administrar imágenes que yá están cargadas <i class="fas fa-hand-point-down"></i> o subir más <i class="fas fa-hand-point-up"></i>.
 </p>
 
 	@if($Entidad->imagenes->count() > 0)
