@@ -31,8 +31,13 @@ class Cabaña extends Model
     }
 
      public function getUrlImgFotoPrincipalAttribute()
-     {
-        return $this->imagen_principal->url_img;
+     {  
+        if($this->imagen_principal->count() > 0)
+        {
+         return $this->imagen_principal->url_img;
+        }
+
+        return url().'/imagenes/Helpers/imagen-no-disponible.png';
      }
 
      public function getUrlImgFotoPrincipalChicaAttribute()
@@ -41,10 +46,8 @@ class Cabaña extends Model
         {
             return $this->imagen_principal->first()->url_img_chica;
         }
-        else
-        {
-            return '';
-        }
+        
+        return url().'/imagenes/Helpers/imagen-no-disponible.png';
         
      }
 

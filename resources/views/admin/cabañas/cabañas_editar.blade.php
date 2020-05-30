@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="contenedor-grupo-datos col-12">
-        <div class="contenedor-grupo-datos-titulo">Contenido del post</div>
+        <div class="contenedor-grupo-datos-titulo">Contenido de la cabaña</div>
         <div class="contenedor-formulario-label-fiel">                       
           <div class="formulario-label-fiel">
             @include('admin.cabañas.formularios_partes.aclaracion_etiquetas')

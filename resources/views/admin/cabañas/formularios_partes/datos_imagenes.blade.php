@@ -12,21 +12,23 @@
 
 
 @if(isset($Entidad))
-<div class="row" >
 
-		@if(file_exists($Entidad->path_url_img_portada))
-		<img class="admin-img-section-img" src="{{$Entidad->url_img_portada}}">
-		@endif  
-		@if(file_exists($Entidad->path_url_img_adicional))
-		<img class="admin-img-section-img" src="{{$Entidad->url_img_adicional}}">  
+	@if($Entidad->imagenes->count() > 0)
+	<div class="row col-12 p-3 mt-4" >
 
-		@endif 
-		@if(file_exists($Entidad->path_url_img_portada))
-		<p class="p-2 mt-4 mb-3 text-center color-text-gris parrafo-class">
-		Para copiar la url de la imagen click derecho arriba de la misma y luego "Copiar dirección de la imagen".
-		</p>
-		@endif
-</div>
+		@foreach($Entidad->imagenes as $Imagen)
+		 <div class="col-6 col-lg-4">
+			<img class="img-fluid" src="{{$Imagen->url_img_chica}}">
+		 </div>
+		@endforeach
+
+			
+	</div>
+	@else
+	<p class="p-2 mt-4 mb-3 text-center color-text-gris parrafo-class">
+			No hay ninguna imagen para esta cabaña. Es necesario que se agregue una lo antes posible.
+	</p>
+	@endif
 @endif
 
 

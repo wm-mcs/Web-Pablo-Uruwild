@@ -32,10 +32,8 @@ class ServiciosDeEntidades
             $Repo = new ImagenRepo();
 
 		    $Imagenes = $Repo->getImagenes($nombre_del_campo,$valor_id); 
-   
-		          
 
-		        return   $Imagenes;
+		    return   $Imagenes;
 		   
 
         });

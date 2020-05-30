@@ -1,7 +1,6 @@
 /*  I M Á G E N E S  */
 
-.background_img{
- 
+.background_img{ 
  width: 100%;
  background-position: center;
  background-repeat: no-repeat;
@@ -12,18 +11,41 @@
  background-attachment: fixed; 
 }
 
+/* S e   u s a   p a r a   l a s  p o r t a d a s */
 .imagen-portada-altura-100vh{
 	display: block;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* A j u s t a   l a   im a g e n   s u   a l t u r a   y   s u    w i d t h */
+.img-cover{
+  width: 100%;    
+  object-fit: cover;
+  display: block;   
+}
+
+
+$altura-imagen-miniaturas:150; /*Defino la altura*/
+
+.img-altura-chica{
+  height:$altura-imagen-miniaturas px;
+}
+
+.img-altura-normal{
+  height:($altura-imagen-miniaturas*1.5) px;
+}
+
+.img-altura-grande{
+  height:($altura-imagen-miniaturas*2) px;
 }
 
 
 
 
 
-/*  B a c k g r o u n d s  */
+/*  B A C K G R O U N D S  */
 
 .background-primary{
   background-color: $color-3;
