@@ -36,7 +36,7 @@ class Cabaña extends Model
      }
 
      public function getUrlImgFotoPrincipalChicaAttribute()
-     {
+     {dd($this->imagen_principal->url_img_chica);
         return $this->imagen_principal->url_img_chica;
      }
 
