@@ -8,6 +8,8 @@
       width:100%;
 }
 
+
+ /* C o n t i e n e   b l o q u e :   t í t u l o   y   g r u p o   d e    i n p u t s */
  .contenedor-grupo-datos{
       @include flexbox; 
       @include flex-direction(column);
@@ -16,10 +18,10 @@
       border-collapse: collapse;
       border:solid 1px $color-grey-1;
       padding:20px;
+ }
 
-   }
-    .contenedor-grupo-datos-titulo{
-     
+    /* T í t u l o   d e l   b l o q u e */
+    .contenedor-grupo-datos-titulo{     
      margin-bottom: 8px;
      font-size: 16px;     
      color:$color-black;     
@@ -28,27 +30,15 @@
      font-family: $font-secondary;
     }
 
-    .contiene-aclaracion-label{
-      margin-top: 3px;
-      width: 100%;
-      padding:6px;
-      line-height:1.7;
-      font-family: $font-secondary;
-      color: $color-gris-text;
-      font-size: 12px;
-      margin-bottom: 3px;
-      background-color:$color-grey0;
-
-    }
-
-
+/* C o n t i e n e   u n   g r u p o   d e   L a b e l s   e   i n p u t s */
 .contenedor-formulario-label-fiel{
   @include flexbox; 
   @include flex-direction(column);
   @include align-items(flex-start);
   width:100%;
 }
-
+            
+           /* C o n t i e n e   e l   l a b e l    y   e l   i n p u t */ 
            .formulario-label-fiel{
              @include flexbox; 
              @include flex-direction(column);
@@ -56,33 +46,11 @@
              width:100%;
              padding: 4px;             
              border:solid 1px transparent;             
-             margin-top: 4px;
-             
+             margin-top: 4px;             
              font-family: $font-secondary;
-           }
+           }           
 
-           .aclaracion-de-etiquetas{
-            width: 100%;
-            margin:3px 0;
-            padding: 10px;
-            background-color: $color-grey0;
-            @include flexbox; 
-            @include flex-direction(column);
-            @include align-items(flex-start);  
-            border-radius:4px;    
-            font-family: $font-secondary;
-            }
-
-            .aclaracion-de-etiquetas-linea{
-              font-size: 12px;
-              margin-top: 2px;
-              padding:2px;
-              
-            }
-           
-           
-
-
+              /* T í t u l o   d e l   l a b e l */
               .formulario-label{                
                 padding:2px 6px;                
                 color:  $Color-secondary;                              
@@ -90,14 +58,31 @@
                 font-family: $font-secondary;
                 font-size: 12px;
                 font-weight: bold;
-                margin:0;
-                
+                margin:0;                
                 border-radius:8px;
-
-
               }
 
+              /* A c l a r a c i ó n   p a r a   e l   u s u a r i o */
+              .contiene-aclaracion-label{
+                margin-top: 3px;
+                width: 100%;
+                padding:6px;
+                line-height:1.7;
+                font-family: $font-secondary;
+                color: $color-gris-text;
+                font-size: 12px;
+                margin-bottom: 3px;
+                background-color:$color-grey0;
+              }
 
+              /* L o   u s o   p a r a   a c l a r a c i o n e s: Ajusta tamaño de texto: usado en explicar Blog Notaciones*/
+              .aclaracion-de-etiquetas-linea{
+                font-size: 12px;
+                margin-top: 2px;
+                padding:2px;              
+              }
+
+              /* I n p u t  */
               .formulario-field{
                 @include InputGeneral;
                 border-radius:0;
@@ -105,24 +90,48 @@
                 color:$color-grey3;
                 font-size:12px !important;
               }
-
-              .formulario-field::placeholder{
+                .formulario-field::placeholder{
                   color: lighten( $color-grey3, 30% );
-              }
-              .formulario-field:focus {    
-                box-shadow: none !important;
-                outline: 0 none !important;
-                border-color:$color-grey3;
-              }
+                }
+                .formulario-field:focus {    
+                  box-shadow: none !important;
+                  outline: 0 none !important;
+                  border-color:$color-grey3;
+                }
 
               
 
-
+              /* B o t ó n   v i e j o   a h o r a   y a   e s t á   e n   d e s u s o */   
               .admin-boton-editar{
                 @include Boton-Normal($color-3)
               }
               .admin-boton-editar:hover{
                 background-color:$color-3light;
+              }
+
+
+
+              /* I m á g e n e s: se usa en entidades que tengan imagenes múltiples*/
+              
+              .img-border-grosor{
+                border:2px solid transparent;
+              }
+              .img-principal{
+                border:2px solid $color-3;
+              }
+
+              .img-element-bottom-left{
+                position:absolute;
+                bottom:2%;
+                left:2%;
+                font-size:14px;
+              }
+
+              .img-element-bottom-right{
+                position:absolute;
+                bottom:2%;
+                right:2%;
+                font-size:14px;
               }
 
 

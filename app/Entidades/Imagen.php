@@ -42,5 +42,29 @@ class Imagen extends Model
         
         return public_path().'/imagenes/'. $this->path . HelpersGenerales::helper_convertir_cadena_para_url($this->name) . '-'.$this->id . '-chica.jpg';
     }
+
+
+    public function getEliminarRouteAttrbute()
+    {
+        return '';
+    }
+
+    public function getEstablecerComoPrincipalRouteAttrbute()
+    {
+        return '';
+    }
+
+
+    public function getEsImagenPrincipalAttribute()
+    {
+        if($this->foto_principal == 'si')
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     
 }
