@@ -44,7 +44,7 @@ class Cabaña extends Model
 
      public function getRouteAdminAttribute()
      {        
-        return route('get_admin_cabaña_editar', $this->id);
+        return route('get_admin_cabañas_editar', $this->id);
      }
 
      public function getRouteAttribute()
