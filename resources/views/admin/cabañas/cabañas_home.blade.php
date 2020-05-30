@@ -2,7 +2,7 @@
 
 @section('miga-de-pan') 
 
- <h1 class="titulos-class  text-color-primary font-secondary">Cabañas</h1>
+ <h1 class="titulos-class  text-color-secondary font-secondary">Cabañas</h1>
 @stop
 
 @section('content')
@@ -14,7 +14,7 @@
 
 
     <div class="col-6 col-lg-4"> 
-     <a class="col-12 Boton-Fuente-Chica Boton-Primario-Relleno" href="{{route('get_admin_cabañas_crear')}}"> 
+     <a class="col-12 Boton-Fuente-Chica Boton-Secondary-Relleno" href="{{route('get_admin_cabañas_crear')}}"> 
       Crear cabaña
       
      </a>  
