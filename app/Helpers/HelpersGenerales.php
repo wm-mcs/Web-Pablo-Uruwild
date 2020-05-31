@@ -37,9 +37,13 @@ class HelpersGenerales
 
         if(Cache::has($nombre_de_cache))
         {
+
+
          Cache::forget($nombre_de_cache);
+
+         dd($nombre_de_cache);
         }
 
-        
+
     }
 }
