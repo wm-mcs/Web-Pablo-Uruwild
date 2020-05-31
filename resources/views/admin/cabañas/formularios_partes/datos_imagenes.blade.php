@@ -32,7 +32,7 @@
 		      <i class="fas fa-star"></i>
 		    </span>
 		    @else
-		    <a class="img-element-bottom-left" href="{{route('establecer_como_principal',[$Imagen->id,'cabaña_id'])}}">
+		    <a class="img-element-bottom-left" href="{{route('establecer_como_principal', ['id' => $Imagen->id ,'nombre_campo'=>'cabaña_id'] )}}">
 		      <i class="far fa-star"></i>
 		    </a>
 		    <a href="{{route('borrar_esta_imagen',[$Imagen->id,'cabaña_id'])}}" class="img-element-bottom-right">
