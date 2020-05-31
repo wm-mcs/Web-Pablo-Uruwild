@@ -30,8 +30,6 @@ class ServiciosDeEntidades
 	public static function getImagenes($nombre_del_campo,$valor_id)
 	{
 
-
-		dd($nombre_del_campo.$valor_id);
 		return Cache::remember('Imagenes'.$nombre_del_campo.$valor_id, 100000, function() use ($nombre_del_campo,$valor_id) {
 
             $Repo = new ImagenRepo();
