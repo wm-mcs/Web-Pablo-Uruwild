@@ -27,18 +27,18 @@
 }
 
 
-$altura-imagen-miniaturas:150; /*Defino la altura*/
+$altura-imagen-miniaturas:150px; /*Defino la altura*/
 
 .img-altura-chica{
-  height:($altura-imagen-miniaturas)px;
+  height:$altura-imagen-miniaturas;
 }
 
 .img-altura-normal{
-  height:($altura-imagen-miniaturas*1.5)px;
+  height:$altura-imagen-miniaturas*1.5;
 }
 
 .img-altura-grande{
-  height:($altura-imagen-miniaturas*2)px;
+  height:$altura-imagen-miniaturas*2;
 }
 
 

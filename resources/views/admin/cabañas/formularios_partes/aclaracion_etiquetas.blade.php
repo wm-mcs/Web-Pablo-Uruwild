@@ -1,8 +1,6 @@
 <div class="p-5 col-12 color-text-gris background-gris-0 mb-4">
 
-  <div class="lista-class aclaracion-de-etiquetas-linea"> H1 El título del post : 
-     <span class="text-bold"> (H1)   (/H1)  </span> 
-  </div>
+ 
   <div class="lista-class aclaracion-de-etiquetas-linea"> Títulos : 
     <span class="text-bold"> (T)   (/T) </span> 
   </div>
