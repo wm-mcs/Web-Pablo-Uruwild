@@ -16,7 +16,7 @@ class ServiciosDeEntidades
 	public static function getFotoPrincipal($nombre_del_campo,$valor_id)
 	{		
 
-		dd('ImagenPrincipal'.$nombre_del_campo.$valor_id);
+
 		return Cache::remember('ImagenPrincipal'.$nombre_del_campo.$valor_id, 100000, function() use ($nombre_del_campo,$valor_id) {
 
             $Repo = new ImagenRepo();
@@ -29,6 +29,9 @@ class ServiciosDeEntidades
 	// T o d a s   l a s   i m á g e n e s
 	public static function getImagenes($nombre_del_campo,$valor_id)
 	{
+
+
+		dd('ImagenPrincipal'.$nombre_del_campo.$valor_id);
 		return Cache::remember('Imagenes'.$nombre_del_campo.$valor_id, 100000, function() use ($nombre_del_campo,$valor_id) {
 
             $Repo = new ImagenRepo();
