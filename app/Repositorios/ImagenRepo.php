@@ -42,11 +42,21 @@ class ImagenRepo extends BaseRepo
 
   public function poner_esta_imagen_como_principal($id_img,$nombre_del_campo)
   {
+    // L a   i m a g e n   q u e   q u i e r o   p o n e r   c o m o   p r i n c i p a l 
     $imagen = $this->find($id_img);
 
-    $imagen_pricipal = $this->get_imagen_principal_de_entidad_especifica($nombre_del_campo,$imagen->$nombre_del_campo) ;  
+    $imagen_pricipal_actual = $this->get_imagen_principal_de_entidad_especifica($nombre_del_campo,$imagen->$nombre_del_campo);  
 
-    $this->cambio_a_imagen_principal_desde_base_repo($imagen_pricipal,$imagen);
+    if($imagen_pricipal_actual->count() > 0)
+    {
+      $imagen_pricipal_actual = $imagen_pricipal_actual->first();
+      $imagen_pricipal_actual->foto_principal = null;
+      $imagen_pricipal_actual->save();
+    }
+
+    $imagen->foto_principal = 'si';
+    $imagen->save();
+    
   }
 
 
