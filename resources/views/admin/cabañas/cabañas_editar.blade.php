@@ -57,7 +57,7 @@
    </div>
    
     <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Primario-Relleno disparar-este-form">
-     Editar: {{$Entidad->name}}  <i class="fas fa-angle-double-right"></i>
+     Guardar cambios   <i class="fas fa-angle-double-right"></i>
     </div> 
 
       
