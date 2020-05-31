@@ -19,6 +19,8 @@ class ServiciosDeEntidades
 
 		return Cache::remember('ImagenPrincipal'.$nombre_del_campo.$valor_id, 100000, function() use ($nombre_del_campo,$valor_id) {
 
+			
+
             $Repo = new ImagenRepo();
 		    return $Repo->get_imagen_principal_de_entidad_especifica($nombre_del_campo,$valor_id); 
 
