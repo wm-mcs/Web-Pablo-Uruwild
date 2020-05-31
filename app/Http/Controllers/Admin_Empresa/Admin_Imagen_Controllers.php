@@ -64,11 +64,12 @@ class Admin_Imagen_Controllers extends Controller
   // P o n e   e s t á  i m a g e n  c ó m o   p r i n c i p a l
   public function establecer_como_principal($id,$nombre_campo)
   {
-  	
+  	HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$id);
+    HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$id);
+    
   	$this->ImagenRepo->poner_esta_imagen_como_principal($id,$nombre_campo);
 
-  	HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$id);
-  	HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$id);
+  	
 
   	return redirect()->back()->with('alert', 'Se cambió la imagen principal con éxito.'); 
   }
