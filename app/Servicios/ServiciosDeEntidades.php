@@ -15,6 +15,8 @@ class ServiciosDeEntidades
 	// $nombre_del_campo: ejemplo -> cabaña_id, producto_id, marca_id ... etc	
 	public static function getFotoPrincipal($nombre_del_campo,$valor_id)
 	{		
+
+		dd('ImagenPrincipal'.$nombre_del_campo.$valor_id);
 		return Cache::remember('ImagenPrincipal'.$nombre_del_campo.$valor_id, 100000, function() use ($nombre_del_campo,$valor_id) {
 
             $Repo = new ImagenRepo();
