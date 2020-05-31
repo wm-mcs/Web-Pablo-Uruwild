@@ -40,11 +40,11 @@
 		    </a>
 		    @endif
 		 </div>
-
+		</div>
 		@endforeach
 
 			
-	</div>
+	
 	</div>
 	@else
 	<p class="p-2 mt-4 mb-3 text-center color-text-gris parrafo-class">
