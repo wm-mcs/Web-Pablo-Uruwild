@@ -97,7 +97,7 @@ class Admin_Cabaña_Controllers extends Controller
       
       
 
-     return redirect()->route('get_admin_cabañas')->with('alert', 'Trayectoria creada correctamente');
+     return redirect()->route('get_admin_cabañas')->with('alert', 'Cabaña creada correctamente');
     
   }
 
@@ -117,19 +117,38 @@ class Admin_Cabaña_Controllers extends Controller
     //propiedades para crear
     $Propiedades = $this->getPropiedades();
 
-    //grabo todo las propiedades
-    $this->CabañaRepo->setEntidadDato($Entidad,$Request,$Propiedades);
+    // G u a r d o  l o s   d a t o s 
+      $this->CabañaRepo->setEntidadDato($Entidad,$Request,$Propiedades);   
 
-    /*
-      if($Request->hasFile('img'))
-      {
-        
+      // S i  e l  a r r a y   d e   i m á g e n e s   n o   e s t á   v a c i o   
+      $files = $Request->file('img');      
+      
+      if($files[0] != null )
+      {        
 
-        
-        $this->ImagenRepo->setImagen(null,$Request,'img','Trayectoria/', $TrayectoriaImg->img,'.jpg'); 
-      }   */
+        foreach($files as $file)
+        { 
 
-    return redirect()->back()->with('alert', 'Trayectoria Editado Correctamente');  
+          // C r e o   l a   i m a g e n   e n   l a   b a s e   d e   d a t o s 
+          $Imagen = $this->ImagenRepo->setUnaImagenEnBaseDeDatos($Entidad->name, 'Cabañas/', 'cabaña_id', $Entidad->id);
+
+          // G u a r d o   l a   i m a g e n   f í s i c a   e n   e l   s i s t e m a   d e   a r c h i v o s 
+          $Nombre_de_la_imagen = HelpersGenerales::helper_convertir_cadena_para_url($Imagen->name).'-'.$Imagen->id;
+
+            // I m a g e n   g r a n d e 
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'.jpg');
+
+            // I m a g e n   c h i c a 
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',300);
+
+            // Ajusto los cache
+            $nombre_campo = 'cabaña_id';
+            HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Entidad->id);
+            HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Entidad->id);
+
+        }
+
+    return redirect()->back()->with('alert', 'Se editó con éxito la cabaña ' .$Entidad->name );  
   }
 
   
