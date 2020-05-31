@@ -36,6 +36,7 @@ class Admin_Imagen_Controllers extends Controller
 
   	$Imagen = $this->ImagenRepo->find($id); 
 
+  	dd($Imagen);
 
   	if(file_exists($Imagen->path_url_img))
   	{
