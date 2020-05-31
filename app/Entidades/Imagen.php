@@ -44,15 +44,7 @@ class Imagen extends Model
     }
 
 
-    public function getEliminarRouteAttrbute()
-    {
-        return '';
-    }
-
-    public function getEstablecerComoPrincipalRouteAttrbute()
-    {
-        return '';
-    }
+    
 
 
     public function getEsImagenPrincipalAttribute()

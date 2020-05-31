@@ -266,7 +266,7 @@ abstract class BaseRepo
 
 
     /**
-     *  L a   u s o   p a r a   b u s c a r   l a   i m a g e n   p r i n c i p a l 
+     *  L a   u s o   p a r a   b u s c a r   l a   i m a g e n   p r i n c i p a l. Devuelve colección. 
      */
     public function get_imagen_principal_de_entidad_especifica($atributo_name,$id_del_atributo)
     {
@@ -319,7 +319,6 @@ abstract class BaseRepo
         $imagen->save();
       }
     }
-
 
      /**
      * grabar entidad atributo especifico

@@ -20,4 +20,6 @@ require __DIR__ . '/Trayectoria/Rutas_Trayectoria.php';
 
 require __DIR__ . '/Cabañas/Rutas_cabañas.php';
 
+require __DIR__ . '/Imagenes/Rutas_imagenes.php';
+
 

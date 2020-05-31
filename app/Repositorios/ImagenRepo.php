@@ -40,5 +40,15 @@ class ImagenRepo extends BaseRepo
  }
 
 
+  public function poner_esta_imagen_como_principal($id_img,$nombre_del_campo)
+  {
+    $imagen = $this->find($id_img);
+
+    $imagen_pricipal = $this->get_imagen_principal_de_entidad_especifica($nombre_del_campo,$imagen->$nombre_del_campo) ;  
+
+    $this->cambio_a_imagen_principal_desde_base_repo($imagen_pricipal,$imagen);
+  }
+
+
   
 }

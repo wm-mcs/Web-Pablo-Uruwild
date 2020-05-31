@@ -32,10 +32,10 @@
 		      <i class="fas fa-star"></i>
 		    </span>
 		    @else
-		    <a class="img-element-bottom-left" href="{{$Imagen->establecer_como_principal_route}}">
+		    <a class="img-element-bottom-left" href="{{route('establecer_como_principal',[$Imagen->id,'cabaña_id'])}}">
 		      <i class="far fa-star"></i>
 		    </a>
-		    <a href="{{$Imagen->eliminar_route}}" class="img-element-bottom-right">
+		    <a href="{{route('borrar_esta_imagen',[$Imagen->id,'cabaña_id'])}}" class="img-element-bottom-right">
 			  <i class="fas fa-trash"></i>
 		    </a>
 		    @endif
