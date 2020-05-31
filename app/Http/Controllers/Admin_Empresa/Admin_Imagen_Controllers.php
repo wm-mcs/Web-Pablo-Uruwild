@@ -67,7 +67,7 @@ class Admin_Imagen_Controllers extends Controller
   public function establecer_como_principal($id,$nombre_campo)
   {
 
-  	dd($id,$nombre_campo);
+  	
   	$this->ImagenRepo->poner_esta_imagen_como_principal($id,$nombre_campo);
   	HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$id);
   	HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$id);
