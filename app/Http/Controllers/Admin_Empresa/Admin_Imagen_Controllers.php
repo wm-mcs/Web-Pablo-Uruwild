@@ -36,25 +36,30 @@ class Admin_Imagen_Controllers extends Controller
 
   	$Imagen = $this->ImagenRepo->find($id); 
 
-  	dd($Imagen);
+  	if(!is_null($Imagen))
+  	{  	
+	  	if(file_exists($Imagen->path_url_img))
+	  	{
+	  		unlink($Imagen->path_url_img);
+	  	}
 
-  	if(file_exists($Imagen->path_url_img))
-  	{
-  		unlink($Imagen->path_url_img);
+	  	if(file_exists($Imagen->path_url_img_chica))
+	  	{
+	  		unlink($Imagen->path_url_img_chica);
+	  	}
+
+	  	$this->ImagenRepo->destruir_esta_entidad($Imagen);
+
+	  	
+	  	HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$id);
+	  	HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$id);
+	  	return redirect()->back()->with('alert', 'Se borró la imagen correctamente.'); 
   	}
-
-  	if(file_exists($Imagen->path_url_img_chica))
+  	else
   	{
-  		unlink($Imagen->path_url_img_chica);
+  		return redirect()->back()->with('alert', 'La imagen ya se había borrado'); 
   	}
-
-  	$this->ImagenRepo->destruir_esta_entidad($Imagen);
-
   	
-  	HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$id);
-  	HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$id);
-
-  	return redirect()->back()->with('alert', 'Se borró la imagen correctamente.'); 
 
   }
 
