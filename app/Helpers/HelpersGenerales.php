@@ -40,6 +40,6 @@ class HelpersGenerales
          Cache::forget($nombre_de_cache);
         }
 
-        dd($nombre_de_cache);
+        
     }
 }
