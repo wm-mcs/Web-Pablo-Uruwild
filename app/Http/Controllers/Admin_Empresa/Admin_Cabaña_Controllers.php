@@ -144,11 +144,11 @@ class Admin_Cabaña_Controllers extends Controller
             // Ajusto los cache
             $nombre_campo = 'cabaña_id';
             
-
+            HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Entidad->id);
+        HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Entidad->id);
         }
 
-        HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Entidad->id);
-        HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Entidad->id);
+        
       }
 
     return redirect()->back()->with('alert', 'Se editó con éxito la cabaña ' .$Entidad->name );  
