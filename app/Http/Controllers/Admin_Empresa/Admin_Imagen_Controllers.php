@@ -34,6 +34,10 @@ class Admin_Imagen_Controllers extends Controller
 
   	$Imagen = $this->ImagenRepo->find($id); 
 
+    // O l v i d o   l o s   c a c h e 
+    HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Imagen->$nombre_campo);
+    HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Imagen->$nombre_campo);
+
   	if(!is_null($Imagen))
   	{  	
 	  	if(file_exists($Imagen->path_url_img))
@@ -49,8 +53,7 @@ class Admin_Imagen_Controllers extends Controller
 	  	$this->ImagenRepo->destruir_esta_entidad($Imagen);
 
 	  	
-	  	HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Imagen->$nombre_campo);
-	  	HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Imagen->$nombre_campo);
+	  	
 	  	return redirect()->back()->with('alert', 'Se borró la imagen correctamente.'); 
   	}
   	else
@@ -66,6 +69,8 @@ class Admin_Imagen_Controllers extends Controller
   {
 
     $Imagen = $this->ImagenRepo->find($id); 
+    
+    // O l v i d o   l o s   c a c h e 
   	HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Imagen->$nombre_campo);
     HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Imagen->$nombre_campo);
   	$this->ImagenRepo->poner_esta_imagen_como_principal($id,$nombre_campo);
