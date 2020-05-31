@@ -46,7 +46,7 @@
             @include('admin.cabañas.formularios_partes.aclaracion_etiquetas')
             {!! Form::label('description', 'Contenido', array('class' => 'formulario-label ')) !!}
             {!! Form::textarea('description', null ,['class' => 'formulario-field',
-                                                     'rows' => 40 ]) !!}
+                                                     'rows' => 20 ]) !!}
           </div>
         </div>
       </div>
