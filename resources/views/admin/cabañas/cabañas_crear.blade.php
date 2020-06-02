@@ -2,7 +2,7 @@
 
 
 @section('miga-de-pan')   
-  <h1 class="titulos-class  text-color-primary font-secondary">Crear cabaña</h1>
+  <h1 class="titulos-class  text-color-secondary font-secondary">Crear cabaña</h1>
 @stop
 
 @section('content')
@@ -50,7 +50,7 @@
      
    </div>
    
-    <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Primario-Relleno disparar-este-form">
+    <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Secondary-Relleno disparar-este-form">
      Crear cabaña <i class="fas fa-angle-double-right"></i>
     </div> 
 

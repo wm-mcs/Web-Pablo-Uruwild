@@ -1,7 +1,7 @@
 @extends('layouts.admin_layout.admin_layout')
 
 @section('miga-de-pan') 
- <h1 class="titulos-class  text-color-primary font-secondary">Team de Uruwild</h1>
+ <h1 class="titulos-class  text-color-secondary font-secondary">Team de Uruwild</h1>
 @stop
 
 @section('content')
@@ -14,8 +14,8 @@
 
 
     <div class="col-6 col-lg-4"> 
-     <a class="col-12 Boton-Fuente-Chica Boton-Primario-Relleno" href="{{route('get_admin_team_crear')}}"> 
-      Crear un nuevo miembro del Team      
+     <a class="col-12 Boton-Fuente-Chica Boton-Secondary-Relleno" href="{{route('get_admin_team_crear')}}"> 
+      Agregar      
      </a>  
     </div>
     @include('admin.team.partes.buscador')
