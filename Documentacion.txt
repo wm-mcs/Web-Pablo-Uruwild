@@ -2,8 +2,16 @@
 
 
 /* C o n v e n c i ó n   d e   c a c h e s */
+
    Todas las entidades tendrán cacheadas (de manera muy prolongada en el tiempo) sus elementos asociados como por ejemplo las imagenes,categorías, etc.
    El fin es separar del modelo la funciones de traer los datos y consultarlos a través de un servicio. 
    Por ende cada vez que se actualice una imagen se deberá borrar el cache asociado a esa entidad. 
    Luego se actualizará el cache de forma automática con la función Cache::remember().
    Importante ver los nombres de estos Cache remeber para luego poder olvidarlos.
+
+
+/* P a r a   e l   c a s o   d e l   p a n e l   a d m i n   L o s   n o m b r e s   d e   l a s   v a r i a b l e s   q u e   
+   c o n t e n g a n   E n t i d a d e s   y   E n t i d a d   d e   l o s   C R U D   s e r á  */
+
+   $Entidades
+   $Entidad

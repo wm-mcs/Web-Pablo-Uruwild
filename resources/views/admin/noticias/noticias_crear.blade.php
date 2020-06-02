@@ -2,7 +2,7 @@
 
 
 @section('miga-de-pan')   
-  <h1 class="titulos-class  text-color-primary font-secondary">Crear post</h1>
+  
 @stop
 
 @section('content')

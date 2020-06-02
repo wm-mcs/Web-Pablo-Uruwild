@@ -51,18 +51,18 @@ class Admin_Noticias_Controllers extends Controller
 
     $Propiedades = $this->getPorpiedades();
 
-    $manager = new noticia_manager(     null, $Request->all()  );
+    $manager = new noticia_manager(  null, $Request->all()  );
 
 
     if ($manager->isValid())
     {
 
-      $this->NoticiasRepo->setEntidadDato($noticia,$Request,$Propiedades );
+     $this->NoticiasRepo->setEntidadDato($noticia,$Request,$Propiedades );
 
      $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Noticias/',  $noticia->name_slug .$noticia->id.'-portada'   ,'.jpg');
      $this->NoticiasRepo->setImagen( null ,$Request , 'img2', 'Noticias/', $noticia->name_slug .$noticia->id.'-adicional' ,'.jpg');
 
-          $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Noticias/',  $noticia->name_slug .$noticia->id.'-portada-chica'   ,'.jpg',250);
+     $this->NoticiasRepo->setImagen( $noticia ,$Request , 'img', 'Noticias/',  $noticia->name_slug .$noticia->id.'-portada-chica'   ,'.jpg',250);
      $this->NoticiasRepo->setImagen( null ,$Request , 'img2', 'Noticias/', $noticia->name_slug .$noticia->id.'-adicional-chica' ,'.jpg',250);
 
      //Olvido el cache de últimos blogs

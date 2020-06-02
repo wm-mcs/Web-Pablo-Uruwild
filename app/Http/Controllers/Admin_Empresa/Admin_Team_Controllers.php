@@ -6,9 +6,10 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Http\Controllers\Controller;
-use App\Repositorios\TrayectoriaRepo;
 use Illuminate\Http\Request;
-use App\Repositorios\ImgTrayectoriaRepo;
+use App\Repositorios\ImagenRepo;
+use App\Repositorios\TeamRepo;
+use App\Managers\team_manager;
 
 
 
@@ -16,79 +17,112 @@ use App\Repositorios\ImgTrayectoriaRepo;
 class Admin_Team_Controllers extends Controller
 {
 
-  protected $TrayectoriaRepo;
-  protected $ImgTrayectoriaRepo;
+  protected $TeamRepo;
+  protected $ImagenRepo;
 
-  public function __construct(TrayectoriaRepo     $TrayectoriaRepo,
-                              ImgTrayectoriaRepo  $ImgTrayectoriaRepo )
+  public function __construct(TeamRepo     $TeamRepo,
+                              ImagenRepo   $ImagenRepo )
   {
-    $this->TrayectoriaRepo    = $TrayectoriaRepo;
-    $this->ImgTrayectoriaRepo = $ImgTrayectoriaRepo;
+    $this->TeamRepo    = $TeamRepo;
+    $this->ImagenRepo  = $ImagenRepo;
   }
 
-  //home admin User
+
+  public function getPropiedades()
+  {
+    return ['name','descripcion_breve','description','estado'];
+  }
+
+  
   public function get_admin_teams(Request $Request)
   { 
-    $Trayectorias = $this->TrayectoriaRepo->getTrayectoriasOrdenedasPorFecha();
-    return view('admin.trayectoria.trayectoria_home', compact('Trayectorias'));
+    $Entidades = $this->TeamRepo->getEntidadActivas();
+    return view('admin.team.team_home', compact('Entidades'));
   }
 
-  //get Crear admin User
+  
   public function get_admin_team_crear()
   {  
-    return view('admin.trayectoria.trayectoria_crear');
+    return view('admin.team.team_crear');
   }
 
-  //set Crear admin User
+  
   public function set_admin_team_crear(Request $Request)
   {     
 
-      //propiedades para crear
-      $Propiedades = ['name','description','estado','fecha_inicio','fecha_fin','hasta_hoy','tipo','link'];
+      
+      $Propiedades = $this->getPropiedades();
+      
+      $Entidad = $this->TeamRepo->getEntidad();
 
-      //traigo la entidad
-      $Trayectoria = $this->TrayectoriaRepo->getEntidad();
+      $manager = new team_manager(  null, $Request->all());
 
-      //grabo todo las propiedades
-      $this->TrayectoriaRepo->setEntidadDato($Trayectoria,$Request,$Propiedades);   
-
-
-      if($Request->hasFile('img'))
+      if(!$manager->isValid())
       {
-        $TrayectoriaImg = $this->ImgTrayectoriaRepo->setImgTrayectoria($Trayectoria);
+         return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
+      }
+      
+      $this->TeamRepo->setEntidadDato($Entidad,$Request,$Propiedades);   
 
-        //para la imagen
-        $this->ImgTrayectoriaRepo->setImagen(null,$Request,'img','Trayectoria/', $TrayectoriaImg->img,'.jpg'); 
-      }   
+      // S i  e l  a r r a y   d e   i m á g e n e s   n o   e s t á   v a c i o   
+      $files = $Request->file('img');      
+      
+      if($files[0] != null )
+      {   
+        foreach($files as $file)
+        { 
+
+          // C r e o   l a   i m a g e n   e n   l a   b a s e   d e   d a t o s 
+          $Imagen = $this->ImagenRepo->setUnaImagenEnBaseDeDatos($Entidad->name, 'Team/', 'team_id', $Entidad->id);
+
+          // G u a r d o   l a   i m a g e n   f í s i c a   e n   e l   s i s t e m a   d e   a r c h i v o s 
+          $Nombre_de_la_imagen = HelpersGenerales::helper_convertir_cadena_para_url($Imagen->name).'-'.$Imagen->id;
+
+            // I m a g e n   g r a n d e 
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'.jpg');
+
+            // I m a g e n   c h i c a 
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',400);
+
+        }
+
+        // M a r c o   u n a   i m a g e n   c o  m o   p r i n c i p a l
+        $Imagen = $this->ImagenRepo->getImagenes('team_id',$Entidad->id)->first();
+        $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si');
+      }     
+
+      return redirect()->route('get_admin_team')->with('alert', 'Se creó correctamente. En breve se verá reflejado en los listados de la interfas pública');
+
+     
+
       
 
-     return redirect()->route('get_admin_trayectorias')->with('alert', 'Trayectoria creada correctamente');
     
   }
 
   //get edit admin marca
   public function get_admin_team_editar($id)
   {
-    $Trayectoria = $this->TrayectoriaRepo->find($id);
+    $Entidad = $this->TeamRepo->find($id);
 
-    return view('admin.trayectoria.trayectoria_editar',compact('Trayectoria'));
+    return view('admin.team.team_editar',compact('Entidad'));
   }
 
   //set edit admin marca
   public function set_admin_team_editar($id,Request $Request)
   {
-    $Trayectoria = $this->TrayectoriaRepo->find($id);    
+    $Entidad = $this->TeamRepo->find($id);    
 
     //propiedades para crear
-    $Propiedades = ['name','description','estado','fecha_inicio','fecha_fin','hasta_hoy','tipo','link'];  
+    $Propiedades = $this->getPropiedades();  
 
     //grabo todo las propiedades
-    $this->TrayectoriaRepo->setEntidadDato($Trayectoria,$Request,$Propiedades);
+    $this->TeamRepo->setEntidadDato($Entidad,$Request,$Propiedades);
 
     
       if($Request->hasFile('img'))
       {
-        $TrayectoriaImg = $this->ImgTrayectoriaRepo->setImgTrayectoria($Trayectoria);
+        $TrayectoriaImg = $this->ImgTrayectoriaRepo->setImgTrayectoria($Entidad);
 
         //para la imagen
         $this->ImgTrayectoriaRepo->setImagen(null,$Request,'img','Trayectoria/', $TrayectoriaImg->img,'.jpg'); 

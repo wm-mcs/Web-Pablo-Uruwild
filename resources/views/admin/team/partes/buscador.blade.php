@@ -1,14 +1,17 @@
-{!! Form::model(Request::all(),['route'   => 'get_admin_trayectorias', 
+
+
+
+{!! Form::model(Request::all(),['route'   => 'get_admin_teams', 
                 'method'  => 'GET',
-                'class'   => 'navbar-form',
+                'class'   => 'col-6 col-lg-6',
                 'role'    => 'search' ])                             !!}
-  <div class="admin-entidad-buscador-contenedor">
-  {!! Form::text('name', null , ['class'       => 'form-control', 
-                                 'placeholder' => 'buscar'])        !!}
- 
+  <div class="col-12 d-flex align-items-center">
+    {!! Form::text('name', null , ['class'       => 'input-text-class-primary col-10', 
+                                   'placeholder' => 'Buscar'])        !!}
+   
 
-  <button type="submit" class="btn btn-default">Buscar</button>
+    <button type="submit" class="Boton-Fuente-Chica Boton-Primario-Sin-Relleno-Ni-Borde col-2">
+      <i class="fas fa-search"></i>
+    </button>
   </div>
-  
-
 {!! Form::close() !!}
