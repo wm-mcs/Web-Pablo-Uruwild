@@ -97,7 +97,7 @@ class Admin_Cabaña_Controllers extends Controller
       
       
 
-     return redirect()->route('get_admin_cabañas')->with('alert', 'Cabaña creada correctamente');
+     return redirect()->route('get_admin_cabañas')->with('alert', 'Cabaña creada correctamente. En breve verás se cargará en la interfas de los usuarios.');
     
   }
 
@@ -153,7 +153,7 @@ class Admin_Cabaña_Controllers extends Controller
         
       }
 
-    return redirect()->back()->with('alert', 'Se editó con éxito la cabaña ' .$Entidad->name );  
+    return redirect()->back()->with('alert', 'Se editó con éxito. En breve se verás reflejado en la interfas de los usuarios' .$Entidad->name );  
   }
 
   
