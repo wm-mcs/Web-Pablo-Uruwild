@@ -155,8 +155,8 @@
                 <img src="{{$Cabaña->url_img_foto_principal_chica}}" alt="{{$Cabaña->descripcion_breve}}" class="servicio_lista_imagen">
               </a>              
               <div class="p-3 mt-2">
-                <h3 class="sub-titulos-class text-color-secondary font-primary mb-2">
-                  <a href="{{$Cabaña->route}}">
+                <h3 class="sub-titulos-class   mb-2">
+                  <a href="{{$Cabaña->route}}" class="font-primary text-color-secondary">
                    {{$Cabaña->name}}
                   </a>                
                 </h3>
