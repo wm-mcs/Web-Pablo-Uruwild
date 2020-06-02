@@ -33,9 +33,7 @@
           <li class="admin-columna-li mi-float-right"><i class="fas fa-user-tie"></i> Trayectoria</li>
         </a>   
 
-        <a href="{{route('get_admin_cabañas')}}">
-          <li class="admin-columna-li mi-float-right"> Cabañas</li>
-        </a>  
+       
 
           <a href="{{route('get_admin_noticias')}}">
           <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Blog</li>
@@ -52,6 +50,9 @@
    <div id="admin-col-admin">
         <a href="{{route('get_datos_corporativos')}}">
             <li class="admin-columna-li mi-float-right"><i class="fas fa-building"></i> Mis datos</li>
+        </a>  
+         <a href="{{route('get_admin_cabañas')}}">
+          <li class="admin-columna-li mi-float-right"> Cabañas</li>
         </a>  
 
        
