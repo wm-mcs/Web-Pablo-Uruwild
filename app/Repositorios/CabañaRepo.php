@@ -18,6 +18,18 @@ class CabañaRepo extends BaseRepo
   }
 
 
+
+  public function getCabañasParaHome()
+  {
+    return $this->getEntidad()
+                    ->where('estado','si')
+                    ->where('borrado','no')
+                    ->orderBy('rank', 'desc')
+                    ->get();
+
+  }
+
+
  
 
 

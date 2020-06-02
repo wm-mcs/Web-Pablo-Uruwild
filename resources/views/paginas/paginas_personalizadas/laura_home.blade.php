@@ -126,6 +126,46 @@
 
 @stop
 
+@if(User::auth())
+  @if(User::user()->first_name = 'Mauricio')
+  <div class="site-section background-gris-2"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          Estancias próximas a nuestros circuitos de pesca
+        </div>
+
+      </div>
+      <div class="row">
+
+        @foreach($Cabañas as $Cabaña)
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="servicio_lista service">
+              <a href="{{$Cabaña->url_img_foto_principal_chica}}">
+                <img src="{{$Cabaña->route}}" alt="{{$Cabaña->descripcion_breve}}" class="servicio_lista_imagen">
+              </a>              
+              <div class="p-3 mt-2">
+                <h3 class="sub-titulos-class text-color-primary font-primary mb-2">
+                  <a href="{{$Cabaña->route}}">
+                   {{$Cabaña->name}}
+                  </a>                
+                </h3>
+                <p class="color-text-gris mb-2 ">
+                 {{$Cabaña->descripcion_breve}}
+                </p>
+                <p>
+                  <a href="{{$Cabaña->route}}"> Leer más  <i class="fas fa-chevron-right"></i></a>
+                </p>                
+              </div>
+            </div>
+          </div>
+        @endforeach
+      </div>      
+    </div>
+  </div>
+  @endif
+@endif
+
 @section('contenido')
 
   

@@ -7,7 +7,8 @@ use App\Repositorios\EmpresaRepo;
 use Illuminate\Http\Request;
 use App\Repositorios\NoticiasRepo;
 use App\Repositorios\TrayectoriaRepo;
-
+use App\Repositorios\CabañaRepo;
+use Illuminate\Support\Facades\Cache;
 
 
 class Home_Public_Controller extends Controller
@@ -16,17 +17,20 @@ class Home_Public_Controller extends Controller
     protected $EmpresaRepo;
     protected $NoticiasRepo;
     protected $TrayectoriaRepo;
+    protected $CabañaRepo;
   
 
     public function __construct(ImgHomeRepo     $ImgHomeRepo,
                                 EmpresaRepo     $EmpresaRepo, 
                                 NoticiasRepo    $NoticiasRepo,
-                                TrayectoriaRepo $TrayectoriaRepo )
+                                TrayectoriaRepo $TrayectoriaRepo,
+                                CabañaRepo      $CabañaRepo )
     {
         $this->ImgHomeRepo     = $ImgHomeRepo;
         $this->EmpresaRepo     = $EmpresaRepo;
         $this->NoticiasRepo    = $NoticiasRepo;
         $this->TrayectoriaRepo = $TrayectoriaRepo;
+        $this->CabañaRepo      = $CabañaRepo;
         
     }
 
@@ -40,8 +44,13 @@ class Home_Public_Controller extends Controller
         $blogs          = $this->NoticiasRepo->getUltimosBlogs();
         $Trayectorias   = $this->TrayectoriaRepo->getTrayectoriaSegunTipoOrdenadas('experiencia');
         $Educacion      = $this->TrayectoriaRepo->getTrayectoriaSegunTipoOrdenadas('educacion');
+        $Cabañas        = Cache::remember('CabañasHome', 60, function(){
+                          return $this->CabañaRepo->getCabañasParaHome();
+                          });
 
-        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Trayectorias','Educacion'));
+        
+
+        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Trayectorias','Educacion','Cabañas'));
     }
 
 
