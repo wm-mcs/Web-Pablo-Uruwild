@@ -15,8 +15,7 @@ class team_manager extends ManagerBase
   {
     $rules = [
       'name'            => 'required',
-
-      'description'     => 'required',
+      
       'img'             => 'required'
              ];
 
