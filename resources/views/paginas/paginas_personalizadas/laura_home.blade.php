@@ -141,7 +141,7 @@
   <div class="site-section background-gris-0"> 
     <div class="container">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 sub-titulos-class mb-3 text-bold text-color-black">
           Estancias próximas a nuestros circuitos de pesca
         </div>
 
@@ -155,7 +155,7 @@
                 <img src="{{$Cabaña->url_img_foto_principal_chica}}" alt="{{$Cabaña->descripcion_breve}}" class="servicio_lista_imagen">
               </a>              
               <div class="p-3 mt-2">
-                <h3 class="sub-titulos-class text-color-primary font-primary mb-2">
+                <h3 class="sub-titulos-class text-color-secondary font-primary mb-2">
                   <a href="{{$Cabaña->route}}">
                    {{$Cabaña->name}}
                   </a>                
