@@ -126,6 +126,16 @@
 
 @stop
 
+
+
+@section('contenido')
+
+  
+
+
+
+
+    
 @if(!Auth::guest())
   @if(Auth::user()->first_name = 'Mauricio')
   <div class="site-section background-gris-2"> 
@@ -141,8 +151,8 @@
         @foreach($Cabañas as $Cabaña)
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="servicio_lista service">
-              <a href="{{$Cabaña->url_img_foto_principal_chica}}">
-                <img src="{{$Cabaña->route}}" alt="{{$Cabaña->descripcion_breve}}" class="servicio_lista_imagen">
+              <a href="{{$Cabaña->route}}">
+                <img src="{{$Cabaña->url_img_foto_principal_chica}}" alt="{{$Cabaña->descripcion_breve}}" class="servicio_lista_imagen">
               </a>              
               <div class="p-3 mt-2">
                 <h3 class="sub-titulos-class text-color-primary font-primary mb-2">
@@ -165,16 +175,6 @@
   </div>
   @endif
 @endif
-
-@section('contenido')
-
-  
-
-
-
-
-    
-
 
 
 
