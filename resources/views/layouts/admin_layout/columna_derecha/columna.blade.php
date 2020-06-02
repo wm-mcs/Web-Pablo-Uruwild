@@ -35,9 +35,15 @@
 
        
 
-          <a href="{{route('get_admin_noticias')}}">
+        <a href="{{route('get_admin_noticias')}}">
           <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Blog</li>
-        </a>  
+        </a> 
+
+        <a href="{{route('get_admin_teams')}}">
+          <li class="admin-columna-li mi-float-right">Team</li>
+        </a>
+
+         
          
 
         

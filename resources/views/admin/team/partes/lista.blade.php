@@ -1,26 +1,20 @@
-
-
-
-
-
-   <div class="contiene-listado-entidad">
-            
-
-            <div class="contiene-listado-entidad-sub-contenedor">
-              <div  class="cintiene-listado-entidad-name">{{$Trayectoria->name}}</div> 
-
-              <div class="atributo-con-distincion   @if($Trayectoria->tipo == 'experiencia')  atributo-distinguido @else atributo-distinguido-2 @endif     ">
-                {{$Trayectoria->tipo}}
-              </div>
-              
-               <div class="cintiene-listado-entidad-fecha">
-                {{$Trayectoria->fecha_inicio_personalizada_formateada}} hasta  {{$Trayectoria->se_termino_fecha}}
-               </div>
-
-              <a href="{{$Trayectoria->route_admin}}" class="cintiene-listado-entidad-leer-mas">
-                Editar  <i class="fas fa-edit"></i>
-              </a>
-            </div>
-            
-
-          </div>
+<div class="col-md-6 col-lg-4 mb-4">
+    <div class="servicio_lista service">
+      <a href="{{$Route}}">
+        <img src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="servicio_lista_imagen">
+      </a>              
+      <div class="p-3 mt-2">
+        <h3 class="sub-titulos-class   mb-2">
+          <a href="{{$Route}}" class="font-primary text-color-secondary">
+           {{$Entidad->first_name}}
+          </a>                
+        </h3>
+        <p class="color-text-gris mb-2 ">
+         {{$Entidad->descripcion_breve}}
+        </p>
+        <p>
+          <a href="{{$Route}}"> Leer más  <i class="fas fa-chevron-right"></i></a>
+        </p>                
+      </div>
+    </div>
+</div>
