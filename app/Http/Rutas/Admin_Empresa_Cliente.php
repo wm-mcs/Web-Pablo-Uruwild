@@ -22,4 +22,6 @@ require __DIR__ . '/Cabañas/Rutas_cabañas.php';
 
 require __DIR__ . '/Imagenes/Rutas_imagenes.php';
 
+require __DIR__ . '/Cabañas/Rutas_team.php';
+
 
