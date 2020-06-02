@@ -138,6 +138,11 @@
     
 @if(!Auth::guest())
   @if(Auth::user()->first_name = 'Mauricio')
+  {{-- Aquí poner contendio para probar --}}
+  @endif
+@endif
+
+
   <div class="site-section background-gris-0"> 
     <div class="container">
       <div class="row">
@@ -173,8 +178,6 @@
       </div>      
     </div>
   </div>
-  @endif
-@endif
 
 
 
