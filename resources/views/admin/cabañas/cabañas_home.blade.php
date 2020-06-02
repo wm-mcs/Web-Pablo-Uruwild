@@ -26,8 +26,8 @@
    <div class="row col-12">
      @foreach($Entidades as $Entidad)
 
-          {{--*/ $Entidad  = $Entidad *--}}
-          {{--*/ $Route    = $Entidad->route_admin *--}}
+          {{--*/ $Entidad  = $Entidad /*--}}
+          {{--*/ $Route    = $Entidad->route_admin /*--}}
           @include('admin.cabañas.partes.lista')
      @endforeach
    </div>

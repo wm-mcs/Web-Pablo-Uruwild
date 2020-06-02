@@ -154,8 +154,8 @@
       <div class="row">
 
         @foreach($Cabañas as $Cabaña)
-          {{--*/ $Entidad  = $Cabaña *--}}
-          {{--*/ $Route    = $Entidad->route *--}}
+          {{--*/ $Entidad  = $Cabaña /*--}}
+          {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.cabañas.partes.lista')
         @endforeach
       </div>      
