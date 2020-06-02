@@ -126,8 +126,8 @@
 
 @stop
 
-@if(User::auth())
-  @if(User::user()->first_name = 'Mauricio')
+@if(!Auth::guest())
+  @if(Auth::user()->first_name = 'Mauricio')
   <div class="site-section background-gris-2"> 
     <div class="container">
       <div class="row">
