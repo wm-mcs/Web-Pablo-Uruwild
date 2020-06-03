@@ -2,7 +2,7 @@
 
 @section('miga-de-pan') 
  <h1 class="titulos-class mb-3  text-color-primary font-secondary">Editar</h1>
- <p class="parrafo-class color-text-gris"> Link del post público <i class="fas fa-hand-point-right"></i> a {{$Entidad->name}}</p>
+ <p class="parrafo-class color-text-gris"> Editar a <i class="fas fa-hand-point-right"></i> a {{$Entidad->name}}</p>
 
  
 @stop
