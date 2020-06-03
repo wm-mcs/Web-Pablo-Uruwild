@@ -142,7 +142,7 @@
   <div class="site-section background-gris-0"> 
     <div class="container">
       <div class="row">
-        <div class="col-12 sub-titulos-class mb-3 text-bold text-color-black">
+        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
           Estancias próximas a nuestros circuitos de pesca
         </div>
 
@@ -165,7 +165,7 @@
   <div class="site-section "> 
     <div class="container">
       <div class="row">
-        <div class="col-12 sub-titulos-class mb-3 text-bold text-color-black text-center">
+        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center">
           Los guías de pesca ninjas de Uruwild
         </div>
 
@@ -175,7 +175,7 @@
         @foreach($Teams as $Entidad)
           {{--*/ $Entidad  = $Entidad /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
-          @include('admin.cabañas.partes.lista')
+          @include('admin.team.partes.lista')
         @endforeach
       </div>      
     </div>
