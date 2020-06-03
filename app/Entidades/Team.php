@@ -73,7 +73,7 @@ class Team extends Model
     public function scopeActive($query)
     {                               
         $query->where('estado', "si"); 
-        $query->where('borrado', "si");                 
+        $query->where('borrado', "no");                 
     }
 
     public function getFirstNameAttribute()
