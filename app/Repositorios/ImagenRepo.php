@@ -68,7 +68,7 @@ class ImagenRepo extends BaseRepo
     public function get_imagen_principal_de_entidad_especifica($atributo_name,$id_del_atributo)
     {
       return $this->entidad
-                  ->where('key_id',$nombre_datributo_nameel_campo)
+                  ->where('key_id',$atributo_name)
                   ->where('valor_id_del_campo_key',$id_del_atributo)
                   ->where('foto_principal','si')
                   ->get();
