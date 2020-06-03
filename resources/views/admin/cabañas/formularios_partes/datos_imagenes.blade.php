@@ -25,21 +25,21 @@
 			
 		
 		 <div class="mt-3 position-relative img-border-grosor  @if($Imagen->es_imagen_principal) img-principal  @endif ">
-			<img class="img-fluid img-cover img-altura-chica" src="{{$Imagen->url_img}}">		
+      <img class="img-fluid img-cover img-altura-chica" src="{{$Imagen->url_img}}">   
 
-		    @if($Imagen->es_imagen_principal)
-		    <span class="img-element-bottom-left text-color-primary">
-		      <i class="fas fa-star"></i>
-		    </span>
-		    @else
-		    <a class="img-element-bottom-left" href="{{route('establecer_como_principal', ['id' => $Imagen->id ,'nombre_campo'=>'cabaña_id'] )}}">
-		      <i class="far fa-star"></i>
-		    </a>
-		    <a href="{{route('borrar_esta_imagen',[$Imagen->id,'cabaña_id'])}}" class="img-element-bottom-right">
-			  <i class="fas fa-trash"></i>
-		    </a>
-		    @endif
-		 </div>
+        @if($Imagen->es_imagen_principal)
+        <span class="img-element-bottom-left text-color-primary">
+          <i class="fas fa-star"></i>
+        </span>
+        @else
+        <a class="img-element-bottom-left" href="{{$Imagen->cambiar_a_pricnipal_route}}">
+          <i class="far fa-star"></i>
+        </a>
+        <a href="{{$Imagen->eliminar_route}}" class="img-element-bottom-right">
+        <i class="fas fa-trash"></i>
+        </a>
+        @endif
+     </div>
 		</div>
 		@endforeach
 

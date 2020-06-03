@@ -58,5 +58,15 @@ class Imagen extends Model
             return false;
         }
     }
+
+    public function getEliminarRouteAttribute()
+    {
+        return route('borrar_esta_imagen',$this->id);
+    }
+
+    public function getCambiarAPricnipalRouteAttribute()
+    {
+        return route('establecer_como_principal',$this->id);
+    }
     
 }
