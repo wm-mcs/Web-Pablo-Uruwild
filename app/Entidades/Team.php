@@ -4,6 +4,7 @@ namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Servicios\ServiciosDeEntidades;
+use App\Helpers\HelpersGenerales;
 
 
 
@@ -81,6 +82,31 @@ class Team extends Model
         $name = explode(" ", $this->name);
       
         return $name[0];
+    }
+
+    public function getFacebookValorAttribute()
+    {
+        return HelpersGenerales::helper_dame_sino_es_null_o_vacio($this->facebook);
+    }
+
+    public function getYoutubeValorAttribute()
+    {
+        return HelpersGenerales::helper_dame_sino_es_null_o_vacio($this->youtube);
+    }
+
+    public function getInstagramValorAttribute()
+    {
+        return HelpersGenerales::helper_dame_sino_es_null_o_vacio($this->instagram);
+    }
+
+    public function getLinkedinValorAttribute()
+    {
+        return HelpersGenerales::helper_dame_sino_es_null_o_vacio($this->linkedin);
+    }
+
+    public function getWhatsappValorAttribute()
+    {
+        return HelpersGenerales::helper_dame_sino_es_null_o_vacio($this->whatsapp);
     }
 
 
