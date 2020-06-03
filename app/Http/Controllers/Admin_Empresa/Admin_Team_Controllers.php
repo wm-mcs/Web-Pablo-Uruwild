@@ -92,7 +92,7 @@ class Admin_Team_Controllers extends Controller
         $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si');
       }     
 
-      return redirect()->route('get_admin_team')->with('alert', 'Se creó correctamente. En breve se verá reflejado en los listados de la interfas pública');
+      return redirect()->route('get_admin_teams')->with('alert', 'Se creó correctamente. En breve se verá reflejado en los listados de la interfas pública');
 
      
 
