@@ -13,7 +13,7 @@
           </a>                
         </h3>
         <p class="color-text-black text-bold text-center mb-2 ">
-         {{$Entidad->descripcion_breve}}
+         {{$Entidad->cargo}}
         </p>
         <p class="color-text-gris text-center mb-2 ">
          {{$Entidad->descripcion_breve}}
