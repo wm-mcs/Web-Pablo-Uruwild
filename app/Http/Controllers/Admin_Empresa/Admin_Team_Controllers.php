@@ -118,18 +118,41 @@ class Admin_Team_Controllers extends Controller
     $Propiedades = $this->getPropiedades();  
 
     //grabo todo las propiedades
-    $this->TeamRepo->setEntidadDato($Entidad,$Request,$Propiedades);
+    $this->TeamRepo->setEntidadDato($Entidad,$Request,$Propiedades);   
+      
 
-    
-      if($Request->hasFile('img'))
-      {
-        $TrayectoriaImg = $this->ImgTrayectoriaRepo->setImgTrayectoria($Entidad);
+      // S i  e l  a r r a y   d e   i m á g e n e s   n o   e s t á   v a c i o   
+      $files = $Request->file('img');      
+      
+      if($files[0] != null )
+      {   
+        foreach($files as $file)
+        { 
 
-        //para la imagen
-        $this->ImgTrayectoriaRepo->setImagen(null,$Request,'img','Trayectoria/', $TrayectoriaImg->img,'.jpg'); 
-      }   
+          // C r e o   l a   i m a g e n   e n   l a   b a s e   d e   d a t o s 
+          $Imagen = $this->ImagenRepo->setUnaImagenEnBaseDeDatos($Entidad->name, 'Team/', 'team_id', $Entidad->id);
 
-    return redirect()->back()->with('alert', 'Trayectoria Editado Correctamente');  
+          // G u a r d o   l a   i m a g e n   f í s i c a   e n   e l   s i s t e m a   d e   a r c h i v o s 
+          $Nombre_de_la_imagen = HelpersGenerales::helper_convertir_cadena_para_url($Imagen->name).'-'.$Imagen->id;
+
+            // I m a g e n   g r a n d e 
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'.jpg');
+
+            // I m a g e n   c h i c a 
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',400);
+
+        }
+
+        // Ajusto los cache
+            $nombre_campo = 'team_id';
+
+        HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Entidad->id);
+        HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Entidad->id);
+
+        
+      }      
+
+      return redirect()->back()->with('alert','Se editó correctamente. En breve lo verás reflejado en la interfás pública');
   }
 
   
