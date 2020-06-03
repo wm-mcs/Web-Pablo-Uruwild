@@ -12,7 +12,7 @@
 
 
   {{-- formulario --}}
-  {!! Form::model($Entidad,   ['route' => ['get_admin_team_editar',$Entidad->id],
+  {!! Form::model($Entidad,   ['route' => ['set_admin_cabañas_editar',$Entidad->id],
                             'method'=> 'patch',
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'
