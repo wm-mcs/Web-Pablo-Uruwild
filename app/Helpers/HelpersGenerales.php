@@ -33,13 +33,24 @@ class HelpersGenerales
 
     public static function helper_olvidar_este_cache($nombre_de_cache)
     {
-
-
         if(Cache::has($nombre_de_cache))
         {
          Cache::forget($nombre_de_cache);
         }
-
-
     }
+
+
+
+    public static function helper_dame_sino_es_null_o_vacio($variable)
+    {
+      if(($variable != null) || ($variable != ''))
+      {
+        return $variable;
+      }
+      else
+      {
+        return false;
+      }
+    }
+
 }
