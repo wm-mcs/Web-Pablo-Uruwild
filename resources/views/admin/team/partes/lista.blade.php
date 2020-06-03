@@ -6,7 +6,7 @@
       </div>
         
                    
-      <div class="p-3 mt-2">
+      <div class="p-1 mt-2 col-12">
         <h3 class="sub-titulos-class text-center   mb-2">
           <a href="{{$Route}}" class="font-primary text-center text-color-secondary">
            {{$Entidad->first_name}}
@@ -18,7 +18,7 @@
         <p class="color-text-gris text-center mb-2 ">
          {{$Entidad->descripcion_breve}}
         </p>
-        <div class="row col-12 d-flex flex-row justify-content-center align-items-center">
+        <div class=" col-12 d-flex flex-row justify-content-center align-items-center">
           <div class="d-flex flex-row align-items-center">
             @if(!$Entidad->facebook_valor) 
             <a class="p-2 d-block team-social-personalizado" href="{{$Entidad->facebook_valor}}">
