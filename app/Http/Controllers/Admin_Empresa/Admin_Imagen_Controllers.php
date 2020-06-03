@@ -27,16 +27,18 @@ class Admin_Imagen_Controllers extends Controller
   }
 
   // B o r r a   e s t a   i m a g e n  y  a j u s t a  c a c h e
-  public function borrar_esta_imagen($id,$nombre_campo)
+  public function borrar_esta_imagen($id)
   {
 
   	
 
   	$Imagen = $this->ImagenRepo->find($id); 
 
+     
+
     // O l v i d o   l o s   c a c h e 
-    HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Imagen->$nombre_campo);
-    HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Imagen->$nombre_campo);
+    HelpersGenerales::helper_olvidar_este_cache('Imagenes'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
+    HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
 
   	if(!is_null($Imagen))
   	{  	
@@ -65,15 +67,15 @@ class Admin_Imagen_Controllers extends Controller
   }
 
   // P o n e   e s t á  i m a g e n  c ó m o   p r i n c i p a l
-  public function establecer_como_principal($id,$nombre_campo)
+  public function establecer_como_principal($id)
   {
 
     $Imagen = $this->ImagenRepo->find($id); 
     
     // O l v i d o   l o s   c a c h e 
-  	HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Imagen->$nombre_campo);
-    HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Imagen->$nombre_campo);
-  	$this->ImagenRepo->poner_esta_imagen_como_principal($id,$nombre_campo);
+  	HelpersGenerales::helper_olvidar_este_cache('Imagenes'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
+    HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
+  	$this->ImagenRepo->poner_esta_imagen_como_principal($id);
 
   	return redirect()->back()->with('alert', 'Se cambió la imagen principal con éxito.'); 
   }

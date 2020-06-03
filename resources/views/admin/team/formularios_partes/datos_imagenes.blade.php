@@ -35,7 +35,7 @@
         <a class="img-element-bottom-left" href="{{route('establecer_como_principal', ['id' => $Imagen->id ,'nombre_campo'=>'team_id'] )}}">
           <i class="far fa-star"></i>
         </a>
-        <a href="{{route('borrar_esta_imagen',[$Imagen->id,'team_id'])}}" class="img-element-bottom-right">
+        <a href="{{route('borrar_esta_imagen', ['id' => $Imagen->id ,'nombre_campo'=>'team_id'])}}" class="img-element-bottom-right">
         <i class="fas fa-trash"></i>
         </a>
         @endif
