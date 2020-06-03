@@ -166,7 +166,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center">
-          Los guías de pesca ninjas de Uruwild
+          Los guías de pesca ninjas de Uruwild <i class="fas fa-hand-point-down"></i>
         </div>
 
       </div>
