@@ -89,7 +89,9 @@ class Admin_Team_Controllers extends Controller
 
         // M a r c o   u n a   i m a g e n   c o  m o   p r i n c i p a l
         $Imagen = $this->ImagenRepo->getImagenes('team_id',$Entidad->id)->first();
-        $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si');
+        $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si'); 
+
+        HelpersGenerales::helper_olvidar_este_cache('TeamsHome');
       }     
 
       return redirect()->route('get_admin_teams')->with('alert', 'Se creó correctamente. En breve se verá reflejado en los listados de la interfas pública');
@@ -148,6 +150,9 @@ class Admin_Team_Controllers extends Controller
 
         HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Entidad->id);
         HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Entidad->id);
+        HelpersGenerales::helper_olvidar_este_cache('TeamsHome');
+
+        
 
         
       }      

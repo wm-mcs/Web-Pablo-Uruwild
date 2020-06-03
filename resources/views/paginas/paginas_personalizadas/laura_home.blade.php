@@ -136,11 +136,7 @@
 
 
     
-@if(!Auth::guest())
-  @if(Auth::user()->first_name = 'Mauricio')
-  {{-- Aquí poner contendio para probar --}}
-  @endif
-@endif
+
 
 
   <div class="site-section background-gris-0"> 
@@ -161,6 +157,31 @@
       </div>      
     </div>
   </div>
+
+
+  @if(!Auth::guest())
+  @if(Auth::user()->first_name = 'Mauricio')
+  {{-- Aquí poner contendio para probar --}}
+  <div class="site-section "> 
+    <div class="container">
+      <div class="row">
+        <div class="col-12 sub-titulos-class mb-3 text-bold text-color-black text-center">
+          Los guías de pesca ninjas de Uruwild
+        </div>
+
+      </div>
+      <div class="row d-flex justify-content-center">
+
+        @foreach($Teams as $Entidad)
+          {{--*/ $Entidad  = $Entidad /*--}}
+          {{--*/ $Route    = $Entidad->route /*--}}
+          @include('admin.cabañas.partes.lista')
+        @endforeach
+      </div>      
+    </div>
+  </div>
+  @endif
+@endif
 
 
 

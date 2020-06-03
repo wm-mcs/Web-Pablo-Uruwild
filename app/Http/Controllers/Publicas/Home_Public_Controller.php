@@ -9,6 +9,7 @@ use App\Repositorios\NoticiasRepo;
 use App\Repositorios\TrayectoriaRepo;
 use App\Repositorios\CabañaRepo;
 use Illuminate\Support\Facades\Cache;
+use App\Repositorios\TeamRepo;
 
 
 class Home_Public_Controller extends Controller
@@ -16,20 +17,20 @@ class Home_Public_Controller extends Controller
     protected $ImgHomeRepo;
     protected $EmpresaRepo;
     protected $NoticiasRepo;
-    protected $TrayectoriaRepo;
+    protected $TeamRepo;
     protected $CabañaRepo;
   
 
     public function __construct(ImgHomeRepo     $ImgHomeRepo,
                                 EmpresaRepo     $EmpresaRepo, 
                                 NoticiasRepo    $NoticiasRepo,
-                                TrayectoriaRepo $TrayectoriaRepo,
+                                TeamRepo        $TeamRepo,
                                 CabañaRepo      $CabañaRepo )
     {
         $this->ImgHomeRepo     = $ImgHomeRepo;
         $this->EmpresaRepo     = $EmpresaRepo;
         $this->NoticiasRepo    = $NoticiasRepo;
-        $this->TrayectoriaRepo = $TrayectoriaRepo;
+        $this->TeamRepo        = $TeamRepo;
         $this->CabañaRepo      = $CabañaRepo;
         
     }
@@ -42,15 +43,17 @@ class Home_Public_Controller extends Controller
 
         
         $blogs          = $this->NoticiasRepo->getUltimosBlogs();
-        $Trayectorias   = $this->TrayectoriaRepo->getTrayectoriaSegunTipoOrdenadas('experiencia');
-        $Educacion      = $this->TrayectoriaRepo->getTrayectoriaSegunTipoOrdenadas('educacion');
-        $Cabañas        = Cache::remember('CabañasHome', 60, function(){
+        $Teams          = Cache::remember('TeamsHome', 30, function(){
+                          return  $this->TeamRepo->getEntidadActivas();
+                          });
+
+        $Cabañas        = Cache::remember('CabañasHome', 40, function(){
                           return $this->CabañaRepo->getCabañasParaHome();
                           });
 
         
 
-        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Trayectorias','Educacion','Cabañas'));
+        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas'));
     }
 
 
