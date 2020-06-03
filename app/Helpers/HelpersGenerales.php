@@ -49,7 +49,7 @@ class HelpersGenerales
       }
       else
       {
-        return false;
+        return true;
       }
     }
 
