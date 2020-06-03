@@ -40,7 +40,8 @@ class HelpersGenerales
     }
 
 
-
+    /*  S i   e s t á   v a c i o   o   e s   n u e l o   d e v u e l v e   f a l s e   d e   l o   c o n t r a r i o   
+        e n t r e g a   e l   v a l o r  */
     public static function helper_dame_sino_es_null_o_vacio($variable)
     {
       if(($variable != null) || ($variable != ''))
@@ -49,7 +50,7 @@ class HelpersGenerales
       }
       else
       {
-        return true;
+        return false;
       }
     }
 
