@@ -17,6 +17,8 @@
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'
                           ])               !!}
+
+<div class="row p-5">
 {{-- datos corporativos --}}
       <div class="contenedor-grupo-datos col-12 col-lg-6">
         <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Datos</div>
