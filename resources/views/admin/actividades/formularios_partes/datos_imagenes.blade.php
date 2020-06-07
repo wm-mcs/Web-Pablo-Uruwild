@@ -48,7 +48,7 @@
 	</div>
 	@else
 	<p class="p-2 mt-4 mb-3 text-center color-text-gris parrafo-class">
-			No hay ninguna imagen para esta cabaña. Es necesario que se agregue una lo antes posible.
+			No hay ninguna imagen.
 	</p>
 	@endif
 @endif
