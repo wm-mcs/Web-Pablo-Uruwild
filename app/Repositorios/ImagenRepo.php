@@ -34,8 +34,7 @@ class ImagenRepo extends BaseRepo
  {
     $Entidad                         = $this->getEntidad();
     $Entidad->name                   = $name;
-    $Entidad->path                   = $path;
-    $Entidad->$Nombre_del_campo_id   = $Valor_id;
+    $Entidad->path                   = $path;    
     $Entidad->key_id                 = $Nombre_del_campo_id;
     $Entidad->valor_id_del_campo_key = $Valor_id;
     $Entidad->save();
