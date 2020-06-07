@@ -9,11 +9,12 @@ use App\Servicios\ServiciosDeEntidades;
 class Tour extends Model
 {
 
-    protected $table ='productos_especiales';
+    protected $table ='tours';
 
     
-    protected $fillable = ['name', 'description'];
-    protected $img_key  = 'tour_id';
+    protected $fillable     = ['name', 'description'];
+    protected $img_key      = 'tour_id';
+    
 
 
 
@@ -73,7 +74,7 @@ class Tour extends Model
 
     public function getRouteAdminAttribute()
     {
-        return route('get_admin_actividades_editar',$this->id);
+        return route('get_admin_tours_editar',$this->id);
     }
     
     
