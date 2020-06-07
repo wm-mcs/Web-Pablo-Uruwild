@@ -2,7 +2,7 @@
 <div class="formulario-label-fiel">
 {!! Form::label('img', 'Imágenes', array('class' => 'formulario-label ')) !!}
 <div class="contiene-aclaracion-label">
-  Cargar imágenes en formato wide (Rectangular). Mínimo 1920px de ancho.  No es necesario que las compriman, la web se encargará de optimizarlas. <i class="far fa-smile-wink"></i>. Se puede subir de a múltiples imágenes.
+  Cargar imágenes en formato png (Cuadrado) con fondo transparente. Mínimo 500px x 500px.  
 </div>
 {!! Form::file('img[]',['class'            => 'formulario-field',                       
                        'multiple'          => true,

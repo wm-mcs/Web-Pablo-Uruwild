@@ -42,8 +42,7 @@ class Actividad extends Model
 
     public function getRouteAdminAttribute()
     {
-        return '';
-
+        return route('get_admin_actividades_editar',$this->id);
     }
     
     
