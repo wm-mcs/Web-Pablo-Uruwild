@@ -19,27 +19,40 @@ class Admin_Actividad_Controllers extends Controller
 {
 
   protected $Entidad_principal;
-  protected $Nombre_entidad_plural      = 'Actividades';
-  protected $Nombre_entidad_singular    = 'Actividad';
-  protected $Carpeta_view_admin         = $Nombre_entidad_plural;
-  protected $Path_view_get_admin_index  = 'admin.' . $Carpeta_view_admin . '.home';
-  protected $Path_view_get_admin_crear  = 'admin.' . $Carpeta_view_admin . '.crear';
-  protected $Path_view_get_admin_editar = 'admin.' . $Carpeta_view_admin . '.editar';
-  protected $Route_index                = 'get_admin_actividades';
-  protected $Route_crear                = 'get_admin_actividades_crear';
-  protected $Route_crear_post           = 'set_admin_actividades_crear';
-  protected $Route_editar_post          = 'set_admin_actividades_editar';
-  protected $Route_luego_de_crear       = $Route_index;
-  protected $Path_carpeta_imagenes      = 'Actividades/'; //donde se gurarda la imagen. Debe existir
-  protected $Nombre_del_campo_imagen    = 'actividad_id'; //campo con el que se asocia
+  protected $Nombre_entidad_plural      ;
+  protected $Nombre_entidad_singular    ;
+  protected $Carpeta_view_admin         ; 
+  protected $Path_view_get_admin_index  ;
+  protected $Path_view_get_admin_crear  ;
+  protected $Path_view_get_admin_editar ;
+  protected $Route_index ;               
+  protected $Route_crear  ;             
+  protected $Route_crear_post ;          
+  protected $Route_editar_post ;         
+  protected $Route_luego_de_crear;       
+  protected $Path_carpeta_imagenes;      
+  protected $Nombre_del_campo_imagen;    
 
   
 
   public function __construct(ActividadRepo  $ActividadRepo,
                               ImagenRepo     $ImagenRepo )
   {
-    $this->Entidad_principal    = $ActividadRepo;
-    $this->ImagenRepo           = $ImagenRepo;
+    $this->Entidad_principal          = $ActividadRepo;
+    $this->ImagenRepo                 = $ImagenRepo;
+    $this->Nombre_entidad_plural      = 'Actividades';
+    $this->Nombre_entidad_singular    = 'Actividad';
+    $this->Carpeta_view_admin         = strtolower($this->Nombre_entidad_plural);
+    $this->Path_view_get_admin_index  = 'admin.' . $this->Carpeta_view_admin . '.home';
+    $this->Path_view_get_admin_crear  = 'admin.' . $this->Carpeta_view_admin . '.crear';
+    $this->Path_view_get_admin_editar = 'admin.' . $this->Carpeta_view_admin . '.editar';
+    $this->Route_index                = 'get_admin_actividades';
+    $this->Route_crear                = 'get_admin_actividades_crear';
+    $this->Route_crear_post           = 'set_admin_actividades_crear';
+    $this->Route_editar_post          = 'set_admin_actividades_editar';
+    $this->Route_luego_de_crear       = $this->Route_index;
+    $this->Path_carpeta_imagenes      = 'Actividades/'; //donde se gurarda la imagen. Debe existir
+    $this->Nombre_del_campo_imagen    = 'actividad_id';
     
   }
 
