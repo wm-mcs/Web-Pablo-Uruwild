@@ -40,8 +40,8 @@ class Admin_Tours_Controllers extends Controller
   {
     $this->Entidad_principal          = $TourRepo;
     $this->ImagenRepo                 = $ImagenRepo;
-    $this->Nombre_entidad_plural      = 'Productos Especiales';
-    $this->Nombre_entidad_singular    = 'Producto';
+    $this->Nombre_entidad_plural      = 'Tours';
+    $this->Nombre_entidad_singular    = 'Tour';
     $this->Carpeta_view_admin         = strtolower(str_replace(' ','_', $this->Nombre_entidad_plural));
     $this->Path_view_get_admin_index  = 'admin.' . $this->Carpeta_view_admin . '.home';
     $this->Path_view_get_admin_crear  = 'admin.' . $this->Carpeta_view_admin . '.crear';
