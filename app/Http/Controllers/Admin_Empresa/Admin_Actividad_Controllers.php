@@ -21,7 +21,7 @@ class Admin_Actividad_Controllers extends Controller
   protected $Entidad_principal;
   protected $Nombre_entidad_plural      = 'Actividades';
   protected $Nombre_entidad_singular    = 'Actividad';
-  protected $Carpeta_view_admin         = strtolower($Nombre_entidad_plural);
+  protected $Carpeta_view_admin         = $Nombre_entidad_plural;
   protected $Path_view_get_admin_index  = 'admin.' . $Carpeta_view_admin . '.home';
   protected $Path_view_get_admin_crear  = 'admin.' . $Carpeta_view_admin . '.crear';
   protected $Path_view_get_admin_editar = 'admin.' . $Carpeta_view_admin . '.editar';
