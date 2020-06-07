@@ -24,6 +24,11 @@ require __DIR__ . '/Imagenes/Rutas_imagenes.php';
 
 require __DIR__ . '/Team/Rutas_team.php';
 
-require __DIR__ . '/Actividades/Ruta_actividades.php';
+require __DIR__ . '/Actividades/Ruta_actividades.php'; 
+
+require __DIR__ . '/ProductosEspeciales/Ruta_productos_especiales.php'; 
+
+
+
 
 

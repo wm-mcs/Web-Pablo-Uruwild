@@ -7,15 +7,15 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Repositorios\ActividadRepo;
+use App\Repositorios\ProductoEspecialRepo;
 use App\Repositorios\ImagenRepo;
 use App\Helpers\HelpersGenerales;
-use App\Managers\actividad_manager;
+use App\Managers\producto_especial_manager;
 
 
 
 
-class Admin_Actividad_Controllers extends Controller
+class Admin_Productos_Especiales_Controllers extends Controller
 {
 
   protected $Entidad_principal;
@@ -35,13 +35,13 @@ class Admin_Actividad_Controllers extends Controller
 
   
 
-  public function __construct(ActividadRepo  $ActividadRepo,
-                              ImagenRepo     $ImagenRepo )
+  public function __construct(ProductoEspecialRepo  $ProductoEspecialRepo,
+                              ImagenRepo            $ImagenRepo )
   {
-    $this->Entidad_principal          = $ActividadRepo;
+    $this->Entidad_principal          = $ProductoEspecialRepo;
     $this->ImagenRepo                 = $ImagenRepo;
-    $this->Nombre_entidad_plural      = 'Actividades';
-    $this->Nombre_entidad_singular    = 'Actividad';
+    $this->Nombre_entidad_plural      = 'Productos Especiales';
+    $this->Nombre_entidad_singular    = 'Producto';
     $this->Carpeta_view_admin         = strtolower(str_replace(' ','_', $this->Nombre_entidad_plural));
     $this->Path_view_get_admin_index  = 'admin.' . $this->Carpeta_view_admin . '.home';
     $this->Path_view_get_admin_crear  = 'admin.' . $this->Carpeta_view_admin . '.crear';
@@ -63,7 +63,7 @@ class Admin_Actividad_Controllers extends Controller
 
   public function getManager($Request)
   {
-    $manager = new actividad_manager(null, $Request->all());
+    $manager = new producto_especial_manager(null, $Request->all());
 
     return $manager;
   }

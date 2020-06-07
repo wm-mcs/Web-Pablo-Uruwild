@@ -47,7 +47,7 @@
 	
 	</div>
 	@else
-	<p class="p-2 mt-4 mb-3 text-center color-text-gris parrafo-class">
+	<p class="p-2 mt-4 mb-3 col-12 text-center color-text-gris parrafo-class">
 			No hay ninguna imagen.
 	</p>
 	@endif

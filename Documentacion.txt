@@ -19,8 +19,17 @@
 /* V e r  e l   C R U D   d e  a c t i v i d a d e s   c o m o   b a s e   p a r a   c r e a r   u n   C R U D   n u e v o  */
 
    - Se inician las variables y la forma de los crud será similares.
-   - Solo hay que editar las partes de set_creat y ser_editar-
+
+   - Solo hay que editar las partes de set_creat y ser_editar.
+
    - Se da por entendido que van a usar imágenes por ende se inicia el repo de imágenes.
-   - Manager y podpiedades se cambia valor en dichas funciones getManager() y getPropiedades()
-   - Se debe crear una carpeta con las vistas en la carpete de views/admin. El nombre debe ser el que  
-     se establece en el controller. 
+
+   - Manager y podpiedades se cambia valor en dichas funciones getManager() y getPropiedades().
+
+   - Se debe crear una carpeta con las vistas en la carpete de views/admin. El nombre debe ser el que se establece en el controller. 
+
+   - Tener en cuenta crear carpeta de imagenes en la carpeta pública en el controller sería la variable $this->Path_carpeta_imagenes.
+
+   - La variable de la entidad protected $img_key establece el nombre por el cual se buscará las imagenes, esto se debe ajustar en el controller en la parte de $this->Nombre_del_campo_imagen
+
+   - En la carpeta pública el nombre de la carpet ver en el controller antes de crear. 
