@@ -26,7 +26,7 @@
 
           {{--*/ $Entidad  = $Entidad /*--}}
           {{--*/ $Route    = $Entidad->route_admin /*--}}
-          @include('admin.'. $Carpeta_view_admin . '.partes.lista')
+          @include('admin.'. $Carpeta_view_admin . '.partes.lista_sin_imagen')
      @endforeach
    </div>
    <div>

@@ -14,7 +14,8 @@ class actividad_manager extends ManagerBase
   public function getRules()
   {
     $rules = [
-      'name'            => 'required',
+      'name'              => 'required',
+      'descripcion_breve' => 'required'
              ];
 
     return $rules;

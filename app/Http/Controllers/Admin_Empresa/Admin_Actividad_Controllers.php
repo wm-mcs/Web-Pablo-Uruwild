@@ -58,7 +58,7 @@ class Admin_Actividad_Controllers extends Controller
 
   public function getPropiedades()
   {
-    return ['name','descripcion_breve','ubicacion','description','cantidad_maxima_de_personas','estado','rank'];
+    return ['name','descripcion_breve''estado'];
   }
 
   public function getManager($Request)
