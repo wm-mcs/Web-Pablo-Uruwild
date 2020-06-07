@@ -133,7 +133,7 @@ class Admin_Productos_Especiales_Controllers extends Controller
         }
 
         // M a r c o   u n a   i m a g e n   c o  m o   p r i n c i p a l
-        $Imagen = $this->ImagenRepo->getImagenes('cabaña_id',$Entidad->id)->first();
+        $Imagen = $this->ImagenRepo->getImagenes($this->Nombre_del_campo_imagen,$Entidad->id)->first();
         $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si');
         
       }
