@@ -47,6 +47,12 @@
           <li class="admin-columna-li mi-float-right"> Productos</li>
         </a>  
 
+        <a href="{{route('get_admin_tours')}}">
+          <li class="admin-columna-li mi-float-right"> Tours</li>
+        </a> 
+
+        
+
         
 
 

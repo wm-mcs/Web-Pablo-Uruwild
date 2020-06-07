@@ -6,7 +6,7 @@ use App\Http\Requests;
 use App\Managers\ManagerBase;
 
 
-class producto_especial_manager extends ManagerBase 
+class tour_manager extends ManagerBase 
 {
 
 
@@ -25,5 +25,3 @@ class producto_especial_manager extends ManagerBase
   
   
 }
-
-

@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 use App\Servicios\ServiciosDeEntidades;
 
 
-class ProductoEspecial extends Model
+class Tour extends Model
 {
 
     protected $table ='productos_especiales';
 
     
     protected $fillable = ['name', 'description'];
-    protected $img_key  = 'producto_especial_id';
+    protected $img_key  = 'tour_id';
 
 
 
@@ -67,7 +67,6 @@ class ProductoEspecial extends Model
         $query->where('estado', "si"); 
                 
     }
-
 
 
     
