@@ -22,14 +22,14 @@ class Admin_Actividad_Controllers extends Controller
   protected $Nombre_entidad_plural      = 'Actividades';
   protected $Nombre_entidad_singular    = 'Actividad';
   protected $Carpeta_view_admin         = strtolower($this->Nombre_entidad_plural);
-  protected $Path_view_get_admin_index  = 'admin.'. $this->Carpeta_view_admin.'.home';
-  protected $Path_view_get_admin_crear  = 'admin.'. $this->Carpeta_view_admin.'.crear';
-  protected $Path_view_get_admin_editar = 'admin.'. $this->Carpeta_view_admin.'.editar';
+  protected $Path_view_get_admin_index  = 'admin.' . $this->Carpeta_view_admin . '.home';
+  protected $Path_view_get_admin_crear  = 'admin.' . $this->Carpeta_view_admin . '.crear';
+  protected $Path_view_get_admin_editar = 'admin.' . $this->Carpeta_view_admin . '.editar';
   protected $Route_index                = 'get_admin_actividades';
   protected $Route_crear                = 'get_admin_actividades_crear';
   protected $Route_crear_post           = 'set_admin_actividades_crear';
   protected $Route_editar_post          = 'set_admin_actividades_editar';
-  protected $Route_luego_de_crear       = $this->$Route_index;
+  protected $Route_luego_de_crear       = $this->Route_index;
   protected $Path_carpeta_imagenes      = 'Actividades/'; //donde se gurarda la imagen. Debe existir
   protected $Nombre_del_campo_imagen    = 'actividad_id'; //campo con el que se asocia
 
