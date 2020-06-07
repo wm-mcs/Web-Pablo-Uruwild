@@ -40,17 +40,7 @@
           @include('admin.'.$Carpeta_view_admin.'.formularios_partes.datos_imagenes')
         </div>
       </div>
-      <div class="contenedor-grupo-datos col-12">
-        <div class="contenedor-grupo-datos-titulo">Contenido de la cabaña</div>
-        <div class="contenedor-formulario-label-fiel">                       
-          <div class="formulario-label-fiel">
-            @include('admin.'.$Carpeta_view_admin.'.formularios_partes.aclaracion_etiquetas')
-            {!! Form::label('description', 'Contenido', array('class' => 'formulario-label ')) !!}
-            {!! Form::textarea('description', null ,['class' => 'formulario-field',
-                                                     'rows' => 20 ]) !!}
-          </div>
-        </div>
-      </div>
+      
 
       
 
