@@ -3,6 +3,7 @@
 namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Servicios\ServiciosDeEntidades;
 
 
 class Actividad extends Model
