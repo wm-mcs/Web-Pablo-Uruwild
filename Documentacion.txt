@@ -10,8 +10,17 @@
    Importante ver los nombres de estos Cache remeber para luego poder olvidarlos.
 
 
-/* P a r a   e l   c a s o   d e l   p a n e l   a d m i n   L o s   n o m b r e s   d e   l a s   v a r i a b l e s   q u e   
+/* P a r a   e l   c a s o   d e l   p a n e l   a d m i n   l o s   n o m b r e s   d e   l a s   v a r i a b l e s   q u e   
    c o n t e n g a n   E n t i d a d e s   y   E n t i d a d   d e   l o s   C R U D   s e r á  */
 
    $Entidades
    $Entidad
+
+/* V e r  e l   C R U D   d e  a c t i v i d a d e s   c o m o   b a s e   p a r a   c r e a r   u n   C R U D   n u e v o  */
+
+   - Se inician las variables y la forma de los crud será similares.
+   - Solo hay que editar las partes de set_creat y ser_editar-
+   - Se da por entendido que van a usar imágenes por ende se inicia el repo de imágenes.
+   - Manager y podpiedades se cambia valor en dichas funciones getManager() y getPropiedades()
+   - Se debe crear una carpeta con las vistas en la carpete de views/admin. El nombre debe ser el que  
+     se establece en el controller. 
