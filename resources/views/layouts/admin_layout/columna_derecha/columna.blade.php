@@ -25,17 +25,7 @@
           <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Blog</li>
         </a> 
 
-        <a href="{{route('get_admin_actividades')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Actividades</li>
-        </a>
 
-        <a href="{{route('get_admin_productos_especiales')}}">
-          <li class="admin-columna-li mi-float-right"> Productos</li>
-        </a>  
-
-        <a href="{{route('get_admin_tours')}}">
-          <li class="admin-columna-li mi-float-right"> Tours</li>
-        </a> 
 
         
 
