@@ -17,21 +17,7 @@
         <a href="{{route('get_admin_users')}}">
           <li class="admin-columna-li mi-float-right"><i class="fas fa-user"></i> Usuarios</li>
         </a>
-        <a href="{{route('get_admin_productos')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fab fa-product-hunt"></i> Productos</li>
-        </a>       
-
-        <a href="{{route('get_admin_marcas')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fab fa-apple"></i> Marcas</li>
-        </a>  
-
-        <a href="{{route('get_admin_categorias')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-bars"></i> Categorias</li>
-        </a>  
-
-        <a href="{{route('get_admin_trayectorias')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-user-tie"></i> Trayectoria</li>
-        </a>   
+       
 
        
 
@@ -81,6 +67,17 @@
         <a href="{{route('get_admin_teams')}}">
           <li class="admin-columna-li mi-float-right">Team</li>
         </a>
+        <a href="{{route('get_admin_actividades')}}">
+          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Actividades</li>
+        </a>
+
+        <a href="{{route('get_admin_productos_especiales')}}">
+          <li class="admin-columna-li mi-float-right"> Productos</li>
+        </a>  
+
+        <a href="{{route('get_admin_tours')}}">
+          <li class="admin-columna-li mi-float-right"> Tours</li>
+        </a> 
 
        
         
