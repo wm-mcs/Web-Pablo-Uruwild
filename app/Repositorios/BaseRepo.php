@@ -55,10 +55,10 @@ abstract class BaseRepo
                        ->where('borrado','no')
                        ->orderBy($Order_value,'$Order_value')
                        ->get();
-                       
+
      if($Entidades->count() >= $Cantidad )   
      {
-      return $Entidades->take($Cantidad)
+      return $Entidades->take($Cantidad);
      }  
 
      return   $Entidades;           
