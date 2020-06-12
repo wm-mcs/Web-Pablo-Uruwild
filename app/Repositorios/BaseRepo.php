@@ -53,7 +53,7 @@ abstract class BaseRepo
      $Entidades = $this->getEntidad()
                        ->where('estado','si')
                        ->where('borrado','no')
-                       ->orderBy($Order_value,'$Order_value')
+                       ->orderBy($Order_key,$Order_value)
                        ->get();
 
      if($Entidades->count() >= $Cantidad )   
@@ -61,7 +61,7 @@ abstract class BaseRepo
       return $Entidades->take($Cantidad);
      }  
 
-     return   $Entidades;           
+      return   $Entidades;           
     }
 
     
