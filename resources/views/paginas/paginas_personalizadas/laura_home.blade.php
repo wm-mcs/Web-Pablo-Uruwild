@@ -141,7 +141,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
-          Circuítos de pesca profesional por le rio Uruguay
+          Circuítos de pesca profesional por le rio Uruguay. Guiados por expertos.
         </div>
 
       </div>
