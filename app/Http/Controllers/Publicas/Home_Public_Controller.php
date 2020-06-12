@@ -10,6 +10,7 @@ use App\Repositorios\TrayectoriaRepo;
 use App\Repositorios\CabañaRepo;
 use Illuminate\Support\Facades\Cache;
 use App\Repositorios\TeamRepo;
+use App\Repositorios\TourRepo;
 
 
 class Home_Public_Controller extends Controller
@@ -19,19 +20,23 @@ class Home_Public_Controller extends Controller
     protected $NoticiasRepo;
     protected $TeamRepo;
     protected $CabañaRepo;
+    protected $TourRepo;
+
   
 
     public function __construct(ImgHomeRepo     $ImgHomeRepo,
                                 EmpresaRepo     $EmpresaRepo, 
                                 NoticiasRepo    $NoticiasRepo,
                                 TeamRepo        $TeamRepo,
-                                CabañaRepo      $CabañaRepo )
+                                CabañaRepo      $CabañaRepo,
+                                TourRepo        $TourRepo )
     {
         $this->ImgHomeRepo     = $ImgHomeRepo;
         $this->EmpresaRepo     = $EmpresaRepo;
         $this->NoticiasRepo    = $NoticiasRepo;
         $this->TeamRepo        = $TeamRepo;
         $this->CabañaRepo      = $CabañaRepo;
+        $this->TourRepo        = $TourRepo;
         
     }
 
@@ -44,11 +49,15 @@ class Home_Public_Controller extends Controller
         
         $blogs          = $this->NoticiasRepo->getUltimosBlogs();
         $Teams          = Cache::remember('TeamsHome', 30, function(){
-                          return  $this->TeamRepo->getEntidadActivas();
+                          return  $this->TeamRepo->getEntidadesParaHome(2,'name', 'desc');
                           });
 
         $Cabañas        = Cache::remember('CabañasHome', 40, function(){
-                          return $this->CabañaRepo->getCabañasParaHome();
+                          return $this->CabañaRepo->getEntidadesParaHome(4,'rank','desc');
+                          });
+
+        $Circuitos      = Cache::remember('CircuitosHome', 40, function(){
+                          return $this->TourRepo->getEntidadesParaHome(2,'name', 'desc');
                           });
 
         

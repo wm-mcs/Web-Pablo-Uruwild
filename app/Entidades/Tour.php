@@ -4,6 +4,7 @@ namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Servicios\ServiciosDeEntidades;
+use App\Helpers\HelpersGenerales;
 
 
 class Tour extends Model
@@ -75,6 +76,15 @@ class Tour extends Model
     public function getRouteAdminAttribute()
     {
         return route('get_admin_tours_editar',$this->id);
+    }
+
+    public function getContenidoRenderAttribute()
+    { 
+
+      $cadena = $this->description;
+
+      return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);
+        
     }
     
     

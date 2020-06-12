@@ -46,9 +46,25 @@ abstract class BaseRepo
       $Entidad->delete();
     }
 
-    /**
-     * Entidades Activas 
-     */
+
+
+    public function getEntidadesParaHome($Cantidad,$Order_key, $Order_value = 'desc')
+    {
+     $Entidades = $this->getEntidad()
+                       ->where('estado','si')
+                       ->where('borrado','no')
+                       ->orderBy($Order_value,'$Order_value')
+                       ->get();
+                       
+     if($Entidades->count() >= $Cantidad )   
+     {
+      return $Entidades->take($Cantidad)
+     }  
+
+     return   $Entidades;           
+    }
+
+    
     public function getEntidadActivas()
     {
       return $this->entidad                  
@@ -57,9 +73,7 @@ abstract class BaseRepo
                   ->get();
     }
 
-    /**
-     * Entidades Activas Paginadas
-     */
+    
     public function getEntidadActivasPaginadas($request,$paginacion)
     {
       return $this->entidad

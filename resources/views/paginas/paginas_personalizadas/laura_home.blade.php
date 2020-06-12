@@ -132,7 +132,34 @@
 
   
 
+  @if(!Auth::guest())
+  @if(Auth::user()->first_name = 'Mauricio')
+  {{-- Aquí poner contendio para probar --}}
+   <div class="site-section background-gris-0"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
+          Circuítos de pesca profesional por le rio Uruguay
+        </div>
 
+      </div>
+      <div class="row">
+
+        @foreach($Circuitos as $Circuito)
+          {{--*/ $Entidad  = $Circuito /*--}}
+          {{--*/ $Route    = $Entidad->route /*--}}
+          @include('admin.tour.partes.lista')
+        @endforeach
+      </div>      
+    </div>
+  </div>
+
+
+
+  
+  </div>
+  @endif
+  @endif
 
 
     
@@ -181,26 +208,13 @@
   @if(!Auth::guest())
   @if(Auth::user()->first_name = 'Mauricio')
   {{-- Aquí poner contendio para probar --}}
-  <div class="site-section "> 
-    <div class="container">
-      <div class="row">
-        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center">
-          Los guías de pesca ninjas de Uruwild <i class="fas fa-hand-point-down"></i>
-        </div>
 
-      </div>
-      <div class="row d-flex justify-content-center">
 
-        @foreach($Teams as $Entidad)
-          {{--*/ $Entidad  = $Entidad /*--}}
-          {{--*/ $Route    = $Entidad->route /*--}}
-          @include('admin.team.partes.lista')
-        @endforeach
-      </div>      
-    </div>
+
+  
   </div>
   @endif
-@endif
+  @endif
 
 
 

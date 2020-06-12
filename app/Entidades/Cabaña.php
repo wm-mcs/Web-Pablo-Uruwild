@@ -4,6 +4,7 @@ namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Servicios\ServiciosDeEntidades;
+use App\Helpers\HelpersGenerales;
 
 
 
@@ -61,6 +62,15 @@ class Cabaña extends Model
      {        
         return url();
      }
+
+    public function getContenidoRenderAttribute()
+    { 
+
+      $cadena = $this->description;
+
+      return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);
+        
+    }
 
 
 

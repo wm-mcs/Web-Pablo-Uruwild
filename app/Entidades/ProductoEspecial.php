@@ -4,6 +4,7 @@ namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Servicios\ServiciosDeEntidades;
+use App\Helpers\HelpersGenerales;
 
 
 class ProductoEspecial extends Model
@@ -66,6 +67,15 @@ class ProductoEspecial extends Model
                                
         $query->where('estado', "si"); 
                 
+    }
+
+    public function getContenidoRenderAttribute()
+    { 
+
+      $cadena = $this->description;
+
+      return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);
+        
     }
 
 
