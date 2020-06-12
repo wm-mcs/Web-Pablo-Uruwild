@@ -62,7 +62,7 @@ class Home_Public_Controller extends Controller
 
         
 
-        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas'));
+        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas','Circuitos'));
     }
 
 

@@ -134,6 +134,8 @@
 
   @if(!Auth::guest())
   @if(Auth::user()->first_name = 'Mauricio')
+
+  @if($Circuitos->count() > 0)
   {{-- Aquí poner contendio para probar --}}
    <div class="site-section background-gris-0"> 
     <div class="container">
@@ -153,6 +155,7 @@
       </div>      
     </div>
   </div>
+  @endif
 
 
 
