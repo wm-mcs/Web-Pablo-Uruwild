@@ -4,6 +4,18 @@
 </div>
 
 <div class="formulario-label-fiel">
+  {!! Form::label('cantidad_de_dias', 'Duración en días', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('cantidad_de_dias', null ,['class' => 'formulario-field']) !!}
+</div>
+
+
+
+<div class="formulario-label-fiel">
+  {!! Form::label('fecha_inicio', 'Fecha del próximo', array('class' => 'formulario-label ')) !!}
+  {!! Form::date('fecha_inicio', null ,['class' => 'formulario-field']) !!}
+</div>
+
+<div class="formulario-label-fiel">
   {!! Form::label('descripcion_breve', 'Descripción breve', array('class' => 'formulario-label ')) !!}
   {!! Form::textarea('descripcion_breve', null ,['class' => 'formulario-field',
                                                   'rows' => 2, 

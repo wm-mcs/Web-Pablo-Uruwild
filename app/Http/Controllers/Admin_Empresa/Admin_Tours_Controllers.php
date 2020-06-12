@@ -58,7 +58,7 @@ class Admin_Tours_Controllers extends Controller
 
   public function getPropiedades()
   {
-    return ['name','descripcion_breve','estado'];
+    return ['name','fecha_inicio','cantidad_de_dias','description','descripcion_breve','estado'];
   }
 
   public function getManager($Request)

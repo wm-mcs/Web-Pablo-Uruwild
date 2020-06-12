@@ -69,9 +69,10 @@ elixir(function(mix) {
         'credo_js/jquery.fancybox.min.js',
         'credo_js/jquery.sticky.js',
         'credo_js/main.js', 
-         'Plugins/Plug-lazyLoadXT.js',       
+        'Plugins/Plug-lazyLoadXT.js',       
         'Customs/noticias_blog.js',
-        'Plugins/Plug-Notify.js'
+        'Plugins/Plug-Notify.js',
+
        
 
        ],'public/js/credo.js');
