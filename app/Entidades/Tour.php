@@ -76,7 +76,7 @@ class Tour extends Model
 
     public function getRouteAttribute()
     {
-        return route('get_pagina_tour_individual', HelpersGenerales::helper_convertir_cadena_para_url($this->name) ,$this->id);
+        return route('get_pagina_tour_individual', [HelpersGenerales::helper_convertir_cadena_para_url($this->name) ,$this->id]);
     }
 
     public function getContenidoRenderAttribute()
