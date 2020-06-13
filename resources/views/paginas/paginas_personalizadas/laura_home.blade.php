@@ -150,7 +150,7 @@
         @foreach($Circuitos as $Circuito)
           {{--*/ $Entidad  = $Circuito /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
-          @include('admin.tour.partes.lista')
+          @include('admin.tours.partes.lista')
         @endforeach
       </div>      
     </div>
