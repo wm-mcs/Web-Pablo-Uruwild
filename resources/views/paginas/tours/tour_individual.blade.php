@@ -137,6 +137,9 @@
  <div class="site-section "> 
     <div class="container">
          {{$Tour->contenido_render}}  
+
+
+         {!! $Tour->contenido_render !!}
     </div>
   </div>
     

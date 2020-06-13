@@ -113,6 +113,7 @@ class HelpersGenerales
         
 
         return htmlentities($cadena, ENT_QUOTES | ENT_IGNORE, "UTF-8"); 
+        return $cadena; 
     }
 
 }
