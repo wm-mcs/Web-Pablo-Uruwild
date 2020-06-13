@@ -110,7 +110,11 @@ class HelpersGenerales
         $cadena = str_replace('(YOU)' ,'<div class="video-responsive" > <iframe  src="https://www.youtube.com/embed/', $cadena);
         $cadena = str_replace('(/YOU)' ,'" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>', $cadena);
 
-        
+        $cadena = str_replace('(UT)' ,'<ul class="timeline" >', $cadena);
+        $cadena = str_replace('(/UT)' ,'</ul>', $cadena);
+
+        $cadena = str_replace('(LT)' ,'<li  >', $cadena);
+        $cadena = str_replace('(/LT)' ,'</li>', $cadena);
 
         /*return htmlentities($cadena, ENT_QUOTES | ENT_IGNORE, "UTF-8");*/ 
         return $cadena; 

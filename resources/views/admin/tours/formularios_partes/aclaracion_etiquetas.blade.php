@@ -24,6 +24,10 @@
     <div class="lista-class aclaracion-de-etiquetas-linea"> Pie de imagen: <span class="text-bold"> (IMGT)  El texto por debajo de la imagen (/IMGT)</span> </div>
 
     <div class="lista-class aclaracion-de-etiquetas-linea"> YOUT UBE: <span class="text-bold"> (YOU)**id del video sin espacios entre las etiquetas YOU**(/YOU)</span> </div>
+
+    <div class="lista-class aclaracion-de-etiquetas-linea"> UT: <span class="text-bold"> (UT)**Contiene la linea de tiempo**(/UT)</span> </div>
+
+    <div class="lista-class aclaracion-de-etiquetas-linea"> LT: <span class="text-bold"> (LT)** Contiene cada item de la linea de tiempo **(/LT)</span> </div>
     
   
 </div>
