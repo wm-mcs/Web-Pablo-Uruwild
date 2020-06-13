@@ -3,7 +3,7 @@
 
 
 
-{{--*/ $ImagenPortada         = $Tour->url_img_foto_principal'/*--}}
+{{--*/ $ImagenPortada         = $Tour->url_img_foto_principal /*--}}
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/Empresa/logo-para-tags.jpg'/*--}}
 {{--*/ $Titulo                = $Tour->name /*--}}
 {{--*/ $DescriptionEtiqueta   = $Tour->descripcion_breve /*--}}
