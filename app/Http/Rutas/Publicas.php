@@ -45,3 +45,6 @@ Route::get('/Quién-es-Laura-Jodral-Garcia' , [
 // B l o g
 require __DIR__ . '/Noticias/Rutas_Noticias_Publicas.php';
 
+// C i r c u i t o  s
+require __DIR__ . '/Tours/Ruta_tours_publicas.php'; 
+

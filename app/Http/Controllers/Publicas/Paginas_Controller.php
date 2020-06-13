@@ -9,6 +9,7 @@ use App\Repositorios\EmpresaRepo;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Session;
 use App\Helpers\CurlHelper;
+use App\Repositorios\TourRepo;
 
 
 class Paginas_Controller extends Controller
@@ -17,15 +18,18 @@ class Paginas_Controller extends Controller
     protected $NoticiasRepo;
     protected $EmpresaRepo;    
     protected $CurlHelper;
+    protected $TourRepo;
 
     public function __construct(NoticiasRepo        $NoticiasRepo,
                                 EmpresaRepo         $EmpresaRepo,                                 
-                                CurlHelper          $CurlHelper   )
+                                CurlHelper          $CurlHelper,
+                                TourRepo            $TourRepo   )
     {
         
         $this->NoticiasRepo        = $NoticiasRepo;
         $this->EmpresaRepo         = $EmpresaRepo;
         $this->CurlHelper          = $CurlHelper;
+        $this->TourRepo            = $TourRepo;
     }
 
     // C o n t a c t o
@@ -60,13 +64,22 @@ class Paginas_Controller extends Controller
     public function get_pagina_noticia_individual($name,$id)  {
        
         $Noticia              = $this->NoticiasRepo->find($id);
-
-
         $Empresa              = $this->EmpresaRepo->getEmpresaDatos();        
         $blogs                = '';
         $blogs_relacionados   = $this->NoticiasRepo->getBlogsRelacionados($Noticia);
         
         return view('paginas.noticias.noticia_individual',compact('Noticia','Empresa','blogs','blogs_relacionados'));
+    }
+
+    // C i r c u i t o 
+    public function get_pagina_tour_individual($name,$id)
+    {
+        $Tour                 = $this->TourRepo->find($id);
+        $Empresa              = $this->EmpresaRepo->getEmpresaDatos();        
+        $blogs                = '';
+
+
+        return view('paginas.tours.tour_individual',compact('Tour','Empresa','blogs'));
     }
 
 

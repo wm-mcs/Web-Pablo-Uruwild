@@ -54,20 +54,16 @@ class Tour extends Model
 
    
     public function scopeName($query, $name)
-    {
-        
+    {        
         if (trim($name) !="")
         {                        
            $query->where('name', "LIKE","%$name%"); 
-        }
-        
+        }        
     }
 
     public function scopeActive($query)
-    {
-                               
-        $query->where('estado', "si"); 
-                
+    {                               
+        $query->where('estado', "si");                 
     }
 
 
@@ -76,6 +72,11 @@ class Tour extends Model
     public function getRouteAdminAttribute()
     {
         return route('get_admin_tours_editar',$this->id);
+    }
+
+    public function getRouteAttribute()
+    {
+        return route('get_pagina_tour_individual', HelpersGenerales::helper_convertir_cadena_para_url($this->name) ,$this->id);
     }
 
     public function getContenidoRenderAttribute()
