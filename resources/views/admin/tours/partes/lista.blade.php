@@ -23,7 +23,7 @@
 </div>
 @else
 {{--  E s t a   e s   p a r a   e l   p ú b l i c o  --}}
-<div class="col-12 col-lg-2 mb-4">
+<div class="col-12 col-lg-6 mb-4">
     <div class="servicio_lista service">
       <a href="{{$Route}}">
         <img v-if="!cargando" src="{{$Entidad->url_img_foto_principal}}" alt="{{$Entidad->descripcion_breve}}" class="servicio_lista_imagen">

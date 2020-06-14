@@ -20,14 +20,13 @@
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
       
-      <div id="app" class="site-wrap">
+      <span id="app" >
 
-        {{-- C a r g a d o r --}}
-        <div v-if="cargando" class="contiene-cargador">
-         <div class="cssload-container">
-           <div class="cssload-tube-tunnel"></div>
-         </div>
+        {{-- C a r g a d o r --}}        
+        <div v-if="cargando" class="w-100 background-secondary d-flex flex-row align-item-center justify-content-center vh-100">
+          <div class="cssload-tube-tunnel"></div>
         </div>
+        <span v-else>   
 
         {{-- A l g o   d e l   m e n ú    m ó b i l  --}}
         <div class="site-mobile-menu site-navbar-target">
@@ -42,9 +41,10 @@
         @yield('header')
         @yield('portada')
         @yield('contenido')
-        @yield('footer')    
+        @yield('footer') 
+        </span> {{-- C o n t e n i d o   v - e l s e     d e l     c a r g a d o r  --}}  
 
-      </div> 
+      </span> {{-- F i n a l   d e l   w r a p    d e   v u e   --}}
 
   
 
