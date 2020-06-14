@@ -24,6 +24,8 @@
 
         {{-- C a r g a d o r --}}        
         <div v-if="cargando" class="w-100 background-secondary d-flex flex-row align-item-center justify-content-center vh-100">
+
+        <div></div>
           <div class="cssload-tube-tunnel"></div>
         </div>
         <span v-else>   
