@@ -14,3 +14,62 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
+
+<IfModule mod_php5.c>
+  php_value max_execution_time 300
+</IfModule>
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+
+
+
+
+# Quitar el forzar https
+# RewriteCond %{SERVER_PORT} 80 
+# RewriteCond %{HTTPS} !=on
+# RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+#sdsd
+
+
+
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+
+RewriteEngine On
+
+#Begin gzip and deflate
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/x-javascript text/plain text/xml image/x-icon
+</IfModule>
+
+<IfModule pagespeed_module>
+  ModPagespeed on
+  ModPagespeedEnableFilters rewrite_css,combine_css
+  ModPagespeedEnableFilters recompress_images
+  ModPagespeedEnableFilters convert_png_to_jpeg,convert_jpeg_to_webp
+  ModPagespeedEnableFilters collapse_whitespace,remove_comments
+</IfModule>
+
+
+
+#bloque el acceso a las carpetas
+Options -Indexes
