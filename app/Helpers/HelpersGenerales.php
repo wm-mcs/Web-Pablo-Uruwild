@@ -116,6 +116,11 @@ class HelpersGenerales
         $cadena = str_replace('(LT)' ,'<li  >', $cadena);
         $cadena = str_replace('(/LT)' ,'</li>', $cadena);
 
+        $cadena = str_replace('(TLT)' ,'<span class="text-color-secondary sub-titulos-class text-bold mb-2" >', $cadena);
+        $cadena = str_replace('(/TLT)' ,'</span>', $cadena);
+
+        
+
         /*return htmlentities($cadena, ENT_QUOTES | ENT_IGNORE, "UTF-8");*/ 
         return $cadena; 
     }

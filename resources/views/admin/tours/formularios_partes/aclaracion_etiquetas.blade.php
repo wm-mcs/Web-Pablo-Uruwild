@@ -25,9 +25,12 @@
 
     <div class="lista-class aclaracion-de-etiquetas-linea"> YOUT UBE: <span class="text-bold"> (YOU)**id del video sin espacios entre las etiquetas YOU**(/YOU)</span> </div>
 
-    <div class="lista-class aclaracion-de-etiquetas-linea"> UT: <span class="text-bold"> (UT)**Contiene la linea de tiempo**(/UT)</span> </div>
+    <div class="lista-class aclaracion-de-etiquetas-linea"> Contiene linea de tiempo: <span class="text-bold"> (UT) (/UT)</span> </div>
 
-    <div class="lista-class aclaracion-de-etiquetas-linea"> LT: <span class="text-bold"> (LT)** Contiene cada item de la linea de tiempo **(/LT)</span> </div>
+    <div class="lista-class aclaracion-de-etiquetas-linea"> Item de linea de tiempo: <span class="text-bold"> (LT) (/LT)</span> </div>
+
+
+    <div class="lista-class aclaracion-de-etiquetas-linea"> Tíutlo linea de tiempo: <span class="text-bold"> (TLT) (/TLT)</span> </div>
     
   
 </div>
