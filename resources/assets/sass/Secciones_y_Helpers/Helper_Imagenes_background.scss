@@ -51,6 +51,10 @@ $altura-imagen-miniaturas:150px; /*Defino la altura*/
   background-color: $color-3;
 }
 
+.background-secondary{
+  background-color: $Color-secondary;
+}
+
 .background-white{
   background-color: $color-white;
 }
@@ -81,4 +85,8 @@ $altura-imagen-miniaturas:150px; /*Defino la altura*/
 
 .background-black{
   background-color: $color-black;
+}
+
+.background-black-transparent{
+  background-color: rgba($color-black,.2);
 }

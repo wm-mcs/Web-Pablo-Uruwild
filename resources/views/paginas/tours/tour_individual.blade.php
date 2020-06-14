@@ -75,10 +75,7 @@
 @stop
 
 
-@section('vue')
-
-
-  
+@section('vue')  
   @include('paginas.home.vue.contacto-component')
   @include('paginas.home.vue.blog-list-component')
   @include('paginas.home.vue.vue-instance')
@@ -100,16 +97,16 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
-            <div class="row">
+            <div class="row p-lg-5 background-black-transparent">
               <div class="col-lg-8 " style="max-width: 550px;">
-                <h1  class="titulos-class text-white font-secondary">{{$Tour->name}}</h1>
-                <h2 class="sub-titulos-class text-white no-mostrar-en-mobil">{{$Tour->descripcion_breve}}
+                <h1  class="titulos-class text-white font-secondary mb-2">{{$Tour->name}}</h1>
+                <h2 class="sub-titulos-class text-white no-mostrar-en-mobil mb-4">{{$Tour->descripcion_breve}}
                 </h2>
                 
                
                 
            
-                <p><a href="#sobre-mi" class="Boton-Fuente-Chico Boton-Blanco"> Conocé toda las actividades del tour <i class="fas fa-chevron-right"></i> </a></p>
+                <p><a href="#contenido" class="scroll_to Boton-Fuente-Chico Boton-Blanco"> Conocé toda las actividades del tour <i class="fas fa-chevron-right"></i> </a></p>
               </div>
             </div>
           </div>
@@ -134,7 +131,7 @@
 
   
     
- <div class="site-section "> 
+ <div class="site-section " id="contenido"> 
     <div class="container">
          
 

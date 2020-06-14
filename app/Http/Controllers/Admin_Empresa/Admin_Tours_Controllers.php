@@ -128,7 +128,7 @@ class Admin_Tours_Controllers extends Controller
             $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'.jpg');
 
             // I m a g e n   c h i c a 
-            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',300);
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',600);
 
         }
 
@@ -163,7 +163,7 @@ class Admin_Tours_Controllers extends Controller
     //propiedades para crear
     $Propiedades = $this->getPropiedades();
 
-    // G u a r d o  l o s   d a t o s 
+      // G u a r d o  l o s   d a t o s 
       $this->Entidad_principal->setEntidadDato($Entidad,$Request,$Propiedades);   
 
       // S i  e l  a r r a y   d e   i m á g e n e s   n o   e s t á   v a c i o   
@@ -185,7 +185,7 @@ class Admin_Tours_Controllers extends Controller
             $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'.jpg');
 
             // I m a g e n   c h i c a 
-            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',300);
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',600);
 
             // Ajusto los cache
             $nombre_campo = $this->Nombre_del_campo_imagen;

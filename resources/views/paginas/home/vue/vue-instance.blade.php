@@ -3,7 +3,7 @@ var app = new Vue({
     data:{
       empresa: {!! json_encode($Empresa) !!},
       blogs:   {!! json_encode($blogs) !!},
-      cargando:false,
+      cargando:true,
       scrolled:0,
       windowWidth: window.innerWidth,
       variables:{
@@ -19,7 +19,10 @@ var app = new Vue({
       window.addEventListener('resize', () => {
         this.windowWidth = window.innerWidth
       });
-      })
+      });
+
+      /*Paro el cargador inicial*/
+      this.cargando = false;
      
 
 

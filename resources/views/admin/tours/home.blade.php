@@ -23,9 +23,10 @@
  <div class="container p-4">
    <div class="row col-12">
      @foreach($Entidades as $Entidad)
-
-          {{--*/ $Entidad  = $Entidad /*--}}
-          {{--*/ $Route    = $Entidad->route_admin /*--}}
+          
+          {{--*/ $Mostrar_admin  = true /*--}}
+          {{--*/ $Entidad        = $Entidad /*--}}
+          {{--*/ $Route          = $Entidad->route_admin /*--}}
           @include('admin.'. $Carpeta_view_admin . '.partes.lista_sin_imagen')
      @endforeach
    </div>
