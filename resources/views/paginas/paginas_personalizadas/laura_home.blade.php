@@ -2,7 +2,7 @@
 
 
 
-
+{{--*/ $ImagenPortadaChica    = url() . '/imagenes/Portadas/portada-uruwild-chica.jpg'/*--}}
 {{--*/ $ImagenPortada         = url() . '/imagenes/Portadas/portada-uruwild.jpg'/*--}}
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/Empresa/logo-para-tags.jpg '/*--}}
 {{--*/ $Titulo                = 'Uruwild' /*--}}
@@ -116,8 +116,8 @@
         </div>
       </div>
       
-       <img class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$ImagenPortada}}" alt="Laura Jodral portada."> 
-       {{-- <img class="logo-float-easy-socio-portada" :src="empresa.logo_easy_blanco" alt="Easysocio ptograma de gestion de gimasios y academias simple de usar."> --}}
+       <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$ImagenPortadaChica}}" alt="Laura Jodral portada.">
+       <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Tour->url_img_foto_principal}}" alt="{{$Tour->name}} Uruwild Uruguay"> 
        
 
     </div>  
