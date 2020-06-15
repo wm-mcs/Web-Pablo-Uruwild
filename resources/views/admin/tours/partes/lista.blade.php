@@ -34,10 +34,8 @@
           <div class="sub-titulos-class text-bold color-text-white mb-2">
            {{$Entidad->name}}
           </div> 
-          <div class="parrafo-class color-text-white mb-3"> 
-             {{$Entidad->descripcion_breve}}
-          </div>
-           <div class="parrafo-class color-text-white mb-2"> 
+          
+           <div class="parrafo-class color-text-white mb-1"> 
             Próxima fecha <i class="far fa-clock"></i> {{$Entidad->fecha->format('d-m-Y')}}.
            </div>
            <div class="parrafo-class color-text-white mb-2"> 
