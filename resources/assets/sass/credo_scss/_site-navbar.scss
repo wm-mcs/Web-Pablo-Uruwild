@@ -4,7 +4,7 @@
 .site-navbar {
 
 	margin-bottom: 0px;
-	z-index: 1999;
+	z-index: 200;
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -353,7 +353,7 @@
 
 .sticky-wrapper {
 	position: absolute;
-	z-index: 100;
+	z-index: 200;
 	width: 100%;
 	& + .site-blocks-cover {
 		// margin-top: 140px;

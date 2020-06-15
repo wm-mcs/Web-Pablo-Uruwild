@@ -97,10 +97,10 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
-            <div class="row p-lg-5 background-black-transparent">
-              <div class="col-lg-8 " style="max-width: 550px;">
-                <h1  class="titulos-class text-white font-secondary mb-2">{{$Tour->name}}</h1>
-                <h2 class="sub-titulos-class text-white no-mostrar-en-mobil mb-4">{{$Tour->descripcion_breve}}
+            <div class="row ">
+              <div class="col-lg-8 p-lg-5 background-black-transparent " style="max-width: 550px;">
+                <h1  class="titulos-class text-white font-secondary mb-4">{{$Tour->name}}</h1>
+                <h2 class="parrafo-class text-white no-mostrar-en-mobil mb-4">{{$Tour->descripcion_breve}}
                 </h2>
                 
                

@@ -102,8 +102,8 @@
           <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
             <div class="row">
               <div class="col-lg-8 " style="max-width: 550px;">
-                <h1  class="titulos-class text-white font-secondary">Tours de pesca profesionales</h1>
-                <h2 class="sub-titulos-class text-white no-mostrar-en-mobil">Te invitamos a vivir una experiencia que te hará renacer.
+                <h1  class="titulos-class text-white font-secondary mb-3">Tours de pesca profesionales</h1>
+                <h2 class="sub-titulos-class text-white no-mostrar-en-mobil mb-4">Te invitamos a vivir una experiencia que te hará renacer.
                 </h2>
                 
                
