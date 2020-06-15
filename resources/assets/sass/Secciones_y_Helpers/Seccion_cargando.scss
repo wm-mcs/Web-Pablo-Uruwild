@@ -9,7 +9,7 @@
     @include flex-direction(row);
     @include align-items(center); 
     @include justify-content(space-around); 
-    z-index: 999;
+    z-index: 1600;
     background-color: $Color-secondary;
 }
 
