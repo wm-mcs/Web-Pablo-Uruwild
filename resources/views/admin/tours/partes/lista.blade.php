@@ -37,6 +37,12 @@
           <div class="parrafo-class color-text-white mb-3"> 
              {{$Entidad->descripcion_breve}}
           </div>
+           <div class="parrafo-class color-text-white mb-2"> 
+            Próxima fecha <i class="far fa-clock"></i> {{$Entidad->fecha->format('d-m-Y')}}.
+           </div>
+           <div class="parrafo-class color-text-white mb-2"> 
+            Tour de <span class="text-bold">{{$Entidad->cantidad_de_dias}}</span> días.
+           </div>
           <p>
           <a href="{{$Route}}"> Explorar el contenido del tour  <i class="fas fa-chevron-right"></i></a>
          </p>
