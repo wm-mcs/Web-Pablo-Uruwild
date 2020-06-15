@@ -109,14 +109,14 @@
                
                 
            
-                <p><a href="#sobre-mi" class="Boton-Fuente-Chico Boton-Blanco"> Conocé nuestros tours de pesca ahora <i class="fas fa-chevron-right"></i> </a></p>
+                <p><a href="#circuitos" class="scroll_to Boton-Fuente-Chico Boton-Blanco"> Conocé nuestros tours de pesca ahora <i class="fas fa-chevron-right"></i> </a></p>
               </div>
             </div>
           </div>
         </div>
       </div>
       
-       <img class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" src="{{$ImagenPortada}}" alt="Laura Jodral portada."> 
+       <img class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$ImagenPortada}}" alt="Laura Jodral portada."> 
        {{-- <img class="logo-float-easy-socio-portada" :src="empresa.logo_easy_blanco" alt="Easysocio ptograma de gestion de gimasios y academias simple de usar."> --}}
        
 
@@ -137,7 +137,7 @@
 
   @if($Circuitos->count() > 0)
   {{-- Aquí poner contendio para probar --}}
-   <div class="site-section background-gris-0"> 
+   <div class="site-section background-gris-0" id="circuitos"> 
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">

@@ -113,7 +113,7 @@
         </div>
       </div>
       
-       <img class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" src="{{$ImagenPortada}}" alt="{{$Tour->name}} Uruwild Uruguay"> 
+       <img class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$ImagenPortada}}" alt="{{$Tour->name}} Uruwild Uruguay"> 
        
        
 
