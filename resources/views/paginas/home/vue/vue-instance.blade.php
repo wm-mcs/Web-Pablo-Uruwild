@@ -22,7 +22,7 @@ var app = new Vue({
       });
 
       /*Paro el cargador inicial*/
-      
+      this.cargando = false;
      
 
 
