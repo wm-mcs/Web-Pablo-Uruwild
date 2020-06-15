@@ -25,23 +25,26 @@
 {{--  E s t a   e s   p a r a   e l   p ú b l i c o  --}}
 <div class="col-12 col-lg-6 mb-4 ">
     <div class="servicio_lista service position-relative">
-      <a href="{{$Route}}">
+      
         <img v-if="!cargando" src="{{$Entidad->url_img_foto_principal}}" alt="{{$Entidad->descripcion_breve}}" class="tour-img-listado">
         <div v-else class="col-12 background-secondary d-flex flex-row align-item-center justify-content-center">
           <div class="cssload-tube-tunnel"></div>
         </div>
         <div class="tour-contiene-datos-listado">
-          <div class="sub-titulos-class text-bold text-color-white mb-4">
+          <div class="sub-titulos-class text-bold text-color-white mb-2">
            {{$Entidad->name}}
           </div> 
-          <div class="parrafo-class text-color-primary"> 
+          <div class="parrafo-class text-color-white mb-3"> 
              {{$Entidad->descripcion_breve}}
           </div>
+          <p>
+          <a href="{{$Route}}"> Explorar el contenido del tour  <i class="fas fa-chevron-right"></i></a>
+         </p>
         </div>
 
 
 
-      </a>      
+           
     </div>
 </div>
 @endif
