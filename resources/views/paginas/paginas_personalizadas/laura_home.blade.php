@@ -116,8 +116,8 @@
         </div>
       </div>
       
-       <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$ImagenPortadaChica}}" alt="Laura Jodral portada.">
-       <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Tour->url_img_foto_principal}}" alt="{{$Tour->name}} Uruwild Uruguay"> 
+       <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$ImagenPortadaChica}}" alt="Uruwild.">
+       <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$ImagenPortada}}" alt="Uruwild.">
        
 
     </div>  
