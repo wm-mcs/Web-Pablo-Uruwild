@@ -31,10 +31,10 @@
           <div class="cssload-tube-tunnel"></div>
         </div>
         <div class="tour-contiene-datos-listado">
-          <div class="sub-titulos-class text-bold text-color-white mb-2">
+          <div class="sub-titulos-class text-bold color-text-white mb-2">
            {{$Entidad->name}}
           </div> 
-          <div class="parrafo-class text-color-white mb-3"> 
+          <div class="parrafo-class color-text-white mb-3"> 
              {{$Entidad->descripcion_breve}}
           </div>
           <p>

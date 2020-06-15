@@ -5,7 +5,7 @@ namespace App\Entidades;
 use Illuminate\Database\Eloquent\Model;
 use App\Servicios\ServiciosDeEntidades;
 use App\Helpers\HelpersGenerales;
-
+use Carbon\Carbon;
 
 class Tour extends Model
 {
@@ -49,6 +49,11 @@ class Tour extends Model
         
         return url().'/imagenes/Helpers/imagen-no-disponible.png';
         
+     }
+
+     public function getFechaAttribute()
+     {
+        return Carbon::parse($this->fecha_inicio);
      }
 
 

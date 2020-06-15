@@ -12,7 +12,12 @@
 
 <div class="formulario-label-fiel">
   {!! Form::label('fecha_inicio', 'Fecha del próximo', array('class' => 'formulario-label ')) !!}
-  {!! Form::date('fecha_inicio', null ,['class' => 'formulario-field']) !!}
+
+  @if(isset($Entidad))
+  {!! Form::date('fecha_inicio', $Entidad->fecha ,['class' => 'formulario-field']) !!}
+  @else
+  {!! Form::date('fecha_inicio', \Carbon\Carbon::now('America/Montevideo') ,['class' => 'formulario-field']) !!}
+  @endif
 </div>
 
 <div class="formulario-label-fiel">
