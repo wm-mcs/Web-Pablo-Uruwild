@@ -8,6 +8,14 @@
   {!! Form::text('cantidad_de_dias', null ,['class' => 'formulario-field']) !!}
 </div>
 
+<div class="formulario-label-fiel">
+  {!! Form::label('precio', 'Precio del todo el tour', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('precio', null ,['class' => 'formulario-field']) !!}
+</div>
+
+
+
+
 
 
 <div class="formulario-label-fiel">

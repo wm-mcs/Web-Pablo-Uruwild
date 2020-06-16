@@ -27,6 +27,16 @@ class Tour extends Model
     {
        return Carbon::parse($this->fecha_inicio);
     }
+
+    public function getFechaLimiteReservaAttribute() 
+    {
+       return $this->fecha->subDays(3);
+    }
+
+    public function getPrecioRedondeadoAttribute() 
+    {
+       return  round($this->precio);
+    }
     
 
     public function getRouteAttribute()

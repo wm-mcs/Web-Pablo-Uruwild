@@ -134,11 +134,13 @@
   
     
  <div class="site-section " id="contenido"> 
-    <div class="container">
-         
-
-
+    <div class="container">  
          {!! $Tour->contenido_render !!}
+
+         <h2 class="post-individual-section-titulo"> Precios </h2>
+         <p class="post-individual-p" > El tour completo tiene un precio de USD {{ $Tour->precio_redondeado }}  </p> la fecha límite para reservar un lugar es {{ $Tour->fecha_limite_reserva->format('d-m-Y') }}
+
+
     </div>
   </div>
     
