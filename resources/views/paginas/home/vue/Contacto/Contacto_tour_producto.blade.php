@@ -48,8 +48,8 @@
         <p class="color-text-gris m-0">Tengo interés en la pesca proesional</p>
       </div>
       <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="checkbox" name="" value="Quiero explorar los ricones naturales de Uruguay" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Quiero explorar los ricones naturales de Uruguay</p>
+        <input class="m-0 mr-2" type="checkbox" name="" value="Quiero explorar los rincones naturales de Uruguay" v-model="data_mensaje.que_necesitas">
+        <p class="color-text-gris m-0">Quiero explorar los rincones naturales de Uruguay</p>
       </div>
        <div class="row align-items-center  col-12 mb-2">
         <input class="m-0 mr-2" type="checkbox" name="" value="Quiero desconectarme de todo" v-model="data_mensaje.que_necesitas">

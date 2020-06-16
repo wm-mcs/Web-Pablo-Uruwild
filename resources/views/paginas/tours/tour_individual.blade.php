@@ -138,7 +138,7 @@
          {!! $Tour->contenido_render !!}
 
          <h2 class="post-individual-section-titulo mt-5"> Precios </h2>
-         <p class="post-individual-p" > El tour completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong>. Es posible hacer partes del Tour y no todo. La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
+         <p class="post-individual-p" > El tour completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong> por persona. La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
          </p> 
 
          <h2 class="post-individual-section-titulo "> ¿Cómo reservo? </h2>
