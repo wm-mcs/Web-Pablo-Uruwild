@@ -3,7 +3,6 @@
 namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Servicios\ServiciosDeEntidades;
 use App\Helpers\HelpersGenerales;
 use App\Traits\entidadesMetodosComunes;
 
