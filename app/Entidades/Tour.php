@@ -7,6 +7,7 @@ use App\Servicios\ServiciosDeEntidades;
 use App\Helpers\HelpersGenerales;
 use Carbon\Carbon;
 use App\Traits\entidadesMetodosComunes;
+
 class Tour extends Model
 {
 

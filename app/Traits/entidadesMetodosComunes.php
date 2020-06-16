@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Traits;
+use App\Servicios\ServiciosDeEntidades;
+use App\Helpers\HelpersGenerales;
 
 trait entidadesMetodosComunes{
     
