@@ -137,12 +137,12 @@
     <div class="container">  
          {!! $Tour->contenido_render !!}
 
-         <h2 class="post-individual-section-titulo mt-4"> Precios </h2>
+         <h2 class="post-individual-section-titulo mt-5"> Precios </h2>
          <p class="post-individual-p" > El tour completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong>. Es posible hacer partes del Tour y no todo. La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
          </p> 
 
          <h2 class="post-individual-section-titulo "> ¿Cómo reservo? </h2>
-         <p class="post-individual-p" > Para reservar debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
+         <p class="post-individual-p mb-4" > Para reservar debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
          </p> 
 
 
