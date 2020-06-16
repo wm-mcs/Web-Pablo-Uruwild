@@ -65,7 +65,7 @@
 
      <div class="row mb-4">
       <div class="form-group col-12">
-        <textarea v-model="data_mensaje.mensaje" class="border-primary input-text-class-secondary" cols="30" rows="4"  placeholder="Si quieres agregar más información escríbela aquí"></textarea>
+        <textarea v-model="data_mensaje.mensaje" class=" input-text-class-secondary" cols="30" rows="4"  placeholder="Si quieres agregar más información escríbela aquí"></textarea>
       </div>
     </div>
 
