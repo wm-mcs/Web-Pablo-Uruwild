@@ -113,7 +113,7 @@ class HelpersGenerales
         $cadena = str_replace('(UT)' ,'<ul class="timeline" >', $cadena);
         $cadena = str_replace('(/UT)' ,'</ul>', $cadena);
 
-        $cadena = str_replace('(LT)' ,'<li  >', $cadena);
+        $cadena = str_replace('(LT)' ,'<li>', $cadena);
         $cadena = str_replace('(/LT)' ,'</li>', $cadena);
 
         $cadena = str_replace('(TLT)' ,'<span class="text-color-secondary sub-titulos-class text-bold mb-2" >', $cadena);
