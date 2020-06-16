@@ -138,7 +138,11 @@
          {!! $Tour->contenido_render !!}
 
          <h2 class="post-individual-section-titulo"> Precios </h2>
-         <p class="post-individual-p" > El tour completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong>. La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
+         <p class="post-individual-p" > El tour completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong>. Es posible hacer partes del Tour y no todo. La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
+         </p> 
+
+         <h2 class="post-individual-section-titulo"> ¿Cómo reservo? </h2>
+         <p class="post-individual-p" > Para reservar debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
          </p> 
 
 
