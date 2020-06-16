@@ -2,7 +2,7 @@
 
   
  
-  <div action="#" class="form">
+  <div action="#" class="form col-11 col-lg-10 p-2 p-lg-5 ba">
     <div class="row mb-4">
       
       <div class="form-group col-lg-6">
@@ -21,72 +21,40 @@
       </div>
     </div>
 
-    <div class="row mb-4">
-      <div class="form-group col-12">
-       <input v-model="data_mensaje.que_vendes" type="text" :class="classImput" placeholder="¿Qué vendes/ofreces?">        
-      </div>
-    </div>
+   
 
    
    
    
 
     <div class="row mb-4 justify-content-end">
-      <p class="col-12 text-bold -text-primary mb-4">¿Con qué presupuesto cuentas?</p>
+      <p class="col-12 text-bold -text-primary mb-4">¿Quieres hacer todo o parte del tour?</p>
       <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="radio" name="" value="Menos de 600 Dolares" v-model="data_mensaje.presupuesto">
-        <p class="color-text-gris m-0">Menos de 500 Dolares</p>
+        <input class="m-0 mr-2" type="radio" name="" value="Todo" v-model="data_mensaje.presupuesto">
+        <p class="color-text-gris m-0">Todo</p>
       </div>
       <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="radio" name="" value="De 500 a 1000 Dolares" v-model="data_mensaje.presupuesto">
-        <p class="color-text-gris m-0">De 500 a 1000 Dolares</p>
-      </div>
-      <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="radio" name="" value="De 1000 a 2000 Dolares" v-model="data_mensaje.presupuesto">
-        <p class="color-text-gris m-0">De 1000 a 2000 Dolares</p>
-      </div>
-      <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="radio" name="" value="El presupuesto no es un problema" v-model="data_mensaje.presupuesto">
-        <p class="color-text-gris m-0">El presupuesto no es un problema</p>
-      </div>      
+        <input class="m-0 mr-2" type="radio" name="" value="Algunas partes" v-model="data_mensaje.presupuesto">
+        <p class="color-text-gris m-0">Algunas partes</p>
+      </div>         
     </div>
 
     <div class="row mb-4 justify-content-end">
 
-      <p class="col-12 text-bold -text-primary mb-4">¿Qué necesitas?</p>
+      <p class="col-12 text-bold -text-primary mb-4">Marca los que te identifiuqe</p>
 
       <div class="row align-items-center  col-12 mb-2">
         <input class="m-0 mr-2" type="checkbox" name="" value="Una página web personal" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Una página web personal</p>
+        <p class="color-text-gris m-0">Tengo interés en la pesca proesional</p>
       </div>
       <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="checkbox" name="" value="Una página web para tu empresa" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Una página web para tu empresa</p>
+        <input class="m-0 mr-2" type="checkbox" name="" value="Quiero explorar los ricones naturales de Uruguay" v-model="data_mensaje.que_necesitas">
+        <p class="color-text-gris m-0">Quiero explorar los ricones naturales de Uruguay</p>
       </div>
        <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="checkbox" name="" value="Un e-commerce" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Un e-commerce </p>
-      </div>
-      <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="checkbox" name="" value="Asesoría para e-commerce" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Asesoría para e-commerce </p>
-      </div>
-      <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="checkbox" name="" value="Publicidad en Google" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Publicidad en Google</p>
-      </div>
-      <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="checkbox" name="" value="Una página web a medida" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Una página web a medida</p>
-      </div>
-      <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="checkbox" name="" value="Rediseño de página web" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Rediseño de página web</p>
-      </div>
-      <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="checkbox" name="" value="Otro tipo de servicio de desarrollo web" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Otro tipo de servicio de desarrollo web</p>
-      </div>
+        <input class="m-0 mr-2" type="checkbox" name="" value="Quiero desconectarme de todo" v-model="data_mensaje.que_necesitas">
+        <p class="color-text-gris m-0"> Quiero desconectarme de todo </p>
+      </div>     
       
       
     </div>
@@ -97,7 +65,7 @@
 
      <div class="row mb-4">
       <div class="form-group col-12">
-        <textarea v-model="data_mensaje.mensaje" class="border-primary" cols="30" rows="4" :class="classImput" placeholder="Explica de manera detallada qué necesitas"></textarea>
+        <textarea v-model="data_mensaje.mensaje" class="border-primary" cols="30" rows="4" :class="classImput" placeholder="Si quieres agregar más información escríbela aquí"></textarea>
       </div>
     </div>
 
