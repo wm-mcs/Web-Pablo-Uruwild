@@ -16,11 +16,11 @@
    
     <div class="row mb-4">
       <div class="form-group col-12">
-        <textarea v-model="data_mensaje.mensaje" cols="30" rows="2" :class="classImput" placeholder="Mensaje"></textarea>
+        <textarea v-model="data_mensaje.mensaje" cols="30" rows="4" :class="classImput" placeholder="Mensaje"></textarea>
       </div>
     </div>
 
-    <div class="row">
+   <div class="row">
 
       <div class="col-md-6" v-if="errores" >
         <div :class="classTextColor" v-for="error in errores">@{{error}}</div>
@@ -39,15 +39,20 @@
       </div>  
 
     </div>
-    {{-- <div class="row">
-       <div class="col-md-12 text-center parrafo-class p-3 mb-4 " :class="classTextColor" >
-        Te responderé en menos de 24hs
+    <div class="row align-items-center justify-content-center mb-4 mt-4">
+      <div class="row  align-items-center justify-content-center">
+
+
+         <div class="col-12 text-center parrafo-class p-3 mb-1 color-text-gris" >
+          {{$Empresa->texto_tiempo_respuesta_contacto}}
+         </div>
+       
+         <img class="rounded-circle   imagen-contacto-chiac-al-lado-de-te-responderemos" src="{{url()}}/imagenes/Contacto/mauricio-costanzo-atención-comercial-por-desarrollo-páginas-web-software.jpg" alt="Image">
+         
       </div>
       
-    </div> --}}
+    </div>
     
   </div>
 </div>
-<div v-else class="section-title text-centermb-5" :class="classTextColor">
-  <h2 class="section-title text-center text-white mb-5">@{{mensaje_se_envio}}</h2>
-</div>
+@include('paginas.home.vue.Contacto.PartialLuegoEnvio')

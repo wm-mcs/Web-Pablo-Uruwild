@@ -146,6 +146,13 @@
          </p> 
 
 
+          <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
+                  
+             @include('paginas.home.vue.Contacto.Contacto_tour_producto')
+                                  
+          </contacto-component>
+
+
     </div>
   </div>
     
