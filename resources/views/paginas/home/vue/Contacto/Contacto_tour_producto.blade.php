@@ -2,21 +2,21 @@
 
   
  
-  <div action="#" class="form col-11 col-lg-10 p-2 p-lg-5 ba">
+  <div action="#" class="form col-11 col-lg-10 p-2 p-lg-5 ml-auto mr-auto background-gris-0">
     <div class="row mb-4">
       
       <div class="form-group col-lg-6">
-        <input v-model="data_mensaje.name" type="text" :class="classImput" placeholder="Nombre">
+        <input v-model="data_mensaje.name" type="text" class="input-text-class-secondary" placeholder="Nombre">
       </div>
 
       <div class="form-group col-lg-6">
-        <input v-model="data_mensaje.email" type="email" :class="classImput" placeholder="Email ">
+        <input v-model="data_mensaje.email" type="email" class="input-text-class-secondary" placeholder="Email ">
       </div>
     </div>
 
      <div class="row mb-4">
       <div class="form-group col-12">
-      <input v-model="data_mensaje.pais" type="text" :class="classImput" placeholder="¿De dónde eres? (País) ">
+      <input v-model="data_mensaje.pais" type="text" class="input-text-class-secondary" placeholder="¿De dónde eres? (País) ">
         
       </div>
     </div>
@@ -65,7 +65,7 @@
 
      <div class="row mb-4">
       <div class="form-group col-12">
-        <textarea v-model="data_mensaje.mensaje" class="border-primary" cols="30" rows="4" :class="classImput" placeholder="Si quieres agregar más información escríbela aquí"></textarea>
+        <textarea v-model="data_mensaje.mensaje" class="border-primary input-text-class-secondary" cols="30" rows="4"  placeholder="Si quieres agregar más información escríbela aquí"></textarea>
       </div>
     </div>
 
@@ -86,8 +86,8 @@
         <div v-if="cargando" class="flex-column align-items-center">
           <div class="cssload-tube-tunnel" :class="classCargadorColor"></div>
         </div>
-        <div v-else v-on:click="enviarMensaje" :class="classBoton" value="Enviar mensaje">
-          Enviar solicitud ahora
+        <div v-else v-on:click="enviarMensaje" class="Boton-Fuente-Chica Boton-Secondary-Sin-Relleno" value="Enviar mensaje">
+          Enviar solicitud para que alguien se ponga en contacto, me explique y me reserve <i class="fas fa-angle-double-right"></i>
         </div>
       </div> 
       <div>
@@ -103,7 +103,7 @@
           {{$Empresa->texto_tiempo_respuesta_contacto}}
          </div>
        
-         <img class="rounded-circle   imagen-contacto-chiac-al-lado-de-te-responderemos" src="{{url()}}/imagenes/Contacto/mauricio-costanzo-atención-comercial-por-desarrollo-páginas-web-software.jpg" alt="Image">
+         {{-- <img class="rounded-circle   imagen-contacto-chiac-al-lado-de-te-responderemos" src="{{url()}}/imagenes/Contacto/mauricio-costanzo-atención-comercial-por-desarrollo-páginas-web-software.jpg" alt="Image"> --}}
          
       </div>
       

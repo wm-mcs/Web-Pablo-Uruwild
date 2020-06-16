@@ -99,6 +99,18 @@
   color:$color-white;
 }
 
+.Boton-Secondary-Sin-Relleno{
+  @include Boton-base;
+  color:$Color-secondary;
+  background-color:transparent;
+  border-color:$Color-secondary;
+}
+
+.Boton-Secondary-Sin-Relleno:hover{
+  background-color: $color-3;
+  color:$color-white;
+}
+
 .Boton-Blanco{
   @include Boton-base;
   color:$color-white;

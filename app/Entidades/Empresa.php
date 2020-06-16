@@ -21,7 +21,8 @@ class Empresa extends Model
     protected $appends  = ['img_logo_horizontal_color',
                            'img_logo_horizontal_blanco',
                            'img_logo_cuadrado_blanco',
-                           'img_logo_cuadrado_color'
+                           'img_logo_cuadrado_color',
+                           'texto_tiempo_respuesta_contacto'
                            ];
 
     /**
@@ -37,6 +38,12 @@ class Empresa extends Model
       {
         return 'no';
       }
+    }
+
+
+    public function getTextoTiempoRespuestaContactoAttribute()
+    {
+        return 'Te responderemos en menos de 12hs';
     }
 
 
