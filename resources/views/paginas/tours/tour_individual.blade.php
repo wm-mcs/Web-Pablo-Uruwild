@@ -138,7 +138,8 @@
          {!! $Tour->contenido_render !!}
 
          <h2 class="post-individual-section-titulo"> Precios </h2>
-         <p class="post-individual-p" > El tour completo tiene un precio de USD {{ $Tour->precio_redondeado }}. La fecha límite para reservar es {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </p> 
+         <p class="post-individual-p" > El tour completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong>. La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
+         </p> 
 
 
     </div>
