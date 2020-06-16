@@ -2,7 +2,7 @@
 
   
  
-  <div action="#" class="form col-11 col-lg-10 p-2 p-lg-5 ml-auto mr-auto background-gris-0">
+  <div action="#" class="form mt-4 col-11 col-lg-10 p-2 p-lg-5 ml-auto mr-auto background-gris-0">
     <div class="row mb-4">
       
       <div class="form-group col-lg-6">
@@ -41,7 +41,7 @@
 
     <div class="row mb-4 justify-content-end">
 
-      <p class="col-12 text-bold -text-primary mb-4">Marca los que te identifiuqe</p>
+      <p class="col-12 text-bold -text-primary mb-4">Marca los que te identifique</p>
 
       <div class="row align-items-center  col-12 mb-2">
         <input class="m-0 mr-2" type="checkbox" name="" value="Una página web personal" v-model="data_mensaje.que_necesitas">
