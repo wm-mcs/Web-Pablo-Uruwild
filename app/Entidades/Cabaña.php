@@ -17,6 +17,7 @@ class Cabaña extends Model
     protected $table              ='cabañas';    
     protected $fillable           = ['name'];
     protected $appends            = ['imagen_principal'];
+    protected $img_key            = 'cabaña_id';
     protected $route_admin_name   = 'get_admin_cabañas_editar';
     
 
