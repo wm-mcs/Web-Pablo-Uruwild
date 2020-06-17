@@ -50,7 +50,7 @@
 
   
 
-  <script src="{{url()}}{{ elixir('js/credo.js')}} " ></script>   
+  <script async src="{{url()}}{{ elixir('js/credo.js')}} " ></script>   
 
 
   @if(Auth::guest())

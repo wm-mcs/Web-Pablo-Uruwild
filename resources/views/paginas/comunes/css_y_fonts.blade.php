@@ -4,4 +4,4 @@
     <link rel="stylesheet" href="{{url()}}/fonts/flaticon/font/flaticon.css">  
 
     <link rel="stylesheet" type="text/css" href="{{url()}}{{ elixir('css/credo.css') }}">
-    <script src="https://kit.fontawesome.com/8cca488c92.js" crossorigin="anonymous"></script>
+    <script async src="https://kit.fontawesome.com/8cca488c92.js" crossorigin="anonymous"></script>
