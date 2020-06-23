@@ -3,6 +3,7 @@
 namespace App\Traits;
 use App\Servicios\ServiciosDeEntidades;
 use App\Helpers\HelpersGenerales;
+use Illuminate\Http\Request;
 
 trait entidadesControllerComunesCrud{
     
