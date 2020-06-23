@@ -86,6 +86,15 @@ class Admin_Producto_Especial_Controllers extends Controller implements entidadC
     return view($this->Path_view_get_admin_index, compact('Entidades','Route_crear','Titulo','Route_busqueda','Carpeta_view_admin'));
   }
 
+  public function get_admin_crear()
+  {  
+    $Route_crear_post    = $this->Route_crear_post;
+    $Titulo              = 'Crear producto especial';
+    $Carpeta_view_admin  = 'producto_especiale';
+
+    return view($this->Path_view_get_admin_crear,compact('Route_crear_post','Titulo','Carpeta_view_admin'));
+  }
+
 
 
 
