@@ -61,7 +61,7 @@ class Home_Public_Controller extends Controller
                           });
 
         $Productos      = Cache::remember('ProductosHome', 40, function(){
-                          return $this->TourRepo->getEntidadesParaHomeTour(2,'name', 'desc','productos');
+                          return $this->TourRepo->getEntidadesParaHomeTour(2,'name', 'desc','producto');
                           });
 
         
