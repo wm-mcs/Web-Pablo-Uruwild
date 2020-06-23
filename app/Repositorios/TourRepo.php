@@ -14,9 +14,9 @@ class TourRepo extends BaseRepo
   }
 
 
-  public function getEntidadesParaHome($Cantidad,$Order_key, $Order_value = 'desc',$tipo_de_tour)
+  public function getEntidadesParaHomeTour($Cantidad,$Order_key, $Order_value = 'desc',$tipo_de_tour)
   {
-   $Entidades = $this->getEntidad()
+   $Entidades = $this->entidad
                      ->where('tipo_de_tour',$tipo_de_tour)
                      ->where('estado','si')
                      ->where('borrado','no')
