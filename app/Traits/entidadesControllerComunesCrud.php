@@ -10,10 +10,7 @@ trait entidadesControllerComunesCrud{
 
 
 
-  public function getImagenMiniaturaSize()
-  {
-    return 600;
-  }
+  
     
 
   public function get_admin(Request $Request)
