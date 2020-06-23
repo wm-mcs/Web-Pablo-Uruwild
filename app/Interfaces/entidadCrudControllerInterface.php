@@ -46,4 +46,10 @@ interface entidadCrudControllerInterface{
    */
   public function set_admin_editar($id,Request $Request);
 
+
+  /**
+   * Tamaño de la imagen en pixeles
+   */
+  public function getImagenMiniaturaSize
+
 }
