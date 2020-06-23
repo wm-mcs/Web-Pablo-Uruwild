@@ -9,7 +9,10 @@ trait entidadesControllerComunesCrud{
 
 
 
-
+  public function getImagenMiniaturaSize()
+  {
+    return 600;
+  }
   
     
 
@@ -71,7 +74,7 @@ trait entidadesControllerComunesCrud{
             $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'.jpg');
 
             // I m a g e n   c h i c a 
-            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',$this->getImagenMiniaturaSize);
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',$this->getImagenMiniaturaSize());
 
         }
 
@@ -128,7 +131,7 @@ trait entidadesControllerComunesCrud{
             $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'.jpg');
 
             // I m a g e n   c h i c a 
-            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',$this->getImagenMiniaturaSize);
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',$this->getImagenMiniaturaSize());
 
             // Ajusto los cache
             $nombre_campo = $this->Nombre_del_campo_imagen;
