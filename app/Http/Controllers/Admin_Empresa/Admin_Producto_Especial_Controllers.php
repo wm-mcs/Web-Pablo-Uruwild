@@ -48,11 +48,11 @@ class Admin_Producto_Especial_Controllers extends Controller implements entidadC
     $this->Nombre_entidad_plural      = 'Tours';
     $this->Nombre_entidad_singular    = 'Tour';
     $this->Carpeta_view_admin         = strtolower(str_replace(' ','_', $this->Nombre_entidad_plural));
-    $this->Path_view_get_admin_index  = 'admin.' . $this->Carpeta_view_admin . '.home';
-    $this->Path_view_get_admin_crear  = 'admin.' . $this->Carpeta_view_admin . '.crear';
+    $this->Path_view_get_admin_index  = 'admin.productos_especiales.home';
+    $this->Path_view_get_admin_crear  = 'admin.productos_especiales.crear';
     $this->Path_view_get_admin_editar = 'admin.' . $this->Carpeta_view_admin . '.editar';
-    $this->Route_index                = 'get_admin_'. $this->Carpeta_view_admin .'';
-    $this->Route_crear                = 'get_admin_'. $this->Carpeta_view_admin .'_crear';
+    $this->Route_index                = 'get_admin_productos_especiales';
+    $this->Route_crear                = 'get_admin_productos_especiales_crear';
     $this->Route_crear_post           = 'set_admin_'. $this->Carpeta_view_admin .'_crear';
     $this->Route_editar_post          = 'set_admin_'. $this->Carpeta_view_admin .'_editar';
     $this->Route_luego_de_crear       = $this->Route_index;
@@ -76,11 +76,12 @@ class Admin_Producto_Especial_Controllers extends Controller implements entidadC
 
   public function get_admin(Request $Request)
   { 
-    $Entidades           = $this->Entidad_principal->getEntidadesDeToursPaginadas($Request,9,'tour','id','desc');
-    $Titulo              = $this->Nombre_entidad_plural;
+    $Entidades           = $this->Entidad_principal->getEntidadesDeToursPaginadas($Request,9,'producto','id','desc');
+    $Titulo              = 'Productos especiales';
     $Route_crear         = $this->Route_crear;
     $Route_busqueda      = $this->Route_index;
-    $Carpeta_view_admin  = $this->Carpeta_view_admin;
+    $Carpeta_view_admin  = 'productos_especiales';
+
 
     return view($this->Path_view_get_admin_index, compact('Entidades','Route_crear','Titulo','Route_busqueda','Carpeta_view_admin'));
   }
