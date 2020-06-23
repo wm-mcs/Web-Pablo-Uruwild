@@ -13,7 +13,6 @@ trait entidadesControllerComunesCrud{
   {
     return 600;
   }
-  
     
 
   public function get_admin(Request $Request)
@@ -24,7 +23,7 @@ trait entidadesControllerComunesCrud{
     $Route_busqueda      = $this->Route_index;
     $Carpeta_view_admin  = $this->Carpeta_view_admin;
 
-    return view($this->Path_view_get_admin_index, compact('Entidades','Route_crear','Titulo','Route_busqueda','Carpeta_view_admin'));
+     return view($this->Path_view_get_admin_index, compact('Entidades','Route_crear','Titulo','Route_busqueda','Carpeta_view_admin'));
   }
 
   public function get_admin_crear()
