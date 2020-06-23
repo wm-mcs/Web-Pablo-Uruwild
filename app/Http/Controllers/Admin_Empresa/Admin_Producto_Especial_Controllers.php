@@ -48,8 +48,8 @@ class Admin_Producto_Especial_Controllers extends Controller implements entidadC
     $this->Nombre_entidad_plural      = 'Tours';
     $this->Nombre_entidad_singular    = 'Tour';
     $this->Carpeta_view_admin         = strtolower(str_replace(' ','_', $this->Nombre_entidad_plural));
-    $this->Path_view_get_admin_index  = 'admin.productos_especiales.home';
-    $this->Path_view_get_admin_crear  = 'admin.productos_especiales.crear';
+    $this->Path_view_get_admin_index  = 'admin.producto_especial.home';
+    $this->Path_view_get_admin_crear  = 'admin.producto_especial.crear';
     $this->Path_view_get_admin_editar = 'admin.' . $this->Carpeta_view_admin . '.editar';
     $this->Route_index                = 'get_admin_productos_especiales';
     $this->Route_crear                = 'get_admin_productos_especiales_crear';
@@ -80,7 +80,7 @@ class Admin_Producto_Especial_Controllers extends Controller implements entidadC
     $Titulo              = 'Productos especiales';
     $Route_crear         = $this->Route_crear;
     $Route_busqueda      = $this->Route_index;
-    $Carpeta_view_admin  = 'productos_especiales';
+    $Carpeta_view_admin  = 'producto_especial';
 
 
     return view($this->Path_view_get_admin_index, compact('Entidades','Route_crear','Titulo','Route_busqueda','Carpeta_view_admin'));
@@ -90,7 +90,7 @@ class Admin_Producto_Especial_Controllers extends Controller implements entidadC
   {  
     $Route_crear_post    = $this->Route_crear_post;
     $Titulo              = 'Crear producto especial';
-    $Carpeta_view_admin  = 'productos_especiales';
+    $Carpeta_view_admin  = 'producto_especial';
 
     return view($this->Path_view_get_admin_crear,compact('Route_crear_post','Titulo','Carpeta_view_admin'));
   }
