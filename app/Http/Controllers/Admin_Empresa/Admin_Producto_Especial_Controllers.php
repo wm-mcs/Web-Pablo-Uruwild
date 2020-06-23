@@ -80,7 +80,7 @@ class Admin_Producto_Especial_Controllers extends Controller implements entidadC
     $Titulo              = 'Productos especiales';
     $Route_crear         = $this->Route_crear;
     $Route_busqueda      = $this->Route_index;
-    $Carpeta_view_admin  = 'productos_especiales';
+    $Carpeta_view_admin  = 'producto_especiale';
 
 
     return view($this->Path_view_get_admin_index, compact('Entidades','Route_crear','Titulo','Route_busqueda','Carpeta_view_admin'));
