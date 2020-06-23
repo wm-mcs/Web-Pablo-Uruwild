@@ -74,6 +74,18 @@ class Admin_Tours_Controllers extends Controller implements entidadCrudControlle
   }
 
 
+  public function get_admin(Request $Request)
+  { 
+    $Entidades           = $this->Entidad_principal->getEntidadesDeToursPaginadas($Request,9,'tour','id','desc');
+    $Titulo              = $this->Nombre_entidad_plural;
+    $Route_crear         = $this->Route_crear;
+    $Route_busqueda      = $this->Route_index;
+    $Carpeta_view_admin  = $this->Carpeta_view_admin;
+
+    return view($this->Path_view_get_admin_index, compact('Entidades','Route_crear','Titulo','Route_busqueda','Carpeta_view_admin'));
+  }
+
+
 
 
   

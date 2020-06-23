@@ -14,6 +14,17 @@ class TourRepo extends BaseRepo
   }
 
 
+  public function getEntidadesDeToursPaginadas($request,$paginada,$tipo_de_tour,$orderBy = 'id', $vañor = 'desc' )
+  {
+    return $this->entidad
+                ->active() 
+                ->where('tipo_de_tour',$tipo_de_tour)
+                ->name($request->get('name'))                               
+                ->orderBy($orderBy,$vañor)
+                ->paginate($paginacion);
+  }
+
+
 
  
   
