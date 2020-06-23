@@ -20,7 +20,7 @@ interface entidadCrudControllerInterface{
   /**
    * Me lleva a la vista para ver las etidades
    */
-  public function get_admin($Request);
+  public function get_admin(Request $Request);
 
   /**
    * Me lleva a la vista para crear
@@ -31,7 +31,7 @@ interface entidadCrudControllerInterface{
   /**
    * Post de crear
    */
-  public function set_admin_crear($Request);
+  public function set_admin_crear(Request $Request);
 
 
   /**
@@ -43,6 +43,6 @@ interface entidadCrudControllerInterface{
   /**
    * post de editar
    */
-  public function set_admin_editar($id,$Request);
+  public function set_admin_editar($id,Request $Request);
 
 }
