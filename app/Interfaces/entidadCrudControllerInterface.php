@@ -50,6 +50,6 @@ interface entidadCrudControllerInterface{
   /**
    * Tamaño de la imagen en pixeles
    */
-  public function getImagenMiniaturaSize
+  public function getImagenMiniaturaSize();
 
 }
