@@ -21,7 +21,7 @@ class TourRepo extends BaseRepo
                 ->where('tipo_de_tour',$tipo_de_tour)
                 ->name($request->get('name'))                               
                 ->orderBy($orderBy,$vañor)
-                ->paginate($paginacion);
+                ->paginate($paginada);
   }
 
 
