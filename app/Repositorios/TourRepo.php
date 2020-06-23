@@ -14,6 +14,24 @@ class TourRepo extends BaseRepo
   }
 
 
+  public function getEntidadesParaHome($Cantidad,$Order_key, $Order_value = 'desc',$tipo_de_tour)
+    {
+     $Entidades = $this->getEntidad()
+                       ->where('tipo_de_tour',$tipo_de_tour)
+                       ->where('estado','si')
+                       ->where('borrado','no')
+                       ->orderBy($Order_key,$Order_value)
+                       ->get();
+
+     if($Entidades->count() >= $Cantidad )   
+     {
+      return $Entidades->take($Cantidad);
+     }  
+
+      return   $Entidades;           
+    }
+
+
   public function getEntidadesDeToursPaginadas($request,$paginada,$tipo_de_tour,$orderBy = 'id', $vañor = 'desc' )
   {
     return $this->entidad

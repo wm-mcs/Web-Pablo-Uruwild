@@ -57,12 +57,16 @@ class Home_Public_Controller extends Controller
                           });
 
         $Circuitos      = Cache::remember('CircuitosHome', 40, function(){
-                          return $this->TourRepo->getEntidadesParaHome(2,'name', 'desc');
+                          return $this->TourRepo->getEntidadesParaHome(2,'name', 'desc','tour');
+                          });
+
+        $Productos      = Cache::remember('ProductosHome', 40, function(){
+                          return $this->TourRepo->getEntidadesParaHome(2,'name', 'desc','productos');
                           });
 
         
 
-        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas','Circuitos'));
+        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas','Circuitos','Productos'));
     }
 
 
