@@ -2,7 +2,7 @@
 <div class="formulario-label-fiel">
 {!! Form::label('img', 'Imágenes', array('class' => 'formulario-label ')) !!}
 <div class="contiene-aclaracion-label">
-  Cargar imágenes en formato png (Cuadrado) con fondo transparente. Mínimo 500px x 500px.  
+  Cargar imágenes en formato png (Cuadrado) con fondo transparente. Mínimo 1920px x 1080px.  
 </div>
 {!! Form::file('img[]',['class'            => 'formulario-field',                       
                        'multiple'          => true,

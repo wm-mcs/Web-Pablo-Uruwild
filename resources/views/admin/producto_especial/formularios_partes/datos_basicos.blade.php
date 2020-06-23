@@ -9,7 +9,7 @@
 </div>
 
 <div class="formulario-label-fiel">
-  {!! Form::label('precio', 'Precio del todo el tour', array('class' => 'formulario-label ')) !!}
+  {!! Form::label('precio', 'Precio por persona', array('class' => 'formulario-label ')) !!}
   {!! Form::text('precio', null ,['class' => 'formulario-field']) !!}
 </div>
 
