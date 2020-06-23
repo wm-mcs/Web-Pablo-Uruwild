@@ -6,6 +6,13 @@ Route::get('get_admin_tours',
   'as'    => 'get_admin_tours'
 ]);
 
+      // R u t a   d e   l o s   p r o d u c t o s   e s p e c i a l e s 
+      Route::get('get_admin_productos_especiales',
+      [
+        'uses'  => 'Admin_Empresa\Admin_Producto_Especial_Controllers@get_admin',
+        'as'    => 'get_admin_productos_especiales'
+      ]);
+
 Route::get('get_admin_tours_crear',
 [
   'uses'  => 'Admin_Empresa\Admin_Tours_Controllers@get_admin_crear',

@@ -26,9 +26,11 @@
         </a> 
 
 
-
+        <a href="{{route('get_admin_productos_especiales')}}">
+          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Productos especiales</li>
+        </a> 
         
-
+      
         
 
 
