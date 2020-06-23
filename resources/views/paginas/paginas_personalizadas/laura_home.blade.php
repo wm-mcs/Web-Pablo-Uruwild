@@ -165,7 +165,7 @@
 
    @if($Productos->count() > 0)
   {{-- Aquí poner contendio para probar --}}
-   <div class="site-section background-gris-2" id="circuitos"> 
+   <div class="site-section background-gris-0" id="circuitos"> 
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
@@ -190,7 +190,7 @@
 
 
 
-  <div class="site-section background-gris-0"> 
+  <div class="site-section background-gris-1"> 
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
