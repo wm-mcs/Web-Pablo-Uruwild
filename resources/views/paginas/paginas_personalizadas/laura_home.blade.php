@@ -163,6 +163,28 @@
   </div>
   @endif
 
+   @if($Productos->count() > 0)
+  {{-- Aquí poner contendio para probar --}}
+   <div class="site-section background-gris-2" id="circuitos"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
+          Escapadas al medio del campo. Desconexión total <i class="fas fa-peace"></i>
+        </div>
+
+      </div>
+      <div class="row">
+
+        @foreach($Productos as $Producto)
+          {{--*/ $Entidad  = $Producto /*--}}
+          {{--*/ $Route    = $Entidad->route /*--}}
+          @include('admin.producto_especial.partes.lista')
+        @endforeach
+      </div>      
+    </div>
+  </div>
+  @endif
+
 
     
 
