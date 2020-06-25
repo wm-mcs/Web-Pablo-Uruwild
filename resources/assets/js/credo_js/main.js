@@ -1,5 +1,3 @@
- 
-
 jQuery(document).ready(function($) {
 
   "use strict";
@@ -107,7 +105,7 @@ jQuery(document).ready(function($) {
   // navigation
   var OnePageNavigation = function() {
     var navToggler = $('.site-menu-toggle');
-    $("body").on("click", ".main-menu li a[href^='#'], .scroll-to, .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a[href^='#']", function(e) {
+    $("body").on("click", ".main-menu li a[href^='#'], .scroll_to, .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a[href^='#']", function(e) {
       e.preventDefault();
 
       var hash = this.hash;
