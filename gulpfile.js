@@ -59,19 +59,20 @@ elixir(function(mix) {
 
      mix.scripts([
         
+        
+        
         'credo_js/jquery-3.3.1.min.js',
-        'credo_js/jquery-ui.js',
-        'credo_js/popper.min.js',
+        /*'credo_js/jquery-ui.js',*/
+       /* 'credo_js/popper.min.js',*/
         'credo_js/bootstrap.min.js',
-        'credo_js/owl.carousel.min.js',
+      /*  'credo_js/owl.carousel.min.js',*/
         'credo_js/jquery.easing.1.3.js',
-        'credo_js/aos.js',
-        'credo_js/jquery.fancybox.min.js',
+       /* 'credo_js/aos.js',
+        'credo_js/jquery.fancybox.min.js',*/
         'credo_js/jquery.sticky.js',
         'credo_js/main.js', 
-        'Plugins/Plug-lazyLoadXT.js',       
-        'Customs/noticias_blog.js',
-        'Plugins/Plug-Notify.js',
+        'Plugins/Plug-lazyLoadXT.js',  
+        'Plugins/Plug-Notify.js'
 
        
 
