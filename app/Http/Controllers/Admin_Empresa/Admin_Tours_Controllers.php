@@ -73,6 +73,16 @@ class Admin_Tours_Controllers extends Controller implements entidadCrudControlle
     return $manager;
   }
 
+  /**
+   * olvida los cache que ponga aquí
+   *
+   * @return void
+   */
+  public function olvidarCachesAsociadoAEstaEntidad()
+  {
+    HelpersGenerales::helper_olvidar_este_cache('CircuitosHome');    
+  }
+
 
   public function get_admin(Request $Request)
   { 

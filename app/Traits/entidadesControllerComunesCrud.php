@@ -13,6 +13,8 @@ trait entidadesControllerComunesCrud{
   {
     return 600;
   }
+
+
     
 
   public function get_admin(Request $Request)
@@ -80,6 +82,9 @@ trait entidadesControllerComunesCrud{
         // M a r c o   u n a   i m a g e n   c o  m o   p r i n c i p a l
         $Imagen = $this->ImagenRepo->getImagenes($this->Nombre_del_campo_imagen,$Entidad->id)->first();
         $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si');
+
+        // B o r r a   l o s   c a c h e   q u e   p u e d a n  e s t a r   u s a n d o   e s t á   e n t i d a d
+        $this->olvidarCachesAsociadoAEstaEntidad();
         
       }
       
@@ -140,6 +145,9 @@ trait entidadesControllerComunesCrud{
 
         HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Entidad->id);
         HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Entidad->id);
+
+        // B o r r a   l o s   c a c h e   q u e   p u e d a n  e s t a r   u s a n d o   e s t á   e n t i d a d
+        $this->olvidarCachesAsociadoAEstaEntidad();
 
         
       }

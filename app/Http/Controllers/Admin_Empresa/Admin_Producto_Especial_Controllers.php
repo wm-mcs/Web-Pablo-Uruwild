@@ -73,6 +73,11 @@ class Admin_Producto_Especial_Controllers extends Controller implements entidadC
     return $manager;
   }
 
+  public function olvidarCachesAsociadoAEstaEntidad()
+  {   
+    HelpersGenerales::helper_olvidar_este_cache('ProductosHome');
+  }
+
 
   public function get_admin(Request $Request)
   { 
