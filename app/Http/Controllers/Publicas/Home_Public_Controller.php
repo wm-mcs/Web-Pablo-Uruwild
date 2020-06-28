@@ -72,7 +72,7 @@ class Home_Public_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home');
                           });     
 
-                            
+                       
 
         return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas','Circuitos','Productos','Portada'));
     }
