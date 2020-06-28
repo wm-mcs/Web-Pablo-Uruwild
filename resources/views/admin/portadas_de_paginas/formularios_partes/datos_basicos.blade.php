@@ -2,8 +2,8 @@
 
 @if(Auth::user()->role == 'adminMcos522')
 <div class="formulario-label-fiel">
-  {!! Form::label('nombre_de_pagina', 'Nombre de página', array('class' => 'formulario-label ')) !!}
-  {!! Form::text('nombre_de_pagina', null ,['class' => 'formulario-field']) !!}
+  {!! Form::label('name', 'Nombre de página', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('name', null ,['class' => 'formulario-field']) !!}
 </div>
 @endif
 
