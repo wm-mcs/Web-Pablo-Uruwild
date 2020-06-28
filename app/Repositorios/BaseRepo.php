@@ -3,50 +3,35 @@ namespace App\Repositorios;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
-use App\Repositorios\Emails\EmailsRepo;
 use Input;
 use Intervention\Image\ImageManagerStatic as Image;
 
-/**
-* Contiene metodos comunes para todo los repositorios
-*/
+
 abstract class BaseRepo 
 {
-    /**
-     * entidad que ingresamos por parametro
-     */
-    protected $entidad;
     
+    protected $entidad;    
 
     public function __construct()
-    {
-      
+    {      
       $this->entidad      = $this->getEntidad();
-    }
-
-   public function getEmailsRepo()
-   {
-    return new EmailsRepo();
-   }
+    }  
 
     public function find($id)
     {
       return $this->entidad->find($id);
     }
 
-     public function destroy_entidad($id)
+    public function destroy_entidad($id)
     {
       $entidad_a_borrar = $this->find($id);
       $entidad_a_borrar->delete();
     }
-
-    //elimina esta entidad
+   
     public function destruir_esta_entidad($Entidad)
     {
       $Entidad->delete();
     }
-
-
 
     public function getEntidadesParaHome($Cantidad,$Order_key, $Order_value = 'desc')
     {
@@ -62,6 +47,27 @@ abstract class BaseRepo
      }  
 
       return   $Entidades;           
+    }
+
+
+    /**
+     * Me trae la primera entidad que exista según ese atributo. Si no existe devuelve string vacio
+     *
+     * @return objet or string "" sino existe
+     */
+    public function getFirstEntidadSegunAtributo($atributo,$valor)
+    {
+      $Entidades =  $this->getEntidad()
+                         ->where($atributo,$valor)
+                         ->get();
+
+      if($Entidades->count() > 0)
+      {
+        return $Entidades[0];
+      }     
+
+      return '';              
+
     }
 
     

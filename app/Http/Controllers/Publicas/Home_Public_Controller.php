@@ -11,6 +11,7 @@ use App\Repositorios\CabañaRepo;
 use Illuminate\Support\Facades\Cache;
 use App\Repositorios\TeamRepo;
 use App\Repositorios\TourRepo;
+use App\Repositorios\PortadaDePaginaRepo;                 
 
 
 class Home_Public_Controller extends Controller
@@ -21,22 +22,25 @@ class Home_Public_Controller extends Controller
     protected $TeamRepo;
     protected $CabañaRepo;
     protected $TourRepo;
+    protected $PortadaDePaginaRepo;
 
   
 
-    public function __construct(ImgHomeRepo     $ImgHomeRepo,
-                                EmpresaRepo     $EmpresaRepo, 
-                                NoticiasRepo    $NoticiasRepo,
-                                TeamRepo        $TeamRepo,
-                                CabañaRepo      $CabañaRepo,
-                                TourRepo        $TourRepo )
+    public function __construct(ImgHomeRepo          $ImgHomeRepo,
+                                EmpresaRepo          $EmpresaRepo, 
+                                NoticiasRepo         $NoticiasRepo,
+                                TeamRepo             $TeamRepo,
+                                CabañaRepo           $CabañaRepo,
+                                TourRepo             $TourRepo,
+                                PortadaDePaginaRepo  $PortadaDePaginaRepo )
     {
-        $this->ImgHomeRepo     = $ImgHomeRepo;
-        $this->EmpresaRepo     = $EmpresaRepo;
-        $this->NoticiasRepo    = $NoticiasRepo;
-        $this->TeamRepo        = $TeamRepo;
-        $this->CabañaRepo      = $CabañaRepo;
-        $this->TourRepo        = $TourRepo;
+        $this->ImgHomeRepo         = $ImgHomeRepo;
+        $this->EmpresaRepo         = $EmpresaRepo;
+        $this->NoticiasRepo        = $NoticiasRepo;
+        $this->TeamRepo            = $TeamRepo;
+        $this->CabañaRepo          = $CabañaRepo;
+        $this->TourRepo            = $TourRepo;
+        $this->PortadaDePaginaRepo = $PortadaDePaginaRepo;
         
     }
 
@@ -64,9 +68,11 @@ class Home_Public_Controller extends Controller
                           return $this->TourRepo->getEntidadesParaHomeTour(4,'name', 'desc','producto');
                           });
 
-        
+        $Portada        = Cache::remember('PortadaHome', 20000, function(){
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home');
+                          });        
 
-        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas','Circuitos','Productos'));
+        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas','Circuitos','Productos','Portada'));
     }
 
 
