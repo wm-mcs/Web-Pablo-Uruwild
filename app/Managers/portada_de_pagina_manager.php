@@ -13,8 +13,8 @@ class portada_de_pagina_manager extends ManagerBase
   {
     $rules = [
       'titulo'               => 'required|max:30',
-      'sub_titulo'           => 'required|max:60',
-      'parrafo'              => 'required|max:90',
+      'sub_titulo'           => 'max:60',
+      'parrafo'              => 'max:90',
       'posicion'             => 'required',
       'llamado_a_la_accion'  => 'max:40'
              ];
