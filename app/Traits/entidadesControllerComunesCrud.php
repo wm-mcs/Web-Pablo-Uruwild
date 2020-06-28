@@ -83,10 +83,12 @@ trait entidadesControllerComunesCrud{
         $Imagen = $this->ImagenRepo->getImagenes($this->Nombre_del_campo_imagen,$Entidad->id)->first();
         $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si');
 
-        // B o r r a   l o s   c a c h e   q u e   p u e d a n  e s t a r   u s a n d o   e s t á   e n t i d a d
-        $this->olvidarCachesAsociadoAEstaEntidad();
+       
         
       }
+
+      // B o r r a   l o s   c a c h e   q u e   p u e d a n  e s t a r   u s a n d o   e s t á   e n t i d a d
+      $this->olvidarCachesAsociadoAEstaEntidad();
       
       
 
@@ -144,13 +146,12 @@ trait entidadesControllerComunesCrud{
         }
 
         HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Entidad->id);
-        HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Entidad->id);
-
-        // B o r r a   l o s   c a c h e   q u e   p u e d a n  e s t a r   u s a n d o   e s t á   e n t i d a d
-        $this->olvidarCachesAsociadoAEstaEntidad();
-
+        HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Entidad->id);  
         
       }
+
+      // B o r r a   l o s   c a c h e   q u e   p u e d a n  e s t a r   u s a n d o   e s t á   e n t i d a d
+      $this->olvidarCachesAsociadoAEstaEntidad();
 
     return redirect()->back()->with('alert', 'Se editó con éxito. En breve se verás reflejado en la interfás de los usuarios'  );  
   }
