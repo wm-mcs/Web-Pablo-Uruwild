@@ -34,8 +34,8 @@
 
 <div class="formulario-label-fiel">
   {!! Form::label('posicion', 'Posición', array('class' => 'formulario-label ')) !!}
-  {!! Form::select('posicion',['left'   => 'Activo',
-                               'center' => 'Desactivar',
+  {!! Form::select('posicion',['left'   => 'Izquierda',
+                               'center' => 'Centro',
                                'rigth'  => 'Derecha'] , null,['class' => 'formulario-field'] )          !!}
 </div>
 

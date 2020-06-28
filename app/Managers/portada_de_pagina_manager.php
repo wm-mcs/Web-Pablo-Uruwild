@@ -22,7 +22,7 @@ class portada_de_pagina_manager extends ManagerBase
     return $rules;
   }
  
-  return ['titulo','sub_titulo','parrafo','llamado_a_la_accion','link_llamado_a_la_accion','posicion','estado'];
+ 
   
   
 }
