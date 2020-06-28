@@ -57,7 +57,7 @@ class Admin_Portadas_De_Pagina_Controllers extends Controller implements entidad
     $this->Route_editar_post          = 'set_admin_'. $this->Carpeta_view_admin .'_editar';
     $this->Route_luego_de_crear       = $this->Route_index;
     $this->Path_carpeta_imagenes      = $this->Carpeta_view_admin .'/'; //donde se gurarda la imagen. Debe existir
-    $this->Nombre_del_campo_imagen    = strtolower($this->Nombre_entidad_singular) . '_id';
+    $this->Nombre_del_campo_imagen    = 'portada_de_pagina_id';
     
   }
 
