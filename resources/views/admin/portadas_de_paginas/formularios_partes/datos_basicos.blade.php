@@ -1,3 +1,12 @@
+
+
+@if(Auth::user()->role == 'adminMcos522')
+<div class="formulario-label-fiel">
+  {!! Form::label('nombre_de_pagina', 'Nombre de página', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('nombre_de_pagina', null ,['class' => 'formulario-field']) !!}
+</div>
+@endif
+
 <div class="formulario-label-fiel">
   {!! Form::label('titulo', 'Título', array('class' => 'formulario-label ')) !!}
   {!! Form::text('titulo', null ,['class' => 'formulario-field']) !!}

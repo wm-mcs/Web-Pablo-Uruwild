@@ -25,7 +25,9 @@
           <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Blog</li>
         </a> 
 
-
+        <a href="{{route('get_admin_portadas_de_paginas')}}">
+          <li class="admin-columna-li mi-float-right">Páginas portadas</li>
+        </a> 
       
         
 
