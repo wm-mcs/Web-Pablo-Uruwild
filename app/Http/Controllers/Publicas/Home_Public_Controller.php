@@ -70,7 +70,9 @@ class Home_Public_Controller extends Controller
 
         $Portada        = Cache::remember('PortadaHome', 20000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home');
-                          });        
+                          });     
+
+                          dd($Portada);   
 
         return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas','Circuitos','Productos','Portada'));
     }
