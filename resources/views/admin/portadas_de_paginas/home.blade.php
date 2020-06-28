@@ -13,10 +13,13 @@
 
 
     <div class="col-6 col-lg-4"> 
-     <a class="col-12 Boton-Fuente-Chica Boton-Secondary-Relleno" href="{{route($Route_crear)}}"> 
-      Crear       
-     </a>  
+     @if(Auth::user()->role == 'adminMcos522')
+       <a class="col-12 Boton-Fuente-Chica Boton-Secondary-Relleno" href="{{route($Route_crear)}}"> 
+        Crear       
+       </a>  
+     @endif
     </div>
+    
     @include('admin.'. $Carpeta_view_admin . '.partes.buscador')
    </div>
  </div>

@@ -5,7 +5,7 @@
  
 
  <h1 class="titulos-class mb-3  text-color-secondary font-secondary">Editar</h1> 
- <p class="parrafo-class color-text-gris mb-3"> Link pública <i class="fas fa-hand-point-right"></i> <a href="{{$Entidad->route}}"  target="_blank">{{$Entidad->name}}</a></p>
+
 
   <p class="parrafo-class color-text-gris"> Para guardar los cambios deben apretar el botón que está abajo del todo</p>
   
@@ -40,17 +40,7 @@
         </div>
       </div>
 
-       <div class="contenedor-grupo-datos col-12">
-        <div class="contenedor-grupo-datos-titulo">Contenido </div>
-        <div class="contenedor-formulario-label-fiel">                       
-          <div class="formulario-label-fiel">
-            @include('admin.tours.formularios_partes.aclaracion_etiquetas')
-            {!! Form::label('description', 'Contenido', array('class' => 'formulario-label ')) !!}
-            {!! Form::textarea('description', null ,['class' => 'formulario-field',
-                                                     'rows' => 20 ]) !!}
-          </div>
-        </div>
-      </div>
+      
      
       
 
