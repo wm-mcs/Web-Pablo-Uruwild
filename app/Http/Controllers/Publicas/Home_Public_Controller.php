@@ -68,11 +68,11 @@ class Home_Public_Controller extends Controller
                           return $this->TourRepo->getEntidadesParaHomeTour(4,'name', 'desc','producto');
                           });
 
-        $Portada        = Cache::remember('PortadaHome', 20000, function(){
+        $Portada        = Cache::remember('PortadaHome', 60, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home');
                           });     
 
-                          dd($Portada);   
+                            
 
         return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas','Circuitos','Productos','Portada'));
     }
