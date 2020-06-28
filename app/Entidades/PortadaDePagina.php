@@ -15,7 +15,7 @@ class PortadaDePagina extends Model
     protected $table            ='portada_de_paginas';    
     protected $fillable         = ['name', 'description'];
     protected $img_key          = 'portada_de_pagina_id';
-    protected $route_admin_name = 'get_admin_portadas_editar';
+    protected $route_admin_name = 'get_admin_portadas_de_paginas_editar';
     
 
 
