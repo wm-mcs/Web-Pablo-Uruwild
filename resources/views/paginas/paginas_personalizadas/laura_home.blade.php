@@ -2,8 +2,8 @@
 
 
 
-{{--*/ $ImagenPortadaChica    = $Portada->url_img_foto_principal_chica *--}}
-{{--*/ $ImagenPortada         = $Portada->url_img_foto_principal'/*--}}
+{{--*/ $ImagenPortadaChica    = $Portada->url_img_foto_principal_chica /*--}}
+{{--*/ $ImagenPortada         = $Portada->url_img_foto_principal /*--}}
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/Empresa/logo-para-tags.jpg '/*--}}
 {{--*/ $Titulo                = 'Uruwild' /*--}}
 {{--*/ $DescriptionEtiqueta   = '' /*--}}
