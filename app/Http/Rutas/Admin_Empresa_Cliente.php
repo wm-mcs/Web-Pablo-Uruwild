@@ -28,6 +28,9 @@ require __DIR__ . '/Actividades/Ruta_actividades.php';
 
 require __DIR__ . '/Tours/Ruta_tours.php'; 
 
+require __DIR__ . '/PortadaDePagina/Ruta_portada_de_paginas.php'; 
+
+
 
 
 
