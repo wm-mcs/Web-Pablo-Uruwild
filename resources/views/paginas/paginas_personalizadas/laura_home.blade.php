@@ -144,19 +144,23 @@
    <div class="site-section background-gris-1" id="circuitos"> 
     <div class="container">
       <div class="row justify-content-lg-center">
-        <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-lg-center">
-          Circuítos de pesca profesional por le rio Uruguay guiados por expertos. <a href="{{route('get_pagina_tours')}}">Ver más</a> 
+        <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
+          Circuítos de pesca profesional por le rio Uruguay guiados por expertos. 
         </div>
 
       </div>
-      <div class="row  justify-content-lg-center">
+      <div class="row  justify-content-lg-center mb-5">
 
         @foreach($Circuitos as $Circuito)
           {{--*/ $Entidad  = $Circuito /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.tours.partes.lista')
         @endforeach
-      </div>      
+      </div>     
+
+      <p class="col-12 col-lg-9 sub-titulos-class -text-center">
+        <a href="{{route('get_pagina_tours')}}">Ver más tours</a> 
+      </p> 
     </div>
   </div>
   @endif
@@ -166,18 +170,22 @@
    <div class="site-section background-gris-0" id="circuitos"> 
     <div class="container">
       <div class="row">
-        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
-          Escapadas al medio del campo. Desconexión total <i class="fas fa-peace"></i>. <a href="{{route('get_pagina_productos')}}">Ver más</a> 
+        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
+          Escapadas al medio del campo. Desconexión total <i class="fas fa-peace"></i>.  
         </div>
 
       </div>
-      <div class="row">
+      <div class="row mb-5">
 
         @foreach($Productos as $Producto)
           {{--*/ $Entidad  = $Producto /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.producto_especial.partes.lista')
         @endforeach
+
+        <p class="col-12 col-lg-9 sub-titulos-class -text-center">
+         <a href="{{route('get_pagina_productos')}}">Ver más</a>
+        </p>
       </div>      
     </div>
   </div>
@@ -191,7 +199,7 @@
   <div class="site-section background-gris-1"> 
     <div class="container">
       <div class="row">
-        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
+        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
           Estancias próximas a nuestros circuitos de pesca
         </div>
 
