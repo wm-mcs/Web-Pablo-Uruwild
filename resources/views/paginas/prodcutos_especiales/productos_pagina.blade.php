@@ -137,6 +137,15 @@
   
   @endif
   @endif
+  <div class="site-section background-gris-0" > 
+    <div class="container">
+      <div class="row p-3 p-lg-5">
+        <p class="col-12  text-center">
+           <b>¿Buscás desconexión total? ¿Qué te parece venir al medio del campo a ser libre? </b> Estos paquetes son para que puedas ver las estrellas, respirar aires fresco, escuchar la naturaleza y conectar con ella. Mirá los paquetes que tenemos <i class="fas fa-hand-point-down"></i> 
+        </p>
+      </div>     
+    </div>
+  </div>
 
 
   @if($Productos->count() > 0)
@@ -145,7 +154,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
-          Escapas especiales
+          Paquetes de desconexión. Vení a la paz.
         </div>
 
       </div>
