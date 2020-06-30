@@ -75,6 +75,7 @@ class Admin_Producto_Especial_Controllers extends Controller implements entidadC
   public function olvidarCachesAsociadoAEstaEntidad()
   {   
     HelpersGenerales::helper_olvidar_este_cache('ProductosHome');
+    HelpersGenerales::helper_olvidar_este_cache('ProductosPagianaTorus');  
   }
 
   public function get_admin(Request $Request)

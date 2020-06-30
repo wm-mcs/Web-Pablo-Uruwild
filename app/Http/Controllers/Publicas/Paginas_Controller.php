@@ -90,14 +90,34 @@ class Paginas_Controller extends Controller
     // P á g i n a   d e   T o u r s
     public function get_pagina_tours(Request $Request)
     {
-        $Tours          = $this->TourRepo->getEntidadActivas();
+        $Tours          = Cache::remember('ToursPagianaTorus', 2000, function(){
+                          return $this->TourRepo->getEntidadesParaHomeTour(50,'name', 'desc','tour');
+                          });
+
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  
-        $Portada        = Cache::remember('PortadaTours', 60, function(){
+        $Portada        = Cache::remember('PortadaTours', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','tours');
                           }); 
 
 
         return view('paginas.tours.tours_pagina',compact('Tours','Empresa','Portada'));
+    }
+
+
+    // P á g i n a   d e   P r o d u c t o s 
+    public function get_pagina_productos(Request $Request)
+    {
+        $Productos      = Cache::remember('ProductosPagianaTorus', 2000, function(){
+                          return $this->TourRepo->getEntidadesParaHomeTour(50,'name', 'desc','producto');
+                          });
+
+        $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  
+        $Portada        = Cache::remember('PortadaProductos', 2000, function(){
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','productos');
+                          }); 
+
+
+        return view('paginas.prodcutos_especiales.productos_pagina',compact('Productos','Empresa','Portada'));
     }
 
 
