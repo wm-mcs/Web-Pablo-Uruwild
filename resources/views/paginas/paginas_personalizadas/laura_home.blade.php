@@ -76,11 +76,6 @@
 
 
 @section('vue')
-
-
-  
-  @include('paginas.home.vue.contacto-component')
-  @include('paginas.home.vue.blog-list-component')
   @include('paginas.home.vue.vue-instance')
 @stop
 
@@ -232,16 +227,6 @@
   </div>
 
 
-  @if(!Auth::guest())
-  @if(Auth::user()->first_name = 'Mauricio')
-  {{-- Aquí poner contendio para probar --}}
-
-
-
-  
- 
-  @endif
-  @endif
 
 
 
