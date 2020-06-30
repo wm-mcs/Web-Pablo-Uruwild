@@ -28,6 +28,14 @@ Route::get('/Contacto' , [
   'as'   => 'get_pagina_contacto']
 );
 
+Route::get('/Tours' , [                    
+  'uses' => 'Publicas\Paginas_Controller@get_pagina_tours',
+  'as'   => 'get_pagina_tours']
+);
+
+
+
+
 // S e r v i c i o s
 Route::get('/Servicios' , [                    
   'uses' => 'Publicas\Paginas_Controller@get_pagina_servicios',

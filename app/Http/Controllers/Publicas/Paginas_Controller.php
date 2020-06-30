@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Session;
 use App\Helpers\CurlHelper;
 use App\Repositorios\TourRepo;
+use App\Repositorios\PortadaDePaginaRepo;  
 
 
 class Paginas_Controller extends Controller
@@ -19,17 +20,20 @@ class Paginas_Controller extends Controller
     protected $EmpresaRepo;    
     protected $CurlHelper;
     protected $TourRepo;
+    protected $PortadaDePaginaRepo;
 
     public function __construct(NoticiasRepo        $NoticiasRepo,
                                 EmpresaRepo         $EmpresaRepo,                                 
                                 CurlHelper          $CurlHelper,
-                                TourRepo            $TourRepo   )
+                                TourRepo            $TourRepo,
+                                PortadaDePaginaRepo $PortadaDePaginaRepo   )
     {
         
         $this->NoticiasRepo        = $NoticiasRepo;
         $this->EmpresaRepo         = $EmpresaRepo;
         $this->CurlHelper          = $CurlHelper;
         $this->TourRepo            = $TourRepo;
+        $this->PortadaDePaginaRepo = $PortadaDePaginaRepo; 
     }
 
     // C o n t a c t o
@@ -81,6 +85,22 @@ class Paginas_Controller extends Controller
 
         return view('paginas.tours.tour_individual',compact('Tour','Empresa','blogs'));
     }
+
+
+    // P á g i n a   d e   T o u r s
+    public function get_pagina_tours(Request $Request)
+    {
+        $Tours          = $this->TourRepo->getEntidadActivas();
+        $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  
+        $Portada        = Cache::remember('PortadaTours', 60, function(){
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','tours');
+                          }); 
+
+
+        return view('paginas.tours.tours_pagina',compact('Tours','Empresa','Portada'));
+    }
+
+
 
 
 

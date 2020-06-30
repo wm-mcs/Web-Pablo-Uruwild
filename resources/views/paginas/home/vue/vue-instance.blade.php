@@ -2,7 +2,6 @@ var app = new Vue({
     el: '#app',    
     data:{
       empresa: {!! json_encode($Empresa) !!},
-      blogs:   {!! json_encode($blogs) !!},
       cargando:true,
       scrolled:0,
       windowWidth: window.innerWidth,
