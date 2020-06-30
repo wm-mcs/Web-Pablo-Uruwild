@@ -176,17 +176,15 @@
 
       </div>
       <div class="row mb-5">
-
         @foreach($Productos as $Producto)
           {{--*/ $Entidad  = $Producto /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.producto_especial.partes.lista')
-        @endforeach
-
-        <p class="col-12 sub-titulos-class text-center">
+        @endforeach       
+      </div>     
+      <p class="col-12 sub-titulos-class text-center">
          <a href="{{route('get_pagina_productos')}}">Ver más</a>
-        </p>
-      </div>      
+       </p> 
     </div>
   </div>
   @endif
