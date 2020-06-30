@@ -144,7 +144,7 @@
    <div class="site-section background-gris-1" id="circuitos"> 
     <div class="container">
       <div class="row justify-content-lg-center">
-        <div class="col-12 col-lg-9 sub-titulos-class mb-4 text-bold text-color-black text-lg-center">
+        <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-lg-center">
           Circuítos de pesca profesional por le rio Uruguay guiados por expertos. <a href="{{route('get_pagina_tours')}}">Ver más</a> 
         </div>
 

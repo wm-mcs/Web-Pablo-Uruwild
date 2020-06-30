@@ -6,11 +6,9 @@
   {!! Form::text('name', null ,['class' => 'formulario-field']) !!}
 </div>
 @else
-<div class="formulario-label-fiel">
-  {!! Form::label('name', 'Nombre de página', array('class' => 'formulario-label ')) !!}
-  {!! Form::text('name', null ,['class'    => 'formulario-field',
-                                'disabled' => 'disabled']) !!}
-</div>
+  
+  {!! Form::hidden('name') !!}
+
 @endif
 
 <div class="formulario-label-fiel">
