@@ -57,7 +57,7 @@ class Home_Public_Controller extends Controller
                           });
 
         $Cabañas        = Cache::remember('CabañasHome', 40, function(){
-                          return $this->CabañaRepo->getEntidadesParaHome(4,'rank','desc');
+                          return $this->CabañaRepo->getEntidadesParaHome(6,'rank','desc');
                           });
 
         $Circuitos      = Cache::remember('CircuitosHome', 40, function(){
