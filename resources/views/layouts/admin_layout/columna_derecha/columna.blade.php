@@ -25,9 +25,7 @@
           <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Blog</li>
         </a> 
 
-        <a href="{{route('get_admin_portadas_de_paginas')}}">
-          <li class="admin-columna-li mi-float-right">Páginas portadas</li>
-        </a> 
+        
       
         
 
@@ -49,7 +47,7 @@
 
    <div id="admin-col-admin">
         <a href="{{route('get_datos_corporativos')}}">
-            <li class="admin-columna-li mi-float-right"><i class="fas fa-building"></i> Mis datos</li>
+            <li class="admin-columna-li mi-float-right"> Mis datos</li>
         </a>  
          <a href="{{route('get_admin_cabañas')}}">
           <li class="admin-columna-li mi-float-right"> Cabañas</li>
@@ -58,17 +56,21 @@
           <li class="admin-columna-li mi-float-right">Team</li>
         </a>
         <a href="{{route('get_admin_actividades')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Actividades</li>
+          <li class="admin-columna-li mi-float-right"> Actividades</li>
         </a>
 
         
         <a href="{{route('get_admin_productos_especiales')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Productos especiales</li>
+          <li class="admin-columna-li mi-float-right"> Productos especiales</li>
         </a> 
          
 
         <a href="{{route('get_admin_tours')}}">
           <li class="admin-columna-li mi-float-right"> Tours</li>
+        </a> 
+
+        <a href="{{route('get_admin_portadas_de_paginas')}}">
+          <li class="admin-columna-li mi-float-right">Páginas portadas</li>
         </a> 
 
        
