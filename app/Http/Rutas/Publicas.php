@@ -28,7 +28,7 @@ Route::get('/Contacto' , [
   'as'   => 'get_pagina_contacto']
 );
 
-Route::get('/Tours' , [                    
+Route::get('/tours' , [                    
   'uses' => 'Publicas\Paginas_Controller@get_pagina_tours',
   'as'   => 'get_pagina_tours']
 );

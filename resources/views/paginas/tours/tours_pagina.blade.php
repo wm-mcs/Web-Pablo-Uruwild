@@ -8,7 +8,7 @@
 {{--*/ $Titulo                = 'Tours' /*--}}
 {{--*/ $DescriptionEtiqueta   = '' /*--}}
 {{--*/ $PalabrasClaves        = '' /*--}}
-{{--*/ $UrlDeLaPagina         = route('get_home') /*--}}
+{{--*/ $UrlDeLaPagina         = route('get_pagina_tours') /*--}}
 
 
 @section('favicon')
