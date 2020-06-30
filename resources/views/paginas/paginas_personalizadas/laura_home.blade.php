@@ -150,7 +150,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
-          Circuítos de pesca profesional por le rio Uruguay guiados por expertos
+          Circuítos de pesca profesional por le rio Uruguay guiados por expertos. <a href="{{route('get_pagina_tours')}}">Ver más</a> 
         </div>
 
       </div>
@@ -172,7 +172,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
-          Escapadas al medio del campo. Desconexión total <i class="fas fa-peace"></i>
+          Escapadas al medio del campo. Desconexión total <i class="fas fa-peace"></i>. <a href="{{route('get_pagina_productos')}}">Ver más</a> 
         </div>
 
       </div>
