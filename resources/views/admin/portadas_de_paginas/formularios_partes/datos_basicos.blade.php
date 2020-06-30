@@ -1,6 +1,6 @@
 
 
-@if(Auth::user()->role == 'adminMcos522')
+@if(Auth::user()->role == 'adminMcos5222')
 <div class="formulario-label-fiel">
   {!! Form::label('name', 'Nombre de página', array('class' => 'formulario-label ')) !!}
   {!! Form::text('name', null ,['class' => 'formulario-field']) !!}
