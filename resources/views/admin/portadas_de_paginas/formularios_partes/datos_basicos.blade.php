@@ -3,8 +3,7 @@
 @if(Auth::user()->role == 'adminMcos522')
 <div class="formulario-label-fiel">
   {!! Form::label('name', 'Nombre de página', array('class' => 'formulario-label ')) !!}
-  {!! Form::text('name', null ,['class'    => 'formulario-field',
-                                'disabled' => 'disabled']) !!}
+  {!! Form::text('name', null ,['class' => 'formulario-field']) !!}
 </div>
 @else
 <div class="formulario-label-fiel">
