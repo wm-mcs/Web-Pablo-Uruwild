@@ -143,13 +143,13 @@
   {{-- Aquí poner contendio para probar --}}
    <div class="site-section background-gris-1" id="circuitos"> 
     <div class="container">
-      <div class="row">
-        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
+      <div class="row justify-content-lg-center">
+        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-lg-center">
           Circuítos de pesca profesional por le rio Uruguay guiados por expertos. <a href="{{route('get_pagina_tours')}}">Ver más</a> 
         </div>
 
       </div>
-      <div class="row  justify-content-center">
+      <div class="row  justify-content-lg-center">
 
         @foreach($Circuitos as $Circuito)
           {{--*/ $Entidad  = $Circuito /*--}}
