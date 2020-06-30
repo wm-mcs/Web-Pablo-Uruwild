@@ -158,7 +158,7 @@
         @endforeach
       </div>     
 
-      <p class="col-12 col-lg-9 sub-titulos-class -text-center">
+      <p class="col-12 col-lg-9 sub-titulos-class text-center">
         <a href="{{route('get_pagina_tours')}}">Ver más tours</a> 
       </p> 
     </div>
@@ -183,7 +183,7 @@
           @include('admin.producto_especial.partes.lista')
         @endforeach
 
-        <p class="col-12 col-lg-9 sub-titulos-class -text-center">
+        <p class="col-12 col-lg-9 sub-titulos-class text-center">
          <a href="{{route('get_pagina_productos')}}">Ver más</a>
         </p>
       </div>      
