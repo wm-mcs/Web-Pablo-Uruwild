@@ -163,7 +163,7 @@
         @foreach($Productos as $Entidad)
           {{--*/ $Entidad  = $Entidad /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
-          @include('admin.tours.partes.lista')
+          @include('admin.productos_especiales.partes.lista')
         @endforeach
       </div>      
     </div>
