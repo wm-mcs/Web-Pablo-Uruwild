@@ -157,14 +157,12 @@
   {{-- Aquí poner contendio para probar --}}
    <div class="site-section background-gris-1" id="tours"> 
     <div class="container">
-      <div class="row">
-        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
-          Circuítos de pesca profesional por le rio Uruguay guiados por expertos
+      <div class="row justify-content-lg-center">
+        <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
+          Circuítos de pesca profesional por le rio Uruguay guiados por expertos. 
         </div>
-
       </div>
       <div class="row justify-content-lg-center">
-
         @foreach($Tours as $Circuito)
           {{--*/ $Entidad  = $Circuito /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
