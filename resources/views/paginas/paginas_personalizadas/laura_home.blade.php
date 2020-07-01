@@ -178,7 +178,7 @@
         </div>
 
       </div>
-      <div class="row justify-content-lg-center mb-0">
+      <div class="row  mb-0">
         @foreach($Productos as $Producto)
           {{--*/ $Entidad  = $Producto /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
