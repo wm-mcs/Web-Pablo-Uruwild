@@ -204,11 +204,11 @@ abstract class BaseRepo
     {
         foreach ($Propiedades as $Propiedad) 
         {
-          if($request->input($Propiedad) == null)
+          if($request->input($Propiedad) === null)
           {            
            
           }
-          elseif($request->input($Propiedad) == '')
+          elseif($request->input($Propiedad) === '')
           {
             $Entidad->$Propiedad = $request->input($Propiedad);
           }
