@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Session;
 use App\Helpers\CurlHelper;
 use App\Repositorios\TourRepo;
 use App\Repositorios\PortadaDePaginaRepo;  
+use App\Repositorios\CabañaRepo;
 
 
 class Paginas_Controller extends Controller
@@ -21,12 +22,14 @@ class Paginas_Controller extends Controller
     protected $CurlHelper;
     protected $TourRepo;
     protected $PortadaDePaginaRepo;
+    protected $CabañaRepo;
 
     public function __construct(NoticiasRepo        $NoticiasRepo,
                                 EmpresaRepo         $EmpresaRepo,                                 
                                 CurlHelper          $CurlHelper,
                                 TourRepo            $TourRepo,
-                                PortadaDePaginaRepo $PortadaDePaginaRepo   )
+                                PortadaDePaginaRepo $PortadaDePaginaRepo,
+                                CabañaRepo          $CabañaRepo   )
     {
         
         $this->NoticiasRepo        = $NoticiasRepo;
@@ -34,13 +37,14 @@ class Paginas_Controller extends Controller
         $this->CurlHelper          = $CurlHelper;
         $this->TourRepo            = $TourRepo;
         $this->PortadaDePaginaRepo = $PortadaDePaginaRepo; 
+        $this->CabañaRepo          = $CabañaRepo;
     }
 
     // C o n t a c t o
     public function get_pagina_contacto()
     {
 
-        $blogs          = $this->NoticiasRepo->getUltimosBlogs();
+        $blogs   = $this->NoticiasRepo->getUltimosBlogs();
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
         return view('paginas.paginas_personalizadas.laura_contacto', compact('Empresa','blogs'));
     }
@@ -60,9 +64,6 @@ class Paginas_Controller extends Controller
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();
         return view('paginas.paginas_personalizadas.laura_quien_es', compact('Empresa','blogs'));
     }
-
-
-
     
     // B l o g   I n d i v i d u a l 
     public function get_pagina_noticia_individual($name,$id)  {
@@ -75,13 +76,21 @@ class Paginas_Controller extends Controller
         return view('paginas.noticias.noticia_individual',compact('Noticia','Empresa','blogs','blogs_relacionados'));
     }
 
+    // C a b a ñ a   I n d i v i d u a l 
+    public function get_pagina_cabaña_individual($name,$id)  {
+       
+        $Cabaña              = $this->CabañaRepo->find($id);
+        $Empresa             = $this->EmpresaRepo->getEmpresaDatos();     
+        
+        return view('paginas.cabañas.cabaña_individual',compact('Cabaña','Empresa'));
+    }
+
     // C i r c u i t o 
     public function get_pagina_tour_individual($name,$id)
     {
         $Tour                 = $this->TourRepo->find($id);
         $Empresa              = $this->EmpresaRepo->getEmpresaDatos();        
         $blogs                = '';
-
 
         return view('paginas.tours.tour_individual',compact('Tour','Empresa','blogs'));
     }
@@ -99,7 +108,6 @@ class Paginas_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','tours');
                           }); 
 
-
         return view('paginas.tours.tours_pagina',compact('Tours','Empresa','Portada'));
     }
 
@@ -115,7 +123,6 @@ class Paginas_Controller extends Controller
         $Portada        = Cache::remember('PortadaProductos', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','productos');
                           }); 
-
 
         return view('paginas.prodcutos_especiales.productos_pagina',compact('Productos','Empresa','Portada'));
     }
