@@ -227,7 +227,7 @@ abstract class BaseRepo
         {
             $imagen_insert = Image::make(File::get($file))->resize($redimencionar_a, null, function ($constraint) {
                                                                            $constraint->aspectRatio();
-                                                                       })->save('imagenes/'.$nombre,70);
+                                                                       })->save('imagenes/'.$nombre,90);
         }
         else
         {
