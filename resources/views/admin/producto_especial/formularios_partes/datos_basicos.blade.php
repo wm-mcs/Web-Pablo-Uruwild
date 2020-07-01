@@ -13,14 +13,6 @@
   {!! Form::text('precio', null ,['class' => 'formulario-field']) !!}
 </div>
 
-
-
-
-
-
-
-
-
 <div class="formulario-label-fiel">
   {!! Form::label('fecha_inicio', 'Fecha del próximo', array('class' => 'formulario-label ')) !!}
 
