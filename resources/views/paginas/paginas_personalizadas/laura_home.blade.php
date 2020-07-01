@@ -178,17 +178,19 @@
         </div>
 
       </div>
-      <div class="row mb-5">
+      <div class="row justify-content-lg-center mb-0">
         @foreach($Productos as $Producto)
           {{--*/ $Entidad  = $Producto /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.producto_especial.partes.lista')
-        @endforeach       
+        @endforeach  
+
+        <p class="col-12 col-lg-10   text-center mt-5">
+         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_productos')}}">Explorar todas las actividades Wilds <i class="fas fa-chevron-right"></i></a> 
+        </p> 
+    
       </div>     
-      <p class="col-12 sub-titulos-class text-center">
-         <a href="{{route('get_pagina_productos')}}">Ver más</a>
-       </p> 
-    </div>
+     
   </div>
   @endif
 

@@ -163,7 +163,7 @@
         </div>
 
       </div>
-      <div class="row">
+      <div class="row justify-content-lg-center">
 
         @foreach($Tours as $Circuito)
           {{--*/ $Entidad  = $Circuito /*--}}
