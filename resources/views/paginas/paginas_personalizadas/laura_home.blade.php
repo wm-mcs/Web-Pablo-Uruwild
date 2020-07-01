@@ -149,18 +149,21 @@
         </div>
 
       </div>
-      <div class="row  justify-content-lg-center mb-5">
+      <div class="row  justify-content-lg-center mb-0">
 
         @foreach($Circuitos as $Circuito)
           {{--*/ $Entidad  = $Circuito /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.tours.partes.lista')
         @endforeach
+
+      <p class="col-12 sub-titulos-class text-center mt-5">
+        <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_tours')}}">Explorar todos los tours <i class="fas fa-chevron-right"></i></a> 
+      </p> 
+
       </div>     
 
-      <p class="col-12 sub-titulos-class text-center">
-        <a href="{{route('get_pagina_tours')}}">Ver más tours</a> 
-      </p> 
+      
     </div>
   </div>
   @endif
