@@ -43,6 +43,17 @@
   ]) !!}
 </div>
 
+<div class="formulario-label-fiel">
+{!! Form::label('rank', 'Calidad / Rank', array('class' => 'formulario-label ')) !!}
+<div class="contiene-aclaracion-label">
+  Es para luego poder ordenar o destacar según su relevancia.
+</div>
+  {!! Form::select('rank',  [1 => '1 - Normal',
+                             2 => '2 - Alta ',
+                             3 => '3 - Elite'] , null, ['class' => 'formulario-field'] )          !!}
+</div>
+
+
 
 
 

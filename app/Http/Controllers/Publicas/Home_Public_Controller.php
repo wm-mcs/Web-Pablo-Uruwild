@@ -61,11 +61,11 @@ class Home_Public_Controller extends Controller
                           });
 
         $Circuitos      = Cache::remember('CircuitosHome', 40, function(){
-                          return $this->TourRepo->getEntidadesParaHomeTour(3,'name', 'desc','tour');
+                          return $this->TourRepo->getEntidadesParaHomeTour(3,'rank', 'desc','tour');
                           });
 
         $Productos      = Cache::remember('ProductosHome', 40, function(){
-                          return $this->TourRepo->getEntidadesParaHomeTour(4,'name', 'desc','producto');
+                          return $this->TourRepo->getEntidadesParaHomeTour(4,'rank', 'desc','producto');
                           });
 
         $Portada        = Cache::remember('PortadaHome', 60, function(){

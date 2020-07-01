@@ -63,7 +63,7 @@ class Admin_Tours_Controllers extends Controller implements entidadCrudControlle
 
   public function getPropiedades()
   {
-    return ['name','fecha_inicio','cantidad_de_dias','description','descripcion_breve','precio','estado','tipo_de_tour'];
+    return ['name','fecha_inicio','cantidad_de_dias','description','descripcion_breve','precio','estado','tipo_de_tour','rank'];
   }
 
   public function getManager($Request)
@@ -88,7 +88,7 @@ class Admin_Tours_Controllers extends Controller implements entidadCrudControlle
 
   public function get_admin(Request $Request)
   { 
-    $Entidades           = $this->Entidad_principal->getEntidadesDeToursPaginadas($Request,9,'tour','id','desc');
+    $Entidades           = $this->Entidad_principal->getEntidadesDeToursPaginadas($Request,9,'tour','rank','desc');
     $Titulo              = $this->Nombre_entidad_plural;
     $Route_crear         = $this->Route_crear;
     $Route_busqueda      = $this->Route_index;
