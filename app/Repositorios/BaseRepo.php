@@ -208,6 +208,10 @@ abstract class BaseRepo
           {            
            
           }
+          elseif($request->input($Propiedad) == '')
+          {
+            $Entidad->$Propiedad = $request->input($Propiedad);
+          }
           else
           {
             $Entidad->$Propiedad = $request->input($Propiedad);
