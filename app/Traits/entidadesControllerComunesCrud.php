@@ -115,6 +115,8 @@ trait entidadesControllerComunesCrud{
     //propiedades para crear
     $Propiedades = $this->getPropiedades();
 
+    dd($Request->get('tipo_de_tour'));
+
       // G u a r d o  l o s   d a t o s 
       $this->Entidad_principal->setEntidadDato($Entidad,$Request,$Propiedades);   
 
