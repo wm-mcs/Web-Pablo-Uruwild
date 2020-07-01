@@ -17,6 +17,11 @@
                           ])               !!}
    <div class="row p-5">
 
+      {{--
+       P a r a   q u e   s e   c r e e o   t i p o   p r o d u c t o .   T e n e r   e n   c u e n t a   q u e   e n   b a s e   d e   d a t o s   s e   c r e a  c o m o    t o u r   p o r   d e f e c t o  
+      --}}
+      {!! Form::hidden('tipo_de_tour', 'producto') !!}
+
       {{-- datos corporativos --}}
       <div class="contenedor-grupo-datos col-12 col-lg-6">
         <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Datos</div>
