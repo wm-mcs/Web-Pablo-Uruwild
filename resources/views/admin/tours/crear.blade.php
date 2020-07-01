@@ -50,12 +50,7 @@
                                                      'rows' => 20 ]) !!}
           </div>
         </div>
-      </div>
-     
-
-      
-
-     
+      </div>     
    </div>
    
     <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Secondary-Relleno disparar-este-form">

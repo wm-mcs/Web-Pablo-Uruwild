@@ -186,8 +186,8 @@ abstract class BaseRepo
                           ->orderBy('id',$Orden)
                           ->get();
       }  
-
-    return $entidades;
+      
+      return $entidades;
     }
 
      
