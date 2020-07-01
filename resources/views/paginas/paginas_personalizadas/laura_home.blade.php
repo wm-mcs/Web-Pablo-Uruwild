@@ -189,7 +189,8 @@
          <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_productos')}}">Explorar todas las actividades Wilds <i class="fas fa-chevron-right"></i></a> 
         </p> 
     
-      </div>     
+      </div>  
+    </div>   
      
   </div>
   @endif
