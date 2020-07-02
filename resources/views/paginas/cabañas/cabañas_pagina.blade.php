@@ -142,7 +142,7 @@
     <div class="container">
       <div class="row p-3 p-lg-5">
         <p class="col-12  text-center">
-           <b>¿Pescador profesional? ¿Buscás nuevos rincones para explorar? </b> Estos Torus son para ti. Guidos por verdaderos expertos de lo natural. Mirá los paquetes y entenderás de que hablo <i class="fas fa-hand-point-down"></i> 
+           <b>¿Alguna vez experimentaste la tranquilidad extreme? </b> Estas cabañas están para eso <i class="fas fa-hand-point-down"></i> 
         </p>
       </div>     
     </div>
@@ -159,7 +159,7 @@
     <div class="container">
       <div class="row justify-content-lg-center">
         <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
-          Cabañas
+          Cabañas próximas a nuestros circuitos de pesca
         </div>
       </div>
       <div class="row ">
