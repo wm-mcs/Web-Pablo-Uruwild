@@ -55,7 +55,7 @@ class Admin_Turismo_Rural_Controllers extends Controller implements entidadCrudC
     $this->Route_crear                = 'get_admin_turismo_rural_crear';
     $this->Route_crear_post           = 'set_admin_'. $this->Carpeta_view_admin .'_crear';
     $this->Route_editar_post          = 'set_admin_'. $this->Carpeta_view_admin .'_editar';
-    $this->Route_luego_de_crear       = $this->Route_index;
+    $this->Route_luego_de_crear       = 'get_admin_turismo_rural';
     $this->Path_carpeta_imagenes      = $this->Carpeta_view_admin .'/'; //donde se gurarda la imagen. Debe existir
     $this->Nombre_del_campo_imagen    = strtolower($this->Nombre_entidad_singular) . '_id';    
   }
