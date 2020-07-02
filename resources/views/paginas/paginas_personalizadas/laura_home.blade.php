@@ -215,6 +215,10 @@
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.cabañas.partes.lista')
         @endforeach
+
+        <p class="col-12 col-lg-10   text-center mt-5 mx-auto">
+         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_cabañas')}}">Explorar todas las cabañas <i class="fas fa-chevron-right"></i></a> 
+        </p> 
       </div>      
     </div>
   </div>

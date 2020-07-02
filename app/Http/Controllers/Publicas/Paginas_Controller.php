@@ -118,10 +118,8 @@ class Paginas_Controller extends Controller
                           return $this->CabañaRepo->getEntidadesParaHome(30,'rank','desc');
                           });
 
-
-
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  
-        $Portada        = Cache::remember('PortadaTours', 2000, function(){
+        $Portada        = Cache::remember('PortadaCabañas', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','cabañas');
                           }); 
 

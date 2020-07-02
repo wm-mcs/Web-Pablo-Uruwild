@@ -33,6 +33,15 @@ class Admin_Cabaña_Controllers extends Controller
     return ['name','descripcion_breve','ubicacion','description','cantidad_maxima_de_personas','estado','rank'];
   }
 
+  public function olvidarCachesAsociadoAEstaEntidad()
+  {
+    HelpersGenerales::helper_olvidar_este_cache('CabañasPagina');
+    HelpersGenerales::helper_olvidar_este_cache('PortadaCabañas');    
+    HelpersGenerales::helper_olvidar_este_cache('CabañasHome');
+    
+      
+  }
+
   //home admin User
   public function get_admin_cabañas(Request $Request)
   { 
@@ -86,16 +95,14 @@ class Admin_Cabaña_Controllers extends Controller
 
             // I m a g e n   c h i c a 
             $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',300);
-
         }
 
         // M a r c o   u n a   i m a g e n   c o  m o   p r i n c i p a l
         $Imagen = $this->ImagenRepo->getImagenes('cabaña_id',$Entidad->id)->first();
-        $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si');
-        
+        $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si');        
       }
-      
-      
+
+     $this->olvidarCachesAsociadoAEstaEntidad();
 
      return redirect()->route('get_admin_cabañas')->with('alert', 'Cabaña creada correctamente. En breve verás se cargará en la interfas de los usuarios.');
     
@@ -128,7 +135,6 @@ class Admin_Cabaña_Controllers extends Controller
 
         foreach($files as $file)
         { 
-
           // C r e o   l a   i m a g e n   e n   l a   b a s e   d e   d a t o s 
           $Imagen = $this->ImagenRepo->setUnaImagenEnBaseDeDatos($Entidad->name, 'Cabañas/', 'cabaña_id', $Entidad->id);
 
@@ -141,19 +147,17 @@ class Admin_Cabaña_Controllers extends Controller
             // I m a g e n   c h i c a 
             $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',300);
 
-            // Ajusto los cache
-            $nombre_campo = 'cabaña_id';
-            
-            
+            // A j u s t o   l o s   c a c h e 
+            $nombre_campo = 'cabaña_id';            
         }
 
         HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Entidad->id);
         HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Entidad->id);
-
-        
       }
 
-    return redirect()->back()->with('alert', 'Se editó con éxito. En breve se verás reflejado en la interfas de los usuarios'  );  
+      $this->olvidarCachesAsociadoAEstaEntidad();      
+
+      return redirect()->back()->with('alert', 'Se editó con éxito. En breve se verás reflejado en la interfas de los usuarios'  );  
   }
 
   
