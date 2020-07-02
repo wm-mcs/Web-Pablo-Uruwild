@@ -73,6 +73,11 @@ class Admin_Tours_Controllers extends Controller implements entidadCrudControlle
     return $manager;
   }
 
+  public function getImagenMiniaturaSize()
+  {
+    return 1000;
+  }
+
   /**
    * olvida los cache que ponga aquí
    *
