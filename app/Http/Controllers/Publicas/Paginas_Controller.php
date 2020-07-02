@@ -123,7 +123,7 @@ class Paginas_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','cabañas');
                           }); 
 
-        return view('paginas.tours.tours_pagina',compact('Cabañas','Empresa','Portada'));
+        return view('paginas.cabañas.cabañas_pagina',compact('Cabañas','Empresa','Portada'));
     }
 
     
