@@ -24,8 +24,7 @@
 @else 
 {{--  E s t a   e s   p a r a   e l   p ú b l i c o  --}}
 <div class="col-12 col-lg-10 mb-4 ">
-    <div class="servicio_lista service position-relative">
-      
+    <div class="servicio_lista service position-relative">      
         <img v-if="!cargando" src="{{$Entidad->url_img_foto_principal}}" alt="{{$Entidad->descripcion_breve}}" class="tour-img-listado">
         <div v-else class="col-12 background-secondary d-flex flex-row align-item-center justify-content-center">
           <div class="cssload-tube-tunnel"></div>
@@ -45,10 +44,6 @@
           <a href="{{$Route}}"> Explorar el contenido del tour  <i class="fas fa-chevron-right"></i></a>
          </p>
         </div>
-
-
-
-           
     </div>
 </div>
 @endif
