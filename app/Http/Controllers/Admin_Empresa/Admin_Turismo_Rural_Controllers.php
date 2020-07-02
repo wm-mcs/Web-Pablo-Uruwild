@@ -102,3 +102,10 @@ class Admin_Turismo_Rural_Controllers extends Controller implements entidadCrudC
 
     return view($this->Path_view_get_admin_crear,compact('Route_crear_post','Titulo','Carpeta_view_admin'));
   }
+
+
+
+
+
+  
+}
