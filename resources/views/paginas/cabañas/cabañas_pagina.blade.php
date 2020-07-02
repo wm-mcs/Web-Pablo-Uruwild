@@ -155,7 +155,7 @@
 
   @if($Cabañas->count() > 0)
   {{-- Aquí poner contendio para probar --}}
-   <div class="site-section background-gris-1" id="cabañas"> 
+   <div class="site-section background-gris-1" id="contendio"> 
     <div class="container">
       <div class="row justify-content-lg-center">
         <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
