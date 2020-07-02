@@ -26,7 +26,7 @@
 <div class="col-12 col-lg-10 mb-4 ">
     <div class="servicio_lista service position-relative">
       
-        <img v-if="!cargando" src="{{$Entidad->url_img_foto_principal}}" alt="{{$Entidad->descripcion_breve}}" class="tour-img-listado">
+        <img v-if="!cargando" src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="tour-img-listado">
         <div v-else class="col-12 background-secondary d-flex flex-row align-item-center justify-content-center">
           <div class="cssload-tube-tunnel"></div>
         </div>
