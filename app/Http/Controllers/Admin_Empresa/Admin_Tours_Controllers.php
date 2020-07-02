@@ -86,8 +86,12 @@ class Admin_Tours_Controllers extends Controller implements entidadCrudControlle
   public function olvidarCachesAsociadoAEstaEntidad()
   {
     HelpersGenerales::helper_olvidar_este_cache('CircuitosHome'); 
-    HelpersGenerales::helper_olvidar_este_cache('ToursPagianaTorus');      
-      
+    HelpersGenerales::helper_olvidar_este_cache('ToursPagianaTorus');   
+
+    HelpersGenerales::helper_olvidar_este_cache('TurismoRuralHome'); 
+
+    HelpersGenerales::helper_olvidar_este_cache('ProductosHome');
+    HelpersGenerales::helper_olvidar_este_cache('ProductosPagianaTorus');        
   }
 
 

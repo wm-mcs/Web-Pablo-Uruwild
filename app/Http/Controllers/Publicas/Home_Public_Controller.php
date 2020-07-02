@@ -68,13 +68,17 @@ class Home_Public_Controller extends Controller
                           return $this->TourRepo->getEntidadesParaHomeTour(4,'rank', 'desc','producto');
                           });
 
+        $Turismo_rural  = Cache::remember('TurismoRuralHome', 40, function(){
+                          return $this->TourRepo->getEntidadesParaHomeTour(6,'rank', 'desc','turismo_rural');
+                          });
+
         $Portada        = Cache::remember('PortadaHome', 60, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home');
                           });     
 
                        
 
-        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas','Circuitos','Productos','Portada'));
+        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas','Circuitos','Productos','Portada','Turismo_rural'));
     }
 
 
