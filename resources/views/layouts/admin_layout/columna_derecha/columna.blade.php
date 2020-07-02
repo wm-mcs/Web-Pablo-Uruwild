@@ -25,6 +25,13 @@
           <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Blog</li>
         </a> 
 
+        <a href="{{route('get_admin_turismo_rural')}}">
+          <li class="admin-columna-li mi-float-right">Turismo rural</li>
+        </a> 
+
+
+        
+
         
       
         
