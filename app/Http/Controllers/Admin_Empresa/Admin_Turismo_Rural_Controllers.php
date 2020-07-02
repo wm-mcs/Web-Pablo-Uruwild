@@ -85,7 +85,7 @@ class Admin_Turismo_Rural_Controllers extends Controller implements entidadCrudC
   public function get_admin(Request $Request)
   { 
     $Entidades           = $this->Entidad_principal->getEntidadesDeToursPaginadas($Request,9,'turismo_rural','rank','desc');
-    $Titulo              = 'Productos especiales';
+    $Titulo              = 'Turismo rural';
     $Route_crear         = $this->Route_crear;
     $Route_busqueda      = $this->Route_index;
     $Carpeta_view_admin  = 'turismo_rural';
@@ -107,5 +107,5 @@ class Admin_Turismo_Rural_Controllers extends Controller implements entidadCrudC
 
 
 
-  
+
 }
