@@ -33,6 +33,12 @@
 </div>
 
 
+<div class="formulario-label-fiel">
+  {!! Form::label('tags', 'Tags', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('tags', null ,['class' => 'formulario-field']) !!}
+</div>
+
+
 
 
 

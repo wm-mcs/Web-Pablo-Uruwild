@@ -62,7 +62,7 @@ class Admin_Producto_Especial_Controllers extends Controller implements entidadC
 
   public function getPropiedades()
   {
-    return ['name','fecha_inicio','cantidad_de_dias','description','descripcion_breve','precio','estado','tipo_de_tour','rank'];
+    return ['name','fecha_inicio','cantidad_de_dias','description','descripcion_breve','precio','estado','tipo_de_tour','rank','tags'];
   }
 
   public function getManager($Request)

@@ -63,7 +63,7 @@ class Admin_Tours_Controllers extends Controller implements entidadCrudControlle
 
   public function getPropiedades()
   {
-    return ['name','fecha_inicio','cantidad_de_dias','description','descripcion_breve','precio','estado','tipo_de_tour','rank'];
+    return ['name','fecha_inicio','cantidad_de_dias','description','descripcion_breve','precio','estado','tipo_de_tour','rank','tags'];
   }
 
   public function getManager($Request)
