@@ -96,7 +96,7 @@ class Paginas_Controller extends Controller
     }
 
 
-    // P á g i n a   d e   T o u r s
+    // P á g i n a   d e   t o u r s
     public function get_pagina_tours(Request $Request)
     {
         $Tours          = Cache::remember('ToursPagianaTorus', 2000, function(){
@@ -110,6 +110,25 @@ class Paginas_Controller extends Controller
 
         return view('paginas.tours.tours_pagina',compact('Tours','Empresa','Portada'));
     }
+
+    // P á g i n a   d e   c a b a ñ a s
+    public function get_pagina_cabañas(Request $Request)
+    {
+        $Cabañas        = Cache::remember('CabañasPagina', 2000, function(){
+                          return $this->CabañaRepo->getEntidadesParaHome(30,'rank','desc');
+                          });
+
+
+
+        $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  
+        $Portada        = Cache::remember('PortadaTours', 2000, function(){
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','cabañas');
+                          }); 
+
+        return view('paginas.tours.tours_pagina',compact('Cabañas','Empresa','Portada'));
+    }
+
+    
 
 
     // P á g i n a   d e   P r o d u c t o s 
