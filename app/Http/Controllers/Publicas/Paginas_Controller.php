@@ -148,7 +148,7 @@ class Paginas_Controller extends Controller
     public function get_pagina_turismo_rural(Request $Request)
     {
         $Turismo_rural  = Cache::remember('TurismoRuralPagina', 2000, function(){
-                          return $this->TourRepo->getEntidadesParaHomeTour(50,'name', 'desc','producto');
+                          return $this->TourRepo->getEntidadesParaHomeTour(50,'name', 'desc','turismo_rural');
                           });
 
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  
