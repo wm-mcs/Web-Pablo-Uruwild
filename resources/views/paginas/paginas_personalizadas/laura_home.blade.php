@@ -151,7 +151,7 @@
           @endforeach
 
           <p class="col-12 col-lg-10   text-center mt-5">
-            <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_tours')}}">Explorá toda la sección de turismo rural <i class="fas fa-chevron-right"></i></a> 
+            <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_turismo_rural')}}">Explorá toda la sección de turismo rural <i class="fas fa-chevron-right"></i></a> 
           </p> 
         </div> 
       </div>

@@ -89,6 +89,7 @@ class Admin_Tours_Controllers extends Controller implements entidadCrudControlle
     HelpersGenerales::helper_olvidar_este_cache('ToursPagianaTorus');   
 
     HelpersGenerales::helper_olvidar_este_cache('TurismoRuralHome'); 
+    HelpersGenerales::helper_olvidar_este_cache('TurismoRuralPagina');     
 
     HelpersGenerales::helper_olvidar_este_cache('ProductosHome');
     HelpersGenerales::helper_olvidar_este_cache('ProductosPagianaTorus');        

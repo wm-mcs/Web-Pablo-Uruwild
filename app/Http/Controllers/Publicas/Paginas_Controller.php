@@ -144,6 +144,24 @@ class Paginas_Controller extends Controller
         return view('paginas.prodcutos_especiales.productos_pagina',compact('Productos','Empresa','Portada'));
     }
 
+    // P á g i n a   d e   T u r i s m o   R u r a l  
+    public function get_pagina_turismo_rural(Request $Request)
+    {
+        $Turismo_rural  = Cache::remember('TurismoRuralPagina', 2000, function(){
+                          return $this->TourRepo->getEntidadesParaHomeTour(50,'name', 'desc','producto');
+                          });
+
+        $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  
+        $Portada        = Cache::remember('PortadaTurimoRural', 2000, function(){
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','turismo_rural');
+                          }); 
+
+        return view('paginas.turismo_rural.turismo_rural_pagina',compact('Turismo_rural','Empresa','Portada'));
+    }
+
+
+    
+
 
 
 
