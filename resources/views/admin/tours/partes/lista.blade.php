@@ -3,6 +3,13 @@
 @if(isset($Mostrar_admin) && $Mostrar_admin == true)
 <div class="col-md-6 col-lg-4 mb-4">
     <div class="servicio_lista service">
+      <p class="mb-4">
+          @if($Entidad->estado == 'si')
+            <span class="color-text-success">Activo</span>
+          @else
+            <span class="color-text-gris">Inactivo</span>
+          @endif
+      </p>   
       <a href="{{$Route}}">
         <img src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="servicio_lista_imagen">
       </a>              
@@ -15,16 +22,10 @@
         <p class="color-text-gris mb-2 ">
          {{$Entidad->descripcion_breve}}
         </p>
-        <p class="mb-3">
+        <p class="">
           <a href="{{$Route}}"> Editar  <i class="fas fa-chevron-right"></i></a>
         </p>  
-        <p>
-          @if($Entidad->estado == 'si')
-            <span class="color-text-success">Activo</span>
-          @else
-            <span class="color-text-gris">Inactivo</span>
-          @endif
-        </p>               
+                    
       </div>
     </div>
 </div>
