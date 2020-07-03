@@ -161,9 +161,7 @@
   @endif
   @endif
 
-  {{-- I m a g e n   d e   p e s c a  --}}
-  <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-pesca-chica"></div>
-  <div v-else class="background_img background_img_fixed home-pesca"></div>
+  
 
 
 
@@ -196,6 +194,10 @@
   </div>
   @endif
 
+  {{-- I m a g e n   d e   p e s c a  --}}
+  <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-pesca-chica"></div>
+  <div v-else class="background_img background_img_fixed home-pesca"></div>
+
    @if($Productos->count() > 0)
   {{-- Aquí poner contendio para probar --}}
    <div class="site-section background-gris-0" id="circuitos"> 
@@ -225,7 +227,9 @@
 
 
     
-
+  {{-- I m a g e n   d e   a c t i v i d a d e s  --}}
+  <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-actividades-chica"></div>
+  <div v-else class="background_img background_img_fixed home-actividades"></div>
 
 
   <div class="site-section background-gris-1"> 
