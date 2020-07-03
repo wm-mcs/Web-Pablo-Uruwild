@@ -15,9 +15,16 @@
         <p class="color-text-gris mb-2 ">
          {{$Entidad->descripcion_breve}}
         </p>
+        <p class="mb-3">
+          <a href="{{$Route}}"> Editar  <i class="fas fa-chevron-right"></i></a>
+        </p>  
         <p>
-          <a href="{{$Route}}"> Leer más  <i class="fas fa-chevron-right"></i></a>
-        </p>                
+          @if($Entidad->estado == 'si')
+            <span class="color-text-success">Activo</span>
+          @else
+            <span class="color-text-gris">Inactivo</span>
+          @endif
+        </p>               
       </div>
     </div>
 </div>
