@@ -120,9 +120,6 @@
 @stop
 
 @section('contenido')
-
-  
-
   <div  class="site-section" id="contactar">
       <div class="container">
         <div class="d-flex  flex-column align-items-center justify-content-center">         
@@ -135,7 +132,7 @@
                 Para contactarte rellenar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i>. Hay un equipo de ninjas de la atención comercial listos para atenderte.                             
             </p>
           </div>
-          <div class="col-lg-6  " id="formulario_contacto">
+          <div class="col-lg-10  " id="formulario_contacto">
                <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
                   @include('paginas.home.vue.Contacto.Contacto_comun')                                
                </contacto-component>
@@ -143,28 +140,4 @@
         </div>
       </div>
     </div>
-
-      
-
-
-
-
-    
-
-
-
-
-    
-
-    
-
-   
-
-
-   
-
-    
-
-   
-
 @stop
