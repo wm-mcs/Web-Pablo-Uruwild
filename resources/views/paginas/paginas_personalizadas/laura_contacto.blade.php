@@ -7,7 +7,7 @@
 {{--*/ $ImagenPortada         = $Portada->url_img_foto_principal /*--}}
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/Empresa/logo-para-tags.jpg '/*--}}
 {{--*/ $Titulo                = 'Contacto' /*--}}
-{{--*/ $DescriptionEtiqueta   = '' /*--}}
+{{--*/ $DescriptionEtiqueta   = 'Contactate con Uruwild' /*--}}
 {{--*/ $PalabrasClaves        = '' /*--}}
 {{--*/ $UrlDeLaPagina         = route('get_pagina_contacto') /*--}}
 
@@ -127,7 +127,7 @@
       <div class="container">
         <div class="d-flex  flex-column align-items-center justify-content-center">         
           <div class="col-6 mb-3 mt-3 d-flex flex-row justify-content-center align-items-center ">
-            <img src="{{$Team[0]->url_img_foto_principal_chica}}" 
+            <img src="{{$Teams[0]->url_img_foto_principal_chica}}" 
                class="imagen-team-pagina-contacto-chica">
           </div>
           <div class="col-8 col-lg-5  mb-5">
