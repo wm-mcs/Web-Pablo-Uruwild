@@ -138,6 +138,23 @@
                </contacto-component>
           </div>
         </div>
+
+        <div class="col-12 mt-5 mb-3">
+          <div class="text-center">
+             También nos puedes contactar a travéz de <i aria-hidden="true" class="fas fa-hand-point-down"></i> ...
+          </div>
+   
+            <p class="text-center color-text-gris mb-3" v-if="se_muestra(empresa.telefono)"  > 
+               <i class="fas fa-phone-square mr-2 color-iconos-footer"></i>   @{{empresa.telefono}}
+            </p>
+            <p class="text-center color-text-gris mb-3" v-if="se_muestra(empresa.celular)"   > 
+               <i class="fas fa-mobile-alt mr-2 color-iconos-footer"></i>     @{{empresa.celular}} 
+            </p>
+            <p class="text-center color-text-gris mb-3" v-if="se_muestra(empresa.email)" >    
+               <i class="far fa-envelope color-iconos-footer mr-2"></i>     @{{empresa.email}}
+            </p>
+          
+        </div>
       </div>
     </div>
 @stop
