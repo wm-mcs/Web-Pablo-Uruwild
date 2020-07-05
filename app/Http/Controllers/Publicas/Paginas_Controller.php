@@ -47,13 +47,17 @@ class Paginas_Controller extends Controller
     // C o n t a c t o
     public function get_pagina_contacto()
     {        
-        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+        $Empresa        = $this->EmpresaRepo->getEmpresaDatos();
 
-        $Teams   = Cache::remember('Teams', 2000, function(){
-                     return  $this->TeamRepo->getEntidadesParaHome(2,'name', 'desc');
-                   });
+        $Teams          = Cache::remember('Teams', 2000, function(){
+                             return  $this->TeamRepo->getEntidadesParaHome(2,'name', 'desc');
+                           });
 
-        return view('paginas.paginas_personalizadas.laura_contacto', compact('Empresa','blogs','Teams'));
+        $Portada        = Cache::remember('PortadaContacto', 2000, function(){
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','contacto');
+                          });        
+
+        return view('paginas.paginas_personalizadas.laura_contacto', compact('Empresa','blogs','Teams','Portada'));
     }
 
     // S e r v i c i o s
