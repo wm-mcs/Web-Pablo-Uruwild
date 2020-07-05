@@ -57,7 +57,7 @@ class Paginas_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','contacto');
                           });        
 
-        return view('paginas.paginas_personalizadas.laura_contacto', compact('Empresa','blogs','Teams','Portada'));
+        return view('paginas.paginas_personalizadas.laura_contacto', compact('Empresa','Teams','Portada'));
     }
 
     // S e r v i c i o s
