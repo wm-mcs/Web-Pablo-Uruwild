@@ -123,7 +123,7 @@
 
   
 
-  <div  class="site-section" id="formulario">
+  <div  class="site-section" id="contactar">
       <div class="container">
         <div class="d-flex  flex-column align-items-center justify-content-center">         
           <div class="col-6 mb-3 mt-3 d-flex flex-row justify-content-center align-items-center ">
