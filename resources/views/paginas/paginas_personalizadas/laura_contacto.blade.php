@@ -3,12 +3,13 @@
 
 
 
-{{--*/ $ImagenPortada         = url() . '/imagenes/Portadas/laura-jodral-home-imagen-principal.jpg'/*--}}
-{{--*/ $ImagenParaTaG         = url() . '/imagenes/PaginasPersonalizadas/Socios/easy-socio-el-software-para-administrar-gimnasios-academias-de-baile-institutos-de-ingles-y-mucho-más.jpg'/*--}}
-{{--*/ $Titulo                = 'Contacto | Laura Jodral' /*--}}
+{{--*/ $ImagenPortadaChica    = $Portada->url_img_foto_principal_chica /*--}}
+{{--*/ $ImagenPortada         = $Portada->url_img_foto_principal /*--}}
+{{--*/ $ImagenParaTaG         = url() . '/imagenes/Empresa/logo-para-tags.jpg '/*--}}
+{{--*/ $Titulo                = 'Contacto' /*--}}
 {{--*/ $DescriptionEtiqueta   = '' /*--}}
 {{--*/ $PalabrasClaves        = '' /*--}}
-{{--*/ $UrlDeLaPagina         = route('get_pagina_servicios') /*--}}
+{{--*/ $UrlDeLaPagina         = route('get_pagina_contacto') /*--}}
 
 
 @section('favicon')
@@ -26,23 +27,7 @@
 @stop 
 
 @section('pixcel-facebook')
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '211354400244020');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=211354400244020&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
+
 
 @stop
 
@@ -91,12 +76,8 @@
 @stop
 
 
-@section('vue')
-
-
-  
-  @include('paginas.home.vue.contacto-component')
-  @include('paginas.home.vue.blog-list-component')
+@section('vue')  
+  @include('paginas.home.vue.contacto-component')  
   @include('paginas.home.vue.vue-instance')
 @stop
 
@@ -112,39 +93,56 @@
 
 @section('portada')
 
-    <div class="site-blocks-cover overlay bg-light" id="home-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
-            <div class="row">
-              <div class="col-lg-8 " style="max-width: 550px;">
-                <h1  class="titulos-class text-white">Contacto</h1>
-                
-                {{-- <p class="parrafo-class text-white"> Soy Laura Jodral y estoy aquí para acompañarte en tu proceso de desarrollo personal.</p>
-               
-                
-           
-                <p><a href="#sobre-mi" class="Boton-Fuente-Chico Boton-Blanco"> Aprendé como ahora mismo <i class="fas fa-chevron-right"></i> </a></p> --}}
-              </div>
-            </div>
+ <div class="site-blocks-cover overlay bg-light" id="home-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
+        <div class="row @if($Portada->posicion == 'left') @elseif($Portada->posicion == 'center') justify-content-center text-center @else justify-content-end text-right @endif">
+          <div class="col-lg-8 " style="max-width: 550px;">
+            <h1  class="titulos-class text-white font-secondary mb-3">{{$Portada->titulo}}</h1>
+            @if($Portada->sub_titulo != '')
+            <h2 class="sub-titulos-class text-white no-mostrar-en-mobil mb-3">{{$Portada->sub_titulo}}
+            </h2>
+            @endif
+            @if($Portada->parrafo != '')
+            <p class="text-white no-mostrar-en-mobil mb-3">{{$Portada->parrafo}}
+            </p>
+            @endif         
+            <p class="mt-3"><a href="{{$Portada->link_llamado_a_la_accion}}" class="scroll_to Boton-Fuente-Chico Boton-Blanco"> {{$Portada->llamado_a_la_accion}} <i class="fas fa-chevron-right"></i> </a></p>
           </div>
         </div>
       </div>
-      
-       <img class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" src="{{$ImagenPortada}}" alt="Laura Jodral portada."> 
-       {{-- <img class="logo-float-easy-socio-portada" :src="empresa.logo_easy_blanco" alt="Easysocio ptograma de gestion de gimasios y academias simple de usar."> --}}
-       
-
-    </div>  
-
-
-
+    </div>
+  </div>  
+  <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" src="{{$ImagenPortadaChica}}" alt="Uruwild.">
+  <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" src="{{$ImagenPortada}}" alt="Uruwild.">
+</div> 
 @stop
 
 @section('contenido')
 
   
 
+  <div  class="site-section" id="formulario">
+      <div class="container">
+        <div class="d-flex  flex-column align-items-center justify-content-center">         
+          <div class="col-6 mb-3 mt-3 d-flex flex-row justify-content-center align-items-center ">
+            <img src="{{$Team[0]->url_img_foto_principal_chica}}" 
+               class="imagen-team-pagina-contacto-chica">
+          </div>
+          <div class="col-8 col-lg-5  mb-5">
+            <p class="text-center color-text-gris">              
+                Para contactarte rellenar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i>. Hay un equipo de ninjas de la atención comercial listos para atenderte.                             
+            </p>
+          </div>
+          <div class="col-lg-6  " id="formulario_contacto">
+               <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
+                  @include('paginas.home.vue.Contacto.Contacto_comun')                                
+               </contacto-component>
+          </div>
+        </div>
+      </div>
+    </div>
 
       
 

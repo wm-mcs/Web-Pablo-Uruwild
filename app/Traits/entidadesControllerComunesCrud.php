@@ -40,7 +40,6 @@ trait entidadesControllerComunesCrud{
   
   public function set_admin_crear(Request $Request)
   {     
-
       
       $Propiedades = $this->getPropiedades();
       
@@ -61,10 +60,8 @@ trait entidadesControllerComunesCrud{
       
       if($files[0] != null )
       {        
-
         foreach($files as $file)
         { 
-
           // C r e o   l a   i m a g e n   e n   l a   b a s e   d e   d a t o s 
           $Imagen = $this->ImagenRepo->setUnaImagenEnBaseDeDatos($Entidad->name, $this->Path_carpeta_imagenes, $this->Nombre_del_campo_imagen, $Entidad->id);
 
@@ -76,24 +73,16 @@ trait entidadesControllerComunesCrud{
 
             // I m a g e n   c h i c a 
             $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',$this->getImagenMiniaturaSize());
-
         }
-
         // M a r c o   u n a   i m a g e n   c o  m o   p r i n c i p a l
         $Imagen = $this->ImagenRepo->getImagenes($this->Nombre_del_campo_imagen,$Entidad->id)->first();
-        $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si');
-
-       
-        
+        $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si');   
       }
 
       // B o r r a   l o s   c a c h e   q u e   p u e d a n  e s t a r   u s a n d o   e s t á   e n t i d a d
-      $this->olvidarCachesAsociadoAEstaEntidad();
-      
-      
+      $this->olvidarCachesAsociadoAEstaEntidad();      
 
-     return redirect()->route($this->Route_luego_de_crear)->with('alert', 'Se creó correctamente. En breve se cargará en la interfás pública de los usuarios.');
-    
+      return redirect()->route($this->Route_luego_de_crear)->with('alert', 'Se creó correctamente. En breve se cargará en la interfás pública de los usuarios.');    
   }
 
   
@@ -126,7 +115,6 @@ trait entidadesControllerComunesCrud{
 
         foreach($files as $file)
         { 
-
           // C r e o   l a   i m a g e n   e n   l a   b a s e   d e   d a t o s 
           $Imagen = $this->ImagenRepo->setUnaImagenEnBaseDeDatos($Entidad->name, $this->Path_carpeta_imagenes, $this->Nombre_del_campo_imagen, $Entidad->id);
 
@@ -140,9 +128,7 @@ trait entidadesControllerComunesCrud{
             $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',$this->getImagenMiniaturaSize());
 
             // Ajusto los cache
-            $nombre_campo = $this->Nombre_del_campo_imagen;
-            
-            
+            $nombre_campo = $this->Nombre_del_campo_imagen;            
         }
 
         HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Entidad->id);
