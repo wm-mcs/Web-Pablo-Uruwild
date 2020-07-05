@@ -12,6 +12,7 @@ use App\Helpers\CurlHelper;
 use App\Repositorios\TourRepo;
 use App\Repositorios\PortadaDePaginaRepo;  
 use App\Repositorios\CabañaRepo;
+use App\Repositorios\TeamRepo;
 
 
 class Paginas_Controller extends Controller
@@ -23,13 +24,15 @@ class Paginas_Controller extends Controller
     protected $TourRepo;
     protected $PortadaDePaginaRepo;
     protected $CabañaRepo;
+    protected $TeamRepo;
 
     public function __construct(NoticiasRepo        $NoticiasRepo,
                                 EmpresaRepo         $EmpresaRepo,                                 
                                 CurlHelper          $CurlHelper,
                                 TourRepo            $TourRepo,
                                 PortadaDePaginaRepo $PortadaDePaginaRepo,
-                                CabañaRepo          $CabañaRepo   )
+                                CabañaRepo          $CabañaRepo,
+                                TeamRepo            $TeamRepo   )
     {
         
         $this->NoticiasRepo        = $NoticiasRepo;
@@ -38,21 +41,25 @@ class Paginas_Controller extends Controller
         $this->TourRepo            = $TourRepo;
         $this->PortadaDePaginaRepo = $PortadaDePaginaRepo; 
         $this->CabañaRepo          = $CabañaRepo;
+        $this->TeamRepo            = $TeamRepo;
     }
 
     // C o n t a c t o
     public function get_pagina_contacto()
-    {
-
-        $blogs   = $this->NoticiasRepo->getUltimosBlogs();
+    {        
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
-        return view('paginas.paginas_personalizadas.laura_contacto', compact('Empresa','blogs'));
+
+        $Teams   = Cache::remember('Teams', 2000, function(){
+                     return  $this->TeamRepo->getEntidadesParaHome(2,'name', 'desc');
+                   });
+
+        return view('paginas.paginas_personalizadas.laura_contacto', compact('Empresa','blogs','Teams'));
     }
 
     // S e r v i c i o s
     public function get_pagina_servicios()
     {
-        $blogs          = $this->NoticiasRepo->getUltimosBlogs();
+        $blogs   = $this->NoticiasRepo->getUltimosBlogs();
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
         return view('paginas.paginas_personalizadas.laura_servicios', compact('Empresa','blogs'));
     }

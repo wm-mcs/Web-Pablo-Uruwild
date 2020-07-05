@@ -48,11 +48,9 @@ class Home_Public_Controller extends Controller
     {
         
            
-        $Empresa        = $this->EmpresaRepo->getEmpresaDatos(); 
-
-        
-        $blogs          = $this->NoticiasRepo->getUltimosBlogs();
-        $Teams          = Cache::remember('TeamsHome', 30, function(){
+        $Empresa        = $this->EmpresaRepo->getEmpresaDatos();         
+       
+        $Teams          = Cache::remember('Teams', 2000, function(){
                           return  $this->TeamRepo->getEntidadesParaHome(2,'name', 'desc');
                           });
 
@@ -78,7 +76,7 @@ class Home_Public_Controller extends Controller
 
                        
 
-        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','blogs','Teams','Cabañas','Circuitos','Productos','Portada','Turismo_rural'));
+        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','Teams','Cabañas','Circuitos','Productos','Portada','Turismo_rural'));
     }
 
 

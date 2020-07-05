@@ -47,6 +47,12 @@ class Admin_Team_Controllers extends Controller
     return view('admin.team.team_crear');
   }
 
+
+  public function olvidarCachesAsociadoAEstaEntidad()
+  {
+      HelpersGenerales::helper_olvidar_este_cache('Teams');
+  }
+
   
   public function set_admin_team_crear(Request $Request)
   {     
@@ -91,8 +97,10 @@ class Admin_Team_Controllers extends Controller
         $Imagen = $this->ImagenRepo->getImagenes('team_id',$Entidad->id)->first();
         $this->ImagenRepo->setAtributoEspecifico($Imagen,'foto_principal','si'); 
 
-        HelpersGenerales::helper_olvidar_este_cache('TeamsHome');
+        
       }     
+
+      $this->olvidarCachesAsociadoAEstaEntidad();
 
       return redirect()->route('get_admin_teams')->with('alert', 'Se creó correctamente. En breve se verá reflejado en los listados de la interfas pública');
 
@@ -150,12 +158,10 @@ class Admin_Team_Controllers extends Controller
 
         HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Entidad->id);
         HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'.$nombre_campo.$Entidad->id);
-        HelpersGenerales::helper_olvidar_este_cache('TeamsHome');
-
-        
-
         
       }      
+
+      $this->olvidarCachesAsociadoAEstaEntidad();
 
       return redirect()->back()->with('alert','Se editó correctamente. En breve lo verás reflejado en la interfás pública');
   }
