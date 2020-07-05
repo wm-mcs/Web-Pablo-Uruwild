@@ -139,7 +139,7 @@
       <div class="container">
         <div class="row justify-content-lg-center">
           <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
-            Turismo rural en Uruguay
+            Turismo rural
           </div>
 
         </div>
@@ -171,7 +171,7 @@
     <div class="container">
       <div class="row justify-content-lg-center">
         <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
-          Circuítos de pesca profesional por le rio Uruguay guiados por expertos. 
+         Tours de pesca
         </div>
 
       </div>
@@ -204,7 +204,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
-          Escapadas al medio del campo. Desconexión total <i class="fas fa-peace"></i>.  
+          Actividades al aire libre.  
         </div>
 
       </div>
@@ -236,7 +236,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
-          Estancias próximas a nuestros circuitos de pesca
+          Estancias asociadas
         </div>
 
       </div>

@@ -42,6 +42,30 @@
 }
 
 
+/*T o u r s*/
+.tour-img-listado{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;    
+}
+
+.tour-contiene-datos-listado{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  background-color:rgba($color-black,.2);
+  padding: 20px;
+  width: 100%;
+}
+
+/* T u r i s m o   r u r a l  */
+.turismo-rural-img-listado{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;    
+}
 
 
 
@@ -59,19 +83,17 @@
 
 
 
-@media (min-width: $BrackPoint-Secundario){
- 
+
+
+@media (min-width: $BrackPoint-Secundario){ 
  .imagen-team-chica{
   height:200px;
   width: 200px;
   }
-
 }
 
 @media (min-width: $BrackPoint-Tercer){
-
-.logo-float{
-  height: 80px;
-}
-
+  .logo-float{
+    height: 80px;
+  }
 }
