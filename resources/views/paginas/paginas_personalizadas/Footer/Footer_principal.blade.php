@@ -106,3 +106,12 @@
        
       </div>
     </footer>
+    
+    <div class="p-5 background-gris-5">
+      <p class="m-0 text-center color-text-white parrafo-class"> 
+        <small>
+           <i class="fas fa-code"></i> <span class="color-text-gris">Desarrollado por</span>   <a class="color-text-white" href="https://mauricio.mwebs.com.uy/"> Mauricio Costanzo</a>
+        </small>
+      
+      </p>
+    </div>
