@@ -158,7 +158,7 @@
         </div>
 
       </div>
-      <div class="row">
+      <div class="row justify-content-lg-center">
 
         @foreach($Turismo_rural as $Entidad)
           {{--*/ $Entidad  = $Entidad /*--}}

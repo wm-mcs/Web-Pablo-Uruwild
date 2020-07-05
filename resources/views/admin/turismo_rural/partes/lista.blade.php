@@ -31,21 +31,13 @@
 </div>
 @else 
 {{--  E s t a   e s   p a r a   e l   p ú b l i c o  --}}
-<div class="col-12 col-lg-6 mb-4 ">
-    <div class="servicio_lista service position-relative">
-      
-        <img v-if="!cargando" src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="turismo-rural-img-listado">
-        <div v-else class="col-12 background-secondary d-flex flex-row align-item-center justify-content-center">
-          <div class="cssload-tube-tunnel"></div>
-        </div>
+<div class="col-12 col-lg-10 mb-4 ">
+    <div class="servicio_lista service position-relative">      
+        <img  src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="turismo-rural-img-listado">       
         <div class="tour-contiene-datos-listado">         
-          <a class="sub-titulos-class" href="{{$Route}}">  {{$Entidad->name}} </a>
-         </p>
-        </div>
-
-
-
-           
+          <a class="sub-titulos-class color-text-white mb-2" href="{{$Route}}">  {{$Entidad->name}} </a>       
+          <p class="m-0"><a href="{{$Route}}"> Leer más  <i class="fas fa-chevron-right"></i></a></p> 
+        </div>           
     </div>
 </div>
 @endif
