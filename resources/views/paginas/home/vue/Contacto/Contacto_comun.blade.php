@@ -33,16 +33,16 @@
 
       <p class="col-12 text-bold -text-primary mb-4">¿Por qué nos contactás?</p>
 
-      <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="checkbox" name="" value="Una página web personal" v-model="data_mensaje.que_necesitas">
+      <div class="d-flex  align-items-center  col-12 mb-2">
+        <input class="m-0 mr-4 type="checkbox" name="" value="Una página web personal" v-model="data_mensaje.que_necesitas">
         <p class="color-text-gris m-0">Tengo interés en la pesca profesional</p>
       </div>
-      <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="checkbox" name="" value="Quiero explorar los rincones naturales de Uruguay" v-model="data_mensaje.que_necesitas">
+      <div class="d-flex  align-items-center  col-12 mb-2">
+        <input class="m-0 mr-4 type="checkbox" name="" value="Quiero explorar los rincones naturales de Uruguay" v-model="data_mensaje.que_necesitas">
         <p class="color-text-gris m-0">Quiero explorar los rincones naturales de Uruguay</p>
       </div>
-       <div class="row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-2" type="checkbox" name="" value="Quiero desconectarme de todo" v-model="data_mensaje.que_necesitas">
+       <div class="d-flex  align-items-center  col-12 mb-2">
+        <input class="m-0 mr-4" type="checkbox" name="" value="Quiero desconectarme de todo" v-model="data_mensaje.que_necesitas">
         <p class="color-text-gris m-0"> Quiero desconectarme de todo </p>
       </div>     
       
