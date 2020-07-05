@@ -34,44 +34,28 @@
       <p class="col-12 text-bold -text-primary mb-4">¿Por qué nos contactás?</p>
 
       <div class="d-flex  align-items-center  col-12 mb-2">
-        <input class="m-0 mr-4 type="checkbox" name="" value="Una página web personal" v-model="data_mensaje.que_necesitas">
+        <input class="m-0 mr-4" type="checkbox" name="" value="Una página web personal" v-model="data_mensaje.que_necesitas">
         <p class="color-text-gris m-0">Tengo interés en la pesca profesional</p>
       </div>
       <div class="d-flex  align-items-center  col-12 mb-2">
-        <input class="m-0 mr-4 type="checkbox" name="" value="Quiero explorar los rincones naturales de Uruguay" v-model="data_mensaje.que_necesitas">
+        <input class="m-0 mr-4" type="checkbox" name="" value="Quiero explorar los rincones naturales de Uruguay" v-model="data_mensaje.que_necesitas">
         <p class="color-text-gris m-0">Quiero explorar los rincones naturales de Uruguay</p>
       </div>
        <div class="d-flex  align-items-center  col-12 mb-2">
         <input class="m-0 mr-4" type="checkbox" name="" value="Quiero desconectarme de todo" v-model="data_mensaje.que_necesitas">
         <p class="color-text-gris m-0"> Quiero desconectarme de todo </p>
-      </div>     
-      
-      
+      </div>    
     </div>
-
-
-
-
 
      <div class="row mb-4">
       <div class="form-group col-12">
         <textarea v-model="data_mensaje.mensaje" class=" input-text-class-secondary" cols="30" rows="4"  placeholder="Si quieres agregar más información escríbela aquí"></textarea>
       </div>
     </div>
-
-
-
-
-
-
-
-
     <div class="row">
-
       <div class="col-md-6" v-if="errores" >
         <div :class="classTextColor" v-for="error in errores">@{{error}}</div>
       </div>
-
       <div class="col-md-12">
         <div v-if="cargando" class="flex-column align-items-center">
           <div class="cssload-tube-tunnel" :class="classCargadorColor"></div>
