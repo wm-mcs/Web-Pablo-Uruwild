@@ -31,7 +31,7 @@
                 {{-- <li><a href="{{route('get_pagina_quien_es')}}" class="text-uppercase">Sobre Uruwild</a></li> --}}
 
                 <li><a href="{{route('get_pagina_tours')}}" class="text-uppercase">Tours de pesca</a></li>
-                <li><a href="{{route('get_pagina_turismo_rural')}}" class="text-uppercase">Turismo rural</a></li>                
+                {{-- <li><a href="{{route('get_pagina_turismo_rural')}}" class="text-uppercase">Turismo rural</a></li> --}}                
                 <li><a href="{{route('get_pagina_contacto')}}" class="text-uppercase">Contacto</a></li>
                 @if(!Auth::guest())
                   <li><a href="{{route('get_datos_corporativos')}}" class="text-uppercase">Administrar</a></li>
