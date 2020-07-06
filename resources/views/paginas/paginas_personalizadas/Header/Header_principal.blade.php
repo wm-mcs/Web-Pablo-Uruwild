@@ -28,7 +28,7 @@
 
             <nav class="site-navigation position-relative" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">               
-                {{-- <li><a href="{{route('get_pagina_quien_es')}}" class="text-uppercase">Sobre Uruwild</a></li> --}}
+                <li><a href="{{route('get_pagina_quien_es')}}" class="text-uppercase">Sobre Uruwild</a></li>
 
                 <li><a href="{{route('get_pagina_tours')}}" class="text-uppercase">Tours de pesca</a></li>
                 {{-- <li><a href="{{route('get_pagina_turismo_rural')}}" class="text-uppercase">Turismo rural</a></li> --}}                

@@ -162,7 +162,7 @@
             </p>
 
             <p class="parrafo-class mb-2">
-            uestro objetivo es acercar diferentes propuestas, productos y actividades al aire libre para invitar a conocer, revalorizar y redescubrir el Uruguay de una forma diferente. Seleccionamos y acercamos un abanico de propuestas al aire libre contemplando particularmente siempre el valor y las aptitudes naturales y paisajísticas de cada lugar.
+            Nuestro objetivo es acercar diferentes propuestas, productos y actividades al aire libre para invitar a conocer, revalorizar y redescubrir el Uruguay de una forma diferente. Seleccionamos y acercamos un abanico de propuestas al aire libre contemplando particularmente siempre el valor y las aptitudes naturales y paisajísticas de cada lugar.
              
             </p>
 
