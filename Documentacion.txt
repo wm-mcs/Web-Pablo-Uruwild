@@ -33,3 +33,5 @@
    - La variable de la entidad protected $img_key establece el nombre por el cual se buscará las imagenes, esto se debe ajustar en el controller en la parte de $this->Nombre_del_campo_imagen
 
    - En la carpeta pública el nombre de la carpet ver en el controller antes de crear. 
+
+   - Los tours, turismo rural y actividades al aire libre son la misma entidad pero desde la vista de crear se pasa la propiedad "tipo_de_tour". Se crea cómo módulos diferentes para que los administradores tengan mejor interfáz.
