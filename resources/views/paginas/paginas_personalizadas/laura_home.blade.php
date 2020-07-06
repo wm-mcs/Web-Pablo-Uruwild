@@ -131,7 +131,7 @@
    <div class="site-section background-primary" id="circuitos"> 
     <div class="container">
       <p class="text-center p-2 p-lg-5 text-white">
-        Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Hacemos  <a class="text-white" href="#circuitos">tours de pesca</a>,  <a class="text-white" href="#ecoturismo">actividades de ecoturismo</a> y <a class="text-white" href="#Turismo">turismo rural</a>. 
+        Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Hacemos  <a class="text-white scroll_to" href="#circuitos">tours de pesca</a>,  <a class="text-white scroll_to" href="#ecoturismo">actividades de ecoturismo</a> y <a class="text-white scroll_to" href="#Turismo">turismo rural</a>. 
       </p>
      </div> 
     </div>
