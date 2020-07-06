@@ -32,9 +32,11 @@
 @else 
 {{--  E s t a   e s   p a r a   e l   p ú b l i c o  --}}
 <div class="col-12 col-lg-6 mb-4 ">
-    <div class="servicio_lista service position-relative">      
-        <img  src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="turismo-rural-img-listado">       
-        <div class="p-3 mt-2 background-secondary" >
+    <div class="servicio_lista service position-relative">   
+        <a href="{{$Route}}">   
+         <img  src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="turismo-rural-img-listado">       
+        </a>
+        <div class="p-3  background-secondary" >
           <h3 class="sub-titulos-class   mb-2">
             <a href="{{$Route}}" class="font-primary color-text-white">
              {{$Entidad->name}}
@@ -43,7 +45,7 @@
           <p class="color-text-white mb-2 ">
            {{$Entidad->descripcion_breve}}
           </p>
-          <p>
+          <p class="m-0">
             <a href="{{$Route}}"> Explorar contenido  <i class="fas fa-chevron-right"></i></a>
           </p>                
         </div>        
