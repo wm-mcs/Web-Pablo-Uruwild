@@ -138,8 +138,8 @@
   </div>
 
  
-  @include('paginas.home.tour_viejo')
-  @include('paginas.home.tour_nuevo')
+  @include('paginas.paginas_personalizadas.home.tour_viejo')
+  @include('paginas.paginas_personalizadas.home.tour_nuevo')
 
   {{-- I m a g e n   d e   p e s c a  --}}
   <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-pesca-chica"></div>
@@ -187,7 +187,7 @@
   @endif
 
 
-  @include('paginas.home.turismo_rural')
+  @include('paginas.paginas_personalizadas.home.turismo_rural')
   
 
 

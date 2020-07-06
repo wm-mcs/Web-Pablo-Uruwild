@@ -75,11 +75,11 @@ class Home_Public_Controller extends Controller
                           });     
 
         $Portada_pesca = Cache::remember('PortadaPescaHome', 2000, function(){
-                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','portada_pesca');
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home_pesca');
                           }); 
 
         $Portada_rural = Cache::remember('PortadaTurismoRuralHome', 2000, function(){
-                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','portada_turismo_rural');
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home_rural');
                           }); 
 
         
