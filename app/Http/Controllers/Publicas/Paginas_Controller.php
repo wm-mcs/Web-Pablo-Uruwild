@@ -74,12 +74,16 @@ class Paginas_Controller extends Controller
         
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();
 
+        $Teams          = Cache::remember('TeamsQuienes', 2000, function(){
+                          return  $this->TeamRepo->getEntidadesParaHome(5,'name', 'desc');
+                          });
+
         $Portada        = Cache::remember('PortadaSobre', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','sobre_uruwild');
                           });    
 
         
-        return view('paginas.paginas_personalizadas.laura_quien_es', compact('Empresa','Portada'));
+        return view('paginas.paginas_personalizadas.laura_quien_es', compact('Empresa','Portada','Teams'));
     }
     
     // B l o g   I n d i v i d u a l 

@@ -131,13 +131,13 @@
 
 @section('contenido')
 
- <div class="site-section background-gris-1" id="sobre">
+ <div class="site-section background-gris-4" id="sobre">
     <div class="container">
       <h2 class="mb-4 sub-titulos-class text-center text-color-primary text-bold">
         HAS LLEGADO HASTA AQUÍ POR ALGO.
       </h2> 
       <p class="text-center text-color-primary m-0">        
-       ¿Eres pescador profesional? ¿Buscas actividades al aire libre? ¿Quieres un fin de semana de paz en el emdio del campo?.
+       ¿Pesca profesional? ¿Actividades al aire libre? ¿Fin de semana de paz en el medio del campo?.
       </p>   
       
     </div>
@@ -186,6 +186,29 @@
              </a>
       </div>
 </div>
+
+
+
+
+
+ <div class="site-section background-gris-1"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center">
+          El team de Uruwild <i class="fas fa-hand-point-down"></i>
+        </div>
+
+      </div>
+      <div class="row d-flex justify-content-center">
+
+        @foreach($Teams as $Entidad)
+          {{--*/ $Entidad  = $Entidad /*--}}
+          {{--*/ $Route    = $Entidad->route /*--}}
+          @include('admin.team.partes.lista_quienes_somos')
+        @endforeach
+      </div>      
+    </div>
+  </div>
 
   
 
