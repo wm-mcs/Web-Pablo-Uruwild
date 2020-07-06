@@ -34,8 +34,8 @@
 <div class="col-12 col-lg-6 mb-4 ">
     <div class="servicio_lista service position-relative">      
         <img  src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="turismo-rural-img-listado">       
-        <div class="p-3 mt-2">
-          <h3 class="sub-titulos-class background-secondary  mb-2">
+        <div class="p-3 mt-2 background-secondary" >
+          <h3 class="sub-titulos-class   mb-2">
             <a href="{{$Route}}" class="font-primary color-text-white">
              {{$Entidad->name}}
             </a>                
