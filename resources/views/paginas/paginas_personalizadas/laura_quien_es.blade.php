@@ -131,15 +131,64 @@
 
 @section('contenido')
 
-  
-  <div class="site-section background-gris-1" id="sobre">
-    <div class="container">    
+ <div class="site-section background-gris-1" id="sobre">
+    <div class="container">
+      <h2 class="mb-4 sub-titulos-class text-center text-color-primary text-bold">
+        HAS LLEGADO HASTA AQUÍ POR ALGO.
+      </h2> 
       <p class="text-center text-color-primary m-0">        
-       <b>Uruwild</b> es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Somos un equipo joven multidisciplinario, capacitados y formados en diversas áreas, que en su conjunto buscamos ofrecer experiencias de auténtico valor.
+       ¿Eres pescador profesional? ¿Buscas actividades al aire libre? ¿Quieres un fin de semana de paz en el emdio del campo?.
       </p>   
+      
     </div>
   </div>
+
+
+
+  <div  class="site-section" id="sobre-mi">
+      <div class="container">
+        <div class="row align-items-center border border-primary p-5 mb-4">
+
+          <h2 class="col-12 titulos-class  text-center text-color-primary mb-5 font-primary">¿Qué es Uruwild?</h2>
+          <h3 class="col-12 text-color-primary text-bold sub-titulos-class text-center text-uppercase">Tours de pesca. Turismo rural. Actividades al aire libre.</h3>
+         
+
+          <div class="row align-items-center ">
+           <div class="col-lg-6 order-2 order-lg-2 flex-column p-4">          
+              
+
+            <p class="parrafo-class mb-2">
+             Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Somos un equipo joven multidisciplinario, capacitados y formados en diversas áreas, que en su conjunto buscamos ofrecer experiencias auténticas motivadas.               
+            </p>
+
+            <p class="parrafo-class mb-2">
+            uestro objetivo es acercar diferentes propuestas, productos y actividades al aire libre para invitar a conocer, revalorizar y redescubrir el Uruguay de una forma diferente. Seleccionamos y acercamos un abanico de propuestas al aire libre contemplando particularmente siempre el valor y las aptitudes naturales y paisajísticas de cada lugar.
+             
+            </p>
+
+            <p class="parrafo-class m-0">
+             Nos apasiona profundamente la naturaleza y cada una de sus manifestaciones. Creemos que es posible aprender de ella mediante el acercamiento y disfrutarla conscientemente de manera responsable. Estamos convencidos que esta unión genera un vínculo inquebrantable que se ve reflejado en una identidad de conservación y respeto hacia la vida,indispensable para un futuro sostenible y sensible ante la preservación.              
+            </p>
+           
+           
+                
+             
+           </div>
+           <div class="col-lg-6 order-3 pl-lg-5 order-lg-1">
+            <img v-if="mostrar_para_celuar" class="img-fluid mb-4" data-src="{{url()}}/imagenes/Quien/sobre-uruwild-chica.jpg" alt="Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Somos un equipo joven multidisciplinario, capacitados y formados en diversas áreas, que en su conjunto buscamos ofrecer experiencias auténticas motivadas. ">
+            <img v-else class="img-fluid mb-4" data-src="{{url()}}/imagenes/Quien/sobre-uruwild" alt="Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Somos un equipo joven multidisciplinario, capacitados y formados en diversas áreas, que en su conjunto buscamos ofrecer experiencias auténticas motivadas. ">
+           </div>
+            
+          </div>         
+         
+        </div>
+         <a href="{{route('get_pagina_tours')}}" class="Boton-Fuente-Chica Boton-Primario-Relleno "> Explorar los tours de pesca <i class="fas fa-fish"></i>
+             </a>
+      </div>
+</div>
+
   
+
 
       
 
