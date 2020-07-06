@@ -132,100 +132,23 @@
 @section('contenido')
 
   
-  <div class="site-section background-gris-1">
-    <div class="container">
-      <h2 class="mb-4 sub-titulos-class text-center text-color-primary text-bold">
-        HAS LLEGADO HASTA AQUÍ POR ALGO.
-      </h2>
-      <h3 class="sub-titulos-class text-center text-color-primary mb-4">
-        Necesitas cambiar el rumbo de tu vida y mejora tus conflictos emocionales, miedos, autoestima e inseguridad.
-      </h3>    
-
-      <p class="text-center text-color-primary m-0">
-        
-       ¿Quiéres tomar las riendas de tu vida? ¿Te gustaría saber cómo?  te ofrezco las herramientas para que puedas llevar tu vida a otro nivel.
+  <div class="site-section background-gris-1" id="sobre">
+    <div class="container">    
+      <p class="text-center text-color-primary m-0">        
+       <b>Uruwild</b> es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Somos un equipo joven multidisciplinario, capacitados y formados en diversas áreas, que en su conjunto buscamos ofrecer experiencias de auténtico valor.
       </p>   
-      
     </div>
   </div>
-  <div class="background_img background_img_fixed img_help-quien"></div>
+  
 
       
 
 
 
-    <div  class="site-section background-gris-0" id="">
-      <div class="container d-flex flex-column align-items-center">
-
-        <div class=" p-4 mb-4 col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center">
-          <img class="rounded-circle img-fluid" data-src="{{url()}}/imagenes/Contacto/Laura-Jodral-contacto-terapias-foto-chica.jpg">
-        </div>
-          
-        
-        <div class="col-12 p-4 border border-primary mb-3 ">
-          <p class=" parrafo-class mb-2">            
-            El poder usar  <strong> la  Gestalt, el Coaching, la Astrología y la PNL  como herramientas</strong> de trabajo para el acompañamiento terapéutico me ayudan a percibir  y orientar a las persona desde una comprensión mucho más amplia. Esto, sumado a mi grado de sensibilidad me dotan de una empatía necesaria para el acompañamiento terapéutico.
-          </p>
-          <p class=" parrafo-class mb-2">            
-           Te facilito el desarrollo de tu confianza, conocimientos y responsabilidad para optimizar al máximo tu potencial y conseguir lo que deseas.
-          </p>
-          <p class=" parrafo-class mb-2">            
-           Creo en algo más que en lo tangible, lo que me lleva  a confiar en mi guía interno y creer que no pasa nada mas que lo inevitable y que cada encuentro se da por una razón inalcanzable a nuestros sentidos pero necesario para el alma ,por lo que si has llegado hasta aquí, a leer estas líneas, no es casualidad que nos hayamos encontrado.
-          </p>
-          <p class=" parrafo-class m-0">            
-           Escucha a tu maestro interno y déjate guiar por tu intuición.
-          </p>
-        </div>
-        
-      </div>
-    </div>
-
-      <div  class="site-section background_img background_img_fixed img_Laura-Jodral-Minimalista" id="">
-      <div class="container ">
-        <div class="row d-flex flex-row justify-content-start">
-          <div class="col-lg-6 ">
-          <h2 class="h2-titulos-class mb-4 text-color-primary">¿Qué haré por tí?</h2>
-          <p class="parrafo-class mb-5"> Como facilitadora del desarrollo personal ,detectaré las áreas de dificultad que te impiden crecer personal y profesionalmente  y te asistiré en tus procesos de aprendizaje y cambio para conseguirlo.  Del mismo modo que si uno se adentra en un lugar desconocido a oscuras sintiéndose desorientado sin saber por dónde ir en ese momento, si tuviese una linterna a mano le ayudaría para orientarse, hay momentos en la vida en que gracias a esa ‘linterna’ podemos recorrer el camino que deseamos y decidimos realizar.
-          </p>   
-
-           <p class="parrafo-class m-0">
-        
-       Confío en cada uno <strong>puede llegar a ser la mejor versión de sí mismo</strong>  y la experiencia me ha mostrado que la gran mayoría de las personas viven distanciadas de sí mismas caminando por la vida como medianamente pueden sin ser quien realmente son con todo su ser y sin experimentar todas las potencialidades que tienen para manifestar en este mundo lo cual acarrea una serie de conflictos internos que si se dedicasen un poquito de tiempo para adentrarse y mirarse a  sí mismos podrían disfrutar de una vida más plena,  y <strong>que mejor momento que ahora, en esta Vida, en la que aún puedes hacer algo por ti</strong> .
-      </p> 
-          
-
-         
-         
-          
-
-         
-
-         
-
-
-
-
-          </div>
-          
-        </div>
-      </div>
-    </div>
-
-
-    <div class="site-section background-gris-1">
-    <div class="container d-flex flex-column align-items-center">
+   
       
-          
-
-       
-
-      <div class="col-12 col-lg-10 p-4">
-          <a href="{{route('get_pagina_servicios')}}" class="Boton-Fuente-Chica Boton-Primario-Relleno "> Descubre las herramientas que llevarán tu vida al siguente nivel <i class="fas fa-chevron-right"></i>
-           </a>
-        </div>
-      
-    </div>
-  </div>
+   
+ 
 
     
 

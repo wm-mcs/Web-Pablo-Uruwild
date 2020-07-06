@@ -71,9 +71,15 @@ class Paginas_Controller extends Controller
     // Q u i é n   e s   L a u r a 
     public function get_pagina_quien_es()
     {
-        $blogs          = $this->NoticiasRepo->getUltimosBlogs();
+        
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();
-        return view('paginas.paginas_personalizadas.laura_quien_es', compact('Empresa','blogs'));
+
+        $Portada        = Cache::remember('PortadaSobre', 2000, function(){
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','sobre_uruwild');
+                          });    
+
+        
+        return view('paginas.paginas_personalizadas.laura_quien_es', compact('Empresa','Portada'));
     }
     
     // B l o g   I n d i v i d u a l 

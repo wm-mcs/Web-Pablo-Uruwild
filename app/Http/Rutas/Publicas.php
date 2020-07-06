@@ -42,8 +42,8 @@ Route::get('/Servicios' , [
   'as'   => 'get_pagina_servicios']
 );
 
-// Q u i é n   e s   L a u r a 
-Route::get('/Quién-es-Laura-Jodral-Garcia' , [                    
+// S o b r e
+Route::get('/sobre-Uruwild' , [                    
   'uses' => 'Publicas\Paginas_Controller@get_pagina_quien_es',
   'as'   => 'get_pagina_quien_es']
 );
