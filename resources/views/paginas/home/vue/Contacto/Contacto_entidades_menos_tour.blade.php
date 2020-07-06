@@ -19,25 +19,13 @@
       <input v-model="data_mensaje.pais" type="text" class="input-text-class-secondary" placeholder="¿De dónde eres? (País) ">
         
       </div>
-    </div>
+    </div> 
 
    
+   
+   
 
    
-   
-   
-
-   {{--  <div class="row mb-4 justify-content-end">
-      <p class="col-12 text-bold -text-primary mb-4">¿Quieres hacer todo o parte del tour?</p>
-      <div class="d-flex flex-row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-4" type="radio" name="" value="Todo" v-model="data_mensaje.presupuesto">
-        <p class="color-text-gris m-0">Todo</p>
-      </div>
-      <div class="d-flex flex-row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-4" type="radio" name="" value="Algunas partes" v-model="data_mensaje.presupuesto">
-        <p class="color-text-gris m-0">Algunas partes</p>
-      </div>         
-    </div> --}}
 
     <div class="row mb-4 justify-content-end">
 
