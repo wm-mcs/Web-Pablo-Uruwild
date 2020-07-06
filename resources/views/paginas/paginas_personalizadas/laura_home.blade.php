@@ -131,7 +131,7 @@
    <div class="site-section background-primary" id="circuitos"> 
     <div class="container">
       <p class="text-center p-2 p-lg-5 text-white">
-        Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay.
+        Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Hacemos  <a class="text-white" href="#circuitos">tours de pesca</a>,  <a class="text-white" href="#ecoturismo">actividades de ecoturismo</a> y <a class="text-white" href="#Turismo">turismo rural</a>. 
       </p>
      </div> 
     </div>
@@ -171,7 +171,7 @@
   <div v-else class="background_img background_img_fixed home-pesca"></div>
   @if($Productos->count() > 0)
    {{-- Aquí poner contendio para probar --}}
-   <div class="site-section background-gris-0" id="circuitos"> 
+   <div class="site-section background-gris-0" id="ecoturismo"> 
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
@@ -205,7 +205,7 @@
 
    @if($Turismo_rural->count() > 0)
     {{-- Aquí poner contendio para probar --}}
-     <div class="site-section background-gris-0" id="circuitos"> 
+     <div class="site-section background-gris-0" id="Turismo"> 
       <div class="container">
         <div class="row justify-content-lg-center">
           <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
