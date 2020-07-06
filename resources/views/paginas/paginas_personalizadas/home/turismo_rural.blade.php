@@ -1,6 +1,6 @@
 {{--  N u e v o   d i s e ñ o  --}}
 
-{{--*/ $Portada_rural    = $Portada /*--}}
+{{--*/  $Portada   =  $Portada_rural /*--}}
 <div class="site-blocks-cover overlay bg-light" id="home-section">
   <div class="container">
     <div class="row justify-content-center">
@@ -32,4 +32,3 @@
 
 
 
-  
