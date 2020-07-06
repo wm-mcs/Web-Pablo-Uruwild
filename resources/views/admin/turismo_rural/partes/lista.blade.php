@@ -31,7 +31,7 @@
 </div>
 @else 
 {{--  E s t a   e s   p a r a   e l   p ú b l i c o  --}}
-<div class="col-12 col-lg-10 mb-4 ">
+<div class="col-12 col-lg-10 mb-4 rounded">
     <div class="servicio_lista service position-relative">      
         <img  src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="turismo-rural-img-listado">       
         <div class="tour-contiene-datos-listado"> 
