@@ -128,7 +128,14 @@
 
 @section('contenido')
 
-  
+   <div class="site-section background-primary" id="circuitos"> 
+    <div class="container">
+      <p class="text-center p-2 p-lg-5 text-white">
+        Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay.
+      </p>
+     </div> 
+    </div>
+  </div>
 
 
 
@@ -142,25 +149,19 @@
     <div class="container">
       <div class="row justify-content-lg-center">
         <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
-         Tours de pesca
+         Tours de pesca Uruwild
         </div>
-
       </div>
       <div class="row  justify-content-lg-center mb-0">
-
         @foreach($Circuitos as $Circuito)
           {{--*/ $Entidad  = $Circuito /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.tours.partes.lista')
         @endforeach
-
       <p class="col-12 col-lg-10   text-center mt-5">
         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_tours')}}">Explorar todos los tours <i class="fas fa-chevron-right"></i></a> 
       </p> 
-
-      </div>     
-
-      
+      </div>
     </div>
   </div>
   @endif
@@ -168,16 +169,14 @@
   {{-- I m a g e n   d e   p e s c a  --}}
   <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-pesca-chica"></div>
   <div v-else class="background_img background_img_fixed home-pesca"></div>
-
-   @if($Productos->count() > 0)
-  {{-- Aquí poner contendio para probar --}}
+  @if($Productos->count() > 0)
+   {{-- Aquí poner contendio para probar --}}
    <div class="site-section background-gris-0" id="circuitos"> 
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
-          Actividades al aire libre.  
+          Naturaleza y ecoturismo  
         </div>
-
       </div>
       <div class="row  mb-0">
         @foreach($Productos as $Producto)
@@ -185,15 +184,12 @@
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.producto_especial.partes.lista')
         @endforeach  
-
         <p class="col-12 col-lg-10   text-center mt-5 mx-auto">
          <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_productos')}}">Explorar todas las actividades Wilds <i class="fas fa-chevron-right"></i></a> 
-        </p> 
-    
+        </p>     
       </div>  
-    </div>   
-     
-  </div>
+    </div>        
+   </div>
   @endif
 
 
@@ -240,7 +236,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
-          Estancias asociadas
+          Estancias y Lodges
         </div>
 
       </div>
