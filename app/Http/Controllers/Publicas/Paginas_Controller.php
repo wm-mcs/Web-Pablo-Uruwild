@@ -121,7 +121,7 @@ class Paginas_Controller extends Controller
     public function get_pagina_tours(Request $Request)
     {
         $Tours          = Cache::remember('ToursPagianaTorus', 2000, function(){
-                          return $this->TourRepo->getEntidadesParaHomeTour(50,'name', 'desc','tour');
+                          return $this->TourRepo->getEntidadesParaHomeTour(50,'rank', 'desc','tour');
                           });
 
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  

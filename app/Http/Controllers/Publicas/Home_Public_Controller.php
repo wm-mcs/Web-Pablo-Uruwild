@@ -58,25 +58,35 @@ class Home_Public_Controller extends Controller
                           return $this->CabañaRepo->getEntidadesParaHome(6,'rank','desc');
                           });
 
-        $Circuitos      = Cache::remember('CircuitosHome', 40, function(){
+        $Circuitos      = Cache::remember('CircuitosHome', 2000, function(){
                           return $this->TourRepo->getEntidadesParaHomeTour(3,'rank', 'desc','tour');
                           });
 
-        $Productos      = Cache::remember('ProductosHome', 40, function(){
+        $Productos      = Cache::remember('ProductosHome', 2000, function(){
                           return $this->TourRepo->getEntidadesParaHomeTour(4,'rank', 'desc','producto');
                           });
 
-        $Turismo_rural  = Cache::remember('TurismoRuralHome', 40, function(){
+        $Turismo_rural  = Cache::remember('TurismoRuralHome', 2000, function(){
                           return $this->TourRepo->getEntidadesParaHomeTour(6,'rank', 'desc','turismo_rural');
                           });
 
-        $Portada        = Cache::remember('PortadaHome', 60, function(){
+        $Portada        = Cache::remember('PortadaHome', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home');
                           });     
 
+        $Portada_pesca = Cache::remember('PortadaPescaHome', 2000, function(){
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','portada_pesca');
+                          }); 
+
+        $Portada_rural = Cache::remember('PortadaTurismoRuralHome', 2000, function(){
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','portada_turismo_rural');
+                          }); 
+
+        
+
                        
 
-        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','Teams','Cabañas','Circuitos','Productos','Portada','Turismo_rural'));
+        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','Teams','Cabañas','Circuitos','Productos','Portada','Turismo_rural','Portada_pesca','Portada_rural'));
     }
 
 

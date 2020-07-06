@@ -137,32 +137,16 @@
     </div>
   </div>
 
-  @if($Circuitos->count() > 0)
-  {{-- Aquí poner contendio para probar --}}
-   <div class="site-section background-gris-1" id="circuitos"> 
-    <div class="container">
-      <div class="row justify-content-lg-center">
-        <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
-         Tours de pesca Uruwild
-        </div>
-      </div>
-      <div class="row  justify-content-lg-center mb-0">
-        @foreach($Circuitos as $Circuito)
-          {{--*/ $Entidad  = $Circuito /*--}}
-          {{--*/ $Route    = $Entidad->route /*--}}
-          @include('admin.tours.partes.lista')
-        @endforeach
-        <p class="col-12 col-lg-10   text-center mt-5">
-          <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_tours')}}">Explorar todos los tours <i class="fas fa-chevron-right"></i></a> 
-        </p> 
-      </div>
-    </div>
-  </div>
-  @endif
+ 
+  @include('paginas.home.tour_viejo')
+  @include('paginas.home.tour_nuevo')
 
   {{-- I m a g e n   d e   p e s c a  --}}
   <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-pesca-chica"></div>
   <div v-else class="background_img background_img_fixed home-pesca"></div>
+
+
+
   @if($Productos->count() > 0)
    {{-- Aquí poner contendio para probar --}}
    <div class="site-section background-gris-0" id="ecoturismo"> 
@@ -179,7 +163,7 @@
           @include('admin.producto_especial.partes.lista')
         @endforeach  
         <p class="col-12 col-lg-10   text-center mt-5 mx-auto">
-         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_productos')}}">Explorar todas las actividades Wilds <i class="fas fa-chevron-right"></i></a> 
+         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_productos')}}">Conocé nuestras diferentes propuestas y actividades <i class="fas fa-chevron-right"></i></a> 
         </p>     
       </div>  
     </div>        
@@ -201,32 +185,12 @@
 
   @endif
   @endif
+
+
+  @include('paginas.home.turismo_rural')
   
 
-   @if($Turismo_rural->count() > 0)
-    {{-- Aquí poner contendio para probar --}}
-     <div class="site-section background-gris-0" id="Turismo"> 
-      <div class="container">
-        <div class="row justify-content-lg-center">
-          <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
-            Turismo rural
-          </div>
 
-        </div>
-        <div class="row  justify-content-lg-center">
-          @foreach($Turismo_rural as $Entidad)
-            {{--*/ $Entidad  = $Entidad /*--}}
-            {{--*/ $Route    = $Entidad->route /*--}}
-            @include('admin.turismo_rural.partes.lista')
-          @endforeach
-
-          <p class="col-12 col-lg-10   text-center mt-5">
-            <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_turismo_rural')}}">Explorá toda la sección de turismo rural <i class="fas fa-chevron-right"></i></a> 
-          </p> 
-        </div> 
-      </div>
-    </div>
-    @endif
   
 
 
