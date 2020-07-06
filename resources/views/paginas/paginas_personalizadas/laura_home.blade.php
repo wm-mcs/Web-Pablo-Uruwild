@@ -130,36 +130,7 @@
 
   
 
-  @if(!Auth::guest())
-  @if(Auth::user()->first_name = 'Mauricio')  
 
-   @if($Turismo_rural->count() > 0)
-    {{-- Aquí poner contendio para probar --}}
-     <div class="site-section background-gris-1" id="circuitos"> 
-      <div class="container">
-        <div class="row justify-content-lg-center">
-          <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
-            Turismo rural
-          </div>
-
-        </div>
-        <div class="row  justify-content-lg-center mb-0">
-          @foreach($Turismo_rural as $Entidad)
-            {{--*/ $Entidad  = $Entidad /*--}}
-            {{--*/ $Route    = $Entidad->route /*--}}
-            @include('admin.turismo_rural.partes.lista')
-          @endforeach
-
-          <p class="col-12 col-lg-10   text-center mt-5">
-            <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_turismo_rural')}}">Explorá toda la sección de turismo rural <i class="fas fa-chevron-right"></i></a> 
-          </p> 
-        </div> 
-      </div>
-    </div>
-    @endif
-  
-  @endif
-  @endif
 
   
 
@@ -230,6 +201,39 @@
   {{-- I m a g e n   d e   a c t i v i d a d e s  --}}
   <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-actividades-chica"></div>
   <div v-else class="background_img background_img_fixed home-actividades"></div>
+
+
+
+  @if(!Auth::guest())
+  @if(Auth::user()->first_name = 'Mauricio')  
+
+   @if($Turismo_rural->count() > 0)
+    {{-- Aquí poner contendio para probar --}}
+     <div class="site-section background-gris-0" id="circuitos"> 
+      <div class="container">
+        <div class="row justify-content-lg-center">
+          <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
+            Turismo rural
+          </div>
+
+        </div>
+        <div class="row  ">
+          @foreach($Turismo_rural as $Entidad)
+            {{--*/ $Entidad  = $Entidad /*--}}
+            {{--*/ $Route    = $Entidad->route /*--}}
+            @include('admin.turismo_rural.partes.lista')
+          @endforeach
+
+          <p class="col-12 col-lg-10   text-center mt-5">
+            <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_turismo_rural')}}">Explorá toda la sección de turismo rural <i class="fas fa-chevron-right"></i></a> 
+          </p> 
+        </div> 
+      </div>
+    </div>
+    @endif
+  
+  @endif
+  @endif
 
 
   <div class="site-section background-gris-1"> 
