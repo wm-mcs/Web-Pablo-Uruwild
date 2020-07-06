@@ -149,8 +149,8 @@
       <div class="container">
         <div class="row align-items-center border border-primary p-5 mb-4">
 
-          <h2 class="col-12 titulos-class  text-center text-color-primary mb-5 font-primary">¿Qué es Uruwild?</h2>
-          <h3 class="col-12 text-color-primary text-bold sub-titulos-class text-center text-uppercase">Tours de pesca. Turismo rural. Actividades al aire libre.</h3>
+          <h2 class="col-12 titulos-class  text-center text-color-secondary mb-2 font-primary">¿Qué es Uruwild?</h2>
+          <h3 class="col-12 text-color-primary text-bold sub-titulos-class text-center text-uppercase mb-5">Tours de pesca. Turismo rural. Actividades al aire libre.</h3>
          
 
           <div class="row align-items-center ">
@@ -176,7 +176,7 @@
            </div>
            <div class="col-lg-6 order-3 pl-lg-5 order-lg-1">
             <img v-if="mostrar_para_celuar" class="img-fluid mb-4" data-src="{{url()}}/imagenes/Quien/sobre-uruwild-chica.jpg" alt="Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Somos un equipo joven multidisciplinario, capacitados y formados en diversas áreas, que en su conjunto buscamos ofrecer experiencias auténticas motivadas. ">
-            <img v-else class="img-fluid mb-4" data-src="{{url()}}/imagenes/Quien/sobre-uruwild" alt="Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Somos un equipo joven multidisciplinario, capacitados y formados en diversas áreas, que en su conjunto buscamos ofrecer experiencias auténticas motivadas. ">
+            <img v-else class="img-fluid mb-4" data-src="{{url()}}/imagenes/Quien/sobre-uruwild.jpg" alt="Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Somos un equipo joven multidisciplinario, capacitados y formados en diversas áreas, que en su conjunto buscamos ofrecer experiencias auténticas motivadas. ">
            </div>
             
           </div>         
