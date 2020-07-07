@@ -31,7 +31,7 @@ class Admin_Team_Controllers extends Controller
 
   public function getPropiedades()
   {
-    return ['name','cargo','celular','email','facebook','instagram','youtube','linkedin','whatsapp','descripcion_breve','description','estado'];
+    return ['name','cargo','celular','email','facebook','instagram','youtube','linkedin','whatsapp','descripcion_breve','description','estado','rank'];
   }
 
   
