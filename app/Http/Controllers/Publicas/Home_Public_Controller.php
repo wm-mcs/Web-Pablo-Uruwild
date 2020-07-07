@@ -51,7 +51,7 @@ class Home_Public_Controller extends Controller
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();         
        
         $Teams          = Cache::remember('Teams', 2000, function(){
-                          return  $this->TeamRepo->getEntidadesParaHome(6,'name', 'desc');
+                          return  $this->TeamRepo->getEntidadesParaHome(6,'rank', 'desc');
                           });
 
         $Cabañas        = Cache::remember('CabañasHome', 40, function(){

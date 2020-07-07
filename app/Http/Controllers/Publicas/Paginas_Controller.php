@@ -50,7 +50,7 @@ class Paginas_Controller extends Controller
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();
 
         $Teams          = Cache::remember('Teams', 2000, function(){
-                             return  $this->TeamRepo->getEntidadesParaHome(2,'name', 'desc');
+                             return  $this->TeamRepo->getEntidadesParaHome(2,'rank', 'desc');
                            });
 
         $Portada        = Cache::remember('PortadaContacto', 2000, function(){
@@ -75,7 +75,7 @@ class Paginas_Controller extends Controller
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();
 
         $Teams          = Cache::remember('TeamsQuienes', 2000, function(){
-                          return  $this->TeamRepo->getEntidadesParaHome(5,'name', 'desc');
+                          return  $this->TeamRepo->getEntidadesParaHome(5,'rank', 'desc');
                           });
 
         $Portada        = Cache::remember('PortadaSobre', 2000, function(){
