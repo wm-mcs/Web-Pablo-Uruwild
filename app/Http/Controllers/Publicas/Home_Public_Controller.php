@@ -82,11 +82,15 @@ class Home_Public_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home_rural');
                           }); 
 
+        $Portada_ecotu = Cache::remember('PortadaEcoTurismoHome', 2000, function(){
+                          return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home_actividades');
+                          }); 
+
         
 
                        
 
-        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','Teams','Cabañas','Circuitos','Productos','Portada','Turismo_rural','Portada_pesca','Portada_rural'));
+        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','Teams','Cabañas','Circuitos','Productos','Portada','Turismo_rural','Portada_pesca','Portada_rural','Portada_ecotu'));
     }
 
 

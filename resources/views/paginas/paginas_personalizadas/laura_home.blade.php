@@ -148,9 +148,7 @@
 
 
     
-  {{-- I m a g e n   d e   a c t i v i d a d e s  --}}
-  {{-- <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-actividades-chica"></div>
-  <div v-else class="background_img background_img_fixed home-actividades"></div> --}}
+  @include('paginas.paginas_personalizadas.home.ecoturismo')
 
 
 

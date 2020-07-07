@@ -16,7 +16,7 @@ class portada_de_pagina_manager extends ManagerBase
       'sub_titulo'           => 'max:60',
       'parrafo'              => 'max:90',
       'posicion'             => 'required',
-      'llamado_a_la_accion'  => 'max:40'
+      'llamado_a_la_accion'  => 'max:60'
              ];
 
     return $rules;

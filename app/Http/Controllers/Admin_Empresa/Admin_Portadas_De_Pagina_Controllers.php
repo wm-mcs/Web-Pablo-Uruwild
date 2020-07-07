@@ -89,6 +89,7 @@ class Admin_Portadas_De_Pagina_Controllers extends Controller implements entidad
       HelpersGenerales::helper_olvidar_este_cache('PortadaSobre');     
       HelpersGenerales::helper_olvidar_este_cache('PortadaPescaHome');  
       HelpersGenerales::helper_olvidar_este_cache('PortadaTurismoRuralHome'); 
+      HelpersGenerales::helper_olvidar_este_cache('PortadaEcoTurismoHome');       
   }
 
 
