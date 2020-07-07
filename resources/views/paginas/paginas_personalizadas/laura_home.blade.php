@@ -122,23 +122,27 @@
   @if($Productos->count() > 0)
    {{-- Aquí poner contendio para probar --}}
    <div class="site-section background-gris-0" id="ecoturismo"> 
-    <div class="container">
+    <div class="container mb-3">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
           Naturaleza y ecoturismo  
         </div>
       </div>
-      <div class="row  mb-0">
+    </div> 
+      <div class="row  ">
         @foreach($Productos as $Producto)
           {{--*/ $Entidad  = $Producto /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.producto_especial.partes.lista')
-        @endforeach  
-        <p class="col-12 col-lg-10   text-center mt-5 mx-auto">
-         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_productos')}}">Conocé nuestras diferentes propuestas y actividades <i class="fas fa-chevron-right"></i></a> 
-        </p>     
+        @endforeach             
       </div>  
-    </div>        
+     <div class="container mt-5">
+       <p class="col-12 col-lg-10   text-center  mx-auto">
+         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_productos')}}">Conocé nuestras diferentes propuestas y actividades <i class="fas fa-chevron-right"></i>
+         </a> 
+       </p>  
+     </div> 
+          
    </div>
   @endif
 
