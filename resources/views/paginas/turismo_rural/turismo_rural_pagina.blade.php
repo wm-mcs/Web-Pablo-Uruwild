@@ -90,12 +90,10 @@
 
 
 @section('portada')
-
   {{--*/  $Portada   =  $Portada /*--}}
   {{--*/  $Route     = '' /*--}}
   {{--*/ $EsPortada  = true /*--}}
   @include('paginas.paginas_personalizadas.partials.portada_molde') 
-
 @stop
 
 
@@ -138,6 +136,26 @@
           {{--*/ $Entidad  = $Entidad /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.turismo_rural.partes.lista')
+        @endforeach
+      </div>      
+    </div>
+  </div>
+  @endif
+
+  @if($Cabañas->count() > 0)
+  {{-- Aquí poner contendio para probar --}}
+   <div class="site-section background-gris-0" id="contendio"> 
+    <div class="container">
+      <div class="row justify-content-lg-center">
+        <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
+          Estancias y Lodges
+        </div>
+      </div>
+      <div class="row ">
+        @foreach($Cabañas as $Entidad)
+          {{--*/ $Entidad  = $Entidad /*--}}
+          {{--*/ $Route    = $Entidad->route /*--}}
+          @include('admin.cabañas.partes.lista')
         @endforeach
       </div>      
     </div>

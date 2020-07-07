@@ -171,13 +171,16 @@ class Paginas_Controller extends Controller
         $Turismo_rural  = Cache::remember('TurismoRuralPagina', 2000, function(){
                           return $this->TourRepo->getEntidadesParaHomeTour(50,'name', 'desc','turismo_rural');
                           });
+        $Cabañas        = Cache::remember('CabañasPagina', 2000, function(){
+                          return $this->CabañaRepo->getEntidadesParaHome(30,'rank','desc');
+                          });
 
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  
         $Portada        = Cache::remember('PortadaTurimoRural', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','turismo_rural');
                           }); 
 
-        return view('paginas.turismo_rural.turismo_rural_pagina',compact('Turismo_rural','Empresa','Portada'));
+        return view('paginas.turismo_rural.turismo_rural_pagina',compact('Turismo_rural','Empresa','Portada','Cabañas'));
     }
 
 
