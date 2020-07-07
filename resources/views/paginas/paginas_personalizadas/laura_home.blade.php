@@ -121,7 +121,7 @@
 
   @if($Productos->count() > 0)
    {{-- Aquí poner contendio para probar --}}
-   <div class="site-section background-gris-4" id="ecoturismo"> 
+   <div class="site-section background-gris-3" id="ecoturismo"> 
     <div class="container mb-3">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold color-text-white text-center text-lg-left">
