@@ -35,13 +35,10 @@
                 <li><a href="{{route('get_pagina_cabañas')}}" class="text-uppercase">Estancias</a></li>
                 <li><a href="{{route('get_pagina_turismo_rural')}}" class="text-uppercase">turismo rural</a></li>
                 <li><a href="{{route('get_pagina_productos')}}" class="text-uppercase">ecoturismo</a></li>
-                
+
                 {{-- <li><a href="{{route('get_pagina_turismo_rural')}}" class="text-uppercase">Turismo rural</a></li> --}}                
                 <li><a href="{{route('get_pagina_contacto')}}" class="text-uppercase">Contacto</a></li>
-                @if(!Auth::guest())
-                  <li><a href="{{route('get_datos_corporativos')}}" class="text-uppercase">Administrar</a></li>
-                  <li><a href="{{route('logout')}}" class="text-uppercase">Salir</a></li>
-                @endif
+               
               </ul>
             </nav>
 
