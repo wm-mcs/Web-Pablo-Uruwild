@@ -92,6 +92,7 @@
 @section('portada')
   {{--*/  $Portada   =  $Portada /*--}}
   {{--*/  $Route     = '' /*--}}
+  {{--*/ $EsPortada  = true /*--}}
   @include('paginas.paginas_personalizadas.partials.portada_molde') 
 @stop
 
