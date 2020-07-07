@@ -138,12 +138,12 @@
   </div>
 
  
-  @include('paginas.paginas_personalizadas.home.tour_viejo')
+  {{--   @include('paginas.paginas_personalizadas.home.tour_viejo') --}}
   @include('paginas.paginas_personalizadas.home.tour_nuevo')
 
   {{-- I m a g e n   d e   p e s c a  --}}
-  <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-pesca-chica"></div>
-  <div v-else class="background_img background_img_fixed home-pesca"></div>
+  {{-- <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-pesca-chica"></div>
+  <div v-else class="background_img background_img_fixed home-pesca"></div> --}}
 
 
 
@@ -173,8 +173,8 @@
 
     
   {{-- I m a g e n   d e   a c t i v i d a d e s  --}}
-  <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-actividades-chica"></div>
-  <div v-else class="background_img background_img_fixed home-actividades"></div>
+  {{-- <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-actividades-chica"></div>
+  <div v-else class="background_img background_img_fixed home-actividades"></div> --}}
 
 
 
