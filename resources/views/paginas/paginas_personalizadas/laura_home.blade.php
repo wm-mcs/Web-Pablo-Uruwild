@@ -129,7 +129,7 @@
         </div>
       </div>
     </div> 
-      <div class="row col-12 mx-auto background-gris-4">
+      <div class="row col-12 mx-auto background-gris-4 pt-4">
         @foreach($Productos as $Producto)
           {{--*/ $Entidad  = $Producto /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
