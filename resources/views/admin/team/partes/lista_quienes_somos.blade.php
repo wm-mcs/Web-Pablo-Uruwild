@@ -8,9 +8,9 @@
                    
       <div class="p-1 mt-2 col-12">
         <h3 class="sub-titulos-class text-center   mb-2">
-          <p  class="font-primary text-center text-color-secondary">
-           <b> {{$Entidad->first_name}}</b>
-          </p>                
+           <span  class="font-primary text-center text-color-secondary">
+             <b> {{$Entidad->first_name}}</b>
+           </span>                 
         </h3>
         <p class="color-text-black text-bold text-center mb-2 ">
          {{$Entidad->cargo}}
