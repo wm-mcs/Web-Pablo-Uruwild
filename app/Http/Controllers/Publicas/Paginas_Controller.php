@@ -49,7 +49,7 @@ class Paginas_Controller extends Controller
     {        
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();
 
-        $Teams          = Cache::remember('Teams', 2000, function(){
+        $Teams          = Cache::remember('TeamsContacto', 2000, function(){
                              return  $this->TeamRepo->getEntidadesParaHome(2,'rank', 'desc');
                            });
 

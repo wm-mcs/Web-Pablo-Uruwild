@@ -51,7 +51,9 @@ class Admin_Team_Controllers extends Controller
   public function olvidarCachesAsociadoAEstaEntidad()
   {
       HelpersGenerales::helper_olvidar_este_cache('Teams');
-      HelpersGenerales::helper_olvidar_este_cache('TeamsQuienes');      
+      HelpersGenerales::helper_olvidar_este_cache('TeamsQuienes');   
+      HelpersGenerales::helper_olvidar_este_cache('TeamsContacto');  
+
   }
 
   
