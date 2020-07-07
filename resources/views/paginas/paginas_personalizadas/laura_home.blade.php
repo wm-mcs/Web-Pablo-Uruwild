@@ -110,39 +110,26 @@
   </div>
 
  
-  <span id="circuitos"></span>
-  {{--   @include('paginas.paginas_personalizadas.home.tour_viejo') --}}
+  <span id="circuitos"></span>  
   @include('paginas.paginas_personalizadas.home.tour_nuevo')
 
   {{-- I m a g e n   d e   p e s c a  --}}
-  {{-- <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-pesca-chica"></div>
-  <div v-else class="background_img background_img_fixed home-pesca"></div> --}}
-
-
-
-
-
-
+  <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-pesca-chica"></div>
+  <div v-else class="background_img background_img_fixed home-pesca"></div>
     
   @include('paginas.paginas_personalizadas.home.ecoturismo')
 
-
-
   @if(!Auth::guest())
   @if(Auth::user()->first_name = 'Mauricio')  
-
-
-
   @endif
   @endif
+
+  {{-- I m a g e n   d e  a c t i v i d a d e s  --}}
+  <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-actividades-chica"></div>
+  <div v-else class="background_img background_img_fixed home-actividades"></div>
 
 
   @include('paginas.paginas_personalizadas.home.turismo_rural')
-  
-
-
-  
-
 
   <div class="site-section background-gris-1"> 
     <div class="container">
@@ -185,22 +172,6 @@
       </div>      
     </div>
   </div>
-
-
-
-
-
-    
-
-    
-
-   
-
-
-   
-
-    
-
    
 
 @stop
