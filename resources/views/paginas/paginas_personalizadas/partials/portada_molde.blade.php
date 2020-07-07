@@ -22,7 +22,8 @@
             @else
             {
               <p class="mt-3"><a href="{{$Route}}" class=" Boton-Fuente-Chico Boton-Blanco"> {{$Portada->llamado_a_la_accion}} <i class="fas fa-chevron-right"></i> </a></p>
-            }     
+            }   
+            @endif  
             
           </div>
         </div>
