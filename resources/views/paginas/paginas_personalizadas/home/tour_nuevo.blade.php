@@ -1,7 +1,7 @@
 {{--  N u e v o   d i s e ñ o  --}}
 
 {{--*/ $Portada   = $Portada_pesca /*--}}
-<div v-if="scrolled" class="site-blocks-cover overlay bg-light" id="home-section">
+<div v-if="scrolled" class="site-blocks-cover overlay bg-light" id="circuitos">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
