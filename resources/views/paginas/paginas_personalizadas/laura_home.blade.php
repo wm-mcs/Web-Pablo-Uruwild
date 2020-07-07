@@ -110,6 +110,7 @@
   </div>
 
  
+  <span id="circuitos"></span>
   {{--   @include('paginas.paginas_personalizadas.home.tour_viejo') --}}
   @include('paginas.paginas_personalizadas.home.tour_nuevo')
 
