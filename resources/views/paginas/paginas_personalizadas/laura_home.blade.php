@@ -124,7 +124,7 @@
    <div class="site-section background-gris-4" id="ecoturismo"> 
     <div class="container mb-3">
       <div class="row">
-        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-white text-center text-lg-left">
+        <div class="col-12 sub-titulos-class mb-4 text-bold color-text-white text-center text-lg-left">
           Naturaleza y ecoturismo  
         </div>
       </div>
