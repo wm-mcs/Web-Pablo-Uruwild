@@ -24,6 +24,7 @@
  <div class="container p-4">
    <div class="row col-12">
      @foreach($Entidades as $Entidad)
+          {{--*/ $Mostrar_admin  = true /*--}}
           {{--*/ $Entidad  = $Entidad /*--}}
           {{--*/ $Route    = $Entidad->route_admin /*--}}
           @include('admin.team.partes.lista')
