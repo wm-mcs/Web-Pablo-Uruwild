@@ -114,7 +114,7 @@
   @include('paginas.paginas_personalizadas.home.tour_nuevo')
 
   {{-- I m a g e n   d e   p e s c a  --}}
-  <div class="p-2 background-secondary"></div>
+  <div class="p-1 background-secondary"></div>
   <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-pesca-chica"></div>
   <div v-else class="background_img background_img_fixed home-pesca"></div>
     
@@ -128,7 +128,7 @@
 
 
   {{-- I m a g e n   d e  a c t i v i d a d e s  --}}
-  <div class="p-4 background-primary"></div>
+  <div class="p-1 background-primary"></div>
   <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-actividades-chica"></div>
   <div v-else class="background_img background_img_fixed home-actividades"></div>
 
