@@ -121,7 +121,8 @@
   @include('paginas.paginas_personalizadas.home.ecoturismo')
 
   @if(!Auth::guest())
-  @if(Auth::user()->first_name = 'Mauricio')  
+  @if(Auth::user()->first_name = 'Mauricio') 
+     
   @endif
   @endif
 
@@ -152,7 +153,7 @@
         @endforeach
 
         <p class="col-12 col-lg-10   text-center mt-5 mx-auto">
-         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_cabañas')}}">Explorar todas las cabañas <i class="fas fa-chevron-right"></i></a> 
+         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_cabañas')}}">Explorar todas las estancias <i class="fas fa-chevron-right"></i></a> 
         </p> 
       </div>      
     </div>
