@@ -100,7 +100,7 @@
 
 @section('contenido')
 
-  <div class="site-section background-primary" id=""> 
+  <div class="p-5 background-primary" id=""> 
     <div class="container">
       <p class="text-center p-2 p-lg-5 text-white">
         Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Hacemos  <a class="text-white scroll_to" href="#circuitos">tours de pesca</a>,  <a class="text-white scroll_to" href="#ecoturismo">actividades de ecoturismo</a> y <a class="text-white scroll_to" href="#Turismo">turismo rural</a>. 
@@ -114,7 +114,7 @@
   @include('paginas.paginas_personalizadas.home.tour_nuevo')
 
   {{-- I m a g e n   d e   p e s c a  --}}
-  <div class="p-1 background-secondary"></div>
+  {{-- <div class="p-1 background-secondary"></div> --}}
   <div v-if="mostrar_para_celuar"class="background_img background_img_fixed home-pesca-chica"></div>
   <div v-else class="background_img background_img_fixed home-pesca"></div>
     
