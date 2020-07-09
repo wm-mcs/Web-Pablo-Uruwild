@@ -36,7 +36,16 @@ descripcion:function(){
 
   if(this.muestra == false)
   {
-    return this.texto.slice(0,this.cantidad_inicial) + '...';
+    let puntitos = '...';
+
+    if(this.texto.length < this.cantidad_inicial)
+    {
+      puntitos = '';
+    }
+
+
+    return this.texto.slice(0,this.cantidad_inicial) + puntitos;
+    
   }
 
   return this.texto;
