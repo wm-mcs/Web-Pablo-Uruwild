@@ -21,7 +21,7 @@
 
         <p class="color-text-gris text-center mb-2 p-2 p-lg-3">
         
-         <mostrar-mas-o-menos texto="{{$Entidad->description}}" :cantidad_inicial="160">
+         <mostrar-mas-o-menos texto="{{$Entidad->description}}" :cantidad_inicial="90">
            
          </mostrar-mas-o-menos> 
         </p>
