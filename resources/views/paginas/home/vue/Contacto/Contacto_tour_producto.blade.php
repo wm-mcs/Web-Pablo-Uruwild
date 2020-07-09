@@ -56,8 +56,8 @@
         <p class="color-text-gris m-0">Quiero hacer todo el tour</p>
       </div>
       <div class="d-flex flex-row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-4" type="checkbox" name="" value=">Quiero alguna parte del tour" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Quiero alguna parte del tour</p>
+        <input class="m-0 mr-4" type="checkbox" name="" value=">Quiero hacer alguna parte del tour" v-model="data_mensaje.que_necesitas">
+        <p class="color-text-gris m-0">Quiero hacer alguna parte del tour</p>
       </div>       
       
       
