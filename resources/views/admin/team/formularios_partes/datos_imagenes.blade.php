@@ -25,7 +25,7 @@
       
     
      <div class="mt-3 position-relative img-border-grosor  @if($Imagen->es_imagen_principal) img-principal  @endif ">
-      <img class="img-fluid img-cover img-altura-chica" src="{{$Imagen->url_img}}">   
+      <img class="img-fluid img-cover img-altura-chica" data-src="{{$Imagen->url_img}}">   
 
         @if($Imagen->es_imagen_principal)
         <span class="img-element-bottom-left text-color-primary">
