@@ -27,7 +27,7 @@
           <li class="admin-columna-li mi-float-right"> Mis datos</li>
         </a>  
          <a href="{{route('get_admin_cabañas')}}">
-          <li class="admin-columna-li mi-float-right"> Cabañas</li>
+          <li class="admin-columna-li mi-float-right"> Estancias y lodges</li>
         </a>  
         <a href="{{route('get_admin_teams')}}">
           <li class="admin-columna-li mi-float-right">Team</li>
@@ -42,7 +42,7 @@
           <li class="admin-columna-li mi-float-right">Turismo rural</li>
         </a>  
         <a href="{{route('get_admin_tours')}}">
-          <li class="admin-columna-li mi-float-right"> Tours</li>
+          <li class="admin-columna-li mi-float-right"> Tours de pesca</li>
         </a> 
         <a href="{{route('get_admin_portadas_de_paginas')}}">
           <li class="admin-columna-li mi-float-right">Páginas portadas</li>
