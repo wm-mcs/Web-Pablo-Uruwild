@@ -42,7 +42,7 @@ descripcion:function(){
   return this.texto;
   
 },
-tipo_hover_element:fucntion()
+tipo_hover_element:function()
 {
   if(this.tipo == 'hover')
   {
