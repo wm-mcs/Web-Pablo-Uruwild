@@ -36,7 +36,7 @@
                 <li><a href="{{route('get_pagina_turismo_rural')}}" class="text-uppercase">turismo rural</a></li>
                 <li><a href="{{route('get_pagina_productos')}}" class="text-uppercase">ecoturismo</a></li>
 
-                {{-- <li><a href="{{route('get_pagina_turismo_rural')}}" class="text-uppercase">Turismo rural</a></li> --}}                
+                               
                 <li><a href="{{route('get_pagina_contacto')}}" class="text-uppercase">Contacto</a></li>
                
               </ul>

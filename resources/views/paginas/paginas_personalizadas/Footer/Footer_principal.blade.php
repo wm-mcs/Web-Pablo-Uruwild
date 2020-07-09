@@ -14,19 +14,30 @@
           {{-- S e g u n d o   B l o q u e     --}}  
           <div class="col-md-3 p-4">
             <h3 class="footer-titulo-columna mb-5">Rutas de interés</h3>
-            
-
              
-               {{-- <p class="contiene-p-linea">
+               <p class="contiene-p-linea">
+                 <a class="contiene-link-linea" href="{{route('get_pagina_quien_es')}}" >Sobre Uruwild</a>
+               </p >
+               <p class="contiene-p-linea">
+                 <a class="contiene-link-linea" href="{{route('get_pagina_tours')}}" >Tours de pesca</a>
+               </p >
+               <p class="contiene-p-linea">
+                 <a class="contiene-link-linea" href="{{route('get_pagina_cabañas')}}" >Estancias y Lodges</a>
+               </p >
+               <p class="contiene-p-linea">
+                 <a class="contiene-link-linea" href="{{route('get_pagina_turismo_rural')}}" >Turismo rural</a>
+               </p >
+               <p class="contiene-p-linea">
+                 <a class="contiene-link-linea" href="{{route('get_pagina_productos')}}" >Ecoturismo</a>
+               </p >
+               <p class="contiene-p-linea">
                  <a class="contiene-link-linea" href="{{route('get_pagina_contacto')}}" >Contacto</a>
-               </p > --}}
-                
+               </p >   
 
                @if(Auth::guest())
                <p class="contiene-p-linea">
                  <a class="contiene-link-linea" href="{{route('auth_login_get')}}" >Iniciar sesión</a>
                </p>
-                
                @else
                <p class="contiene-p-linea">
                  <a class="contiene-link-linea" href="{{route('get_datos_corporativos')}}" >Administrar</a>
@@ -34,8 +45,6 @@
                <p class="contiene-p-linea">
                  <a class="contiene-link-linea" href="{{route('logout')}}" >Salir</a>
                </p>
-                
-                
                @endif
             
           </div>   
