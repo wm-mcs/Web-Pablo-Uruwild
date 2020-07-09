@@ -4,7 +4,7 @@
 <div class="col-md-6 col-lg-4 mb-4">
     <div class="servicio_lista service">      
       <a href="{{$Route}}">
-        <img src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="servicio_lista_imagen">
+        <img data-src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="servicio_lista_imagen">
       </a>              
       <div class="p-3 mt-2">
         <p class="mb-3">

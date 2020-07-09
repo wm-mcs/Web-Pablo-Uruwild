@@ -112,8 +112,8 @@
         </div>
       </div>
       
-       <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" src="{{$Cabaña->url_img_foto_principal_chica}}" alt="{{$Cabaña->name}} Uruwild Uruguay"> 
-       <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" src="{{$Cabaña->url_img_foto_principal}}" alt="{{$Cabaña->name}} Uruwild Uruguay"> 
+       <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Cabaña->url_img_foto_principal_chica}}" alt="{{$Cabaña->name}} Uruwild Uruguay"> 
+       <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Cabaña->url_img_foto_principal}}" alt="{{$Cabaña->name}} Uruwild Uruguay"> 
 
        
        
