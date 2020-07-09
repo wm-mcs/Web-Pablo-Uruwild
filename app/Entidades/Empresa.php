@@ -22,7 +22,8 @@ class Empresa extends Model
                            'img_logo_horizontal_blanco',
                            'img_logo_cuadrado_blanco',
                            'img_logo_cuadrado_color',
-                           'texto_tiempo_respuesta_contacto'
+                           'texto_tiempo_respuesta_contacto',
+                           'link_whatsapp_send'
                            ];
 
     /**
