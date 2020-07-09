@@ -57,7 +57,7 @@ template:'
 <span>
   
   <span v-if="tipo_hover_element">
-    <span   v-on:click="mostrar" class="w-100 cursor-pointer" >@{{descripcion}}</span>
+    <span v-on:click="mostrar" class="w-100 cursor-pointer" >@{{descripcion}}</span>
   </span>
   <span v-else>
     <span class="w-100" >@{{descripcion}}</span>
