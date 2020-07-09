@@ -40,8 +40,8 @@
   </div>
 
   @if(isset($EsPortada) && $EsPortada == true)   
-  <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" src="{{$Portada->url_img_foto_principal_chica}}" alt="{{$Portada->titulo}} -{{$Portada->sub_titulo}} -  {{$Portada->parrafo}}  Uruwild.">
-  <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" src="{{$Portada->url_img_foto_principal}}" alt="{{$Portada->titulo}} - {{$Portada->sub_titulo}} -  {{$Portada->parrafo}} Uruwild.">  
+  <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Portada->url_img_foto_principal_chica}}" alt="{{$Portada->titulo}} -{{$Portada->sub_titulo}} -  {{$Portada->parrafo}}  Uruwild.">
+  <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Portada->url_img_foto_principal}}" alt="{{$Portada->titulo}} - {{$Portada->sub_titulo}} -  {{$Portada->parrafo}} Uruwild.">  
   @else
    <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Portada->url_img_foto_principal_chica}}" alt="{{$Portada->titulo}} -{{$Portada->sub_titulo}} -  {{$Portada->parrafo}}  Uruwild.">
    <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Portada->url_img_foto_principal}}" alt="{{$Portada->titulo}} - {{$Portada->sub_titulo}} -  {{$Portada->parrafo}} Uruwild.">  
