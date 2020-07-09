@@ -44,17 +44,21 @@
       <p class="col-12 text-bold -text-primary mb-4">Marca los que te identifique</p>
 
       <div class="d-flex flex-row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-4" type="checkbox" name="" value="Una página web personal" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Tengo interés en la pesca profesional</p>
+        <input class="m-0 mr-4" type="checkbox" name="" value="Quiero solo ir a pescar" v-model="data_mensaje.que_necesitas">
+        <p class="color-text-gris m-0">Quiero solo ir a pescar</p>
       </div>
       <div class="d-flex flex-row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-4" type="checkbox" name="" value="Quiero explorar los rincones naturales de Uruguay" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Quiero explorar los rincones naturales de Uruguay</p>
+        <input class="m-0 mr-4" type="checkbox" name="" value="Quiero ir a pescar y también hacer otras actividades" v-model="data_mensaje.que_necesitas">
+        <p class="color-text-gris m-0">Quiero ir a pescar y también hacer otras actividades</p>
       </div>
        <div class="d-flex flex-row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-4" type="checkbox" name="" value="Quiero desconectarme de todo" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0"> Quiero desconectarme de todo </p>
-      </div>     
+        <input class="m-0 mr-4" type="checkbox" name="" value="Quiero hacer todo el tour" v-model="data_mensaje.que_necesitas">
+        <p class="color-text-gris m-0">Quiero hacer todo el tour</p>
+      </div>
+      <div class="d-flex flex-row align-items-center  col-12 mb-2">
+        <input class="m-0 mr-4" type="checkbox" name="" value=">Quiero alguna parte del tour" v-model="data_mensaje.que_necesitas">
+        <p class="color-text-gris m-0">Quiero alguna parte del tour</p>
+      </div>       
       
       
     </div>
