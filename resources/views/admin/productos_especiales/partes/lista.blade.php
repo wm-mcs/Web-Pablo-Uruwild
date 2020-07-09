@@ -1,10 +1,10 @@
 
 
 
-<div class="col-md-6 col-lg-4 mb-4">
+<div class="col-md-6 col-lg-6 mb-4">
     <div class="servicio_lista service">
       <a href="{{$Route}}">
-        <img src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="servicio_lista_imagen">
+        <img src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="actividad_lista_imagen">
       </a>              
       <div class="p-3 mt-2">
         <h3 class="sub-titulos-class   mb-2">
