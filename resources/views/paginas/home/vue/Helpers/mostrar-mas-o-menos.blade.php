@@ -44,7 +44,7 @@ descripcion:function(){
 },
 tipo_hover_element:function()
 {
-  if(this.tipo == 'hover')
+  if(this.tipo == 'click-on-element')
   {
     return true;
   }
@@ -57,7 +57,7 @@ template:'
 <span>
   
   <span v-if="tipo_hover_element">
-    <span  class="" @mouseover="mostrar"  @mouseleave="mostrar" class="w-100" >@{{descripcion}}</span>
+    <span  class="cursor-pointer" v-on:click="mostrar" class="w-100" >@{{descripcion}}</span>
   </span>
   <span v-else>
     <span class="w-100" >@{{descripcion}}</span>
