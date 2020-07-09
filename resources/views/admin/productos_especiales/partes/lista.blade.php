@@ -13,7 +13,7 @@
           </a>                
         </h3>
         <p class="color-text-gris mb-2 ">
-         <mostrar-mas-o-menos texto="{{$Entidad->descripcion_breve}}" :cantidad_inicial="120" tipo="hover">
+         <mostrar-mas-o-menos texto="{{$Entidad->descripcion_breve}}" :cantidad_inicial="90" tipo="hover">
            
          </mostrar-mas-o-menos> 
         </p>
