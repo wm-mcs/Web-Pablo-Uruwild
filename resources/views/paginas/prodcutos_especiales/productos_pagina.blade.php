@@ -76,6 +76,7 @@
 
 
 @section('vue')
+  @include('paginas.home.vue.Helpers.mostrar-mas-o-menos')
   @include('paginas.home.vue.vue-instance')
 @stop
 
