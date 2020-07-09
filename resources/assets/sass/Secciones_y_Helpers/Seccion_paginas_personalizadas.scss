@@ -59,24 +59,34 @@
   width: 100%;
 }
 
+
+
+
+
+/* E s t a s   s o n   l a s   m i n i a t u r a s */
+
+/* C a b a ñ a s */
+.servicio_lista_imagen {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;    
+}
+
+/* E c o t u r i s m o */
+.actividad_lista_imagen {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;    
+}
+
 /* T u r i s m o   r u r a l  */
 .turismo-rural-img-listado{
   width: 100%;
   height: 200px;
   object-fit: cover;
   display: block;    
-}
-
-
-
-
-/* Es la miniatura de la imagen */
-.actividad_lista_imagen {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    display: block;
-    
 }
 
 
