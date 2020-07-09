@@ -19,8 +19,11 @@
          <B> {{$Entidad->descripcion_breve}} </B>
         </p>
 
-        <p class="color-text-gris text-center mb-2 ">
-         {{$Entidad->description}}
+        <p class="color-text-gris text-center mb-2 p-2">
+        
+         <mostrar-mas-o-menos texto="{{$Entidad->description}}" :cantidad_inicial="160">
+           
+         </mostrar-mas-o-menos> 
         </p>
 
         
