@@ -49,8 +49,8 @@ template:'
 <span>
   
   <span class="w-100" >@{{descripcion}}</span>
-  <span v-if="!muestra" v-on:click="mostrar" class="parrafo-class w-100 py-3 simula-link mt-3">Mostrar más <i class="fas fa-chevron-down"></i></span>  
-  <span v-else v-on:click="mostrar" class="parrafo-class w-100 py-3 simula-link mt-3">Mostrar menos <i class="fas fa-chevron-up"></i></span> 
+  <span v-if="!muestra" v-on:click="mostrar" class="d-block parrafo-class w-100 py-3 simula-link mt-3">Mostrar más <i class="fas fa-chevron-down"></i></span>  
+  <span v-else v-on:click="mostrar" class="d-block parrafo-class w-100 py-3 simula-link mt-3">Mostrar menos <i class="fas fa-chevron-up"></i></span> 
 
 </span>
 '

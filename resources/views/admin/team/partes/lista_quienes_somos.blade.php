@@ -1,7 +1,7 @@
 <div class="col-md-6 col-lg-4 mb-4">
     <div class="servicio_lista service d-flex flex-column align-items-center ">
       
-      <div class="col-6 mb-3 mt-3 d-flex flex-row justify-content-center align-items-center ">
+      <div class="col-6 mb-3 mt-4 d-flex flex-row justify-content-center align-items-center ">
         <img src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="imagen-team-chica">
       </div>
         
@@ -19,7 +19,7 @@
          <B> {{$Entidad->descripcion_breve}} </B>
         </p>
 
-        <p class="color-text-gris text-center mb-2 p-2">
+        <p class="color-text-gris text-center mb-2 p-2 p-lg-3">
         
          <mostrar-mas-o-menos texto="{{$Entidad->description}}" :cantidad_inicial="160">
            
