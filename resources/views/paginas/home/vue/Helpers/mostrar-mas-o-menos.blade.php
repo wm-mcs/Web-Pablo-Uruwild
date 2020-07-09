@@ -1,7 +1,7 @@
 Vue.component('mostrar-mas-o-menos' ,
 {
 
-props:['texto','cantidad_inicial']
+props:['texto','cantidad_inicial','tipo']
 ,  
 
 data:function(){
@@ -41,17 +41,30 @@ descripcion:function(){
 
   return this.texto;
   
-}
+},
+tipo_hover_element:fucntion()
+{
+  if(this.tipo == 'hover')
+  {
+    return true;
+  }
+
+},
 
 
 },
 template:'
 <span>
   
-  <span class="w-100" >@{{descripcion}}</span>
-  
-  <slot name="botones"></slot>
- 
+  <span v-if="tipo_hover_element">
+    <span  class="" @mouseover="mostrar"  @mouseleave="mostrar" class="w-100" >@{{descripcion}}</span>
+  </span>
+  <span v-else>
+    <span class="w-100" >@{{descripcion}}</span>
+    <span v-if="!muestra" v-on:click="mostrar" class="d-block parrafo-class w-100 py-3 simula-link mt-1">Mostrar más <i class="fas fa-chevron-down"></i></span>  
+    <span v-else v-on:click="mostrar" class="d-block parrafo-class w-100 py-3 simula-link mt-1">Mostrar menos <i class="fas fa-chevron-up"></i></span>
+  </span>
+   
 
 </span>
 '
