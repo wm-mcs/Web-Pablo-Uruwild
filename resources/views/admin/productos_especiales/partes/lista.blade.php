@@ -13,7 +13,9 @@
           </a>                
         </h3>
         <p class="color-text-gris mb-2 ">
-         {{$Entidad->descripcion_breve}}
+         <mostrar-mas-o-menos texto="{{$Entidad->descripcion_breve}}" :cantidad_inicial="120" tipo="hover">
+           
+         </mostrar-mas-o-menos> 
         </p>
         <p>
           <a href="{{$Route}}"> Leer más  <i class="fas fa-chevron-right"></i></a>
