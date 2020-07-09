@@ -22,7 +22,14 @@
         <p class="color-text-gris text-center mb-2 p-2 p-lg-3">
         
          <mostrar-mas-o-menos texto="{{$Entidad->description}}" :cantidad_inicial="90">
-           
+            <template slot="botones">
+               <span v-if="!muestra" v-on:click="mostrar" class="d-block parrafo-class w-100 py-3 simula-link mt-1">
+                  Mostrar más <i class="fas fa-chevron-down"></i>
+               </span>  
+               <span v-else v-on:click="mostrar" class="d-block parrafo-class w-100 py-3 simula-link mt-1">
+                  Mostrar menos <i class="fas fa-chevron-up"></i>
+               </span> 
+            </template>
          </mostrar-mas-o-menos> 
         </p>
 
