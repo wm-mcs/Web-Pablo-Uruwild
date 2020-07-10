@@ -32,6 +32,10 @@ class Envio_Formularios_Controller extends Controller
     public function post_contacto_form(Request $Request)
     {
 
+      $Request->attributes->add(['Color_principal' =>'#ffb900' ]);
+      $Request->attributes->add(['Logo_url'        => $this->EmpresaRepo->getEmpresaDatos()->img_logo_horizontal_color ]);
+      $Request->attributes->add(['Color_fondo'     => '#00ab9e' ]);
+
       
       $Nombre_de_empresa  = $this->EmpresaRepo->getEmpresaDatos()->name;
        //valores del request
@@ -39,18 +43,10 @@ class Envio_Formularios_Controller extends Controller
       $email              = $Request->get('email');
       $mensaje            = $Request->get('mensaje');
       $Email_al_que_envia = $this->EmpresaRepo->getEmpresaDatos()->email;
-      $Titulo_de_email    = 'Contacto por Webs o Easy';
+      $Titulo_de_email    = 'Solicitud de contacto por web de ' . $name;
       $manager            = new envio_contacto_manager( null, $Request->all());
 
-
-
             $Validacion   =  $manager->isValid();
-
-            
-
-            
-            
-
             
 
             if($Validacion == true)
@@ -72,13 +68,6 @@ class Envio_Formularios_Controller extends Controller
                    'Errores'    => $manager->getErrors()    
                      ];
             }
-
-            
-           
-
-
-
-
     }
 
     public function post_envio_solicitud_trabajo_form(Request $Request)
