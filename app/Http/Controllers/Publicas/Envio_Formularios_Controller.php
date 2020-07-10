@@ -51,7 +51,7 @@ class Envio_Formularios_Controller extends Controller
 
             if($Validacion == true)
             {
-                $this->EmailsRepo->EnvioEmailDeContacto($name, $email, $mensaje,$Email_al_que_envia, $Nombre_de_empresa,$Titulo_de_email);    
+                $this->EmailsRepo->EnvioEmailDeContacto($name, $email, $mensaje,$Email_al_que_envia, $Nombre_de_empresa,$Titulo_de_email,$Request);     
 
                  return   [ 
                    'Validacion'            => $Validacion,
