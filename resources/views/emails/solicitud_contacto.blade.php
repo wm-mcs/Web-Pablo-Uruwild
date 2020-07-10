@@ -34,7 +34,7 @@
          </tr> 
         </tbody>
        </table> 
-@endif
+@stop
 
 @section('titulo')
  <table class="es-content" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%"> 
