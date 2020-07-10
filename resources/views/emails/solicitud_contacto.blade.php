@@ -292,6 +292,6 @@
         </tbody>
        </table> 
 
-@endif
+@stop
 
 
