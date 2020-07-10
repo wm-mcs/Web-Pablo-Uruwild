@@ -33,7 +33,7 @@ class Envio_Formularios_Controller extends Controller
     {
 
       $Request->attributes->add(['Color_principal' =>'#ffb900' ]);
-      $Request->attributes->add(['Logo_url'        => $this->EmpresaRepo->getEmpresaDatos()->img_logo_horizontal_color ]);
+      $Request->attributes->add(['Logo_url'        => $this->EmpresaRepo->getEmpresaDatos()->img_logo_horizontal_blanco ]);
       $Request->attributes->add(['Color_fondo'     => '#00ab9e' ]);
 
       
