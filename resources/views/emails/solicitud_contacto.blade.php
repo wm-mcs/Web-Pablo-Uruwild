@@ -22,7 +22,7 @@
                     <tbody>
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;font-size:0"> 
-                        @if($Logo != null)
+                        @if($Logo_url != null)
                         <img src="{{$Logo_url}}" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="150">
                         @endif
                       </td> 
