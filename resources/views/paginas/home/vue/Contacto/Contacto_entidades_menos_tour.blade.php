@@ -32,7 +32,7 @@
       <p class="col-12 text-bold -text-primary mb-4">Marca los que te identifique</p>
 
       <div class="d-flex flex-row align-items-center  col-12 mb-2">
-        <input class="m-0 mr-4" type="checkbox" name="" value="Una página web personal" v-model="data_mensaje.que_necesitas">
+        <input class="m-0 mr-4" type="checkbox" name="" value="Tengo interés en la pesca profesional" v-model="data_mensaje.que_necesitas">
         <p class="color-text-gris m-0">Tengo interés en la pesca profesional</p>
       </div>
       <div class="d-flex flex-row align-items-center  col-12 mb-2">
