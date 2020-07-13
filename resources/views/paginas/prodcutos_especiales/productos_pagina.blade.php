@@ -6,7 +6,7 @@
 {{--*/ $ImagenPortada         = $Portada->url_img_foto_principal /*--}}
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/Empresa/logo-para-tags.jpg '/*--}}
 {{--*/ $Titulo                = 'Tours' /*--}}
-{{--*/ $DescriptionEtiqueta   = '' /*--}}
+{{--*/ $DescriptionEtiqueta   = 'Propuestas ecoturísticas en Uruguay. Veni a la naturaleza' /*--}}
 {{--*/ $PalabrasClaves        = '' /*--}}
 {{--*/ $UrlDeLaPagina         = route('get_pagina_productos') /*--}}
 
@@ -114,7 +114,7 @@
     <div class="container">
       <div class="row p-3 p-lg-5">
         <p class="col-12  text-center">
-           <b>¿Buscás desconexión total? ¿Qué te parece venir al medio del campo a ser libre? </b> Estos paquetes son para que puedas ver las estrellas, respirar aires fresco, escuchar la naturaleza y conectar con ella. Mirá lo que tenemos para tí <i class="fas fa-hand-point-down"></i> 
+           <b>Encontrá actividades ecoturisticas unicas. vení a descubrir los maravillosos encantos naturales que te ofrece el uruguay como más te guste. <i class="fas fa-hand-point-down"></i> 
         </p>
       </div>     
     </div>
@@ -127,7 +127,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
-          Paquetes de desconexión. Vení a la paz.
+          Propuestas ecoturísticas. Veni a la naturaleza
         </div>
 
       </div>
