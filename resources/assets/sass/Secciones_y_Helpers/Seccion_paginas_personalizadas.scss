@@ -39,7 +39,19 @@
   object-fit: cover;
   display: block;
   border-radius:100%;    
-}
+} 
+
+ @media (min-width: $BrackPoint-Tercer){
+  .altura-minima-del-team{
+    min-height: 427px;
+  }
+
+  .altura-minima-del-team-quienes-somos{
+      min-height: 449px;
+   }
+
+ }
+
 
 
 /*T o u r s*/

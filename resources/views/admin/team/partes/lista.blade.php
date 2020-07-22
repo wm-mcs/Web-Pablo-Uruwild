@@ -1,6 +1,6 @@
 
 @if(isset($Mostrar_admin) && $Mostrar_admin == true)
-<div class="col-md-6 col-lg-4 mb-4">
+<div class="col-md-6 col-lg-4 mb-4 altura-minima-del-team" >
     <div class="servicio_lista service d-flex flex-column align-items-center ">
       
       <div class="col-6 mb-3 mt-3 d-flex flex-row justify-content-center align-items-center ">
@@ -55,7 +55,7 @@
     </div>
 </div>
 @else 
-<div class="col-md-6 col-lg-4 mb-4">
+<div class="col-md-6 col-lg-4 mb-4 altura-minima-del-team">
     <div class="servicio_lista service d-flex flex-column align-items-center ">
       
       <div class="col-6 mb-3 mt-3 d-flex flex-row justify-content-center align-items-center ">
