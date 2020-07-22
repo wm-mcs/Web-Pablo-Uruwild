@@ -5,7 +5,7 @@
       <a href="{{$Route}}">
         <img data-src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="servicio_lista_imagen">
       </a>              
-      <div class="p-3 mt-2">
+      <div class="p-3 mt-2 cabaña-altura-minima">
         <p class="mb-3">
           @if($Entidad->estado == 'si')
             <span class="color-text-success">Activo</span>
@@ -33,7 +33,7 @@
       <a href="{{$Route}}">
         <img data-src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="servicio_lista_imagen">
       </a>              
-      <div class="p-3 mt-2">
+      <div class="p-3 mt-2 cabaña-altura-minima">
         <h3 class="sub-titulos-class   mb-2">
           <a href="{{$Route}}" class="font-primary text-color-secondary">
            {{$Entidad->name}}

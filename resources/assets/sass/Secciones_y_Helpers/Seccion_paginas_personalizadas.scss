@@ -43,11 +43,11 @@
 
  @media (min-width: $BrackPoint-Tercer){
   .altura-minima-del-team{
-    min-height: 427px;
+    min-height: 200px;
   }
 
   .altura-minima-del-team-quienes-somos{
-      min-height: 449px;
+      min-height: 452px;
    }
 
  }
@@ -84,6 +84,13 @@
     object-fit: cover;
     display: block;    
 }
+
+  
+ @media (min-width: $BrackPoint-Tercer){
+  .cabaña-altura-minima{
+    min-height: 170px;
+  }
+ }
 
 /* E c o t u r i s m o */
 .actividad_lista_imagen {
