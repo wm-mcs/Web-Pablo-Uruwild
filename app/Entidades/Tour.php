@@ -37,6 +37,18 @@ class Tour extends Model
     {
        return  round($this->precio);
     }
+
+    public function getLlamadoALaAaccionTextAttribute()
+    {
+      if(($this->call_to_action != null) &&( $this->call_to_action != ''))
+      {
+        return trim($this->call_to_action);
+      }
+      else
+      {
+        'Conocé cómo está armado';
+      }
+    }
     
 
     public function getRouteAttribute()

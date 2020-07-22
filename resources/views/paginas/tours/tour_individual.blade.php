@@ -102,7 +102,7 @@
                 <h1  class="titulos-class text-white font-secondary mb-4">{{$Tour->name}}</h1>
                 <h2 class="parrafo-class text-white no-mostrar-en-mobil mb-4">{{$Tour->descripcion_breve}}
                 </h2>
-                <p><a href="#contenido" class="scroll_to Boton-Fuente-Chico Boton-Blanco"> Conocé toda las actividades  <i class="fas fa-chevron-right"></i> </a></p>
+                <p><a href="#contenido" class="scroll_to Boton-Fuente-Chico Boton-Blanco"> {{$Tour->llamado_a_la_accion_text}}  <i class="fas fa-chevron-right"></i> </a></p>
               </div>
             </div>
           </div>
