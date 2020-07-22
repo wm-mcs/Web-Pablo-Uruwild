@@ -41,6 +41,17 @@
 </div>
 
 <div class="formulario-label-fiel">
+  {!! Form::label('call_to_action', 'Texto llamado a la acción', array('class' => 'formulario-label ')) !!}
+  <div class="contiene-aclaracion-label">
+    Es el texto para el botón del llamdo a la acción de la página de la entidad. 
+  </div>
+  {!! Form::text('call_to_action', null ,['class' => 'formulario-field']) !!}
+</div>
+
+
+
+
+<div class="formulario-label-fiel">
 {!! Form::label('rank', 'Calidad / Rank', array('class' => 'formulario-label ')) !!}
 <div class="contiene-aclaracion-label">
   Es para luego poder ordenar o destacar según su relevancia.
