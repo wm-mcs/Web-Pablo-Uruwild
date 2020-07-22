@@ -1,4 +1,4 @@
-<div class="col-md-6 col-lg-4 mb-4 altura-minima-del-team-quienes-somos">
+<div class="col-md-6 col-lg-4 mb-4 ">
     <div class="servicio_lista service d-flex flex-column align-items-center ">
       
       <div class="col-6 mb-3 mt-4 d-flex flex-row justify-content-center align-items-center ">
@@ -6,7 +6,7 @@
       </div>
         
                    
-      <div class="p-1 mt-2 col-12">
+      <div class="p-1 mt-2 col-12 altura-minima-del-team-quienes-somos">
         <h3 class="sub-titulos-class text-center   mb-2">
            <span  class="font-primary text-center text-color-secondary">
              <b> {{$Entidad->first_name}}</b>
