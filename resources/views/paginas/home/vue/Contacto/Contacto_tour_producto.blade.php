@@ -25,9 +25,8 @@
 
    
    
-   
-
-   {{--  <div class="row mb-4 justify-content-end">
+   @if($Tour->tipo_de_tour == 'tipo_de_tour')
+       <div class="row mb-4 justify-content-end">
       <p class="col-12 text-bold -text-primary mb-4">¿Quieres hacer todo o parte del tour?</p>
       <div class="d-flex flex-row align-items-center  col-12 mb-2">
         <input class="m-0 mr-4" type="radio" name="" value="Todo" v-model="data_mensaje.presupuesto">
@@ -37,7 +36,7 @@
         <input class="m-0 mr-4" type="radio" name="" value="Algunas partes" v-model="data_mensaje.presupuesto">
         <p class="color-text-gris m-0">Algunas partes</p>
       </div>         
-    </div> --}}
+    </div>
 
     <div class="row mb-4 justify-content-end">
 
@@ -62,6 +61,14 @@
       
       
     </div>
+
+   @elseif($Tour->tipo_de_tour == 'producto')
+
+   @elseif($Tour->tipo_de_tour == 'turismo_rural')
+
+   @endif
+
+
 
 
 

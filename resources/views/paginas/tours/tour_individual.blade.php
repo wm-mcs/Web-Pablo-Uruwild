@@ -130,8 +130,8 @@
          <p class="post-individual-p" > El paquete completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong> por persona. La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
          </p> 
 
-         <h2 class="post-individual-section-titulo "> ¿Cómo reservo? </h2>
-         <p class="post-individual-p mb-4" > Para reservar debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
+         <h2 class="post-individual-section-titulo mt-3"> ¿Cómo reservo? </h2>
+         <p class="post-individual-p mb-5" > Para reservar debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
          </p> 
 
 
