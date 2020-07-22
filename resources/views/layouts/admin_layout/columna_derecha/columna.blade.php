@@ -23,30 +23,36 @@
    @endif
 
    <div id="admin-col-admin">
-        <a href="{{route('get_datos_corporativos')}}">
-          <li class="admin-columna-li mi-float-right"> Mis datos</li>
-        </a>  
-         <a href="{{route('get_admin_cabañas')}}">
-          <li class="admin-columna-li mi-float-right"> Estancias y lodges</li>
-        </a>  
-        <a href="{{route('get_admin_teams')}}">
-          <li class="admin-columna-li mi-float-right">Team</li>
-        </a>
-        <a href="{{route('get_admin_actividades')}}">
-          <li class="admin-columna-li mi-float-right"> Actividades</li>
-        </a>        
-        <a href="{{route('get_admin_productos_especiales')}}">
-          <li class="admin-columna-li mi-float-right"> Productos especiales</li>
-        </a> 
-        <a href="{{route('get_admin_turismo_rural')}}">
-          <li class="admin-columna-li mi-float-right">Turismo rural</li>
-        </a>  
+
         <a href="{{route('get_admin_tours')}}">
           <li class="admin-columna-li mi-float-right"> Tours de pesca</li>
         </a> 
+        <a href="{{route('get_admin_productos_especiales')}}">
+          <li class="admin-columna-li mi-float-right"> Ecoturismo</li>
+        </a> 
+        
+        <a href="{{route('get_admin_turismo_rural')}}">
+          <li class="admin-columna-li mi-float-right">Turismo rural</li>
+        </a>
+         
+         <a href="{{route('get_admin_cabañas')}}">
+          <li class="admin-columna-li mi-float-right"> Estancias y lodges</li>
+        </a>  
+
+        <a href="{{route('get_admin_teams')}}">
+          <li class="admin-columna-li mi-float-right">Team</li>
+        </a>          
+        
         <a href="{{route('get_admin_portadas_de_paginas')}}">
           <li class="admin-columna-li mi-float-right">Páginas portadas</li>
         </a> 
+        {{-- <a href="{{route('get_admin_actividades')}}">
+          <li class="admin-columna-li mi-float-right"> Actividades</li>
+        </a>  --}}
+        <a href="{{route('get_datos_corporativos')}}">
+          <li class="admin-columna-li mi-float-right"> Mis datos</li>
+        </a> 
+        
     </div>
 </ul>
 
