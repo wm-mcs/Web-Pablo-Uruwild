@@ -24,7 +24,7 @@
    
 
    
-   
+   @if(isset($Tour))
    @if($Tour->tipo_de_tour == 'tipo_de_tour')
        <div class="row mb-4 justify-content-end">
       <p class="col-12 text-bold -text-primary mb-4">¿Quieres hacer todo o parte del tour?</p>
@@ -66,6 +66,7 @@
 
    @elseif($Tour->tipo_de_tour == 'turismo_rural')
 
+   @endif
    @endif
 
 
