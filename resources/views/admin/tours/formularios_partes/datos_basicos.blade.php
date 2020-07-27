@@ -19,7 +19,7 @@
 
 
 <div class="formulario-label-fiel">
-{!! Form::label('muestra_fecha', 'Calidad / Rank', array('class' => 'formulario-label ')) !!}
+{!! Form::label('muestra_fecha', '¿Muestra fecha?', array('class' => 'formulario-label ')) !!}
 <div class="contiene-aclaracion-label">
   ¿Muestra fecha en la descripción?
 </div>
