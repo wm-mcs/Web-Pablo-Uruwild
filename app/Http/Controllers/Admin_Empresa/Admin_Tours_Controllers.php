@@ -107,6 +107,14 @@ class Admin_Tours_Controllers extends Controller implements entidadCrudControlle
     return view($this->Path_view_get_admin_index, compact('Entidades','Route_crear','Titulo','Route_busqueda','Carpeta_view_admin'));
   }
 
+
+  public function delet_tour_actividad_turismo_rural($id)
+  {
+    $Entidad = $this->Entidad_principal->find($id);
+
+    $this->Entidad_principal->setAtributoEspecifico($Entidad,'borrado','si');
+  }
+
   
 
 
