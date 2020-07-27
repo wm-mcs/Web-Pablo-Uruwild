@@ -117,7 +117,7 @@
     <div class="container">
       <div class="row p-3 p-lg-5">
         <p class="col-12  text-center">
-           <b>¿Pescador profesional? ¿Buscás nuevos rincones para explorar? </b> Estos Torus son para ti. Guidos por verdaderos expertos de lo natural. Mirá los paquetes y entenderás de que hablo <i class="fas fa-hand-point-down"></i> 
+           <b>¿Pescador profesional? ¿Buscás nuevos rincones para explorar? </b> Estos Torus son para ti. Guiádos por expertos de la pesca y la naturaleza. Mirá los paquetes y entenderás de que hablo <i class="fas fa-hand-point-down"></i> 
         </p>
       </div>     
     </div>
@@ -134,7 +134,7 @@
     <div class="container">
       <div class="row justify-content-lg-center">
         <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
-          Circuítos de pesca profesional por le rio Uruguay guiados por expertos. 
+          Circuítos de pesca profesional por le rio Uruguay guiádos por expertos. 
         </div>
       </div>
       <div class="row justify-content-lg-center">
