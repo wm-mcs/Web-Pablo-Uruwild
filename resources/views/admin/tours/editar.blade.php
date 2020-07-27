@@ -52,8 +52,10 @@
 
   <div class="col-12 mt-5">
     <p class="mt-5  color-text-gris">
-       <small>Borrar para siempre la entidad {{$Entidad->name}}</small>
-       <a href="{{route('delet_tour_actividad_turismo_rural',$Entidad->id)}}" class="confirmar"> Click aquí para borrar de manera definitiva</a>
+       <small>
+        Borrar para siempre la entidad {{$Entidad->name}}.
+        <a href="{{route('delet_tour_actividad_turismo_rural',$Entidad->id)}}" class="confirmar"> Click aquí para borrar de manera definitiva</a>
+       </small>
     </p>    
   </div>
   {!! Form::close() !!}
