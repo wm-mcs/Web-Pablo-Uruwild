@@ -49,5 +49,12 @@
   <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Secondary-Relleno disparar-este-form">
       Guardar cambios   <i class="fas fa-angle-double-right"></i>
   </div> 
+
+  <div class="col-12 mt-5">
+    <p class="mt-5  color-text-gris">
+       <small>Borrar para siempre la entidad {{$Entidad->name}}</small>
+       <a href="{{route('delet_tour_actividad_turismo_rural',$Entidad->id)}}" class="confirmar"> Click aquí para borrar de manera definitiva</a>
+    </p>    
+  </div>
   {!! Form::close() !!}
 @stop

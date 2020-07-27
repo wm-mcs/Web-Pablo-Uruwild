@@ -108,11 +108,19 @@ class Admin_Tours_Controllers extends Controller implements entidadCrudControlle
   }
 
 
+  /**
+   * Elimina de manera lógica la entidad
+   * 
+   */
   public function delet_tour_actividad_turismo_rural($id)
   {
     $Entidad = $this->Entidad_principal->find($id);
 
+    dd($Entidad);
+
     $this->Entidad_principal->setAtributoEspecifico($Entidad,'borrado','si');
+
+    $this->olvidarCachesAsociadoAEstaEntidad();
   }
 
   

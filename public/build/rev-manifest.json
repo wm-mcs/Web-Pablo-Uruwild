@@ -1,10 +1,6 @@
 {
   "css/admin.css": "css/admin-6383302a62.css",
-  "css/creative_template_mixer.css": "css/creative_template_mixer-9c4c73e7aa.css",
   "css/credo.css": "css/credo-86b3510e35.css",
-  "css/mixer.css": "css/mixer-d41d8cd98f.css",
-  "js/admin.js": "js/admin-dbdb1e05f1.js",
-  "js/all.js": "js/all-e03dba9384.js",
-  "js/credo.js": "js/credo-90766e1202.js",
-  "js/vue.js": "js/vue-d41d8cd98f.js"
+  "js/admin.js": "js/admin-ca09918724.js",
+  "js/credo.js": "js/credo-90766e1202.js"
 }

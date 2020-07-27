@@ -57,3 +57,12 @@ Route::patch('set_admin_tours_editar{id}',
   'uses'  => 'Admin_Empresa\Admin_Tours_Controllers@set_admin_editar',
   'as'    => 'set_admin_tours_editar'
 ]);
+
+
+/* B o r r a d o   l ó g i c o */
+Route::get('delet_tour_actividad_turismo_rural{id}',
+[
+  'uses'  => 'Admin_Empresa\Admin_Tours_Controllers@delet_tour_actividad_turismo_rural',
+  'as'    => 'delet_tour_actividad_turismo_rural'
+]);
+
