@@ -126,11 +126,11 @@
     <div class="container">  
          {!! $Tour->contenido_render !!}
 
-         @if($Tour->precio != '')
+         @if($Tour->precio != '' &&  $Tour->precio_redondeado != 0)
          <h2 class="post-individual-section-titulo mt-5"> Precios </h2>
          @endif
          <p class="post-individual-p" >
-          @if($Tour->precio != '') El paquete completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong> por persona. 
+          @if($Tour->precio != '' &&  $Tour->precio_redondeado != 0) El paquete completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong> por persona. 
           @endif
 
           @if($Tour->muestra_fecha == 'si')
