@@ -10,11 +10,22 @@
 
 <div class="formulario-label-fiel">
   {!! Form::label('precio', 'Precio del todo el tour', array('class' => 'formulario-label ')) !!}
+  <div class="contiene-aclaracion-label">
+    Si se deja el campo vacio, no se mostrará el precio en la descripción.
+  </div>
   {!! Form::text('precio', null ,['class' => 'formulario-field']) !!}
 </div>
 
 
 
+<div class="formulario-label-fiel">
+{!! Form::label('muestra_fecha', 'Calidad / Rank', array('class' => 'formulario-label ')) !!}
+<div class="contiene-aclaracion-label">
+  ¿Muestra fecha en la descripción?
+</div>
+  {!! Form::select('muestra_fecha',  ['si' => 'Muestra fecha',
+                                      'no' => 'No muestra fecha '] , null, ['class' => 'formulario-field'] )          !!}
+</div>
 
 
 

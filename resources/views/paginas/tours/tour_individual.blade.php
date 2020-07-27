@@ -126,8 +126,16 @@
     <div class="container">  
          {!! $Tour->contenido_render !!}
 
+         @if($Tour->precio != '')
          <h2 class="post-individual-section-titulo mt-5"> Precios </h2>
-         <p class="post-individual-p" > El paquete completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong> por persona. La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
+         @endif
+         <p class="post-individual-p" >
+          @if($Tour->precio != '') El paquete completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong> por persona. 
+          @endif
+
+          @if($Tour->muestra_fecha == 'si')
+           La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
+          @endif
          </p> 
 
          <h2 class="post-individual-section-titulo mt-3"> ¿Cómo reservo? </h2>
