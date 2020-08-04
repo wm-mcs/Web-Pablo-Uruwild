@@ -94,7 +94,7 @@ class Admin_Cabaña_Controllers extends Controller
             $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'.jpg');
 
             // I m a g e n   c h i c a 
-            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',300);
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',1200);
         }
 
         // M a r c o   u n a   i m a g e n   c o  m o   p r i n c i p a l
@@ -145,7 +145,7 @@ class Admin_Cabaña_Controllers extends Controller
             $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'.jpg');
 
             // I m a g e n   c h i c a 
-            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',300);
+            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',1200);
 
             // A j u s t o   l o s   c a c h e 
             $nombre_campo = 'cabaña_id';            
