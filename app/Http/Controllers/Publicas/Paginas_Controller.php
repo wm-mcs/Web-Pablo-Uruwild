@@ -154,7 +154,7 @@ class Paginas_Controller extends Controller
     public function get_pagina_productos(Request $Request)
     {
         $Productos      = Cache::remember('ProductosPagianaTorus', 2000, function(){
-                          return $this->TourRepo->getEntidadesParaHomeTour(50,'name', 'desc','producto');
+                          return $this->TourRepo->getEntidadesParaHomeTour(50,'name', 'rank','producto');
                           });
 
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  
@@ -169,7 +169,7 @@ class Paginas_Controller extends Controller
     public function get_pagina_turismo_rural(Request $Request)
     {
         $Turismo_rural  = Cache::remember('TurismoRuralPagina', 2000, function(){
-                          return $this->TourRepo->getEntidadesParaHomeTour(50,'name', 'desc','turismo_rural');
+                          return $this->TourRepo->getEntidadesParaHomeTour(50,'rank', 'desc','turismo_rural');
                           });
         $Cabañas        = Cache::remember('CabañasPagina', 2000, function(){
                           return $this->CabañaRepo->getEntidadesParaHome(30,'rank','desc');
