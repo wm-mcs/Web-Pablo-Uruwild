@@ -48,7 +48,9 @@ class Lenguaje
               Here parameter_name refers to what you called the parameter in the route.
             */
 
-            dd($Request);
+              // Nombre de la route $Request->route()->getName()
+
+            dd($Request->route()->getName());
 
           }
 
