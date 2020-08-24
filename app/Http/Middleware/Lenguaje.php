@@ -49,8 +49,10 @@ class Lenguaje
             */
 
               // Nombre de la route $Request->route()->getName()
+              // Parametros $Request->route()->parameters()
+              // Un parametro específico $Request->route('parameter_name')
 
-            dd($Request->route()->getName(),$Request->route()->parameters());
+            dd($Request->route()->getName(),$Request->route()->parameters(),$Request->route('idioma'));
 
           }
 
