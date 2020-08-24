@@ -14,12 +14,15 @@ Route::get('/blog/{name}/{id}' , [
         'name'=> '^[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$'])*/;
 
 
-
-// H o m e
-Route::get('/' , [                    
-  'uses' => 'Publicas\Home_Public_Controller@get_home',
-  'as'   => 'get_home']
-);
+Route::group(['middleware' => 'lenguaje'],function()
+{
+  // H o m e
+  Route::get('/' , [                    
+    'uses' => 'Publicas\Home_Public_Controller@get_home',
+    'as'   => 'get_home']
+  );
+  
+});  
 
 
 // C o n t a c t o
