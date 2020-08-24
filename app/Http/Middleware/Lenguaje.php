@@ -50,9 +50,12 @@ class Lenguaje
 
               // Nombre de la route $Request->route()->getName()
               // Parametros $Request->route()->parameters()
-              // Un parametro específico $Request->route('parameter_name')
+              // Un parametro específico $Request->route('parameter_name') // si no está me da null
 
-            dd($Request->route()->getName(),$Request->route()->parameters(),$Request->route('idioma'));
+              // Cosas a hacer
+              // Ver si el parametro idioma es diferente al parametro de sesión
+              // Tomar accion de eso
+              // Debería ganar predominar el parametro de la ruta, porque de está manera se puede enviar link y se mantiene
 
           }
 
