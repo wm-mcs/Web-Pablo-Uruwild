@@ -50,7 +50,7 @@ class Lenguaje
 
               // Nombre de la route $Request->route()->getName()
 
-            dd($Request->route()->getName());
+            dd($Request->route()->getName(),$Request->route()->parameters());
 
           }
 
