@@ -19,9 +19,36 @@ class Lenguaje
           {
             // I p   d e l   u s u a r i o
             $ip_del_user  = strval($_SERVER['REMOTE_ADDR']); 
-            $data_user    = json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$ip_del_user));
+            $data_user    = json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$ip_del_user)); 
 
-            dd($data_user);
+            if($data_user->geoplugin_continentCode != 'SA')
+            {
+              // diferente de SudAmerica 
+              Session::put('lenguaje','EN');
+              
+            }
+            else
+            {
+              // SudAmerica
+              Session::put('lenguaje','ES');
+            }
+
+
+            /*
+              First Method
+
+              $request->route()->parameters();
+
+              This method will return an array of all the parameters.
+
+              Second Method
+
+              $request->route('parameter_name');
+
+              Here parameter_name refers to what you called the parameter in the route.
+            */
+
+            dd($Request);
 
           }
 
