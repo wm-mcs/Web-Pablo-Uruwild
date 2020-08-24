@@ -19,7 +19,7 @@ class Lenguaje
           {
             // I p   d e l   u s u a r i o
             $ip_del_user  = strval($_SERVER['REMOTE_ADDR']); 
-            $data_user    = json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$ip));
+            $data_user    = json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$ip_del_user));
 
             dd($data_user);
 
