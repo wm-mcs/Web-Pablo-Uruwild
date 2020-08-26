@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use App\Helpers\HelpersSessionLenguaje;
 
 
 use Closure;
@@ -23,14 +24,15 @@ class Lenguaje
             if($data_user->geoplugin_continentCode != 'SA')
             {
               // diferente de SudAmerica 
-              Session::put('lenguaje','EN');
-              
+              HelpersSessionLenguaje::getAndPutSessionLenguaje('EN');              
             }
             else
             {
               // SudAmerica
-              Session::put('lenguaje','ES');
+              HelpersSessionLenguaje::getAndPutSessionLenguaje('ES'); 
             }
+
+            //se debe verificar el parametro que viene desde la ruta para saber cual es y se lo compara con los idiomas instalados
 
 
             /*

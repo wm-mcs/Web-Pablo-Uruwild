@@ -7,6 +7,7 @@ use App\Helpers\HelpersGenerales;
 use Carbon\Carbon;
 use App\Traits\entidadesMetodosComunes;
 use Illuminate\Support\Facades\Session;
+use App\Helpers\HelpersSessionLenguaje;
 
 class Tour extends Model
 {
@@ -54,7 +55,7 @@ class Tour extends Model
 
     public function getRouteAttribute()
     {
-       return route('get_pagina_tour_individual', [Session::get('lenguaje'), HelpersGenerales::helper_convertir_cadena_para_url($this->name) ,$this->id]);
+       return route('get_pagina_tour_individual', [HelpersSessionLenguaje::getAndPutSessionLenguaje(), HelpersGenerales::helper_convertir_cadena_para_url($this->name) ,$this->id]);
     }
 
     public function getContenidoRenderAttribute()

@@ -11,29 +11,56 @@ class HelpersSessionLenguaje
 
     public function getSessionPorDefecto()
     {
-        return 'es';
+        return 'ES';
     }
 
     /**
      * crea la sesión y la devuelve
      *
      */
-    public static function getAndPutSessionIdioma($idioma = null)
+    public static function getAndPutSessionLenguaje($lenguaje = null,$parametro_de_la_ruta = null)
     {
-       
-        if(!Session::has('idioma'))
+        // se está pidiendo la sesion
+        if($lenguaje == null)
         {
-           Session::put('idioma',$this->getSessionPorDefecto());
+            if(!Session::has('lenguaje'))
+            {
+               Session::put('lenguaje',$this->getSessionPorDefecto());
+            }   
         }
         else
         {
-            if($idioma != null)
+            if(!in_array($lenguaje, config('lenguajes')))
             {
-                Session::put('idioma',$idioma);
+               if(!Session::has('lenguaje'))
+               {
+                 Session::put('lenguaje',$this->getSessionPorDefecto());
+               }
             }
+            else
+            {
+               if(!Session::has('lenguaje'))
+               {
+                 Session::put('lenguaje',$lenguaje);
+               } 
+               else
+               {
+                 if(Session::get('lenguaje') != $lenguaje)
+                 {
+                    Session::put('lenguaje',$this->getSessionPorDefecto());
+                 }
+               }
+            } 
         }
 
-        return Session::get('idioma');
-        
+        if($parametro_de_la_ruta != null && in_array($parametro_de_la_ruta, config('lenguajes')) && Session::get('lenguaje') != $parametro_de_la_ruta )
+        {
+            Session::put('lenguaje',$parametro_de_la_ruta);
+        }       
+       
+        return Session::get('lenguaje');        
     }
+
+
+    
 }
