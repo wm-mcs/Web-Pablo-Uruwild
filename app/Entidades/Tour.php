@@ -56,8 +56,8 @@ class Tour extends Model
     public function getRouteAttribute()
     {
        dd(HelpersSessionLenguaje::getAndPutSessionLenguaje());
-       
-       return route('get_pagina_tour_individual', [HelpersSessionLenguaje::getAndPutSessionLenguaje(), HelpersGenerales::helper_convertir_cadena_para_url($this->name) ,$this->id]);
+
+       return route('get_pagina_tour_individual', [HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null), HelpersGenerales::helper_convertir_cadena_para_url($this->name) ,$this->id]);
     }
 
     public function getContenidoRenderAttribute()
