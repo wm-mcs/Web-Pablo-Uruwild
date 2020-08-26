@@ -12,8 +12,7 @@ class Lenguaje
 {
     public function handle($Request, Closure $next)
     {
-        if(!Auth::guest() && Auth::user()->first_name == 'Mauricio')
-        {
+       
           // Si la sesión no existe hacer lo siguiente
           if(!Session::has('lenguaje'))
           {
@@ -66,9 +65,9 @@ class Lenguaje
 
 
           return $next($Request);
-        }
+        
 
 
-        return $next($Request);
+        
     }
 }
