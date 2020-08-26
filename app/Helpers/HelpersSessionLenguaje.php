@@ -28,7 +28,7 @@ class HelpersSessionLenguaje
                Session::put('lenguaje',self::getSessionPorDefecto());
             }   
 
-            dd(self::getSessionPorDefecto());
+            dd(Session::get('lenguaje'));
         }
         else
         {
