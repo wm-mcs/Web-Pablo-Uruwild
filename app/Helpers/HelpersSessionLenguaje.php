@@ -27,8 +27,6 @@ class HelpersSessionLenguaje
             {
                Session::put('lenguaje',self::getSessionPorDefecto());
             }   
-
-
         }
         else
         {
@@ -49,20 +47,18 @@ class HelpersSessionLenguaje
                {
                  if(Session::get('lenguaje') != $lenguaje)
                  {
-                    Session::put('lenguaje',self::getSessionPorDefecto());
+                    Session::put('lenguaje',$lenguaje);
                  }
                }
             } 
         }
-
-
 
         if($parametro_de_la_ruta != null && in_array($parametro_de_la_ruta, config('lenguajes')) && Session::get('lenguaje') != $parametro_de_la_ruta )
         {
             Session::put('lenguaje',$parametro_de_la_ruta);
         }  
 
-        dd(Session::get('lenguaje'));     
+            
        
         return Session::get('lenguaje');        
     }
