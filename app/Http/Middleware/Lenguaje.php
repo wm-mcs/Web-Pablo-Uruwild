@@ -14,9 +14,7 @@ class Lenguaje
     public function handle($Request, Closure $next)
     {
        
-          // Si la sesión no existe hacer lo siguiente
-          if(!Session::has('lenguaje'))
-          {
+          
             // I p   d e l   u s u a r i o
             $ip_del_user  = strval($_SERVER['REMOTE_ADDR']); 
             $data_user    = json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$ip_del_user)); 
@@ -34,7 +32,7 @@ class Lenguaje
 
             //se debe verificar el parametro que viene desde la ruta para saber cual es y se lo compara con los idiomas instalados
             HelpersSessionLenguaje::getAndPutSessionLenguaje(null,$Request->route('lenguaje'));
-            
+
             /*
               First Method
 
@@ -58,10 +56,7 @@ class Lenguaje
               // Tomar accion de eso
               // Debería ganar predominar el parametro de la ruta, porque de está manera se puede enviar link y se mantiene
 
-          }
-
-          // Si la sesión existe retornar
-
+          
 
 
 
