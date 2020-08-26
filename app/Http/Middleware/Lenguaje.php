@@ -33,6 +33,8 @@ class Lenguaje
             //se debe verificar el parametro que viene desde la ruta para saber cual es y se lo compara con los idiomas instalados            
             HelpersSessionLenguaje::getAndPutSessionLenguaje(null,$Request->route('lenguaje'));
 
+            dd(ession::get('lenguaje'))
+
             /*
               First Method
 
