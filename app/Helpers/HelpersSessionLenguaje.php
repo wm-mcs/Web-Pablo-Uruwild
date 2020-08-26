@@ -43,7 +43,7 @@ class HelpersSessionLenguaje
             } 
         }
 
-        if($parametro_de_la_ruta != null && in_array($parametro_de_la_ruta, config('lenguajes')) && Session::get('lenguaje') != $parametro_de_la_ruta )
+        if($parametro_de_la_ruta != null && in_array($parametro_de_la_ruta, config('lenguajes')) )
         {
             Session::put('lenguaje',$parametro_de_la_ruta);
         }  
