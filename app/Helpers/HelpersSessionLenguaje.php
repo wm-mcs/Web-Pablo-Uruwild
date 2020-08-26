@@ -21,7 +21,7 @@ class HelpersSessionLenguaje
     public static function getAndPutSessionLenguaje($lenguaje = null,$parametro_de_la_ruta = null)
     {
         // se está pidiendo la sesion
-        if($lenguaje == null)
+        if($lenguaje === null)
         {
             if(!Session::has('lenguaje'))
             {
@@ -35,7 +35,7 @@ class HelpersSessionLenguaje
                if(!Session::has('lenguaje'))
                {
                  Session::put('lenguaje',self::getSessionPorDefecto());
-               }
+               }               
             }
             else
             {
@@ -53,7 +53,7 @@ class HelpersSessionLenguaje
             } 
         }
 
-        
+
 
         if($parametro_de_la_ruta != null && in_array($parametro_de_la_ruta, config('lenguajes')) && Session::get('lenguaje') != $parametro_de_la_ruta )
         {
