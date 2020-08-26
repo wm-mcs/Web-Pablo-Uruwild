@@ -19,21 +19,27 @@ class Lenguaje
             $ip_del_user  = strval($_SERVER['REMOTE_ADDR']); 
             $data_user    = json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$ip_del_user)); 
 
-            if($data_user->geoplugin_continentCode != 'SA')
+
+            if(!Session::has('lenguaje'))
             {
-              // diferente de SudAmerica 
-              HelpersSessionLenguaje::getAndPutSessionLenguaje('EN');              
+              if($data_user->geoplugin_continentCode != 'SA')
+              {
+                // diferente de SudAmerica 
+                HelpersSessionLenguaje::getAndPutSessionLenguaje('EN');              
+              }
+              else
+              {
+                // SudAmerica
+                HelpersSessionLenguaje::getAndPutSessionLenguaje('ES'); 
+              }
             }
-            else
-            {
-              // SudAmerica
-              HelpersSessionLenguaje::getAndPutSessionLenguaje('ES'); 
-            }
+
+            
 
             //se debe verificar el parametro que viene desde la ruta para saber cual es y se lo compara con los idiomas instalados            
             HelpersSessionLenguaje::getAndPutSessionLenguaje(null,$Request->route('lenguaje'));
 
-            
+
 
             /*
               First Method
