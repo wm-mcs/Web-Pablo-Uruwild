@@ -107,7 +107,7 @@ class Paginas_Controller extends Controller
     }
 
     // C i r c u i t o 
-    public function get_pagina_tour_individual($name,$id)
+    public function get_pagina_tour_individual($lenguaje,$name,$id)
     {
         $Tour                 = $this->TourRepo->find($id);
         $Empresa              = $this->EmpresaRepo->getEmpresaDatos();        
