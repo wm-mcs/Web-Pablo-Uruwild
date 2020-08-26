@@ -39,17 +39,7 @@ class HelpersSessionLenguaje
             }
             else
             {
-               if(!Session::has('lenguaje'))
-               {
-                 Session::put('lenguaje',$lenguaje);
-               } 
-               else
-               {
-                 if(Session::get('lenguaje') != $lenguaje)
-                 {
-                    Session::put('lenguaje',$lenguaje);
-                 }
-               }
+               Session::put('lenguaje',$lenguaje);
             } 
         }
 
