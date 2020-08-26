@@ -27,6 +27,8 @@ class HelpersGenerales
         $cadena = str_replace(' ' ,'-', $cadena);
         $cadena = str_replace('?' ,'', $cadena);
         $cadena = str_replace('¿' ,'', $cadena);
+        $cadena = str_replace('.' ,'', $cadena);
+        $cadena = str_replace(',' ,'', $cadena);
         return $cadena;
     
     }
