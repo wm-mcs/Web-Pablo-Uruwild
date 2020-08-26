@@ -9,7 +9,7 @@ class HelpersSessionLenguaje
 {
 
 
-    public function getSessionPorDefecto()
+    public static  function getSessionPorDefecto()
     {
         return 'ES';
     }
@@ -25,7 +25,7 @@ class HelpersSessionLenguaje
         {
             if(!Session::has('lenguaje'))
             {
-               Session::put('lenguaje',$this->getSessionPorDefecto());
+               Session::put('lenguaje',self::getSessionPorDefecto());
             }   
         }
         else
@@ -34,7 +34,7 @@ class HelpersSessionLenguaje
             {
                if(!Session::has('lenguaje'))
                {
-                 Session::put('lenguaje',$this->getSessionPorDefecto());
+                 Session::put('lenguaje',self::getSessionPorDefecto());
                }
             }
             else
@@ -47,7 +47,7 @@ class HelpersSessionLenguaje
                {
                  if(Session::get('lenguaje') != $lenguaje)
                  {
-                    Session::put('lenguaje',$this->getSessionPorDefecto());
+                    Session::put('lenguaje',self::getSessionPorDefecto());
                  }
                }
             } 
