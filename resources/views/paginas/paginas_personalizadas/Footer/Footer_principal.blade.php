@@ -16,19 +16,19 @@
             <h3 class="footer-titulo-columna mb-5">Rutas de interés</h3>
              
                <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_quien_es')}}" >Sobre Uruwild</a>
+                 <a class="contiene-link-linea" href="{{route('get_pagina_quien_es',Session::get('lenguaje'))}}" >Sobre Uruwild</a>
                </p >
                <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_tours')}}" >Tours de pesca</a>
+                 <a class="contiene-link-linea" href="{{route('get_pagina_tours',Session::get('lenguaje'))}}" >Tours de pesca</a>
                </p >
                <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_cabañas')}}" >Estancias y Lodges</a>
+                 <a class="contiene-link-linea" href="{{route('get_pagina_cabañas',Session::get('lenguaje'))}}" >Estancias y Lodges</a>
                </p >
                <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_turismo_rural')}}" >Turismo rural</a>
+                 <a class="contiene-link-linea" href="{{route('get_pagina_turismo_rural',Session::get('lenguaje'))}}" >Turismo rural</a>
                </p >
                <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_productos')}}" >Ecoturismo</a>
+                 <a class="contiene-link-linea" href="{{route('get_pagina_productos',Session::get('lenguaje'))}}" >Ecoturismo</a>
                </p >
                <p class="contiene-p-linea">
                  <a class="contiene-link-linea" href="{{route('get_pagina_contacto')}}" >Contacto</a>

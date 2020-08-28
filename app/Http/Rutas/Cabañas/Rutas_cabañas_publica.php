@@ -1,13 +1,13 @@
 <?php 
 
 
-Route::get('/cabañas' , [                    
+Route::get('/{lenguaje}/cabañas' , [                    
   'uses' => 'Publicas\Paginas_Controller@get_pagina_cabañas',
   'as'   => 'get_pagina_cabañas']
 );
 
 
-Route::get('/cabañas/{name}/{id}' , [                    
+Route::get('/{lenguaje}/cabañas/{name}/{id}' , [                    
 'uses' => 'Publicas\Paginas_Controller@get_pagina_cabaña_individual',
 'as'   => 'get_pagina_cabaña_individual']
 )/*->where(['id'  => '[0-9]+',

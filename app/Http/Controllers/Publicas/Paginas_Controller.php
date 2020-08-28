@@ -98,7 +98,7 @@ class Paginas_Controller extends Controller
     }
 
     // C a b a ñ a   I n d i v i d u a l 
-    public function get_pagina_cabaña_individual($name,$id)  {
+    public function get_pagina_cabaña_individual($lenguaje,$name,$id)  {
        
         $Cabaña              = $this->CabañaRepo->find($id);
         $Empresa             = $this->EmpresaRepo->getEmpresaDatos();     

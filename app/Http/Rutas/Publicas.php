@@ -30,6 +30,9 @@ Route::group(['middleware' => 'lenguaje'],function()
 
   // C i r c u i t o  s
   require __DIR__ . '/Tours/Ruta_tours_publicas.php'; 
+
+  // C a b a ñ a s 
+  require __DIR__ . '/Cabañas/Rutas_cabañas_publica.php'; 
   
 });  
 
