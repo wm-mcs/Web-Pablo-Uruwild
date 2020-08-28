@@ -7,7 +7,7 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto ">
                 <li>
-                  <a  href="{{url()}}" >  
+                  <a  href="{{route('get_home_con_lenguaje', Session::get('lenguaje'))}}" >  
 
                     
                     <img class="logo-nav" v-if="scrolled > 0" src="{{$Empresa->img_logo_horizontal_color}}">  
