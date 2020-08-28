@@ -55,7 +55,7 @@ Route::get('/Servicios' , [
 );
 
 // S o b r e
-Route::get('/sobre-Uruwild' , [                    
+Route::get('/{lenguaje}/sobre-Uruwild' , [                    
   'uses' => 'Publicas\Paginas_Controller@get_pagina_quien_es',
   'as'   => 'get_pagina_quien_es']
 );
