@@ -42,7 +42,7 @@
 
 
     <!-- Scripts -->
-    <script src="{{url()}}{{ elixir('js/all.js')}} " ></script>  
+    <script src="{{url()}}{{ elixir('js/credo.js')}} " ></script>  
     @include('paginas.home.home_vue_script')
 
   </body>

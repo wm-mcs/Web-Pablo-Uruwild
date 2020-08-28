@@ -2,7 +2,7 @@
 
 
 @section('title')
- Iniciar Sesion 
+ Iniciar sesion 
 @stop
 
 @section('MetaContent')
