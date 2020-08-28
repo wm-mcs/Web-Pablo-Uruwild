@@ -4,9 +4,6 @@
 // Authentication routes...
 require __DIR__ . '/Rutas/Auth.php';
 
-// Authentication routes...
-require __DIR__ . '/Rutas/Publicas.php';
-
 /**
  * Grupo de Rutas con middleware
  */
@@ -31,5 +28,9 @@ Route::group(['middleware' => 'auth'],function()
          });
     });
 });
+
+
+// Authentication routes...
+require __DIR__ . '/Rutas/Publicas.php';
 
 

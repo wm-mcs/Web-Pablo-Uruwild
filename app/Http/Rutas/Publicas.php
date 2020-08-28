@@ -13,6 +13,11 @@ Route::get('/blog/{name}/{id}' , [
 )/*->where(['id'  => '[0-9]+',
         'name'=> '^[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$'])*/;
 
+// C o n t a c t o
+Route::get('/Contacto' , [                    
+  'uses' => 'Publicas\Paginas_Controller@get_pagina_contacto',
+  'as'   => 'get_pagina_contacto']
+);
 
 Route::group(['middleware' => 'lenguaje'],function()
 {
@@ -37,11 +42,7 @@ Route::group(['middleware' => 'lenguaje'],function()
 });  
 
 
-// C o n t a c t o
-Route::get('/Contacto' , [                    
-  'uses' => 'Publicas\Paginas_Controller@get_pagina_contacto',
-  'as'   => 'get_pagina_contacto']
-);
+
 
 
 
