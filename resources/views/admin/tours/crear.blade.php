@@ -39,18 +39,10 @@
         </div>
       </div>  
 
+       @include('admin.'. $Carpeta_view_admin . '.formularios_partes.descripcion')
 
-       <div class="contenedor-grupo-datos col-12">
-        <div class="contenedor-grupo-datos-titulo">Contenido </div>
-        <div class="contenedor-formulario-label-fiel">                       
-          <div class="formulario-label-fiel">
-            @include('admin.tours.formularios_partes.aclaracion_etiquetas')
-            {!! Form::label('description', 'Contenido', array('class' => 'formulario-label ')) !!}
-            {!! Form::textarea('description', null ,['class' => 'formulario-field',
-                                                     'rows' => 20 ]) !!}
-          </div>
-        </div>
-      </div>     
+
+      
    </div>
    
     <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Secondary-Relleno disparar-este-form">

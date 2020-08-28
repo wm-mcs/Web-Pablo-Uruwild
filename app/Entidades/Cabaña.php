@@ -33,11 +33,8 @@ class Cabaña extends Model
 
     public function getContenidoRenderAttribute()
     { 
-
       $cadena = $this->description;
-
-      return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);
-        
+      return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);        
     }
 
 
