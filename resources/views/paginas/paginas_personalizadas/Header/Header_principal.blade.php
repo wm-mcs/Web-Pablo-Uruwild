@@ -29,7 +29,7 @@
             <nav class="site-navigation position-relative" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 
-                <li><a href="{{route('get_home')}}" class="text-uppercase" >Inicio</a></li>
+                <li><a href="{{route('get_home_con_lenguaje', Session::get('lenguaje'))}}" class="text-uppercase" >Inicio</a></li>
                 <li><a href="{{route('get_pagina_tours')}}" class="text-uppercase" >Tours de pesca</a></li> 
                 <li><a href="{{route('get_pagina_productos')}}" class="text-uppercase" >ecoturismo</a></li>
                 <li><a href="{{route('get_pagina_turismo_rural')}}" class="text-uppercase" >turismo rural</a></li>

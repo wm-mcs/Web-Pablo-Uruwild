@@ -22,6 +22,12 @@ Route::group(['middleware' => 'lenguaje'],function()
     'as'   => 'get_home']
   );
 
+  // H o m e   c o n   l e n g u a j e  
+  Route::get('/{lenguaje}' , [                    
+    'uses' => 'Publicas\Home_Public_Controller@get_home',
+    'as'   => 'get_home_con_lenguaje']
+  );
+
   // C i r c u i t o  s
   require __DIR__ . '/Tours/Ruta_tours_publicas.php'; 
   
