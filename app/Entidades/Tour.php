@@ -58,16 +58,25 @@ class Tour extends Model
     }
 
     public function getContenidoRenderAttribute()
-    { 
-       $cadena = $this->description;
+    {        
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
 
-       return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);        
+      $cadena   = $this->getPropiedadValorSegunLenguaje($Lenguaje, 'description');       
+
+      return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);    
     }
 
 
     /**
      * Me da el nombre ya teniendo en cuenta el lenguaje que está en la sesión.
      */
+    public function getNameFormateadoConLenguajeAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+
+      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'name');  
+    }
+
     public function getNameFormateadoConLenguajeAttribute()
     {
       $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
