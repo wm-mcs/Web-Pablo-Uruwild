@@ -77,11 +77,11 @@ class Tour extends Model
       return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'name');  
     }
 
-    public function getNameFormateadoConLenguajeAttribute()
+    public function getDescripcionBreveFormateadoConLenguajeAttribute()
     {
       $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
 
-      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'name');  
+      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'descripcion_breve');  
     }
     
     

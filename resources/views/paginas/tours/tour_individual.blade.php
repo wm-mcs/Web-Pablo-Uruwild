@@ -100,7 +100,7 @@
             <div class="row ">
               <div class="col-lg-8 p-lg-5 background-black-transparent " style="max-width: 550px;">
                 <h1  class="titulos-class text-white font-secondary mb-4">{{$Tour->name_formateado_con_lenguaje}}</h1>
-                <h2 class="parrafo-class text-white no-mostrar-en-mobil mb-4">{{$Tour->descripcion_breve}}
+                <h2 class="parrafo-class text-white no-mostrar-en-mobil mb-4">{{$Tour->descripcion_breve_formateado_con_lenguaje}}
                 </h2>
                 <p><a href="#contenido" class="scroll_to Boton-Fuente-Chico Boton-Blanco"> {{$Tour->llamado_a_la_accion_text}}  <i class="fas fa-chevron-right"></i> </a></p>
               </div>
@@ -109,7 +109,7 @@
         </div>
       </div>
        <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Tour->url_img_foto_principal_chica}}" alt="{{$Tour->name_formateado_con_lenguaje}} Uruwild Uruguay"> 
-       <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Tour->url_img_foto_principal}}" alt="{{$Tour->name}} Uruwild Uruguay">        
+       <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Tour->url_img_foto_principal}}" alt="{{$Tour->name_formateado_con_lenguaje}} Uruwild Uruguay">        
 
     </div>  
 @stop
