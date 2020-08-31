@@ -42,9 +42,13 @@ class Tour extends Model
 
     public function getLlamadoALaAccionTextAttribute()
     {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+
+      $Valor    = $this->getPropiedadValorSegunLenguaje($Lenguaje, 'call_to_action');  
+
       if(($this->call_to_action != null) &&( $this->call_to_action != ''))
       {
-        return trim($this->call_to_action);
+        return trim($Valor);
       }
       else
       {
