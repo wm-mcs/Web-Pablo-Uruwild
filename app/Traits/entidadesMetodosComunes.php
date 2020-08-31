@@ -41,7 +41,6 @@ trait entidadesMetodosComunes{
 
      public function getRouteAdminAttribute()
      {
-
         if(isset($this->route_admin_name))
         {
           return route($this->route_admin_name,$this->id);
@@ -49,8 +48,7 @@ trait entidadesMetodosComunes{
         else
         {
           return null;
-        }
-        
+        }        
      }
 
      
