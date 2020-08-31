@@ -65,7 +65,7 @@ class Tour extends Model
     {        
       $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
 
-      $cadena   = $this->getPropiedadValorSegunLenguaje($Lenguaje, 'description');       
+      $cadena   = $this->getPropiedadValorSegunLenguaje($Lenguaje, 'description',false);       
 
       return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);    
     }

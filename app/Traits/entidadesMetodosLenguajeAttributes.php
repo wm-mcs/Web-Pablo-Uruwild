@@ -12,7 +12,7 @@ trait entidadesMetodosLenguajeAttributes{
      * @param $Lenguaje = Session Lenguaje
      * @param $PropiedadName = El nombre de la prioridad
      */
-    public function getPropiedadValorSegunLenguaje($Lenguaje,$PropiedadName)
+    public function getPropiedadValorSegunLenguaje($Lenguaje,$PropiedadName,$FormateoTexto = true)
     {
       if($Lenguaje == 'ES')
       {
@@ -26,8 +26,14 @@ trait entidadesMetodosLenguajeAttributes{
       {
         $Valor = $this->$Propiedad;
       }
+
+      if($FormateoTexto)
+      {
+        return ucfirst(strtolower($Valor));
+      }
+
+      return $Valor;
       
-      return ucfirst(strtolower($Valor));
     }
    
 
