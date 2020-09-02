@@ -9,7 +9,7 @@
   
   {!! Form::hidden('name') !!}
 
-@endif
+@endif 
 
 <div class="formulario-label-fiel">
   {!! Form::label('titulo', 'Título', array('class' => 'formulario-label ')) !!}
@@ -30,6 +30,32 @@
   {!! Form::label('llamado_a_la_accion', 'Call to action', array('class' => 'formulario-label ')) !!}
   {!! Form::text('llamado_a_la_accion', null ,['class' => 'formulario-field']) !!}
 </div>
+  @endif
+@endforeach
+
+@foreach(config('lenguajes') as $Lenguaje)
+  @if($Lenguaje != 'ES')
+      <div class="formulario-label-fiel">
+        {!! Form::label('titulo'.$Lenguaje, 'Título'.$Lenguaje, array('class' => 'formulario-label ')) !!}
+        {!! Form::text('titulo'.$Lenguaje, null ,['class' => 'formulario-field']) !!}
+      </div>
+
+      <div class="formulario-label-fiel">
+        {!! Form::label('sub_titulo'.$Lenguaje, 'Sub títtulo'.$Lenguaje, array('class' => 'formulario-label ')) !!}
+        {!! Form::text('sub_titulo'.$Lenguaje, null ,['class' => 'formulario-field']) !!}
+      </div>
+
+      <div class="formulario-label-fiel">
+        {!! Form::label('parrafo'.$Lenguaje, 'Párrafo'.$Lenguaje, array('class' => 'formulario-label ')) !!}
+        {!! Form::text('parrafo'.$Lenguaje, null ,['class' => 'formulario-field']) !!}
+      </div>
+
+      <div class="formulario-label-fiel">
+        {!! Form::label('llamado_a_la_accion'.$Lenguaje, 'Call to action'.$Lenguaje, array('class' => 'formulario-label ')) !!}
+        {!! Form::text('llamado_a_la_accion'.$Lenguaje, null ,['class' => 'formulario-field']) !!}
+      </div>
+  @endif
+@endforeach  
 
 <div class="formulario-label-fiel">
   {!! Form::label('link_llamado_a_la_accion', 'Link call to action', array('class' => 'formulario-label ')) !!}

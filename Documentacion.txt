@@ -35,3 +35,20 @@
    - En la carpeta pública el nombre de la carpet ver en el controller antes de crear. 
 
    - Los tours, turismo rural y actividades al aire libre son la misma entidad pero desde la vista de crear se pasa la propiedad "tipo_de_tour". Se crea cómo módulos diferentes para que los administradores tengan mejor interfáz.
+
+
+
+
+
+
+/* L e n g u a j e s */
+
+   - La lógica de lenguaje se hace en el middelware App\HTTP\Middelware\Lenguaje. 
+
+   - Lo idiomas disponibles están en un array en App\config\lenguajes
+
+   - Las entidades que tiene atributes a traducir tendrán multimples atributos para cada idioma. Ejemplo: si tiene una propiedad de nombre 'name' esa propiedad en ingles sería 'nameEN'. Estás nuevas propiedades hay que crearlas en la base de datos a medida que se agreguen nuevos idiomas. 
+
+   - Cuando se agrega un idioma se debe ajustar agregar en los controllers de las entidades las nuevas propiedades para ese idioma. Se agregan en la función getPropiedades(); 
+
+   - Para la lógica de como se muestran las propiedades de las entidades se creó un Trait en App\Traits\entidadesMetodosLenguajeAttributes. Este Trait se debe implementar en el modelo de las entidades (App/Entidades) y se debe crear las prpeidades mutadas correspondientes. Ver la Entidad tour y el código explicará mejor.  

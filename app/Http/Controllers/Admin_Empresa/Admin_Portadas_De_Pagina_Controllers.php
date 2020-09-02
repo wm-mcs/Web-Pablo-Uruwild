@@ -63,7 +63,8 @@ class Admin_Portadas_De_Pagina_Controllers extends Controller implements entidad
 
   public function getPropiedades()
   {
-    return ['titulo','sub_titulo','parrafo','llamado_a_la_accion','link_llamado_a_la_accion','posicion','estado','name'];
+    return ['titulo','sub_titulo','parrafo','llamado_a_la_accion','link_llamado_a_la_accion','posicion','estado','name',
+            'tituloEN','sub_tituloEN','parrafoEN','llamado_a_la_accionEN'];
   }
 
   public function getManager($Request)
