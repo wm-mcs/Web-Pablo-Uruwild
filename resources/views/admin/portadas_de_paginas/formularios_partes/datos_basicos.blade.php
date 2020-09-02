@@ -30,8 +30,7 @@
   {!! Form::label('llamado_a_la_accion', 'Call to action', array('class' => 'formulario-label ')) !!}
   {!! Form::text('llamado_a_la_accion', null ,['class' => 'formulario-field']) !!}
 </div>
-  @endif
-@endforeach
+
 
 @foreach(config('lenguajes') as $Lenguaje)
   @if($Lenguaje != 'ES')
