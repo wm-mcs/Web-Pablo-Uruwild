@@ -62,19 +62,11 @@ class HelpersSessionLenguaje
         // L a   r u t a   n o   t i e n e   e l   p a r a m e t r o   i n d i c a d o 
         if($lenguaje_que_viene_de_la_ruta == '{lenguaje}')
         {
-            $Validacion = false;
-            $Route = route($route_en_cuestion,$this->getAndPutSessionLenguaje(null,null));
-
-            return [
-                      'Validacion' = $Validacion,
-                      'Route'      = $Route
-                   ];
+          return false;            
         }
         else
         {
-            return [
-                      'Validacion' = true
-                   ];
+          return true;
         }
     }
 

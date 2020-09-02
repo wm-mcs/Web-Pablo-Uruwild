@@ -131,10 +131,9 @@ class Paginas_Controller extends Controller
                           });   
 
 
-        if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($lenguaje,'get_pagina_tours')['Validacion'])
-        {
-          $Route = HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($lenguaje,'get_pagina_tours')['Route'];
-          return redirect()->$Route;
+        if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($lenguaje,'get_pagina_tours'))
+        {          
+          return redirect()->route('get_pagina_tours',HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null));
         }
 
         return view('paginas.tours.tours_pagina',compact('Tours','Empresa','Portada'));
