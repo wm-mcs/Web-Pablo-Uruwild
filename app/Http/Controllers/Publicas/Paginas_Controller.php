@@ -133,7 +133,8 @@ class Paginas_Controller extends Controller
 
         if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($lenguaje,'get_pagina_tours')['Validacion'])
         {
-          return redirect()->HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($lenguaje,'get_pagina_tours')['Route'];
+          $Route = HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($lenguaje,'get_pagina_tours')['Route'];
+          return redirect()->$Route;
         }
 
         return view('paginas.tours.tours_pagina',compact('Tours','Empresa','Portada'));
