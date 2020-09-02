@@ -118,7 +118,7 @@ class Paginas_Controller extends Controller
 
 
     // P á g i n a   d e   t o u r s
-    public function get_pagina_tours(Request $Request)
+    public function get_pagina_tours($lenguaje,Request $Request)
     {
         $Tours          = Cache::remember('ToursPagianaTorus', 2000, function(){
                           return $this->TourRepo->getEntidadesParaHomeTour(50,'rank', 'desc','tour');
@@ -127,7 +127,8 @@ class Paginas_Controller extends Controller
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  
         $Portada        = Cache::remember('PortadaTours', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','tours');
-                          }); 
+                          });   
+        dd($lenguaje);
 
         return view('paginas.tours.tours_pagina',compact('Tours','Empresa','Portada'));
     }
