@@ -13,7 +13,7 @@ use App\Repositorios\TourRepo;
 use App\Repositorios\PortadaDePaginaRepo;  
 use App\Repositorios\CabañaRepo;
 use App\Repositorios\TeamRepo;
-
+use App\Helpers\HelpersSessionLenguaje;
 
 class Paginas_Controller extends Controller
 {
@@ -82,6 +82,7 @@ class Paginas_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','sobre_uruwild');
                           });    
 
+
         
         return view('paginas.paginas_personalizadas.laura_quien_es', compact('Empresa','Portada','Teams'));
     }
@@ -128,7 +129,12 @@ class Paginas_Controller extends Controller
         $Portada        = Cache::remember('PortadaTours', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','tours');
                           });   
-        dd($lenguaje);
+
+
+        if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($lenguaje,'get_pagina_tours')['Validacion'])
+        {
+          return redirect()->HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($lenguaje,'get_pagina_tours')['Route'];
+        }
 
         return view('paginas.tours.tours_pagina',compact('Tours','Empresa','Portada'));
     }
