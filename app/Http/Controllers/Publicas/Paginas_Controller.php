@@ -163,7 +163,7 @@ class Paginas_Controller extends Controller
 
 
     // P á g i n a   d e   P r o d u c t o s 
-    public function get_pagina_productos(Request $Request)
+    public function get_pagina_productos($Lenguaje,Request $Request)
     {
         $Productos      = Cache::remember('ProductosPagianaTorus', 2000, function(){
                           return $this->TourRepo->getEntidadesParaHomeTour(50,'name', 'rank','producto');
@@ -174,11 +174,17 @@ class Paginas_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','productos');
                           }); 
 
+        if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($Lenguaje,'get_pagina_productos'))
+        {          
+          return redirect()->route('get_pagina_productos',HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null));
+        }
+
+
         return view('paginas.prodcutos_especiales.productos_pagina',compact('Productos','Empresa','Portada'));
     }
 
     // P á g i n a   d e   T u r i s m o   R u r a l  
-    public function get_pagina_turismo_rural(Request $Request)
+    public function get_pagina_turismo_rural($Lenguaje,Request $Request)
     {
         $Turismo_rural  = Cache::remember('TurismoRuralPagina', 2000, function(){
                           return $this->TourRepo->getEntidadesParaHomeTour(50,'rank', 'desc','turismo_rural');
@@ -191,6 +197,11 @@ class Paginas_Controller extends Controller
         $Portada        = Cache::remember('PortadaTurimoRural', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','turismo_rural');
                           }); 
+
+        if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($Lenguaje,'get_pagina_turismo_rural'))
+        {          
+          return redirect()->route('get_pagina_turismo_rural',HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null));
+        }
 
         return view('paginas.turismo_rural.turismo_rural_pagina',compact('Turismo_rural','Empresa','Portada','Cabañas'));
     }
