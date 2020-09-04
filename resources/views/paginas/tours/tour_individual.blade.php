@@ -6,7 +6,7 @@
 {{--*/ $ImagenPortada         = $Tour->url_img_foto_principal /*--}}
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/Empresa/logo-para-tags.jpg'/*--}}
 {{--*/ $Titulo                = $Tour->name_formateado_con_lenguaje /*--}}
-{{--*/ $DescriptionEtiqueta   = $Tour->descripcion_breve /*--}}
+{{--*/ $DescriptionEtiqueta   = $Tour->descripcion_breve_formateado_con_lenguaje /*--}}
 {{--*/ $PalabrasClaves        = '' /*--}}
 {{--*/ $UrlDeLaPagina         = $Tour->route /*--}}
 

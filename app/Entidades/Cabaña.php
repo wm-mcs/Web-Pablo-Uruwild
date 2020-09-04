@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Helpers\HelpersGenerales;
 use App\Traits\entidadesMetodosComunes;
 use App\Helpers\HelpersSessionLenguaje;
+use App\Traits\entidadesMetodosLenguajeAttributes;
 
 
 
@@ -14,6 +15,7 @@ class Cabaña extends Model
 {
 
     use entidadesMetodosComunes;
+    use entidadesMetodosLenguajeAttributes;
 
     protected $table              ='cabañas';    
     protected $fillable           = ['name'];
@@ -32,9 +34,30 @@ class Cabaña extends Model
     }
 
     public function getContenidoRenderAttribute()
-    { 
-      $cadena = $this->description;
-      return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);        
+    {        
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+
+      $cadena   = $this->getPropiedadValorSegunLenguaje($Lenguaje, 'description',false);       
+
+      return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);    
+    }
+
+
+    /**
+     * Me da el nombre ya teniendo en cuenta el lenguaje que está en la sesión.
+     */
+    public function getNameFormateadoConLenguajeAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+
+      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'name');  
+    }
+
+    public function getDescripcionBreveFormateadoConLenguajeAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+
+      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'descripcion_breve');  
     }
 
 

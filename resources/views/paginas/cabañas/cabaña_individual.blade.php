@@ -5,8 +5,8 @@
 
 {{--*/ $ImagenPortada         = $Cabaña->url_img_foto_principal /*--}}
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/Empresa/logo-para-tags.jpg'/*--}}
-{{--*/ $Titulo                = $Cabaña->name /*--}}
-{{--*/ $DescriptionEtiqueta   = $Cabaña->descripcion_breve /*--}}
+{{--*/ $Titulo                = $Cabaña->name_formateado_con_lenguaje /*--}}
+{{--*/ $DescriptionEtiqueta   = $Cabaña->descripcion_breve_formateado_con_lenguaje /*--}}
 {{--*/ $PalabrasClaves        = '' /*--}}
 {{--*/ $UrlDeLaPagina         = $Cabaña->route /*--}}
 
@@ -28,7 +28,7 @@
 @section('pixcel-facebook')
 
 
-@stop
+@stop  
 
 @section('data-estructurada')
 
@@ -98,8 +98,8 @@
           <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
             <div class="row ">
               <div class="col-lg-8 p-lg-5 background-black-transparent " style="max-width: 550px;">
-                <h1  class="titulos-class text-white font-secondary mb-4">{{$Cabaña->name}}</h1>
-                <h2 class="parrafo-class text-white no-mostrar-en-mobil mb-4">{{$Cabaña->descripcion_breve}}
+                <h1  class="titulos-class text-white font-secondary mb-4">{{$Cabaña->name_formateado_con_lenguaje}}</h1>
+                <h2 class="parrafo-class text-white no-mostrar-en-mobil mb-4">{{$Cabaña->descripcion_breve_formateado_con_lenguaje}}
                 </h2>
                 
                
@@ -112,8 +112,8 @@
         </div>
       </div>
       
-       <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Cabaña->url_img_foto_principal_chica}}" alt="{{$Cabaña->name}} Uruwild Uruguay"> 
-       <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Cabaña->url_img_foto_principal}}" alt="{{$Cabaña->name}} Uruwild Uruguay"> 
+       <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Cabaña->url_img_foto_principal_chica}}" alt="{{$Cabaña->name_formateado_con_lenguaje}} Uruwild Uruguay"> 
+       <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Cabaña->url_img_foto_principal}}" alt="{{$Cabaña->name_formateado_con_lenguaje}} Uruwild Uruguay"> 
 
        
        

@@ -119,7 +119,7 @@ class Paginas_Controller extends Controller
 
 
     // P á g i n a   d e   t o u r s
-    public function get_pagina_tours($lenguaje,Request $Request)
+    public function get_pagina_tours($Lenguaje,Request $Request)
     {
         $Tours          = Cache::remember('ToursPagianaTorus', 2000, function(){
                           return $this->TourRepo->getEntidadesParaHomeTour(50,'rank', 'desc','tour');
@@ -131,7 +131,7 @@ class Paginas_Controller extends Controller
                           });   
 
 
-        if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($lenguaje,'get_pagina_tours'))
+        if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($Lenguaje,'get_pagina_tours'))
         {          
           return redirect()->route('get_pagina_tours',HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null));
         }
@@ -140,7 +140,7 @@ class Paginas_Controller extends Controller
     }
 
     // P á g i n a   d e   c a b a ñ a s
-    public function get_pagina_cabañas(Request $Request)
+    public function get_pagina_cabañas($Lenguaje,Request $Request)
     {
         $Cabañas        = Cache::remember('CabañasPagina', 2000, function(){
                           return $this->CabañaRepo->getEntidadesParaHome(30,'rank','desc');
@@ -150,6 +150,11 @@ class Paginas_Controller extends Controller
         $Portada        = Cache::remember('PortadaCabañas', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','cabañas');
                           }); 
+
+        if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($Lenguaje,'get_pagina_cabañas'))
+        {          
+          return redirect()->route('get_pagina_cabañas',HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null));
+        }
 
         return view('paginas.cabañas.cabañas_pagina',compact('Cabañas','Empresa','Portada'));
     }

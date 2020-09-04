@@ -11,6 +11,25 @@
 
   ]) !!}
 </div>
+
+@foreach(config('lenguajes') as $Lenguaje)
+  @if($Lenguaje != 'ES')
+    <div class="formulario-label-fiel">
+      {!! Form::label('name'.$Lenguaje, 'Título '.$Lenguaje, array('class' => 'formulario-label ')) !!}
+      {!! Form::text('name'.$Lenguaje, null ,['class' => 'formulario-field']) !!}
+    </div>
+
+    <div class="formulario-label-fiel">
+      {!! Form::label('descripcion_breve'.$Lenguaje, 'Descripción breve ' . $Lenguaje, array('class' => 'formulario-label ')) !!}
+      {!! Form::textarea('descripcion_breve'.$Lenguaje, null ,['class' => 'formulario-field',
+                                                      'rows' => 2, 
+                                                      'cols' => 25
+
+      ]) !!}
+    </div> 
+  @endif
+@endforeach
+
 <div class="formulario-label-fiel">
   {!! Form::label('ubicacion', 'Ubicación', array('class' => 'formulario-label ')) !!}
   {!! Form::text('ubicacion', null ,['class' => 'formulario-field']) !!}
