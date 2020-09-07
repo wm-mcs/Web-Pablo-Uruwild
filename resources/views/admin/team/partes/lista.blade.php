@@ -59,7 +59,7 @@
     <div class="servicio_lista service d-flex flex-column align-items-center ">
       
       <div class="col-6 mb-3 mt-3 d-flex flex-row justify-content-center align-items-center ">
-        <img src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="imagen-team-chica">
+        <img src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve_formateado_con_lenguaje}}" class="imagen-team-chica">
       </div>
         
                    
@@ -70,10 +70,10 @@
           </span>              
         </h3>
         <p class="color-text-black text-bold text-center mb-2 ">
-         {{$Entidad->cargo}}
+         {{$Entidad->cargo_formateado_con_lenguaje}}
         </p>
         <p class="color-text-gris text-center mb-2 ">
-         {{$Entidad->descripcion_breve}}
+         {{$Entidad->descripcion_breve_formateado_con_lenguaje}}
         </p>
         <div class=" col-12 d-flex flex-row justify-content-center align-items-center">
           <div class="d-flex flex-row align-items-center">

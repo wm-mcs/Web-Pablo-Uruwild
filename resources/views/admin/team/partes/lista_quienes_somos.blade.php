@@ -13,15 +13,15 @@
            </span>                 
         </h3>
         <p class="color-text-black text-bold text-center mb-2 ">
-         {{$Entidad->cargo}}
+         {{$Entidad->cargo_formateado_con_lenguaje}}
         </p>
         <p class="color-text-gris text-center mb-2 ">
-         <B> {{$Entidad->descripcion_breve}} </B>
+         <B> {{$Entidad->descripcion_breve_formateado_con_lenguaje}} </B>
         </p>
 
         <p class="color-text-gris text-center mb-2 p-2 p-lg-3">
         
-         <mostrar-mas-o-menos texto="{{$Entidad->description}}" :cantidad_inicial="160" tipo="click">
+         <mostrar-mas-o-menos texto="{{$Entidad->descripcion_formateado_con_lenguaje}}" :cantidad_inicial="160" tipo="click">
            
          </mostrar-mas-o-menos> 
         </p>

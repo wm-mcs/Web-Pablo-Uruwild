@@ -5,6 +5,7 @@ namespace App\Entidades;
 use Illuminate\Database\Eloquent\Model;
 use App\Servicios\ServiciosDeEntidades;
 use App\Helpers\HelpersGenerales;
+use App\Traits\entidadesMetodosLenguajeAttributes;
 
 
 
@@ -15,6 +16,8 @@ class Team extends Model
     protected $table ='teams';
     
     protected $fillable = ['name', 'description'];
+
+    use entidadesMetodosLenguajeAttributes;
 
 
 
@@ -107,6 +110,28 @@ class Team extends Model
     public function getWhatsappValorAttribute()
     {
         return HelpersGenerales::helper_dame_sino_es_null_o_vacio($this->whatsapp);
+    }
+
+     
+    public function getCargoFormateadoConLenguajeAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+
+      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'cargo');  
+    }
+
+    public function getDescripcionBreveFormateadoConLenguajeAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+
+      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'descripcion_breve');  
+    }
+
+    public function getDescripcionFormateadoConLenguajeAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+
+      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'descripcion');  
     }
 
 

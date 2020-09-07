@@ -87,6 +87,63 @@ class Tour extends Model
 
       return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'descripcion_breve');  
     }
+
+    public function getProximasFechaFormateadoConLenguajeAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+      if($Lenguaje == 'ES')
+      {
+        $Texto = 'Próxima fecha ';
+      }
+      elseif($Lenguaje == 'EN')
+      {
+        $Texto = 'Next date ';
+      }
+      else
+      {
+        $Texto = 'Próxima fecha ';
+      }
+
+      return   $Texto . $this->fecha->format('d-m-Y');
+    }
+
+    public function getCantidadDeDiasTextoFormateadoConLenguajeAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+      if($Lenguaje == 'ES')
+      {
+        $Texto = 'Cantidad días del tour';
+      }
+      elseif($Lenguaje == 'EN')
+      {
+        $Texto = 'Number of days of the tour';
+      }
+      else
+      {
+        $Texto = 'Cantidad días del tour';
+      }
+
+      return   $Texto ;
+    }
+
+    public function getCallToActionListaFormateadoConLenguajeAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+      if($Lenguaje == 'ES')
+      {
+        $Texto = 'Explorar el contenido del tour ';
+      }
+      elseif($Lenguaje == 'EN')
+      {
+        $Texto = 'Explore the content of the tour';
+      }
+      else
+      {
+        $Texto = 'Explorar el contenido del tour ';
+      }
+
+      return   $Texto ;
+    }
     
     
 }

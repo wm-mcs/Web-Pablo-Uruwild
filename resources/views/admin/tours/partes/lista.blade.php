@@ -39,17 +39,18 @@
         <a href="{{$Route}}">         
           <div class="tour-contiene-datos-listado">
             <div class="sub-titulos-class text-bold color-text-white mb-2">
-             {{$Entidad->name}}
+             {{$Entidad->name}} 
             </div> 
             
              <div class="parrafo-class color-text-white mb-1"> 
-              Próxima fecha <i class="far fa-clock"></i> {{$Entidad->fecha->format('d-m-Y')}}.
+             <i class="far fa-clock"></i> {{$Entidad->proximas_fecha_formateado_con_lenguaje}}.
              </div>
              <div class="parrafo-class color-text-white mb-2"> 
-              Tour de <span class="text-bold">{{$Entidad->cantidad_de_dias}}</span> días.
+              {{$Entidad->cantidad_de_dias_texto_formateado_con_lenguaje}}              
+              <b>{{$Entidad->cantidad_de_dias}}</b>.
              </div>
             <p>
-            <a href="{{$Route}}"> Explorar el contenido del tour  <i class="fas fa-chevron-right"></i></a>
+            <a href="{{$Route}}"> {{$Entidad->call_to_action_lista_formateado_con_lenguaje}} <i class="fas fa-chevron-right"></i></a>
            </p>
           </div>
         </a>
