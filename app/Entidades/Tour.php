@@ -112,7 +112,7 @@ class Tour extends Model
       $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
       if($Lenguaje == 'ES')
       {
-        $Texto = 'Cantidad días del tour';
+        $Texto = 'Cantidad de días del tour';
       }
       elseif($Lenguaje == 'EN')
       {
@@ -120,7 +120,7 @@ class Tour extends Model
       }
       else
       {
-        $Texto = 'Cantidad días del tour';
+        $Texto = 'Cantidad de días del tour';
       }
 
       return   $Texto ;
