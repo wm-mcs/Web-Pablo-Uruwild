@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Servicios\ServiciosDeEntidades;
 use App\Helpers\HelpersGenerales;
 use App\Traits\entidadesMetodosLenguajeAttributes;
+use App\Helpers\HelpersSessionLenguaje;
 
 
 
