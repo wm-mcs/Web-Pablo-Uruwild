@@ -46,7 +46,7 @@
       {!! Form::textarea('description'.$Lenguaje, null ,['class' => 'formulario-field']) !!}
     </div> 
   @endif
-@endif  
+@endforeach  
 
 <div class="formulario-label-fiel">
 {!! Form::label('rank', 'Rank', array('class' => 'formulario-label ')) !!}
