@@ -22,6 +22,33 @@
 </div>
 
 <div class="formulario-label-fiel">
+  {!! Form::label('description', 'Descripción', array('class' => 'formulario-label ')) !!}
+  {!! Form::textarea('description', null ,['class' => 'formulario-field']) !!}
+</div> 
+
+@foreach(config('lenguajes') as $Lenguaje)
+  @if($Lenguaje != 'ES')
+    <div class="formulario-label-fiel">
+      {!! Form::label('cargo'.$Lenguaje, 'Cargo'.$Lenguaje, array('class' => 'formulario-label ')) !!}
+      {!! Form::text('cargo'.$Lenguaje, null ,['class' => 'formulario-field', 'placeholder' => 'Ejemplo: CEO']) !!}
+    </div>
+
+    <div class="formulario-label-fiel">
+      {!! Form::label('descripcion_breve'.$Lenguaje, 'Descripción corta'.$Lenguaje, array('class' => 'formulario-label ')) !!}
+      {!! Form::text('descripcion_breve'.$Lenguaje, null ,['class'       => 'formulario-field', 
+                                                 'placeholder' => 'Describir algo de su personalidad o de lo que hará por el cliente',
+                                                 'rows'        => 2, 
+                                                 'cols'        => 25]) !!}
+    </div>
+
+    <div class="formulario-label-fiel">
+      {!! Form::label('description'.$Lenguaje, 'Descripción'.$Lenguaje, array('class' => 'formulario-label ')) !!}
+      {!! Form::textarea('description'.$Lenguaje, null ,['class' => 'formulario-field']) !!}
+    </div> 
+  @endif
+@endif  
+
+<div class="formulario-label-fiel">
 {!! Form::label('rank', 'Rank', array('class' => 'formulario-label ')) !!}
 <div class="contiene-aclaracion-label">
   Es para luego poder ordenar o destacar según su relevancia.
@@ -33,10 +60,7 @@
 
 
 
-<div class="formulario-label-fiel">
-  {!! Form::label('description', 'Descripción', array('class' => 'formulario-label ')) !!}
-  {!! Form::textarea('description', null ,['class' => 'formulario-field']) !!}
-</div> 
+
 
 <div class="formulario-label-fiel">
   {!! Form::label('facebook', 'Facebook', array('class' => 'formulario-label ')) !!}
