@@ -34,12 +34,12 @@
 <div class="col-12 col-lg-10 mb-4 ">
     <div class="servicio_lista service position-relative">  
         <a href="{{$Route}}"> 
-         <img  data-src="{{$Entidad->url_img_foto_principal}}" alt="{{$Entidad->descripcion_breve}}" class="tour-img-listado">
+         <img  data-src="{{$Entidad->url_img_foto_principal}}" alt="{{$Entidad->descripcion_breve_formateado_con_lenguaje}}" class="tour-img-listado">
         </a> 
         <a href="{{$Route}}">         
           <div class="tour-contiene-datos-listado">
             <div class="sub-titulos-class text-bold color-text-white mb-2">
-             {{$Entidad->name}} 
+             {{$Entidad->name_formateado_con_lenguaje}} 
             </div> 
             
              <div class="parrafo-class color-text-white mb-1"> 
@@ -50,7 +50,9 @@
               <b>{{$Entidad->cantidad_de_dias}}</b>.
              </div>
             <p>
-            <a href="{{$Route}}"> {{$Entidad->call_to_action_lista_formateado_con_lenguaje}} <i class="fas fa-chevron-right"></i></a>
+            <a href="{{$Route}}">
+             {{$Entidad->call_to_action_lista_formateado_con_lenguaje}} <i class="fas fa-chevron-right"></i>
+            </a>
            </p>
           </div>
         </a>
