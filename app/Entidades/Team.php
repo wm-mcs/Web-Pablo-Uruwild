@@ -132,7 +132,7 @@ class Team extends Model
     {
       $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
 
-      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'descripcion');  
+      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'description');  
     }
 
 
