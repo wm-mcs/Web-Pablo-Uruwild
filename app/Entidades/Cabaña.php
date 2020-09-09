@@ -33,33 +33,7 @@ class Cabaña extends Model
        return route('get_pagina_cabaña_individual', [HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null),HelpersGenerales::helper_convertir_cadena_para_url($this->name) ,$this->id]);
     }
 
-    public function getContenidoRenderAttribute()
-    {        
-      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
-
-      $cadena   = $this->getPropiedadValorSegunLenguaje($Lenguaje, 'description',false);       
-
-      return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);    
-    }
-
-
-    /**
-     * Me da el nombre ya teniendo en cuenta el lenguaje que está en la sesión.
-     */
-    public function getNameFormateadoConLenguajeAttribute()
-    {
-      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
-
-      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'name');  
-    }
-
-    public function getDescripcionBreveFormateadoConLenguajeAttribute()
-    {
-      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
-
-      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'descripcion_breve');  
-    }
-
+   
 
 
     
