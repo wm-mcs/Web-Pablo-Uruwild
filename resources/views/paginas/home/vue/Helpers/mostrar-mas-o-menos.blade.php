@@ -1,7 +1,7 @@
 Vue.component('mostrar-mas-o-menos' ,
 {
 
-props:['texto','cantidad_inicial','tipo']
+props:['texto_mostrar_mas','texto_mostrar_menos','texto','cantidad_inicial','tipo']
 ,  
 
 data:function(){
@@ -70,8 +70,8 @@ template:'
   </span>
   <span v-else>
     <span class="w-100" >@{{descripcion}}</span>
-    <span v-if="!muestra" v-on:click="mostrar" class="d-block parrafo-class w-100 py-3 simula-link mt-1">Mostrar más <i class="fas fa-chevron-down"></i></span>  
-    <span v-else v-on:click="mostrar" class="d-block parrafo-class w-100 py-3 simula-link mt-1">Mostrar menos <i class="fas fa-chevron-up"></i></span>
+    <span v-if="!muestra" v-on:click="mostrar" class="d-block parrafo-class w-100 py-3 simula-link mt-1">@{{texto_mostrar_mas}} <i class="fas fa-chevron-down"></i></span>  
+    <span v-else v-on:click="mostrar" class="d-block parrafo-class w-100 py-3 simula-link mt-1">@{{texto_mostrar_menos}} <i class="fas fa-chevron-up"></i></span>
   </span>
    
 

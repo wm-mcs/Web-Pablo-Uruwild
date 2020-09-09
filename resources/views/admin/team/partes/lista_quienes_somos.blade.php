@@ -21,7 +21,7 @@
 
         <p class="color-text-gris text-center mb-2 p-2 p-lg-3">
         
-         <mostrar-mas-o-menos texto="{{$Entidad->descripcion_formateado_con_lenguaje}}" :cantidad_inicial="160" tipo="click">
+         <mostrar-mas-o-menos texto_mostrar_menos="{{$Entidad->mostrar_menos_traducido}}"  texto_mostrar_mas="{{$Entidad->mostrar_mas_traducido}}" texto="{{$Entidad->descripcion_formateado_con_lenguaje}}" :cantidad_inicial="160" tipo="click">
            
          </mostrar-mas-o-menos> 
         </p>

@@ -7,7 +7,7 @@ use App\Servicios\ServiciosDeEntidades;
 use App\Helpers\HelpersGenerales;
 use App\Traits\entidadesMetodosLenguajeAttributes;
 use App\Helpers\HelpersSessionLenguaje;
-
+use App\Traits\entidadesMetodosComunes;
 
 
 
@@ -19,41 +19,11 @@ class Team extends Model
     protected $fillable = ['name', 'description'];
 
     use entidadesMetodosLenguajeAttributes;
+    use entidadesMetodosComunes;
 
 
 
-    // A t r i b u t o s   m u t a d o s
-
-    public function getImagenesAttribute()
-    {
-        return ServiciosDeEntidades::getImagenes('team_id',$this->id);
-    }
-
-    public function getImagenPrincipalAttribute()
-    {
-        return ServiciosDeEntidades::getFotoPrincipal('team_id',$this->id);
-    }
-
-     public function getUrlImgFotoPrincipalAttribute()
-     {  
-        if($this->imagen_principal->count() > 0)
-        {
-          return $this->imagen_principal->url_img;
-        }
-
-        return url().'/imagenes/Helpers/imagen-no-disponible.png';
-     }
-
-     public function getUrlImgFotoPrincipalChicaAttribute()
-     {
-        if($this->imagen_principal->count() > 0)
-        {
-          return $this->imagen_principal->first()->url_img_chica;
-        }
-        
-        return url().'/imagenes/Helpers/imagen-no-disponible.png';        
-     }
-
+   
 
      public function getRouteAdminAttribute()
      {        
@@ -66,27 +36,9 @@ class Team extends Model
      }
 
 
-    
-    public function scopeName($query, $name)
-    {        
-        if (trim($name) !="")
-        {                        
-           $query->where('name', "LIKE","%$name%"); 
-        }        
-    }
+  
 
-    public function scopeActive($query)
-    {                               
-        $query->where('estado', "si"); 
-        $query->where('borrado', "no");                 
-    }
-
-    public function getFirstNameAttribute()
-    {
-        $name = explode(" ", $this->name);
-      
-        return $name[0];
-    }
+   
 
     public function getFacebookValorAttribute()
     {
@@ -119,20 +71,41 @@ class Team extends Model
       $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
 
       return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'cargo');  
-    }
-
-    public function getDescripcionBreveFormateadoConLenguajeAttribute()
-    {
-      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
-
-      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'descripcion_breve');  
-    }
+    } 
 
     public function getDescripcionFormateadoConLenguajeAttribute()
     {
       $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
 
       return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'description');  
+    }
+
+    public function getMostrarMenosTraducidoAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+
+      $Texto = 'Mostrar menos';
+
+      if($Lenguaje == 'EN')
+      {
+         $Texto = 'Show less';
+      }      
+
+      return $Text;
+    }
+
+    public function getMostrarMasTraducidoAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+
+      $Texto = 'Mostrar más';
+      
+      if($Lenguaje == 'EN')
+      {
+         $Texto = 'Show more';
+      }      
+
+      return $Text;
     }
 
 
