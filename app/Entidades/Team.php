@@ -14,17 +14,12 @@ use App\Traits\entidadesMetodosComunes;
 class Team extends Model
 {
 
-  protected $table ='teams';
-
+  protected $table    = 'teams';
   protected $fillable = ['name', 'description'];
   protected $img_key  = 'team_id';
 
   use entidadesMetodosLenguajeAttributes;
-  use entidadesMetodosComunes;
-
-
-
-   
+  use entidadesMetodosComunes;   
 
   public function getRouteAdminAttribute()
   {        
