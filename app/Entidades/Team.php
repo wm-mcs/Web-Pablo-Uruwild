@@ -81,7 +81,7 @@ class Team extends Model
        $Texto = 'Show less';
     }      
 
-    return $Text;
+    return $Texto;
   }
 
   public function getMostrarMasTraducidoAttribute()
@@ -95,7 +95,7 @@ class Team extends Model
        $Texto = 'Show more';
     }      
 
-    return $Text;
+    return $Texto;
   }
 
 
