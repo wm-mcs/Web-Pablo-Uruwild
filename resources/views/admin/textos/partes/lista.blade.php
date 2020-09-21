@@ -13,7 +13,7 @@
         </p>   
         <h3 class="sub-titulos-class   mb-2">
           <a href="{{$Route}}" class="font-primary text-color-secondary">
-           {{$Entidad->text}}
+           {{$Entidad->name}}
           </a>                
         </h3>
         <p class="color-text-gris mb-2 ">
