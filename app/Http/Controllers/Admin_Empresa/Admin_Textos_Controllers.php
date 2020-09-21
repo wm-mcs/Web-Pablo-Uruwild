@@ -17,7 +17,7 @@ use App\Traits\entidadesControllerComunesCrud;
 
 
 
-class Admin_Texto_Controllers extends Controller implements entidadCrudControllerInterface
+class Admin_Textos_Controllers extends Controller implements entidadCrudControllerInterface
 {
 
 
