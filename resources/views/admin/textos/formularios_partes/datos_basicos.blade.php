@@ -5,7 +5,7 @@
 </div>
 
 <div class="formulario-label-fiel">
-  {!! Form::label('name', 'Título', array('class' => 'formulario-label ')) !!}
+  {!! Form::label('name', 'Nombre key', array('class' => 'formulario-label ')) !!}
   {!! Form::text('name', null ,['class' => 'formulario-field']) !!}
 </div>
 
@@ -43,6 +43,11 @@
 
 
 
+<div class="formulario-label-fiel">
+  {!! Form::label('estado', 'Estado', array('class' => 'formulario-label ')) !!}
+  {!! Form::select('estado',['si' => 'Activo',
+                             'no' => 'Desactivar'] , null,['class' => 'formulario-field'] )          !!}
+</div>
 
 
 
