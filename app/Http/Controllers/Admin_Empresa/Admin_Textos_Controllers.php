@@ -63,7 +63,7 @@ class Admin_Textos_Controllers extends Controller implements entidadCrudControll
 
   public function getPropiedades()
   {
-    return ['pagina','texto','textoEN'];
+    return ['pagina','name','texto','textoEN'];
   }
 
   public function getManager($Request)
