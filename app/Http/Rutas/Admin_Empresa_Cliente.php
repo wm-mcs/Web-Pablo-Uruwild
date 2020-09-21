@@ -30,8 +30,7 @@ require __DIR__ . '/Tours/Ruta_tours.php';
 
 require __DIR__ . '/PortadaDePagina/Ruta_portada_de_paginas.php'; 
 
-
-
+require __DIR__ . '/Textos/Ruta_textos.php'; 
 
 
 

@@ -14,11 +14,16 @@
    @if(Auth::user()->role === 'adminMcos522')
    <div id="admin-col-superadmin">
         <a href="{{route('get_admin_users')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-user"></i> Usuarios</li>
+          <li class="admin-columna-li mi-float-right"> Usuarios</li>
         </a>
         <a href="{{route('get_admin_noticias')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Blog</li>
+          <li class="admin-columna-li mi-float-right"> Blog</li>
         </a> 
+        <a href="{{route('get_admin_textos')}}">
+          <li class="admin-columna-li mi-float-right"> Textos</li>
+        </a> 
+
+
     </div>
    @endif
 
