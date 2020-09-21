@@ -1,6 +1,6 @@
 <div class="formulario-label-fiel">
   {!! Form::label('pagina', 'Página', array('class' => 'formulario-label ')) !!}
-  {!! Form::select('pagina', config('paginas') , null, ['class' => 'formulario-field'] )       
+  {!! Form::select('pagina', config('paginas') , null, ['class' => 'formulario-field'] )     !!}   
   
 </div>
 
