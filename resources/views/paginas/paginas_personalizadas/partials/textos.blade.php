@@ -1,2 +1,3 @@
 
-  {{$Textos->where('name',$Key)->first()->name_formateado_con_lenguaje}}
+  {{dd($Textos->where('name',$Key))}}
+  {{$Textos->where('name',$Key)->name_formateado_con_lenguaje}}
