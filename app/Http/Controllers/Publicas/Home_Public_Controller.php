@@ -11,7 +11,8 @@ use App\Repositorios\CabañaRepo;
 use Illuminate\Support\Facades\Cache;
 use App\Repositorios\TeamRepo;
 use App\Repositorios\TourRepo;
-use App\Repositorios\PortadaDePaginaRepo;                 
+use App\Repositorios\PortadaDePaginaRepo;     
+use App\Repositorios\TextoRepo;            
 
 
 class Home_Public_Controller extends Controller
@@ -23,6 +24,7 @@ class Home_Public_Controller extends Controller
     protected $CabañaRepo;
     protected $TourRepo;
     protected $PortadaDePaginaRepo;
+    protected $TextoRepo;
 
   
 
@@ -32,7 +34,8 @@ class Home_Public_Controller extends Controller
                                 TeamRepo             $TeamRepo,
                                 CabañaRepo           $CabañaRepo,
                                 TourRepo             $TourRepo,
-                                PortadaDePaginaRepo  $PortadaDePaginaRepo )
+                                PortadaDePaginaRepo  $PortadaDePaginaRepo,
+                                TextoRepo            $TextoRepo )
     {
         $this->ImgHomeRepo         = $ImgHomeRepo;
         $this->EmpresaRepo         = $EmpresaRepo;
@@ -41,6 +44,7 @@ class Home_Public_Controller extends Controller
         $this->CabañaRepo          = $CabañaRepo;
         $this->TourRepo            = $TourRepo;
         $this->PortadaDePaginaRepo = $PortadaDePaginaRepo;
+        $this->TextoRepo           = $TextoRepo;
         
     }
 
@@ -87,10 +91,10 @@ class Home_Public_Controller extends Controller
                           }); 
 
         
-
+        $Textos        = $this->TextoRepo->getTextosDeSeccion('home');
                        
 
-        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','Teams','Cabañas','Circuitos','Productos','Portada','Turismo_rural','Portada_pesca','Portada_rural','Portada_ecotu'));
+        return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','Teams','Cabañas','Circuitos','Productos','Portada','Turismo_rural','Portada_pesca','Portada_rural','Portada_ecotu','Textos'));
     }
 
 

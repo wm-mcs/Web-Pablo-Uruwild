@@ -103,7 +103,10 @@
   <div class="p-5 background-primary" id=""> 
     <div class="container">
       <p class="text-center p-2 p-lg-5 text-white">
-        Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Hacemos  <a class="text-white scroll_to" href="#circuitos">tours de pesca</a>,  <a class="text-white scroll_to" href="#ecoturismo">actividades de ecoturismo</a> y <a class="text-white scroll_to" href="#Turismo">turismo rural</a>. 
+
+        {{--*/ $Key  = 'bienvenida' /*--}}
+        @include('paginas.paginas_personalizadas.partials.textos') 
+        
       </p>
      </div> 
     </div>

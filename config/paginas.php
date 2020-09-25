@@ -1,6 +1,7 @@
 <?php 
 
 return [
+'generales', 
 'home',
 'listado_tours',
 'listado_productos',
