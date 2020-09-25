@@ -92,6 +92,8 @@ class Home_Public_Controller extends Controller
 
         
         $Textos        = $this->TextoRepo->getTextosDeSeccion('home');
+
+        dd($Textos );
                        
 
         return view('paginas.paginas_personalizadas.laura_home', compact('Empresa','Teams','Cabañas','Circuitos','Productos','Portada','Turismo_rural','Portada_pesca','Portada_rural','Portada_ecotu','Textos'));
