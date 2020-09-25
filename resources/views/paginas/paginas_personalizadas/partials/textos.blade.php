@@ -1,3 +1,7 @@
 
+  @if($Textos->count() > 0)
   {{dd($Textos->where('name',$Key))}}
-  {{$Textos->where('name',$Key)->name_formateado_con_lenguaje}}
+    @if(isset($Textos->where('name',$Key)->name_formateado_con_lenguaje))
+      {{$Textos->where('name',$Key)->name_formateado_con_lenguaje}}
+    @endif
+  @endif
