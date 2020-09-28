@@ -138,7 +138,7 @@ class Paginas_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','tours');
                           });   
 
-        $Textos              = $this->TextoRepo->getTextosDeSeccion('listado_tours');
+        $Textos         = $this->TextoRepo->getTextosDeSeccion('listado_tours');
 
         if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($Lenguaje,'get_pagina_tours'))
         {          
