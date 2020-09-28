@@ -24,7 +24,7 @@
              
                <p class="contiene-p-linea">
                  <a class="contiene-link-linea" href="{{route('get_pagina_quien_es',Session::get('lenguaje'))}}" >
-                  {{--*/ $Key  = 'nav sobre' /*--}}
+                  {{--*/ $Key  = 'nav  sobre' /*--}}
                   @include('paginas.paginas_personalizadas.partials.textos')  
 
                  </a>
