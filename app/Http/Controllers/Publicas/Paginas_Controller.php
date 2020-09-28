@@ -63,7 +63,7 @@ class Paginas_Controller extends Controller
 
         $Textos        = $this->TextoRepo->getTextosDeSeccion('contacto');     
 
-        return view('paginas.paginas_personalizadas.laura_contacto', compact('Empresa','Teams','Portada','Textos');
+        return view('paginas.paginas_personalizadas.laura_contacto', compact('Empresa','Teams','Portada','Textos'));
     }
 
     // S e r v i c i o s
