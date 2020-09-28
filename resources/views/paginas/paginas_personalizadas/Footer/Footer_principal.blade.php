@@ -37,7 +37,7 @@
                </p >
                <p class="contiene-p-linea">
                  <a class="contiene-link-linea" href="{{route('get_pagina_cabañas',Session::get('lenguaje'))}}" >
-                     {{--*/ $Key  = 'nav  estancias y lodges' /*--}}
+                     {{--*/ $Key  = 'nav estancias y lodges' /*--}}
                     @include('paginas.paginas_personalizadas.partials.textos')
                  </a>
                </p >
@@ -151,7 +151,13 @@
     <div class="p-5 background-gris-5">
       <p class="m-0 text-center color-text-white parrafo-class"> 
         <small>
-         <span class="color-text-white">Todos los derechos reservados <b class="text-color-primary">@{{empresa.name}}</b> © 2020</span> 
+         <span class="color-text-white">
+
+          
+          {{--*/ $Key  = 'derechos' /*--}}
+          @include('paginas.paginas_personalizadas.partials.textos')
+
+          <b class="text-color-primary">@{{empresa.name}}</b> © 2020</span> 
 
           <span v-if="mostrar_para_grande" class="text-color-primary"> | </span>
           <br v-else>
