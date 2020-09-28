@@ -2,6 +2,7 @@
 
 return [
 'footer'                 => 'footer' , 
+'nav'                    => 'nav',
 'home'                   => 'home' ,
 'listado_tours'          => 'listado_tours' ,
 'listado_productos'      => 'listado_productos' ,
