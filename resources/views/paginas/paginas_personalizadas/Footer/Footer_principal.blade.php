@@ -8,7 +8,11 @@
           {{-- P r i m e r    b l o q u e   --}}
           <div class="col-md-3 p-4">
             <h3 class="footer-titulo-columna mb-5 ">@{{empresa.name}}</h3>
-            <p  class="contiene-p-linea">Te invitamos a conocer paisajes y entornos fascinantes del Uruguay. Rincones perdidos e inexplorados, lugares únicos para contemplar, relajarse y disfrutar en contacto directo con la naturaleza a través de la pesca deportiva, birdwatching y otras actividades.</p>           
+            <p  class="contiene-p-linea">
+              {{--*/ $Key  = 'texto sobre uruwild' /*--}}
+              @include('paginas.paginas_personalizadas.partials.textos') 
+
+            </p>           
           </div>
 
           {{-- S e g u n d o   B l o q u e     --}}  
