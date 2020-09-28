@@ -23,22 +23,43 @@
             </h3>
              
                <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_quien_es',Session::get('lenguaje'))}}" >Sobre Uruwild</a>
+                 <a class="contiene-link-linea" href="{{route('get_pagina_quien_es',Session::get('lenguaje'))}}" >
+
+                  Sobre Uruwil
+                  {{--*/ $Key  = 'texto sobre uruwild' /*--}}
+                  @include('paginas.paginas_personalizadas.partials.textos')  
+
+                 </a>
                </p >
                <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_tours',Session::get('lenguaje'))}}" >Tours de pesca</a>
+                 <a class="contiene-link-linea" href="{{route('get_pagina_tours',Session::get('lenguaje'))}}" >
+                    {{--*/ $Key  = 'nav tours de pesca' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos') 
+                 </a>
                </p >
                <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_cabañas',Session::get('lenguaje'))}}" >Estancias y Lodges</a>
+                 <a class="contiene-link-linea" href="{{route('get_pagina_cabañas',Session::get('lenguaje'))}}" >
+                     {{--*/ $Key  = 'nav  estancias y lodges' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos')
+                 </a>
                </p >
                <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_turismo_rural',Session::get('lenguaje'))}}" >Turismo rural</a>
+                 <a class="contiene-link-linea" href="{{route('get_pagina_turismo_rural',Session::get('lenguaje'))}}" >
+                    {{--*/ $Key  = 'nav turismo rural' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos')
+                 </a>
                </p >
                <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_productos',Session::get('lenguaje'))}}" >Ecoturismo</a>
+                 <a class="contiene-link-linea" href="{{route('get_pagina_productos',Session::get('lenguaje'))}}" >
+                    {{--*/ $Key  = 'nav ecoturismo' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos')
+                 </a>
                </p >
                <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_contacto')}}" >Contacto</a>
+                 <a class="contiene-link-linea" href="{{route('get_pagina_contacto')}}" >
+                    {{--*/ $Key  = 'nav contacto' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos')
+                 </a>
                </p >   
 
                @if(Auth::guest())
