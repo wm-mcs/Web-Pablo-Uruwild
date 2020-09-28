@@ -21,9 +21,9 @@ class TextoRepo extends BaseRepo
                 ->where('borrado','no')
                 ->active()
                 ->where(function($q) use ($pagina)
-                   {       
-                    $generales = 'generales';           
-                    $q->where('pagina', "LIKE","%".trim($generales)."%"); 
+                   {    
+                    $q->where('pagina', "LIKE","%".trim('footer')."%"); 
+                    $q->orWhere('pagina', "LIKE","%".trim('header')."%");                     
                     $q->orWhere('pagina', "LIKE","%".trim($pagina)."%");
                  })->get();
   }               
