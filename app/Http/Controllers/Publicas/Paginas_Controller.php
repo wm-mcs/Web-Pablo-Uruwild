@@ -14,6 +14,7 @@ use App\Repositorios\PortadaDePaginaRepo;
 use App\Repositorios\CabañaRepo;
 use App\Repositorios\TeamRepo;
 use App\Helpers\HelpersSessionLenguaje;
+use App\Repositorios\TextoRepo;
 
 class Paginas_Controller extends Controller
 {
@@ -25,6 +26,7 @@ class Paginas_Controller extends Controller
     protected $PortadaDePaginaRepo;
     protected $CabañaRepo;
     protected $TeamRepo;
+    protected $TextoRepo;
 
     public function __construct(NoticiasRepo        $NoticiasRepo,
                                 EmpresaRepo         $EmpresaRepo,                                 
@@ -32,7 +34,8 @@ class Paginas_Controller extends Controller
                                 TourRepo            $TourRepo,
                                 PortadaDePaginaRepo $PortadaDePaginaRepo,
                                 CabañaRepo          $CabañaRepo,
-                                TeamRepo            $TeamRepo   )
+                                TeamRepo            $TeamRepo,
+                                TextoRepo           $TextoRepo   )
     {
         
         $this->NoticiasRepo        = $NoticiasRepo;
@@ -42,6 +45,7 @@ class Paginas_Controller extends Controller
         $this->PortadaDePaginaRepo = $PortadaDePaginaRepo; 
         $this->CabañaRepo          = $CabañaRepo;
         $this->TeamRepo            = $TeamRepo;
+        $this->TextoRepo           = $TextoRepo;
     }
 
     // C o n t a c t o
@@ -55,9 +59,11 @@ class Paginas_Controller extends Controller
 
         $Portada        = Cache::remember('PortadaContacto', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','contacto');
-                          });        
+                          });   
 
-        return view('paginas.paginas_personalizadas.laura_contacto', compact('Empresa','Teams','Portada'));
+        $Textos        = $this->TextoRepo->getTextosDeSeccion('contacto');     
+
+        return view('paginas.paginas_personalizadas.laura_contacto', compact('Empresa','Teams','Portada','Textos');
     }
 
     // S e r v i c i o s
@@ -82,9 +88,9 @@ class Paginas_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','sobre_uruwild');
                           });    
 
-
+        $Textos        = $this->TextoRepo->getTextosDeSeccion('quien_es');
         
-        return view('paginas.paginas_personalizadas.laura_quien_es', compact('Empresa','Portada','Teams'));
+        return view('paginas.paginas_personalizadas.laura_quien_es', compact('Empresa','Portada','Teams','Textos'));
     }
     
     // B l o g   I n d i v i d u a l 
@@ -103,8 +109,9 @@ class Paginas_Controller extends Controller
        
         $Cabaña              = $this->CabañaRepo->find($id);
         $Empresa             = $this->EmpresaRepo->getEmpresaDatos();     
-        
-        return view('paginas.cabañas.cabaña_individual',compact('Cabaña','Empresa'));
+        $Textos              = $this->TextoRepo->getTextosDeSeccion('cabaña_individual');
+
+        return view('paginas.cabañas.cabaña_individual',compact('Cabaña','Empresa','Textos'));
     }
 
     // C i r c u i t o 
@@ -113,8 +120,9 @@ class Paginas_Controller extends Controller
         $Tour                 = $this->TourRepo->find($id);
         $Empresa              = $this->EmpresaRepo->getEmpresaDatos();        
         $blogs                = '';
+        $Textos              = $this->TextoRepo->getTextosDeSeccion('tour_individual');
 
-        return view('paginas.tours.tour_individual',compact('Tour','Empresa','blogs'));
+        return view('paginas.tours.tour_individual',compact('Tour','Empresa','blogs','Textos'));
     }
 
 
@@ -130,13 +138,14 @@ class Paginas_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','tours');
                           });   
 
+        $Textos              = $this->TextoRepo->getTextosDeSeccion('listado_tours');
 
         if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($Lenguaje,'get_pagina_tours'))
         {          
           return redirect()->route('get_pagina_tours',HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null));
         }
 
-        return view('paginas.tours.tours_pagina',compact('Tours','Empresa','Portada'));
+        return view('paginas.tours.tours_pagina',compact('Tours','Empresa','Portada','Textos'));
     }
 
     // P á g i n a   d e   c a b a ñ a s
@@ -151,12 +160,14 @@ class Paginas_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','cabañas');
                           }); 
 
+        $Textos         = $this->TextoRepo->getTextosDeSeccion('listado_cabañas');
+
         if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($Lenguaje,'get_pagina_cabañas'))
         {          
           return redirect()->route('get_pagina_cabañas',HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null));
         }
 
-        return view('paginas.cabañas.cabañas_pagina',compact('Cabañas','Empresa','Portada'));
+        return view('paginas.cabañas.cabañas_pagina',compact('Cabañas','Empresa','Portada','Textos'));
     }
 
     
@@ -173,6 +184,7 @@ class Paginas_Controller extends Controller
         $Portada        = Cache::remember('PortadaProductos', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','productos');
                           }); 
+        $Textos         = $this->TextoRepo->getTextosDeSeccion('listado_productos');
 
         if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($Lenguaje,'get_pagina_productos'))
         {          
@@ -180,7 +192,7 @@ class Paginas_Controller extends Controller
         }
 
 
-        return view('paginas.prodcutos_especiales.productos_pagina',compact('Productos','Empresa','Portada'));
+        return view('paginas.prodcutos_especiales.productos_pagina',compact('Productos','Empresa','Portada','Textos'));
     }
 
     // P á g i n a   d e   T u r i s m o   R u r a l  
@@ -196,14 +208,16 @@ class Paginas_Controller extends Controller
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();  
         $Portada        = Cache::remember('PortadaTurimoRural', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','turismo_rural');
-                          }); 
+                          });
+
+        $Textos         = $this->TextoRepo->getTextosDeSeccion('listado_turismo_rural'); 
 
         if(!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($Lenguaje,'get_pagina_turismo_rural'))
         {          
           return redirect()->route('get_pagina_turismo_rural',HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null));
         }
 
-        return view('paginas.turismo_rural.turismo_rural_pagina',compact('Turismo_rural','Empresa','Portada','Cabañas'));
+        return view('paginas.turismo_rural.turismo_rural_pagina',compact('Turismo_rural','Empresa','Portada','Cabañas','Textos'));
     }
 
 
