@@ -31,15 +31,41 @@
 
                 <li>
                   <a href="{{route('get_home_con_lenguaje', Session::get('lenguaje'))}}" class="text-uppercase" >
-                    Inicio
+                    {{--*/ $Key  = 'nav inicio' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos') 
                   </a>
                 </li>
-                <li><a href="{{route('get_pagina_tours', Session::get('lenguaje'))}}" class="text-uppercase" >Tours de pesca</a></li> 
-                <li><a href="{{route('get_pagina_productos',Session::get('lenguaje'))}}" class="text-uppercase" >ecoturismo</a></li>
-                <li><a href="{{route('get_pagina_turismo_rural',Session::get('lenguaje'))}}" class="text-uppercase" >turismo rural</a></li>
+                <li>
+                  <a href="{{route('get_pagina_tours', Session::get('lenguaje'))}}" class="text-uppercase" >
+                    {{--*/ $Key  = 'nav tours de pesca' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos') 
+                  </a>
+                </li> 
+                <li>
+                  <a href="{{route('get_pagina_productos',Session::get('lenguaje'))}}" class="text-uppercase" >
+                    {{--*/ $Key  = 'nav ecoturismo' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos')
+                  </a>
+                </li>
+                <li>
+                  <a href="{{route('get_pagina_turismo_rural',Session::get('lenguaje'))}}" class="text-uppercase" >
+                    {{--*/ $Key  = 'nav turismo rural' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos')
+                  </a>
+                </li>
                 {{-- <li><a href="{{route('get_pagina_cabañas')}}" class="text-uppercase">Estancias</a></li> --}}
-                <li><a href="{{route('get_pagina_quien_es',Session::get('lenguaje'))}}" class="text-uppercase" >Sobre Uruwild</a></li>
-                <li><a href="{{route('get_pagina_contacto')}}" class="text-uppercase" >Contacto</a></li>
+                <li>
+                  <a href="{{route('get_pagina_quien_es',Session::get('lenguaje'))}}" class="text-uppercase" >
+                    {{--*/ $Key  = 'nav sobre' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos') 
+                  </a>
+                </li>
+                <li>
+                  <a href="{{route('get_pagina_contacto')}}" class="text-uppercase" >
+                    {{--*/ $Key  = 'nav contacto' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos')
+                  </a>
+                </li>
                
               </ul>
             </nav>
