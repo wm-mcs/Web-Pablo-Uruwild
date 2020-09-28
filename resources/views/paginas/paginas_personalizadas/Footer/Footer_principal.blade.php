@@ -13,7 +13,10 @@
 
           {{-- S e g u n d o   B l o q u e     --}}  
           <div class="col-md-3 p-4">
-            <h3 class="footer-titulo-columna mb-5">Rutas de interés</h3>
+            <h3 class="footer-titulo-columna mb-5">              
+              {{--*/ $Key  = 'columna titulo rutas de interes' /*--}}
+              @include('paginas.paginas_personalizadas.partials.textos') 
+            </h3>
              
                <p class="contiene-p-linea">
                  <a class="contiene-link-linea" href="{{route('get_pagina_quien_es',Session::get('lenguaje'))}}" >Sobre Uruwild</a>

@@ -17,7 +17,7 @@
           </a>                
         </h3>
         <p class="color-text-gris mb-2 ">
-         {{$Entidad->página}}
+         {{$Entidad->pagina}}
         </p>
         <p class="">
           <a href="{{$Route}}"> Editar  <i class="fas fa-chevron-right"></i></a>
