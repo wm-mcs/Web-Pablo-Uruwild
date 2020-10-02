@@ -12,7 +12,7 @@ class texto_manager extends ManagerBase
   public function getRules()
   {
     $rules = [
-      'pagina'  => 'required',
+      
       'texto'   => 'required'
              ];
 
