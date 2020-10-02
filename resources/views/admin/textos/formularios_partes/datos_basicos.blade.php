@@ -1,3 +1,4 @@
+@if(Auth::user()->role == 'adminMcos522')
 <div class="formulario-label-fiel">
   {!! Form::label('pagina', 'Página', array('class' => 'formulario-label ')) !!}
   {!! Form::select('pagina', config('paginas') , null, ['class' => 'formulario-field'] )     !!}   
@@ -8,6 +9,7 @@
   {!! Form::label('name', 'Nombre key', array('class' => 'formulario-label ')) !!}
   {!! Form::text('name', null ,['class' => 'formulario-field']) !!}
 </div>
+@endif
 
 <div class="formulario-label-fiel">
   {!! Form::label('texto', 'Texto', array('class' => 'formulario-label ')) !!}
