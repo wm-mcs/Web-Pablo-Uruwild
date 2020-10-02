@@ -140,8 +140,9 @@
   <div class="site-section background-gris-1"> 
     <div class="container">
       <div class="row">
-        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
-          Estancias y Lodges
+        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left"> 
+          {{--*/ $Key  = 'titulo seccion estancias y lodges' /*--}}
+          @include('paginas.paginas_personalizadas.partials.textos') 
         </div>
 
       </div>
@@ -154,7 +155,12 @@
         @endforeach
 
         <p class="col-12 col-lg-10   text-center mt-5 mx-auto">
-         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_cabañas')}}">Explorar todas las estancias <i class="fas fa-chevron-right"></i></a> 
+         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_cabañas')}}">
+           {{--*/ $Key  = 'boton seccion estancias y lodges' /*--}}
+           @include('paginas.paginas_personalizadas.partials.textos')  
+
+           <i class="fas fa-chevron-right"></i>
+         </a> 
         </p> 
       </div>      
     </div>
@@ -164,7 +170,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center">
-          El equipo Uruwild <i class="fas fa-hand-point-down"></i>
+           {{--*/ $Key  = 'titulo seccion el equipo de uruwild' /*--}}
+           @include('paginas.paginas_personalizadas.partials.textos')  
+
+          <i class="fas fa-hand-point-down"></i>
         </div>
 
       </div>
