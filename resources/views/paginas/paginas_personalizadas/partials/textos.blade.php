@@ -1,6 +1,14 @@
 
   @if($Textos->count() > 0)  
-    @if(isset($Textos->where('name',$Key)->first()->name_formateado_con_lenguaje))
-      {{$Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje}}
+
+    {{--*/ $Entidad_texto  = $Textos->where('name',$Key)->first() /*--}}
+    @if(isset($Entidad_texto->name_formateado_con_lenguaje))
+      {{$Entidad_texto->texto_formateado_con_lenguaje}} 
+
+       @if(!Auth::guest() )
+        @if( Auth::user()->first_name = 'Pablo' || Auth::user()->first_name = 'Mauricio')
+            <a href="{{$Entidad_texto->route_admin}}"><i class="fas fa-edit"></i></a>
+        @endif
+       @endif
     @endif
   @endif
