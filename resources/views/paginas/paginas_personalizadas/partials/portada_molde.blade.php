@@ -11,31 +11,52 @@
 
               {{--*/ $Entidad  = $Portada /*--}}
               @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
-              
+
               </h1>
               @if($Portada->sub_titulo != '')
               <h2 class="sub-titulos-class text-white no-mostrar-en-mobil mb-3">{{$Portada->sub_titulo_formateado_con_lenguaje}}
+
+                {{--*/ $Entidad  = $Portada /*--}}
+                @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
               </h2>
               @endif
               @if($Portada->parrafo != '')
-              <p class="text-white no-mostrar-en-mobil mb-3">{{$Portada->parrafo_formateado_con_lenguaje}}
+              <p class="text-white no-mostrar-en-mobil mb-3">{{$Portada->parrafo_formateado_con_lenguaje}} 
+                {{--*/ $Entidad  = $Portada /*--}}
+                @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
               </p>
               @endif 
             @else
-              <h2  class="titulos-class text-white font-secondary mb-3">{{$Portada->titulo_formateado_con_lenguaje}}</h2>
+              <h2  class="titulos-class text-white font-secondary mb-3">{{$Portada->titulo_formateado_con_lenguaje}}
+
+                {{--*/ $Entidad  = $Portada /*--}}
+                @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
+              </h2>
               @if($Portada->sub_titulo != '')
               <h3 class="sub-titulos-class text-white no-mostrar-en-mobil mb-3">{{$Portada->sub_titulo_formateado_con_lenguaje}}
+                {{--*/ $Entidad  = $Portada /*--}}
+                @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
               </h3>
               @endif
               @if($Portada->parrafo != '')
               <p class="text-white no-mostrar-en-mobil mb-3">{{$Portada->parrafo_formateado_con_lenguaje}}
+                {{--*/ $Entidad  = $Portada /*--}}
+                @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
               </p>
               @endif 
             @endif           
             @if($Route == '')
-               <p class="mt-3"><a href="{{$Portada->link_llamado_a_la_accion}}" class="scroll_to Boton-Fuente-Chico Boton-Blanco"> {{$Portada->llamado_a_la_accion_formateado_con_lenguaje}} <i class="fas fa-chevron-right"></i> </a></p>
+               <p class="mt-3"><a href="{{$Portada->link_llamado_a_la_accion}}" class="scroll_to Boton-Fuente-Chico Boton-Blanco"> {{$Portada->llamado_a_la_accion_formateado_con_lenguaje}} <i class="fas fa-chevron-right"></i> </a>
+
+                {{--*/ $Entidad  = $Portada /*--}}
+                @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
+               </p>
             @else            
-              <p class="mt-3"><a href="{{$Route}}" class=" Boton-Fuente-Chico Boton-Blanco"> {{$Portada->llamado_a_la_accion_formateado_con_lenguaje}} <i class="fas fa-chevron-right"></i> </a></p>
+              <p class="mt-3"><a href="{{$Route}}" class=" Boton-Fuente-Chico Boton-Blanco"> {{$Portada->llamado_a_la_accion_formateado_con_lenguaje}} <i class="fas fa-chevron-right"></i> </a>
+
+                {{--*/ $Entidad  = $Portada /*--}}
+                @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
+              </p>
             @endif  
             
           </div>
