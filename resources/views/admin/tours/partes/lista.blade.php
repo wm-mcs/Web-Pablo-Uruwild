@@ -38,8 +38,8 @@
         </a> 
                 
           <div class="tour-contiene-datos-listado">
-            <div class="sub-titulos-class text-bold color-text-white mb-2">
-              <a href="{{$Route}}"> 
+            <div class="sub-titulos-class text-bold  mb-2">
+              <a class="color-text-white" href="{{$Route}}"> 
               {{$Entidad->name_formateado_con_lenguaje}} 
               </a>
               @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
