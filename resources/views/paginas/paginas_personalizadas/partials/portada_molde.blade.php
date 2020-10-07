@@ -7,7 +7,12 @@
         <div class="row @if($Portada->posicion == 'left') @elseif($Portada->posicion == 'center') justify-content-center text-center @else justify-content-end text-right @endif">
           <div class="col-lg-8 " style="max-width: 550px;">
             @if(isset($EsPortada) && $EsPortada == true) 
-              <h1  class="titulos-class text-white font-secondary mb-3">{{$Portada->titulo_formateado_con_lenguaje}}</h1>
+              <h1  class="titulos-class text-white font-secondary mb-3">{{$Portada->titulo_formateado_con_lenguaje}}
+
+              {{--*/ $Entidad  = $Portada /*--}}
+              @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
+              
+              </h1>
               @if($Portada->sub_titulo != '')
               <h2 class="sub-titulos-class text-white no-mostrar-en-mobil mb-3">{{$Portada->sub_titulo_formateado_con_lenguaje}}
               </h2>
