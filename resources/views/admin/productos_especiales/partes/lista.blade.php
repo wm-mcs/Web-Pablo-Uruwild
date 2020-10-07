@@ -22,8 +22,9 @@
         <p>
           <a href="{{$Route}}"> 
 
-           
-            {{$Entidad->leer_mas_text}}
+            {{--*/ $Key  = 'leer mas' /*--}}
+            @include('paginas.paginas_personalizadas.partials.textos')  
+
             <i class="fas fa-chevron-right"></i></a>
         </p>                
       </div>
