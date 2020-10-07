@@ -20,7 +20,7 @@
           </a>                
         </h3>
         <p class="color-text-gris mb-2 ">
-         {{$Entidad->descripcion_breve}}
+         {{$Entidad->descripcion_breve}} 
         </p>
         <p class="">
           <a href="{{$Route}}"> Editar  <i class="fas fa-chevron-right"></i></a>
@@ -40,7 +40,9 @@
           <h3 class="sub-titulos-class   mb-2">
             <a href="{{$Route}}" class="font-primary color-text-white">
              {{$Entidad->name}}
-            </a>                
+            </a>   
+            @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
+             
           </h3>
           <p class="color-text-white mb-2 ">
            {{$Entidad->descripcion_breve}}

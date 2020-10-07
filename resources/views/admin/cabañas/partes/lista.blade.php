@@ -37,7 +37,8 @@
         <h3 class="sub-titulos-class   mb-2">
           <a href="{{$Route}}" class="font-primary text-color-secondary">
            {{$Entidad->name_formateado_con_lenguaje}}
-          </a>                
+          </a>     
+          @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')           
         </h3>
         <p class="color-text-gris mb-2 ">
          {{$Entidad->descripcion_breve_formateado_con_lenguaje}}

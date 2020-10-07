@@ -141,7 +141,7 @@
 
            {{--*/ $Key  = 'titulo seccion listado de tours' /*--}}
            @include('paginas.paginas_personalizadas.partials.textos') 
-          . 
+              . 
         </div>
       </div>
       <div class="row justify-content-lg-center">

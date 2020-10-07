@@ -14,10 +14,10 @@
 
               </h1>
               @if($Portada->sub_titulo != '')
-              <h2 class="sub-titulos-class text-white no-mostrar-en-mobil mb-3">{{$Portada->sub_titulo_formateado_con_lenguaje}}
+                <h2 class="sub-titulos-class text-white no-mostrar-en-mobil mb-3">{{$Portada->sub_titulo_formateado_con_lenguaje}}
 
                 {{--*/ $Entidad  = $Portada /*--}}
-                @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
+                @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')   
               </h2>
               @endif
               @if($Portada->parrafo != '')

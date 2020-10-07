@@ -42,7 +42,7 @@
               <a class="color-text-white" href="{{$Route}}"> 
               {{$Entidad->name_formateado_con_lenguaje}} 
               </a>
-              @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
+                @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
             </div> 
             
              <div class="parrafo-class color-text-white mb-1"> 
