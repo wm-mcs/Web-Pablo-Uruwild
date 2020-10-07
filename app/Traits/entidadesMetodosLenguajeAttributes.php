@@ -60,6 +60,25 @@ trait entidadesMetodosLenguajeAttributes{
       return   $Texto ;
     }
 
+    public function getLeerMasTextAttribute()
+    {
+      $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
+      if($Lenguaje == 'ES')
+      {
+        $Texto = 'Leer más';
+      }
+      elseif($Lenguaje == 'EN')
+      {
+        $Texto = 'Read more';
+      }
+      else
+      {
+        $Texto = 'Leer más';
+      }
+
+      return   $Texto ;
+    }
+
      /**
      * Me da el nombre ya teniendo en cuenta el lenguaje que está en la sesión.
      */
