@@ -36,10 +36,13 @@
         <a href="{{$Route}}"> 
          <img  data-src="{{$Entidad->url_img_foto_principal}}" alt="{{$Entidad->descripcion_breve_formateado_con_lenguaje}}" class="tour-img-listado">
         </a> 
-        <a href="{{$Route}}">         
+                
           <div class="tour-contiene-datos-listado">
             <div class="sub-titulos-class text-bold color-text-white mb-2">
-             {{$Entidad->name_formateado_con_lenguaje}} 
+              <a href="{{$Route}}"> 
+              {{$Entidad->name_formateado_con_lenguaje}} 
+              </a>
+              @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
             </div> 
             
              <div class="parrafo-class color-text-white mb-1"> 
@@ -55,7 +58,7 @@
             </a>
            </p>
           </div>
-        </a>
+       
     </div>
 </div>
 @endif
