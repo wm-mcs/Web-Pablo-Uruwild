@@ -106,15 +106,17 @@
   @if(!Auth::guest())
   @if(Auth::user()->first_name = 'Mauricio')
 
-
+ 
   
   @endif
   @endif
   <div class="site-section background-gris-0" > 
     <div class="container">
       <div class="row p-3 p-lg-5">
-        <p class="col-12  text-center">
-           <b>Encontrá actividades ecoturisticas unicas. vení a descubrir los maravillosos encantos naturales que te ofrece el uruguay como más te guste. <i class="fas fa-hand-point-down"></i> 
+        <p class="col-12  text-center">          
+            {{--*/ $Key  = 'bienvenida pagina ecoturismo' /*--}}
+            @include('paginas.paginas_personalizadas.partials.textos') 
+            <i class="fas fa-hand-point-down"></i> 
         </p>
       </div>     
     </div>
@@ -127,7 +129,8 @@
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
-          Propuestas ecoturísticas. Veni a la naturaleza
+          {{--*/ $Key  = 'titulo seccion listado de productos' /*--}}
+          @include('paginas.paginas_personalizadas.partials.textos') 
         </div>
 
       </div>

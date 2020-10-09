@@ -114,11 +114,14 @@
 
  <div class="site-section background-gris-4" id="sobre">
     <div class="container">
-      <h2 class="mb-4 sub-titulos-class text-center text-color-primary text-bold">
-        HAS LLEGADO HASTA AQUÍ POR ALGO.
+      <h2 class="mb-4 sub-titulos-class text-center text-color-primary text-bold">        
+        {{--*/ $Key  = 'sobre uruwild first title' /*--}}
+        @include('paginas.paginas_personalizadas.partials.textos') 
       </h2> 
-      <p class="text-center text-color-primary m-0">        
-       ¿Pesca profesional? ¿Actividades al aire libre? ¿Fin de semana de paz en el medio del campo?.
+      <p class="text-center text-color-primary m-0">  
+        {{--*/ $Key  = 'sobre uruwild empatia' /*--}}
+        @include('paginas.paginas_personalizadas.partials.textos')       
+      
       </p>   
       
     </div>
@@ -130,8 +133,17 @@
       <div class="container">
         <div class="row align-items-center border border-primary p-5 mb-4">
 
-          <h2 class="col-12 titulos-class  text-center text-color-secondary mb-2 font-primary">¿Qué es Uruwild?</h2>
-          <h3 class="col-12 text-color-primary text-bold sub-titulos-class text-center text-uppercase mb-5">Tours de pesca. Turismo rural. Actividades al aire libre.</h3>
+          <h2 class="col-12 titulos-class  text-center text-color-secondary mb-2 font-primary">
+            {{--*/ $Key  = 'sobre uruwild titulo contenido' /*--}}
+            @include('paginas.paginas_personalizadas.partials.textos')   
+          </h2>
+          <h3 class="col-12 text-color-primary text-bold sub-titulos-class text-center text-uppercase mb-5">
+
+            {{--*/ $Key  = 'sobre uruwild sub titulo contenido' /*--}}
+            @include('paginas.paginas_personalizadas.partials.textos')  
+            
+
+          </h3>
          
 
           <div class="row align-items-center ">
