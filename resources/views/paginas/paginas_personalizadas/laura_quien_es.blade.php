@@ -147,24 +147,12 @@
          
 
           <div class="row align-items-center ">
-           <div class="col-lg-6 order-2 order-lg-2 flex-column p-4">          
+           <div class="col-lg-6 order-2 order-lg-2 flex-column p-4">         
               
-            <p class="mb-0 text-color-secondary"> <b>¿Qué es Uruwild?</b> </p>
-            <p class="parrafo-class mb3">
-             <strong>Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay</strong> . Somos un equipo joven multidisciplinario, capacitados y formados en diversas áreas, y tenemos como objetivo común acercar experiencias auténticas para vivir y disfrutar de la magia y la naturaleza del Uruguay.             
-            </p>
+           
 
-            <p class="mb-0 text-color-secondary"> <b>Nuestra misión:</b> </p>
-            <p class="parrafo-class mb-3">
-            Nuestro objetivo es acercar diferentes propuestas, productos y actividades al aire libre para invitar a conocer, revalorizar y redescubrir el Uruguay de una forma diferente. Seleccionamos y acercamos un abanico de propuestas al aire libre contemplando particularmente siempre el valor y las aptitudes naturales y paisajísticas de cada lugar.
-             
-            </p>
-
-            <p class="mb-0 text-color-secondary"> <b>Nuestra visión</b> </p>
-            <p class="parrafo-class m-0">
-             Nos apasiona profundamente la naturaleza y cada una de sus manifestaciones. Creemos que el vínculo armonioso y respetuoso entre el hombre y la naturaleza nos convierte en mejores personas. Interpretamos a la naturaleza es un gran escenario que nos invita a descubrirla y a descubrirnos y estamos convencidos que este acercamiento genera un efecto saludable y una actitud de respeto hacia la vida; indispensable para un futuro sostenible y sensible ante la preservación.
-             
-            </p>
+             {{--*/ $Key  = 'sobre uruwild contenido' /*--}}
+             @include('paginas.paginas_personalizadas.partials.textos')  
            
            
                 
@@ -178,8 +166,13 @@
           </div>         
          
         </div>
-         <a href="{{route('get_pagina_tours')}}" class="Boton-Fuente-Chica Boton-Primario-Relleno "> Explorar los tours de pesca <i class="fas fa-fish"></i>
-             </a>
+         <a href="{{route('get_pagina_tours')}}" class="Boton-Fuente-Chica Boton-Primario-Relleno "> 
+
+           {{--*/ $Key  = 'sobre uruwild llamado a la accion' /*--}}
+           @include('paginas.paginas_personalizadas.partials.textos')  
+           <i class="fas fa-fish"></i>
+            
+         </a>
       </div>
 </div>
 

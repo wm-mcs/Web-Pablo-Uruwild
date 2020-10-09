@@ -71,9 +71,12 @@ class HelpersGenerales
 
 
         //text bold  
+        $cadena = str_replace('(COLOR_SECONDARY)' ,'<span class="text-color-secondary">', $cadena);  
+        $cadena = str_replace('(/COLOR_SECONDARY)' ,'</span>', $cadena);
+
         $cadena = str_replace('(B)' ,'<strong>', $cadena);  
         $cadena = str_replace('(/B)' ,'</strong>', $cadena);
-
+        
         //titulos
         $cadena = str_replace('(T)' ,'<h2 class="post-individual-section-titulo">', $cadena);
         $cadena = str_replace('(/T)' ,'</h2>', $cadena);

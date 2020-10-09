@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Traits\entidadesMetodosComunes;
 use App\Traits\entidadesMetodosLenguajeAttributes;
 use App\Helpers\HelpersSessionLenguaje;
+use App\Helpers\HelpersGenerales;
 
 class Texto extends Model
 {
@@ -32,7 +33,9 @@ class Texto extends Model
     {
       $Lenguaje = HelpersSessionLenguaje::getAndPutSessionLenguaje(null,null);
 
-      return $this->getPropiedadValorSegunLenguaje($Lenguaje, 'texto');  
+      $texto = $this->getPropiedadValorSegunLenguaje($Lenguaje, 'texto');  
+
+      return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($texto);
     }
 
    
