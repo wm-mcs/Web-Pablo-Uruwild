@@ -30,7 +30,7 @@ trait entidadesMetodosLenguajeAttributes{
 
       if($FormateoTexto)
       {
-        return ucfirst(strtolower($Valor));
+        return $Valor;
       }
 
       return $Valor;      
