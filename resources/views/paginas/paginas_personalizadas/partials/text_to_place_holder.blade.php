@@ -1,9 +1,11 @@
   @if($Textos->count() > 0)  
 
-    {{--*/ $Entidad_texto  = $Textos->where('name',$Key)->first() /*--}}
+    {{--*/ $Entidad_texto  = $Textos->where('name',$Key)->first(); /*--}}
 
-    {{dd($Entidad_texto)}}
-    {{--*/ $Texto          =  $Entidad_texto->texto_formateado_con_lenguaje /*--}}  
+    
+    {{--*/ $Texto          =  $Entidad_texto->texto_formateado_con_lenguaje; /*--}}  
+
+    {{dd($Texto)}}
     @if(isset($Entidad_texto->name_formateado_con_lenguaje))
        
        
