@@ -56,12 +56,18 @@
         <p class="color-text-gris m-0">@include('paginas.paginas_personalizadas.partials.textos')  </p>
       </div>
       <div class="d-flex  align-items-center  col-12 mb-2">
-        <input class="m-0 mr-4" type="checkbox" name="" value="Quiero explorar los rincones naturales de Uruguay" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Quiero explorar los rincones naturales de Uruguay</p>
+        {{--*/ $Key  = 'formulario contacto interes explorar uruguay' /*--}}
+        {{--*/ $Texto  = $Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje /*--}}
+
+        <input class="m-0 mr-4" type="checkbox" name="" value="{{$Texto}}" v-model="data_mensaje.que_necesitas">
+        <p class="color-text-gris m-0">@include('paginas.paginas_personalizadas.partials.textos')</p>
       </div>
        <div class="d-flex  align-items-center  col-12 mb-2">
+        {{--*/ $Key  = 'formulario contacto interes  desconectarme' /*--}}
+        {{--*/ $Texto  = $Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje /*--}}
+
         <input class="m-0 mr-4" type="checkbox" name="" value="Quiero desconectarme de todo" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0"> Quiero desconectarme de todo </p>
+        <p class="color-text-gris m-0">@include('paginas.paginas_personalizadas.partials.textos') </p>
       </div>    
     </div>
 
@@ -79,7 +85,9 @@
           <div class="cssload-tube-tunnel" :class="classCargadorColor"></div>
         </div>
         <div v-else v-on:click="enviarMensaje" class="Boton-Fuente-Chica Boton-Secondary-Sin-Relleno" value="Enviar mensaje">
-          Enviar solicitud de contacto <i class="fas fa-angle-double-right"></i>
+          {{--*/ $Key  = 'formulario contacto boton de pagina de contacto' /*--}}
+          @include('paginas.paginas_personalizadas.partials.textos')
+         <i class="fas fa-angle-double-right"></i>
         </div>
       </div> 
       <div>
