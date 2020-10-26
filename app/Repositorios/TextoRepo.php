@@ -23,7 +23,8 @@ class TextoRepo extends BaseRepo
                 ->where(function($q) use ($pagina)
                    {    
                     $q->where('pagina', "LIKE","%".trim('footer')."%"); 
-                    $q->orWhere('pagina', "LIKE","%".trim('header')."%");   
+                    $q->orWhere('pagina', "LIKE","%".trim('header')."%");  
+                    $q->orWhere('pagina', "LIKE","%".trim('contacto')."%");                       
                     $q->orWhere('pagina', "LIKE","%".trim('nav')."%");                    
                     $q->orWhere('pagina', "LIKE","%".trim($pagina)."%");
                  })->get();

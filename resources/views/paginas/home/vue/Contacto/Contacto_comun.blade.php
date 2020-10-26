@@ -6,17 +6,23 @@
     <div class="row mb-4">
       
       <div class="form-group col-lg-6">
-        <input v-model="data_mensaje.name" type="text" class="input-text-class-secondary" placeholder="Nombre">
+        {{--*/ $Key  = 'formulario placeholder name' /*--}}
+        @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
+        <input v-model="data_mensaje.name" type="text" class="input-text-class-secondary" placeholder="{{$Texto}}">
       </div>
 
       <div class="form-group col-lg-6">
-        <input v-model="data_mensaje.email" type="email" class="input-text-class-secondary" placeholder="Email ">
+        {{--*/ $Key  = 'formulario placeholder email' /*--}}
+        @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
+        <input v-model="data_mensaje.email" type="email" class="input-text-class-secondary" placeholder="{{$Texto}} ">
       </div>
     </div>
 
      <div class="row mb-4">
       <div class="form-group col-12">
-      <input v-model="data_mensaje.pais" type="text" class="input-text-class-secondary" placeholder="¿De dónde eres? (País) ">
+        {{--*/ $Key  = 'formulario placeholder pais' /*--}}
+        @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
+        <input v-model="data_mensaje.pais" type="text" class="input-text-class-secondary" placeholder="¿De dónde eres? (País) ">
         
       </div>
     </div>
@@ -34,7 +40,8 @@
       <p class="col-12 text-bold -text-primary mb-4">¿Por qué nos contactás?</p>
 
       <div class="d-flex  align-items-center  col-12 mb-2">
-        <input class="m-0 mr-4" type="checkbox" name="" value="Una página web personal" v-model="data_mensaje.que_necesitas">
+
+        <input class="m-0 mr-4" type="checkbox" name="" value="Tengo interés en la pesca profesional" v-model="data_mensaje.que_necesitas">
         <p class="color-text-gris m-0">Tengo interés en la pesca profesional</p>
       </div>
       <div class="d-flex  align-items-center  col-12 mb-2">

@@ -32,27 +32,24 @@
 @stop
 
 @section('data-estructurada')
-
- <script type="application/ld+json">
-        {
-         "@context": "http://schema.org",
-         "@type": "BreadcrumbList",
-         "itemListElement":
-         [
-          {
-           "@type": "ListItem",
-           "position": 1,
-           "item":
-           {
-            "@id": "{{$UrlDeLaPagina}}",
-            "name": "{{$Titulo}}"
-            }
-          }          
-         ]
+  <script type="application/ld+json">
+    {
+     "@context": "http://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement":
+     [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "item":
+       {
+        "@id": "{{$UrlDeLaPagina}}",
+        "name": "{{$Titulo}}"
         }
-</script>
-
-
+      }          
+     ]
+    }
+  </script>
 @stop
 
 
@@ -108,8 +105,15 @@
                class="imagen-team-pagina-contacto-chica">
           </div>
           <div class="col-8 col-lg-5  mb-5">
-            <p class="text-center color-text-gris">              
-                Para contactarte rellenar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i>. Hay un equipo de ninjas de la atención comercial listos para atenderte.                             
+            <p class="text-center color-text-gris">  
+   
+                {{--*/ $Key  = 'pagina_contacto_como_contactar_1' /*--}}
+                @include('paginas.paginas_personalizadas.partials.textos') 
+                <i class="fas fa-hand-point-down"></i>
+
+                {{--*/ $Key  = 'pagina_contacto_como_contactar_2' /*--}}
+                @include('paginas.paginas_personalizadas.partials.textos').
+                                              
             </p>
           </div>
           <div class="col-lg-10  " id="formulario_contacto">
@@ -121,7 +125,9 @@
 
         <div class="col-12 mt-5 mb-3 p-2 p-lg-5">
           <p class="text-center mb-5 color-text-gris">
-             También nos puedes contactar a travéz de <i aria-hidden="true" class="fas fa-hand-point-down"></i> ...
+              {{--*/ $Key  = 'tambien puedes contactar' /*--}}
+              @include('paginas.paginas_personalizadas.partials.textos')
+              <i aria-hidden="true" class="fas fa-hand-point-down"></i> ...
           </p>   
           <p class="text-center color-text-gris mb-3" v-if="se_muestra(empresa.telefono)"  > 
              <i class="fas fa-phone-square mr-2 color-iconos-footer"></i>  @{{empresa.telefono}}

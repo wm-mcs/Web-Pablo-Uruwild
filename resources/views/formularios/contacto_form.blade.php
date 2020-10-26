@@ -20,8 +20,7 @@
                     {!! Form::label('name', 'Nombre') !!}
                     {!! Form::text('name', null ,['class'       => 'form-control',
                                                   'placeholder' => 'Escribe aquí tu nombre' ,
-                                                  'required'    => 'required',
-                                                  'data-error'  => 'Por favor, ingresa tu nombre.']) !!}
+                                                  'required'    => 'required']) !!}
                 <div class="help-block with-errors"></div>    
                 </div>
                 
@@ -32,8 +31,7 @@
                     {!! Form::label('name', 'Empresa') !!}
                     {!! Form::text('name', null ,['class'       => 'form-control',
                                                   'placeholder' => 'Escribe aquí el nombre de tu empresa' ,
-                                                  'required'    => 'required',
-                                                  'data-error'  => 'Por favor, ingresa el nombre de tu empresa.']) !!}
+                                                  'required'    => 'required']) !!}
                 <div class="help-block with-errors"></div>    
                 </div>
                 
@@ -44,10 +42,9 @@
             <div class="col-sm-6">
                 <div class="form-group">                    
                     {!! Form::label('email', 'Email') !!}
-                    {!! Form::text('email', null ,['class'       => 'form-control',
+                    {!! Form::text('email', null ,['class'      => 'form-control',
                                                   'placeholder' => 'Escribe aquí una dirección de correo' ,
-                                                  'required'    => 'required',
-                                                  'data-error'  => 'Por favor, ingresa una dirección de correo válida.']) !!}
+                                                  'required'    => 'required']) !!}
                 <div class="help-block with-errors"></div>   
                 </div>
                 
