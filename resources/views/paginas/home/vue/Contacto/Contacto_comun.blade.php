@@ -8,24 +8,27 @@
       <div class="form-group col-lg-6">
 
 
-        {{--*/ $Key  = 'formulario placeholder name' /*--}}
+        {{--*/ $Key    = 'formulario placeholder name' /*--}}
+        {{--*/ $Texto  = $Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje /*--}}
+
         @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
-        
-        <input v-model="data_mensaje.name" type="text" class="input-text-class-secondary" placeholder="{{$Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje}}">
+        <input v-model="data_mensaje.name" type="text" class="input-text-class-secondary" placeholder="{{$Texto}}">
       </div>
 
       <div class="form-group col-lg-6">
         {{--*/ $Key  = 'formulario placeholder email' /*--}}
+        {{--*/ $Texto  = $Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje /*--}}
         @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
-        <input v-model="data_mensaje.email" type="email" class="input-text-class-secondary" placeholder="{{$Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje}}">
+        <input v-model="data_mensaje.email" type="email" class="input-text-class-secondary" placeholder="{{$Texto}}">
       </div>
     </div>
 
      <div class="row mb-4">
       <div class="form-group col-12">
         {{--*/ $Key  = 'formulario placeholder pais' /*--}}
+        {{--*/ $Texto  = $Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje /*--}}
         @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
-        <input v-model="data_mensaje.pais" type="text" class="input-text-class-secondary" placeholder="{{$Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje}}">
+        <input v-model="data_mensaje.pais" type="text" class="input-text-class-secondary" placeholder="{{$Texto}}">
         
       </div>
     </div>
@@ -40,12 +43,17 @@
 
     <div class="row mb-4 justify-content-end">
 
-      <p class="col-12 text-bold -text-primary mb-4">¿Por qué nos contactás?</p>
+      <p class="col-12 text-bold -text-primary mb-4">
+       {{--*/ $Key  = 'pagina contacto por que' /*--}}
+       @include('paginas.paginas_personalizadas.partials.textos') 
+      </p>
 
       <div class="d-flex  align-items-center  col-12 mb-2">
+        {{--*/ $Key  = 'formulario contacto interes pesca' /*--}}
+        {{--*/ $Texto  = $Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje /*--}}
 
-        <input class="m-0 mr-4" type="checkbox" name="" value="Tengo interés en la pesca profesional" v-model="data_mensaje.que_necesitas">
-        <p class="color-text-gris m-0">Tengo interés en la pesca profesional</p>
+        <input class="m-0 mr-4" type="checkbox" name="" value="{{$Texto}}" v-model="data_mensaje.que_necesitas">
+        <p class="color-text-gris m-0">@include('paginas.paginas_personalizadas.partials.textos')  </p>
       </div>
       <div class="d-flex  align-items-center  col-12 mb-2">
         <input class="m-0 mr-4" type="checkbox" name="" value="Quiero explorar los rincones naturales de Uruguay" v-model="data_mensaje.que_necesitas">
