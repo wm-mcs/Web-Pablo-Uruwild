@@ -73,7 +73,10 @@
 
      <div class="row mb-4">
       <div class="form-group col-12">
-        <textarea v-model="data_mensaje.mensaje" class=" input-text-class-secondary" cols="30" rows="4"  placeholder="Escribe tu mensaje aquí"></textarea>
+        {{--*/ $Key  = 'formulario place holder mensaje' /*--}}
+        {{--*/ $Texto  = $Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje /*--}}
+         @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
+        <textarea v-model="data_mensaje.mensaje" class=" input-text-class-secondary" cols="30" rows="4"  placeholder="{{$Texto}}"></textarea>
       </div>
     </div>
     <div class="row">
