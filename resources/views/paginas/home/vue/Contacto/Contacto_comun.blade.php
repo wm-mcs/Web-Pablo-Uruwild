@@ -22,7 +22,7 @@
       <div class="form-group col-12">
         {{--*/ $Key  = 'formulario placeholder pais' /*--}}
         @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
-        <input v-model="data_mensaje.pais" type="text" class="input-text-class-secondary" placeholder="¿De dónde eres? (País) ">
+        <input v-model="data_mensaje.pais" type="text" class="input-text-class-secondary" placeholder="{{$Texto}}">
         
       </div>
     </div>
