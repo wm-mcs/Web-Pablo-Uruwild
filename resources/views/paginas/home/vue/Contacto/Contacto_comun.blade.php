@@ -7,9 +7,10 @@
       
       <div class="form-group col-lg-6">
 
-        {{dd($Textos)}}
+
         {{--*/ $Key  = 'formulario placeholder name' /*--}}
         @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
+        {{dd($Texto)}}
         <input v-model="data_mensaje.name" type="text" class="input-text-class-secondary" placeholder="{{$Texto}}">
       </div>
 
