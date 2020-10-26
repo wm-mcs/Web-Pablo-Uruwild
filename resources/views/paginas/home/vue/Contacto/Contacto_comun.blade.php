@@ -11,13 +11,13 @@
         {{--*/ $Key  = 'formulario placeholder name' /*--}}
         @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
         
-        <input v-model="data_mensaje.name" type="text" class="input-text-class-secondary" placeholder="{{$Texto}}">
+        <input v-model="data_mensaje.name" type="text" class="input-text-class-secondary" placeholder="{{$Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje}}">
       </div>
 
       <div class="form-group col-lg-6">
         {{--*/ $Key  = 'formulario placeholder email' /*--}}
         @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
-        <input v-model="data_mensaje.email" type="email" class="input-text-class-secondary" placeholder="{{$Texto}} ">
+        <input v-model="data_mensaje.email" type="email" class="input-text-class-secondary" placeholder="{{$Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje}}">
       </div>
     </div>
 
@@ -25,7 +25,7 @@
       <div class="form-group col-12">
         {{--*/ $Key  = 'formulario placeholder pais' /*--}}
         @include('paginas.paginas_personalizadas.partials.text_to_place_holder')
-        <input v-model="data_mensaje.pais" type="text" class="input-text-class-secondary" placeholder="{{$Texto}}">
+        <input v-model="data_mensaje.pais" type="text" class="input-text-class-secondary" placeholder="{{$Textos->where('name',$Key)->first()->texto_formateado_con_lenguaje}}">
         
       </div>
     </div>
