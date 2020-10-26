@@ -5,7 +5,7 @@
     
     {{--*/ $Texto          =  $Entidad_texto->texto_formateado_con_lenguaje; /*--}}  
 
-    {{dd($Texto)}}
+    
     @if(isset($Entidad_texto->name_formateado_con_lenguaje))
        
        
