@@ -108,7 +108,8 @@ abstract class BaseRepo
     {
 
     return $this->entidad
-                ->name($request->get('name'))                
+                ->name($request->get('name'))
+                ->where('borrado','no')                
                 ->orderBy('id','desc')
                 ->paginate($paginacion);
   
