@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     @include('paginas.comunes.css_y_fonts')   
+    @yield('cdn-css')
     @yield('favicon')
 
     @yield('og-tags')
@@ -52,7 +53,8 @@
 
   <script  src="{{url()}}{{ elixir('js/credo.js')}} " ></script>   
 
-
+  @yield('cdn-js')
+  @yield('acciones-js-manuales')
   @if(Auth::guest())
       <script  src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script> 
   @else
