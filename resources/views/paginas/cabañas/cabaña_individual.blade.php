@@ -156,7 +156,7 @@
     <div class="col-12 col-lg-9 ">
         <div class="row">
           @foreach($Cabaña->imagenes as $Imagen)
-            <a href="{{$Imagen->url_img}}" data-toggle="lightbox" data-gallery="example-gallery" class="col-6 col-lg-4">
+            <a href="{{$Imagen->url_img}}" data-toggle="lightbox" data-gallery="example-gallery" class="col-6 col-lg-4 p-2 mb-2">
                 <img src="{{$Imagen->url_img_chica}}" class="img-fluid">
             </a>
           @endforeach 
