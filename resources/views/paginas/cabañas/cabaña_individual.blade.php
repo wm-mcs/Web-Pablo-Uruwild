@@ -153,10 +153,10 @@
  <div class="site-section " id="contenido"> 
 
  <div class="row justify-content-center mb-5">
-    <div class="col-md-8 ">
+    <div class="col-12 col-lg-9 ">
         <div class="row">
           @foreach($Cabaña->imagenes as $Imagen)
-            <a href="{{$Imagen->url_img}}" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+            <a href="{{$Imagen->url_img}}" data-toggle="lightbox" data-gallery="example-gallery" class="col-6 col-lg-4">
                 <img src="{{$Imagen->url_img_chica}}" class="img-fluid">
             </a>
           @endforeach 
