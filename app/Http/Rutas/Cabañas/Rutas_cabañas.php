@@ -29,3 +29,10 @@ Route::patch('set_admin_cabañas_editar{id}',
   'uses'  => 'Admin_Empresa\Admin_Cabaña_Controllers@set_admin_cabañas_editar',
   'as'    => 'set_admin_cabañas_editar'
 ]);
+
+Route::patch('delet_cabaña{id}',
+[
+  'uses'  => 'Admin_Empresa\Admin_Cabaña_Controllers@delet_cabaña',
+  'as'    => 'delet_cabaña'
+]);
+

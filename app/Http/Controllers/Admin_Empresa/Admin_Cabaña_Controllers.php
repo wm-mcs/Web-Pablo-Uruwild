@@ -143,14 +143,14 @@ class Admin_Cabaña_Controllers extends Controller
           // G u a r d o   l a   i m a g e n   f í s i c a   e n   e l   s i s t e m a   d e   a r c h i v o s 
           $Nombre_de_la_imagen = HelpersGenerales::helper_convertir_cadena_para_url($Imagen->name).'-'.$Imagen->id;
 
-            // I m a g e n   g r a n d e 
-            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'.jpg');
+          // I m a g e n   g r a n d e 
+          $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen,'.jpg');
 
-            // I m a g e n   c h i c a 
-            $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',900);
+          // I m a g e n   c h i c a 
+          $this->ImagenRepo->setImagenEnStorage($file,$Imagen->path,$Nombre_de_la_imagen.'-chica','.jpg',900);
 
-            // A j u s t o   l o s   c a c h e 
-            $nombre_campo = 'cabaña_id';            
+          // A j u s t o   l o s   c a c h e 
+          $nombre_campo = 'cabaña_id';            
         }
 
         HelpersGenerales::helper_olvidar_este_cache('Imagenes'.$nombre_campo.$Entidad->id);
@@ -160,6 +160,16 @@ class Admin_Cabaña_Controllers extends Controller
       $this->olvidarCachesAsociadoAEstaEntidad();      
 
       return redirect()->back()->with('alert', 'Se editó con éxito. En breve se verás reflejado en la interfas de los usuarios'  );  
+  }
+
+
+  public function delet_cabaña($id)
+  {
+    $Cabaña = $this->CabañaRepo->find($id);
+
+    $this->CabañaRepo->setAtributoEspecifico($Cabaña,'borrado','si');
+
+    return redirect()->back()->with('alert', 'Se eliminó la cabaña ' . $Cabaña->name );  
   }
 
   
