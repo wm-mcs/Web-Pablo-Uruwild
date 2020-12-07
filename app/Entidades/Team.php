@@ -99,6 +99,14 @@ class Team extends Model
   }
 
 
+  public function getFirstNameAttribute()
+  {
+      $name = explode(" ", $this->name);
+    
+      return $name[0];
+  }
+
+
 
     
     
