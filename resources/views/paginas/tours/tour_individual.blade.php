@@ -140,34 +140,37 @@
   
     
  <div class="site-section " id="contenido"> 
-    <div class="container">  
-         {!! $Tour->contenido_render !!}
 
-         @if($Tour->precio != '' &&  $Tour->precio_redondeado != 0)
-         <h2 class="post-individual-section-titulo mt-5"> Precios </h2>
-         @endif
-         <p class="post-individual-p" >
-          @if($Tour->precio != '' &&  $Tour->precio_redondeado != 0) El paquete completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong> por persona. 
+      {{--*/ $Entidad         = $Tour /*--}}  
+      @include('paginas.partial.imagenes_galeria')
+
+
+      <div class="container">  
+          {!! $Tour->contenido_render !!}
+
+          @if($Tour->precio != '' &&  $Tour->precio_redondeado != 0)
+           <h2 class="post-individual-section-titulo mt-5"> Precios </h2>
           @endif
+          <p class="post-individual-p" >
+            @if($Tour->precio != '' &&  $Tour->precio_redondeado != 0) El paquete completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong> por persona. 
+            @endif
 
-          @if($Tour->muestra_fecha == 'si')
-           La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
-          @endif
-         </p> 
+            @if($Tour->muestra_fecha == 'si')
+              La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
+            @endif
+          </p> 
 
-         <h2 class="post-individual-section-titulo mt-3"> ¿Cómo reservo? </h2>
-         <p class="post-individual-p mb-5" > Para reservar debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
-         </p> 
+          <h2 class="post-individual-section-titulo mt-3"> ¿Cómo reservo? </h2>
+            <p class="post-individual-p mb-5" > Para reservar debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
+          </p> 
 
 
           <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
                   
-             @include('paginas.home.vue.Contacto.Contacto_tour_producto')
+              @include('paginas.home.vue.Contacto.Contacto_tour_producto')
                                   
           </contacto-component>
-
-
-    </div>
+      </div>
   </div>
     
 
