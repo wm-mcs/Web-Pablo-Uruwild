@@ -12,8 +12,8 @@
         <h3 class="sub-titulos-class text-center   mb-2">
           <span  class="font-primary text-center text-color-secondary">
             <a href="{{$Route}}">
-            <b> {{$Entidad->first_name}}</b>
-          </a>
+             <b> {{$Entidad->first_name}}</b>
+            </a>
           </span>              
         </h3>
         <p class="color-text-black text-bold text-center mb-2 ">
