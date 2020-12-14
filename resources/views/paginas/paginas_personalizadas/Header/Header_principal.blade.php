@@ -68,7 +68,7 @@
                 </li>
                 <li>
                   <div data-toggle="modal" data-target="#exampleModal" class=" col-12 text-center cursor-pointer color-text-white">                   
-                      Session::get('lenguaje')                 
+                      {{Session::get('lenguaje')      }}           
                   </div>   
                   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -83,7 +83,7 @@
                           <div class="row">
                           @foreach(config('lenguajes') as $Lenguaje)
                            
-                              <a href="{{route('get_home_con_lenguaje', $Lenguaje)}}" class="d-block col-6 @if(Session::get('lenguaje') !=  $Lenguaje) p-3 @endif">
+                              <a href="{{route('get_home_con_lenguaje', $Lenguaje)}}" class="d-block col-6 @if(Session::get('lenguaje') !=  $Lenguaje) p-3 @endif ">
                                   <img class="servicio_lista_imagen" src="{{url()}}/imagenes/Lenguaje/{{Session::get('lenguaje')}}.jpg" alt="">
                               </a>
                            
