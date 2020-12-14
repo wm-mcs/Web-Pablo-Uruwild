@@ -1,5 +1,5 @@
 
-@if($Entidad->imagenes->count() > 1)
+
 <div id="carouselExampleControls" class="carousel slide my-3" data-ride="carousel">
     <div class="carousel-inner">
         {{--*/ $Vuelta = 0 /*--}}  
@@ -19,4 +19,3 @@
         <span class="sr-only">Siguiente</span>
     </a>
 </div>
-@endif
