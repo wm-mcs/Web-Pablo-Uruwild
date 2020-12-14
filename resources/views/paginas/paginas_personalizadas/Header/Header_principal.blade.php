@@ -67,7 +67,7 @@
                   </a>
                 </li>
                 <li>
-                  <div data-toggle="modal" data-target="#exampleModal" class=" col-12 text-center cursor-pointer text-color-primary">                   
+                  <div data-toggle="modal" data-target="#exampleModal" class=" col-12 cursor-pointer text-color-primary">                   
                       {{Session::get('lenguaje')      }}           
                   </div>                          
                 </li>
