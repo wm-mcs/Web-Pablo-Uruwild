@@ -4,7 +4,7 @@
     <div class="carousel-inner">
         {{--*/ $Vuelta = 0 /*--}}  
         @foreach($Entidad->imagenes as $Imagen)
-            <div class="carousel-item @if( $Vuelta = 0) active @endif">
+            <div class="carousel-item @if( $Vuelta == 0) active @endif ">
                <img class="d-block w-100" src="{{$Imagen->url_img}}" alt="First slide">
             </div>
             {{--*/ $Vuelta += 1 /*--}}  
