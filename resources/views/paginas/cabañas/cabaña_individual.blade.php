@@ -156,24 +156,23 @@
     @include('paginas.partial.imagenes_galeria')
 
     <div class="container">  
-         {!! $Cabaña->contenido_render !!}
+      {!! $Cabaña->contenido_render !!}
 
-         <h2 class="post-individual-section-titulo mt-5"> Precios </h2>
-         <p class="post-individual-p" > Precio por día <strong> USD {{ $Cabaña->precio_redondeado }}</strong>. 
-         </p> 
+      @include('paginas.partial.imagenes_slider')
 
-         <h2 class="post-individual-section-titulo "> ¿Cómo reservo? </h2>
-         <p class="post-individual-p mb-4" > Para reservar debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
-         </p> 
-
-
-          <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
-                  
-             @include('paginas.home.vue.Contacto.Contacto_tour_producto')
-                                  
-          </contacto-component>
+      @if( $Cabaña->precio_redondeado != null || $Cabaña->precio_redondeado != '' )
+        <h2 class="post-individual-section-titulo mt-5"> Precios </h2>
+        <p class="post-individual-p" > Precio por día <strong> USD {{ $Cabaña->precio_redondeado }}</strong>. 
+        </p> 
+      @endif
+      <h2 class="post-individual-section-titulo "> ¿Cómo reservo? </h2>
+        <p class="post-individual-p mb-4" > Para reservar debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
+      </p> 
 
 
+      <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
+          @include('paginas.home.vue.Contacto.Contacto_tour_producto')
+      </contacto-component>
     </div>
   </div>
     
