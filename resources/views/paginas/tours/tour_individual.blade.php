@@ -148,6 +148,8 @@
       <div class="container">  
           {!! $Tour->contenido_render !!}
 
+          @include('paginas.partial.imagenes_slider')
+
           @if($Tour->precio != '' &&  $Tour->precio_redondeado != 0)
            <h2 class="post-individual-section-titulo mt-5"> Precios </h2>
           @endif
