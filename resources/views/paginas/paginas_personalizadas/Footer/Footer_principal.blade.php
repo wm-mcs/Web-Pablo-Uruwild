@@ -182,7 +182,7 @@
             <div class="row">
             @foreach(config('lenguajes') as $Lenguaje)
               
-                <a  href="{{route('get_home_con_lenguaje', $Lenguaje)}}" class="d-block col-6 @if(Session::get('lenguaje') !=  $Lenguaje) p-3 @endif ">
+                <a  href="{{route('get_home_con_lenguaje', $Lenguaje)}}" class="d-block col-6">
                     <img class="servicio_lista_imagen" src="{{url()}}/imagenes/Lenguaje/{{$Lenguaje}}.jpg" alt="">
                 </a>
               
