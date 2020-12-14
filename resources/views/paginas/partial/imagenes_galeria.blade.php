@@ -1,3 +1,4 @@
+@if($Entidad->imagenes->count() > 1)
 <div class="row justify-content-center mb-5 mx-0">
     <div class="col-12 col-lg-9 p-1">
         <div class="row mx-0">
@@ -6,7 +7,7 @@
                 <img src="{{$Imagen->url_img_chica}}" class="img-fluid">
             </a>
           @endforeach 
-        </div>
-        
+        </div>        
     </div>
   </div>
+ @endif 
