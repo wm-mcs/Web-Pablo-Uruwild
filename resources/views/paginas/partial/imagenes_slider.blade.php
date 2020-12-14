@@ -1,9 +1,11 @@
+
+@if($Entidad->imagenes->count() > 1)
 <div id="carouselExampleControls" class="carousel slide my-3" data-ride="carousel">
     <div class="carousel-inner">
         {{--*/ $Vuelta = 0 /*--}}  
         @foreach($Entidad->imagenes as $Imagen)
             <div class="carousel-item @if( $Vuelta = 0) active @endif">
-               <img class="d-block w-100" src="{{$Imagen->url_img_chica}}" alt="First slide">
+               <img class="d-block w-100" src="{{$Imagen->url_img}}" alt="First slide">
             </div>
             {{--*/ $Vuelta += 1 /*--}}  
         @endforeach 
@@ -17,3 +19,4 @@
         <span class="sr-only">Siguiente</span>
     </a>
 </div>
+@endif
