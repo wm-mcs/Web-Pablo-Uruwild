@@ -102,7 +102,7 @@
 
   <div class="p-5 background-gris-4" id="">
     <div class="container">
-      <p class="text-center sub-titulos-class mb-0 p-2 p-lg-5 text-white">
+      <p class="sub-titulos-class text-center text-color-primary text-bold mb-0 p-2 p-lg-5 ">
 
         {{--*/ $Key  = 'bienvenida' /*--}}
         @include('paginas.paginas_personalizadas.partials.textos')
