@@ -100,7 +100,7 @@
 
 @section('contenido')
 
-  <div class="p-5 background-primary" id="">
+  <div class="p-5 background-gris-4" id="">
     <div class="container">
       <p class="text-center sub-titulos-class mb-0 p-2 p-lg-5 text-white">
 
