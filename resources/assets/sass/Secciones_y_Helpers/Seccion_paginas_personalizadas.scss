@@ -1,140 +1,112 @@
- 
 /* L O G O   F L O T A N T E   E N   I M A G E N E S */
- .logo-float{
+.logo-float {
   height: 60px;
   position: absolute;
   bottom: 5%;
-  right: 5%; 
+  right: 5%;
   display: block;
 }
 
-
 /*  L o g o  N A V */
-.logo-nav{
-  height:40px;
-  width:auto;
+.logo-nav {
+  height: 40px;
+  width: auto;
   transition: height 0.3s linear; /* vendorless fallback */
   -o-transition: height 0.3s linear; /* opera */
   -ms-transition: height 0.3s linear; /* IE 10 */
   -moz-transition: height 0.3s linear; /* Firefox */
   -webkit-transition: height 0.3s linear; /*safari and chrome */
 }
-.logo-nav:hover{
-  height:43px;
+.logo-nav:hover {
+  height: 43px;
 }
-
 
 /* T e a m */
-.imagen-team-chica{
+.imagen-team-chica {
   width: 150px;
   height: 150px;
   object-fit: cover;
   display: block;
-  border-radius:100%;    
+  border-radius: 100%;
 }
 
-.imagen-team-pagina-contacto-chica{
+.imagen-team-pagina-contacto-chica {
   width: 150px;
   height: 150px;
   object-fit: cover;
   display: block;
-  border-radius:100%;    
-} 
+  border-radius: 100%;
+}
 
- @media (min-width: $BrackPoint-Tercer){
-  .altura-minima-del-team{
+@media (min-width: $BrackPoint-Tercer) {
+  .altura-minima-del-team {
     min-height: 200px;
   }
 
-  .altura-minima-del-team-quienes-somos{
-      min-height: 452px;
-   }
-
- }
-
-
+  .altura-minima-del-team-quienes-somos {
+    min-height: 452px;
+  }
+}
 
 /*T o u r s*/
-.tour-img-listado{
+.tour-img-listado {
   width: 100%;
   height: 350px;
   object-fit: cover;
-  display: block;    
+  display: block;
 }
 
-.tour-contiene-datos-listado{
+.tour-contiene-datos-listado {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   left: 0;
-  background-color:rgba($color-black,.2);
+  background-color: rgba($color-black, 0.2);
   padding: 20px;
   width: 100%;
+  pointer-events: none;
 }
-
-
-
-
 
 /* E s t a s   s o n   l a s   m i n i a t u r a s */
 
 /* C a b a ñ a s */
 .servicio_lista_imagen {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;    
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
 }
 
-  
- @media (min-width: $BrackPoint-Tercer){
-  .cabaña-altura-minima{
+@media (min-width: $BrackPoint-Tercer) {
+  .cabaña-altura-minima {
     min-height: 170px;
   }
- }
+}
 
 /* E c o t u r i s m o */
 .actividad_lista_imagen {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    display: block;    
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
 }
 
 /* T u r i s m o   r u r a l  */
-.turismo-rural-img-listado{
+.turismo-rural-img-listado {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  display: block;    
+  display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: $BrackPoint-Secundario){ 
- .imagen-team-chica{
-  height:200px;
-  width: 200px;
+@media (min-width: $BrackPoint-Secundario) {
+  .imagen-team-chica {
+    height: 200px;
+    width: 200px;
   }
 }
 
-@media (min-width: $BrackPoint-Tercer){
-  .logo-float{
+@media (min-width: $BrackPoint-Tercer) {
+  .logo-float {
     height: 80px;
   }
 }

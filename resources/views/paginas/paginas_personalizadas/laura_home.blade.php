@@ -12,7 +12,7 @@
 
 
 @section('favicon')
-<link rel="shortcut icon" href="{{ asset('imagenes/Favicon/favicon.ico') }}"> 
+<link rel="shortcut icon" href="{{ asset('imagenes/Favicon/favicon.ico') }}">
 @stop
 
 @section('og-tags')
@@ -20,10 +20,10 @@
  <meta property="og:title"              content="{{ $Titulo}} " />
  <meta property="og:description"        content="{{$DescriptionEtiqueta}}" />
  <meta property="og:image"              content="{{$ImagenParaTaG }}" />
- <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" /> 
+ <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" />
  <meta property="og:image:width"        content="250">
  <meta property="og:image:height"       content="250">
-@stop 
+@stop
 
 @section('pixcel-facebook')
 
@@ -46,7 +46,7 @@
             "@id": "{{$UrlDeLaPagina}}",
             "name": "{{$Titulo}}"
             }
-          }          
+          }
          ]
         }
 </script>
@@ -93,56 +93,56 @@
   {{--*/  $Portada   =  $Portada /*--}}
   {{--*/  $Route     = '' /*--}}
   {{--*/ $EsPortada  = true /*--}}
-  @include('paginas.paginas_personalizadas.partials.portada_molde') 
+  @include('paginas.paginas_personalizadas.partials.portada_molde')
 @stop
 
 
 
 @section('contenido')
 
-  <div class="p-5 background-primary" id=""> 
+  <div class="p-5 background-primary" id="">
     <div class="container">
-      <p class="text-center p-2 p-lg-5 text-white">
+      <p class="text-center sub-titulos-class mb-0 p-2 p-lg-5 text-white">
 
         {{--*/ $Key  = 'bienvenida' /*--}}
-        @include('paginas.paginas_personalizadas.partials.textos') 
-        
+        @include('paginas.paginas_personalizadas.partials.textos')
+
       </p>
-     </div> 
+     </div>
     </div>
   </div>
 
- 
-  <span id="circuitos"></span>  
+
+  <span id="circuitos"></span>
   @include('paginas.paginas_personalizadas.home.tour_nuevo')
 
   {{-- I m a g e n   d e   p e s c a  --}}
- 
+
   <div  class="background_img background_img_fixed home-pesca"></div>
-    
+
   @include('paginas.paginas_personalizadas.home.ecoturismo')
 
   @if(!Auth::guest())
-  @if(Auth::user()->first_name = 'Mauricio') 
-     
+  @if(Auth::user()->first_name = 'Mauricio')
+
   @endif
   @endif
 
 
 
   {{-- I m a g e n   d e  a c t i v i d a d e s  --}}
-  
+
   <div class="background_img background_img_fixed home-actividades"></div>
 
 
   @include('paginas.paginas_personalizadas.home.turismo_rural')
 
-  <div class="site-section background-gris-1"> 
+  <div class="site-section background-gris-1">
     <div class="container">
       <div class="row">
-        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left"> 
+        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
           {{--*/ $Key  = 'titulo seccion estancias y lodges' /*--}}
-          @include('paginas.paginas_personalizadas.partials.textos') 
+          @include('paginas.paginas_personalizadas.partials.textos')
         </div>
 
       </div>
@@ -157,21 +157,21 @@
         <p class="col-12 col-lg-10   text-center mt-5 mx-auto">
          <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_cabañas')}}">
            {{--*/ $Key  = 'boton seccion estancias y lodges' /*--}}
-           @include('paginas.paginas_personalizadas.partials.textos')  
+           @include('paginas.paginas_personalizadas.partials.textos')
 
            <i class="fas fa-chevron-right"></i>
-         </a> 
-        </p> 
-      </div>      
+         </a>
+        </p>
+      </div>
     </div>
   </div>
 
-  <div class="site-section "> 
+  <div class="site-section ">
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center">
            {{--*/ $Key  = 'titulo seccion el equipo de uruwild' /*--}}
-           @include('paginas.paginas_personalizadas.partials.textos')  
+           @include('paginas.paginas_personalizadas.partials.textos')
 
           <i class="fas fa-hand-point-down"></i>
         </div>
@@ -184,9 +184,9 @@
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.team.partes.lista')
         @endforeach
-      </div>      
+      </div>
     </div>
   </div>
-   
+
 
 @stop
