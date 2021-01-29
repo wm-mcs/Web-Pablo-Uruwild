@@ -6,7 +6,7 @@
 <div class="formulario-label-fiel">
   {!! Form::label('descripcion_breve', 'Descripción breve', array('class' => 'formulario-label ')) !!}
   {!! Form::textarea('descripcion_breve', null ,['class' => 'formulario-field',
-                                                  'rows' => 2, 
+                                                  'rows' => 2,
                                                   'cols' => 25
 
   ]) !!}
@@ -15,7 +15,7 @@
 <div class="formulario-label-fiel">
   {!! Form::label('call_to_action', 'Texto llamado a la acción', array('class' => 'formulario-label ')) !!}
   <div class="contiene-aclaracion-label">
-    Es el texto para el botón del llamdo a la acción de la página de la entidad. 
+    Es el texto para el botón del llamdo a la acción de la página de la entidad.
   </div>
   {!! Form::text('call_to_action', null ,['class' => 'formulario-field']) !!}
 </div>
@@ -32,7 +32,7 @@
     <div class="formulario-label-fiel">
       {!! Form::label('descripcion_breve'.$Lenguaje, 'Descripción breve ' . $Lenguaje, array('class' => 'formulario-label ')) !!}
       {!! Form::textarea('descripcion_breve'.$Lenguaje, null ,['class' => 'formulario-field',
-                                                      'rows' => 2, 
+                                                      'rows' => 2,
                                                       'cols' => 25
 
       ]) !!}
@@ -41,7 +41,7 @@
     <div class="formulario-label-fiel">
       {!! Form::label('call_to_action'.$Lenguaje, 'Texto llamado a la acción ' .$Lenguaje, array('class' => 'formulario-label ')) !!}
       <div class="contiene-aclaracion-label">
-        Es el texto para el botón del llamdo a la acción de la página de la entidad. 
+        Es el texto para el botón del llamdo a la acción de la página de la entidad.
       </div>
       {!! Form::text('call_to_action'.$Lenguaje, null ,['class' => 'formulario-field']) !!}
     </div>
@@ -105,6 +105,12 @@
   {!! Form::text('tags', null ,['class' => 'formulario-field']) !!}
 </div>
 
+<div class="formulario-label-fiel">
+  {!! Form::label('destacado', '¿Destacado?', array('class' => 'formulario-label ')) !!}
+  {!! Form::select('destacado',['si' => 'Activo',
+                             'no' => 'Desactivar'] , null,['class' => 'formulario-field'] )          !!}
+</div>
+
 
 
 
@@ -115,6 +121,3 @@
   {!! Form::select('estado',['si' => 'Activo',
                              'no' => 'Desactivar'] , null,['class' => 'formulario-field'] )          !!}
 </div>
-
-
-
