@@ -7,7 +7,7 @@
         <img data-src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="servicio_lista_imagen">
       </a>
       <div class="p-3 mt-2">
-      @if($Entidad->destacado == 'si')
+        @if($Entidad->destacado == 'si')
           <p class="mb-1 h4">
             <span class="color-text-success">DESTACADO</span>
           </p>
@@ -28,9 +28,10 @@
          {{$Entidad->descripcion_breve}}
         </p>
         <p class="">
-          <a href="{{$Route}}"> Editar  <i class="fas fa-chevron-right"></i></a>
+          <a href="{{$Route}}">
+            Editar  <i class="fas fa-chevron-right"></i>
+          </a>
         </p>
-
       </div>
     </div>
 </div>
