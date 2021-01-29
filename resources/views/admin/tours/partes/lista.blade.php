@@ -46,7 +46,7 @@
 
           <div class="tour-contiene-datos-listado">
             <div class="sub-titulos-class text-bold  mb-2">
-              <a class="color-text-white" href="{{$Route}}">
+              <a class="color-text-white d-block" href="{{$Route}}">
               {{$Entidad->name_formateado_con_lenguaje}}
               </a>
                 @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
@@ -60,7 +60,7 @@
               <b>{{$Entidad->cantidad_de_dias}}</b>.
              </div>
             <p>
-            <a href="{{$Route}}">
+            <a href="{{$Route}}" class="d-block">
              {{$Entidad->call_to_action_lista_formateado_con_lenguaje}} <i class="fas fa-chevron-right"></i>
             </a>
            </p>
