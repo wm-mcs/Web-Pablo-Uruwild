@@ -1,47 +1,57 @@
-<?php 
+<?php
 
 namespace App\Repositorios;
+
 use App\Entidades\Tour;
 
 class TourRepo extends BaseRepo
 {
-  
-  public function getEntidad()
-  {
-     return new Tour();
-  }
 
-  public function getEntidadesParaHomeTour($Cantidad,$Order_key, $Order_value = 'desc',$tipo_de_tour)
-  {
-     $Entidades = $this->entidad
-                       ->where('tipo_de_tour',$tipo_de_tour)
-                       ->where('estado','si')
-                       ->where('borrado','no')
-                       ->orderBy($Order_key,$Order_value)
-                       ->get();
+    public function getEntidad()
+    {
+        return new Tour();
+    }
 
-     if($Entidades->count() >= $Cantidad )   
-     {
-       return $Entidades->take($Cantidad);
-     }  
+    public function getEntidadesParaHomeTour($Cantidad, $Order_key, $Order_value = 'desc', $tipo_de_tour)
+    {
+        $Entidades = $this->entidad
+            ->where('tipo_de_tour', $tipo_de_tour)
+            ->where('estado', 'si')
+            ->where('borrado', 'no')
+            ->orderBy($Order_key, $Order_value)
+            ->get();
 
-     return   $Entidades;           
-  }
+        if ($Entidades->count() >= $Cantidad) {
+            return $Entidades->take($Cantidad);
+        }
 
-  public function getEntidadesDeToursPaginadas($request,$paginada,$tipo_de_tour,$orderBy = 'id', $vañor = 'desc' )
-  {
-     return $this->entidad
-                 ->where('borrado','no')
-                 ->where('tipo_de_tour',$tipo_de_tour)
-                 ->name($request->get('name'))                               
-                 ->orderBy($orderBy,$vañor)
-                 ->paginate($paginada);
-  }
+        return $Entidades;
+    }
 
+    public function getEntidadesDeToursPaginadas($request, $paginada, $tipo_de_tour, $orderBy = 'id', $vañor = 'desc')
+    {
+        return $this->entidad
+            ->where('borrado', 'no')
+            ->where('tipo_de_tour', $tipo_de_tour)
+            ->name($request->get('name'))
+            ->orderBy($orderBy, $vañor)
+            ->paginate($paginada);
+    }
 
+    public function getEntidadesDestacadas($Cantidad, $Order_key, $Order_value = 'desc')
+    {
+        $Entidades = $this->entidad
+            ->where('estado', 'si')
+            ->where('borrado', 'no')
+            ->where('destacado', 'si')
+            ->orderBy($Order_key, $Order_value)
+            ->get();
 
- 
-  
+        if ($Entidades->count() >= $Cantidad) {
+            return $Entidades->take($Cantidad);
+        }
 
-  
+        return $Entidades;
+    }
+
 }

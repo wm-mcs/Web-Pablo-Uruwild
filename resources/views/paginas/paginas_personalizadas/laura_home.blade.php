@@ -148,14 +148,14 @@
       </div>
       <div class="row">
 
-        @foreach($Cabañas as $Cabaña)
-          {{--*/ $Entidad  = $Cabaña /*--}}
+        @foreach($Destacados as $Destacado)
+          {{--*/ $Entidad  = $Destacado /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
-          @include('admin.cabañas.partes.lista')
+          @include('admin.productos_especiales.partes.lista')
         @endforeach
 
         <p class="col-12 col-lg-10   text-center mt-5 mx-auto">
-         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_cabañas')}}">
+         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_destacados')}}">
            {{--*/ $Key  = 'boton seccion estancias y lodges' /*--}}
            @include('paginas.paginas_personalizadas.partials.textos')
 

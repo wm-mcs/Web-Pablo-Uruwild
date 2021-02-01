@@ -83,6 +83,10 @@ class Admin_Tours_Controllers extends Controller implements entidadCrudControlle
 
         HelpersGenerales::helper_olvidar_este_cache('ProductosHome');
         HelpersGenerales::helper_olvidar_este_cache('ProductosPagianaTorus');
+
+        HelpersGenerales::helper_olvidar_este_cache('DestacadosHome');
+        HelpersGenerales::helper_olvidar_este_cache('Destacados');
+
     }
 
     public function get_admin(Request $Request)
