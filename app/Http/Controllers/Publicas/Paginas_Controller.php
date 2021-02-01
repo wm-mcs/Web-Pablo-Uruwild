@@ -160,7 +160,7 @@ class Paginas_Controller extends Controller
 
         $Textos = $this->TextoRepo->getTextosDeSeccion('listado_cabañas');
 
-        if (!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($Lenguaje, 'get_pagina_cabañas')) {
+        if (!HelpersSessionLenguaje::validarRouteTeniendoEnCuentaElLenguaje($Lenguaje, 'get_pagina_destacados')) {
             return redirect()->route('get_pagina_cabañas', HelpersSessionLenguaje::getAndPutSessionLenguaje(null, null));
         }
 
