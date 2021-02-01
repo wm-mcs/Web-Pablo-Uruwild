@@ -2,8 +2,8 @@
  <div class="col-11">
    {{-- imagen logo --}}
    <a href="{{route('get_home')}}">
-    @if(file_exists($Empresa->path_img_logo_cuadrado_blanco))  
-      <img class="p-4 img-fluid" src="{{$Empresa->img_logo_cuadrado_blanco}}">  
+    @if(file_exists($Empresa->path_img_logo_cuadrado_blanco))
+      <img class="p-4 img-fluid" src="{{$Empresa->img_logo_cuadrado_blanco}}">
     @else
     <span class="text-color-primary">{{$Empresa->name}}</span>
     @endif
@@ -18,10 +18,10 @@
         </a>
         <a href="{{route('get_admin_noticias')}}">
           <li class="admin-columna-li mi-float-right"> Blog</li>
-        </a> 
+        </a>
         <a href="{{route('get_admin_textos')}}">
           <li class="admin-columna-li mi-float-right"> Textos</li>
-        </a> 
+        </a>
 
 
     </div>
@@ -31,36 +31,34 @@
 
         <a href="{{route('get_admin_tours')}}">
           <li class="admin-columna-li mi-float-right"> Tours de pesca</li>
-        </a> 
+        </a>
         <a href="{{route('get_admin_productos_especiales')}}">
           <li class="admin-columna-li mi-float-right"> Ecoturismo</li>
-        </a> 
-        
-        <a href="{{route('get_admin_turismo_rural')}}">
-          <li class="admin-columna-li mi-float-right">Turismo rural</li>
         </a>
-         
-         <a href="{{route('get_admin_cabañas')}}">
-          <li class="admin-columna-li mi-float-right"> Estancias y lodges</li>
-        </a>  
+
+        <a href="{{route('get_admin_turismo_rural')}}">
+          <li class="admin-columna-li mi-float-right">Lodges y estancias</li>
+        </a>
+
+
 
         <a href="{{route('get_admin_teams')}}">
           <li class="admin-columna-li mi-float-right">Team</li>
-        </a>          
-        
+        </a>
+
         <a href="{{route('get_admin_portadas_de_paginas')}}">
           <li class="admin-columna-li mi-float-right">Páginas portadas</li>
-        </a> 
+        </a>
         {{-- <a href="{{route('get_admin_actividades')}}">
           <li class="admin-columna-li mi-float-right"> Actividades</li>
         </a>  --}}
         <a href="{{route('get_datos_corporativos')}}">
           <li class="admin-columna-li mi-float-right"> Mis datos</li>
-        </a> 
-        
+        </a>
+
     </div>
 </ul>
 
 
-    
+
 </div>
