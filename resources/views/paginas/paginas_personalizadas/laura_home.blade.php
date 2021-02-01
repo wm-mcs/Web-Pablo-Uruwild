@@ -155,7 +155,7 @@
         @endforeach
 
         <p class="col-12 col-lg-10   text-center mt-5 mx-auto">
-         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_destacados')}}">
+         <a class="Boton-Fuente-Chico Boton-Secondary-Sin-Relleno" href="{{route('get_pagina_destacados',Session::get('lenguaje'))}}">
            {{--*/ $Key  = 'boton seccion estancias y lodges' /*--}}
            @include('paginas.paginas_personalizadas.partials.textos')
 
