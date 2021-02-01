@@ -5,14 +5,14 @@
 {{--*/ $ImagenPortadaChica    = $Portada->url_img_foto_principal_chica /*--}}
 {{--*/ $ImagenPortada         = $Portada->url_img_foto_principal /*--}}
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/Empresa/logo-para-tags.jpg '/*--}}
-{{--*/ $Titulo                = 'Cabañas' /*--}}
+{{--*/ $Titulo                = 'Destacados' /*--}}
 {{--*/ $DescriptionEtiqueta   = '' /*--}}
 {{--*/ $PalabrasClaves        = '' /*--}}
-{{--*/ $UrlDeLaPagina         = route('get_pagina_cabañas') /*--}}
+{{--*/ $UrlDeLaPagina         = route('get_pagina_destacados') /*--}}
 
 
 @section('favicon')
-<link rel="shortcut icon" href="{{ asset('imagenes/Favicon/favicon.ico') }}"> 
+<link rel="shortcut icon" href="{{ asset('imagenes/Favicon/favicon.ico') }}">
 @stop
 
 @section('og-tags')
@@ -20,10 +20,10 @@
  <meta property="og:title"              content="{{ $Titulo}} " />
  <meta property="og:description"        content="{{$DescriptionEtiqueta}}" />
  <meta property="og:image"              content="{{$ImagenParaTaG }}" />
- <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" /> 
+ <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" />
  <meta property="og:image:width"        content="250">
  <meta property="og:image:height"       content="250">
-@stop 
+@stop
 
 @section('pixcel-facebook')
 
@@ -46,7 +46,7 @@
             "@id": "{{$UrlDeLaPagina}}",
             "name": "{{$Titulo}}"
             }
-          }          
+          }
          ]
         }
 </script>
@@ -93,41 +93,41 @@
   {{--*/  $Portada   =  $Portada /*--}}
   {{--*/  $Route     = '' /*--}}
   {{--*/  $EsPortada = true /*--}}
-  @include('paginas.paginas_personalizadas.partials.portada_molde') 
+  @include('paginas.paginas_personalizadas.partials.portada_molde')
 @stop
 
 
 
 @section('contenido')
 
-  
+
 
   @if(!Auth::guest())
   @if(Auth::user()->first_name = 'Mauricio')
 
 
-  
+
   @endif
   @endif
 
-  <div class="site-section background-gris-0" > 
+  <div class="site-section background-gris-0" >
     <div class="container">
       <div class="row p-3 p-lg-5">
         <p class="col-12  text-center">
-           <b>¿Alguna vez experimentaste la tranquilidad extreme? </b> Estas cabañas están para eso <i class="fas fa-hand-point-down"></i> 
+           <b>¿Alguna vez experimentaste la tranquilidad extreme? </b> Estas cabañas están para eso <i class="fas fa-hand-point-down"></i>
         </p>
-      </div>     
+      </div>
     </div>
   </div>
- 
 
 
 
 
 
-  @if($Cabañas->count() > 0)
+
+  @if($Entidades->count() > 0)
   {{-- Aquí poner contendio para probar --}}
-   <div class="site-section background-gris-1" id="contendio"> 
+   <div class="site-section background-gris-1" id="contendio">
     <div class="container">
       <div class="row justify-content-lg-center">
         <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
@@ -135,30 +135,30 @@
         </div>
       </div>
       <div class="row ">
-        @foreach($Cabañas as $Entidad)
+        @foreach($Entidades as $Entidad)
           {{--*/ $Entidad  = $Entidad /*--}}
           {{--*/ $Route    = $Entidad->route /*--}}
-          @include('admin.cabañas.partes.lista')
+          @include('admin.productos_especiales.partes.lista')
         @endforeach
-      </div>      
+      </div>
     </div>
   </div>
   @endif
 
- 
 
 
-    
-
-    
-
-   
 
 
-   
 
-    
 
-   
+
+
+
+
+
+
+
+
+
 
 @stop
