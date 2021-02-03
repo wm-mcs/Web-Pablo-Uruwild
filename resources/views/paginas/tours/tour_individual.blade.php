@@ -12,7 +12,7 @@
 
 
 @section('favicon')
-<link rel="shortcut icon" href="{{ asset('imagenes/Favicon/favicon.ico') }}"> 
+<link rel="shortcut icon" href="{{ asset('imagenes/Favicon/favicon.ico') }}">
 @stop
 
 @section('og-tags')
@@ -20,10 +20,10 @@
  <meta property="og:title"              content="{{ $Titulo}} " />
  <meta property="og:description"        content="{{$DescriptionEtiqueta}}" />
  <meta property="og:image"              content="{{$ImagenParaTaG }}" />
- <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" /> 
+ <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" />
  <meta property="og:image:width"        content="250">
  <meta property="og:image:height"       content="250">
-@stop 
+@stop
 
 @section('cdn-js')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g==" crossorigin="anonymous"></script>
@@ -63,7 +63,7 @@
             "@id": "{{$UrlDeLaPagina}}",
             "name": "{{$Titulo}}"
             }
-          }          
+          }
          ]
         }
 </script>
@@ -92,7 +92,7 @@
 @stop
 
 
-@section('vue')  
+@section('vue')
   @include('paginas.home.vue.contacto-component')
   @include('paginas.home.vue.blog-list-component')
   @include('paginas.home.vue.vue-instance')
@@ -125,27 +125,63 @@
           </div>
         </div>
       </div>
-       <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Tour->url_img_foto_principal_chica}}" alt="{{$Tour->name_formateado_con_lenguaje}} Uruwild Uruguay"> 
-       <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Tour->url_img_foto_principal}}" alt="{{$Tour->name_formateado_con_lenguaje}} Uruwild Uruguay">        
+       <img v-if="mostrar_para_celuar" class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Tour->url_img_foto_principal_chica}}" alt="{{$Tour->name_formateado_con_lenguaje}} Uruwild Uruguay">
+       <img v-else class="imagen-portada-altura-100vh" style="position: absolute;top: 0;" data-src="{{$Tour->url_img_foto_principal}}" alt="{{$Tour->name_formateado_con_lenguaje}} Uruwild Uruguay">
 
-    </div>  
+    </div>
 @stop
 
 
 
 @section('contenido')
 
-  
 
-  
-    
- <div class="site-section " id="contenido"> 
 
-      {{--*/ $Entidad         = $Tour /*--}}  
+
+
+ <div class="site-section " id="contenido">
+
+      <nav aria-label="breadcrumb" class="w-100">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{{route('get_home_con_lenguaje', Session::get('lenguaje'))}}"> <i class="fas fa-home"></i>
+            </a>
+          </li>
+          <li class="breadcrumb-item">
+            @if($Tour->tipo_de_tour == 'tour')
+            <a href="{{route('get_pagina_tours',Session::get('lenguaje'))}}">
+            {{--*/ $Key  = 'nav tours de pesca' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos')
+
+
+            </a>
+            @elseif($Tour->tipo_de_tour == 'producto')
+            <a href="{{route('get_admin_productos_especiales', Session::get('lenguaje'))}}">
+            {{--*/ $Key  = 'nav ecoturismo' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos')
+            </a>
+            @elseif($Tour->tipo_de_tour == 'turismo_rural')
+            <a href="{{route('get_pagina_turismo_rural',Session::get('lenguaje'))}}">
+            {{--*/ $Key  = 'nav turismo rural' /*--}}
+                    @include('paginas.paginas_personalizadas.partials.textos')
+            </a>
+            @else
+            <a href="{{route('get_home_con_lenguaje', Session::get('lenguaje'))}}">
+              Home
+            </a>
+            @endif
+          </li>
+          <li class="breadcrumb-item">
+             {{ $Tour->name}}
+          </li>
+        </ol>
+      </nav>
+
+      {{--*/ $Entidad         = $Tour /*--}}
       @include('paginas.partial.imagenes_galeria')
 
 
-      <div class="container">  
+      <div class="container">
           {!! $Tour->contenido_render !!}
 
           @include('paginas.partial.imagenes_slider')
@@ -154,35 +190,35 @@
            <h2 class="post-individual-section-titulo mt-5"> Precios </h2>
           @endif
           <p class="post-individual-p" >
-            @if($Tour->precio != '' &&  $Tour->precio_redondeado != 0) El paquete completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong> por persona. 
+            @if($Tour->precio != '' &&  $Tour->precio_redondeado != 0) El paquete completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong> por persona.
             @endif
 
             @if($Tour->muestra_fecha == 'si')
               La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
             @endif
-          </p> 
+          </p>
 
           <h2 class="post-individual-section-titulo mt-3"> ¿Cómo reservo? </h2>
             <p class="post-individual-p mb-5" > Para reservar debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
-          </p> 
+          </p>
 
 
           <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
-                  
+
               @include('paginas.home.vue.Contacto.Contacto_tour_producto')
-                                  
+
           </contacto-component>
       </div>
   </div>
-    
-
-   
 
 
-   
 
-    
 
-   
+
+
+
+
+
+
 
 @stop
