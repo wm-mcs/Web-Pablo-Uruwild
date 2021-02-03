@@ -136,12 +136,7 @@
 @section('contenido')
 
 
-
-
-
- <div class="site-section " id="contenido">
-
-      <nav aria-label="breadcrumb" class="w-100">
+<nav aria-label="breadcrumb" class="w-100">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
             <a href="{{route('get_home_con_lenguaje', Session::get('lenguaje'))}}"> <i class="fas fa-home"></i>
@@ -176,6 +171,11 @@
           </li>
         </ol>
       </nav>
+
+
+ <div class="site-section py-3" id="contenido">
+
+
 
       {{--*/ $Entidad         = $Tour /*--}}
       @include('paginas.partial.imagenes_galeria')
