@@ -199,15 +199,19 @@
           </p>
 
           <h2 class="post-individual-section-titulo mt-3"> ¿Cómo reservo? </h2>
-            <p class="post-individual-p mb-5" > Para reservar debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
+            <p class="post-individual-p mb-5" > Para reservar dale  debes completar el formulario de aquí abajo <i class="fas fa-hand-point-down"></i> y un prodigio de la atención comercial se pondrá en contacto contigo.
           </p>
 
-
+          @if($Tour->tipo_de_tour == 'tour' && $Tour->fly_dreamers_script != '' && $Tour->fly_dreamers_script != null)
+           {!! $Tour->fly_dreamers_script !!}
+          @else
           <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
 
               @include('paginas.home.vue.Contacto.Contacto_tour_producto')
 
           </contacto-component>
+
+          @endif
       </div>
   </div>
 
