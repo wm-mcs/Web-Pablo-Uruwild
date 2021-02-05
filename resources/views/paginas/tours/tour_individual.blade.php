@@ -27,6 +27,12 @@
 
 @section('cdn-js')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g==" crossorigin="anonymous"></script>
+@if($Tour->tipo_de_tour == 'tour' && $Tour->fly_dreamers_script != '' && $Tour->fly_dreamers_script != null)
+
+  {!! $Tour->fly_dreamers_script !!}
+
+@else
+
 @stop
 
 @section('acciones-js-manuales')
@@ -204,9 +210,8 @@
 
           @if($Tour->tipo_de_tour == 'tour' && $Tour->fly_dreamers_script != '' && $Tour->fly_dreamers_script != null)
            <div class="d-flex flex-column align-items-center w-100">
-             {!! $Tour->fly_dreamers_script !!}
+             {!! $Tour->fly_dreamers_html !!}
            </div>
-
           @else
           <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
 
