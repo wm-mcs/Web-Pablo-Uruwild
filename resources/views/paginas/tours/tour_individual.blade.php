@@ -203,7 +203,10 @@
           </p>
 
           @if($Tour->tipo_de_tour == 'tour' && $Tour->fly_dreamers_script != '' && $Tour->fly_dreamers_script != null)
-           {!! $Tour->fly_dreamers_script !!}
+           <div class="d-flex flex-column align-items-center w-100">
+             {!! $Tour->fly_dreamers_script !!}
+           </div>
+
           @else
           <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
 
