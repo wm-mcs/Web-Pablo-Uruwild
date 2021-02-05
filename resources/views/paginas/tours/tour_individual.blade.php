@@ -31,7 +31,7 @@
 
   {!! $Tour->fly_dreamers_script !!}
 
-@else
+@endif
 
 @stop
 
