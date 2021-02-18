@@ -53,12 +53,14 @@
             </div>
 
              <div class="parrafo-class color-text-white mb-1">
-             <i class="far fa-clock"></i> {{$Entidad->proximas_fecha_formateado_con_lenguaje}}.
+              {{$Entidad->descripcion_breve}}.
              </div>
-             <div class="parrafo-class color-text-white mb-2">
-              {{$Entidad->cantidad_de_dias_texto_formateado_con_lenguaje}}
-              <b>{{$Entidad->cantidad_de_dias}}</b>.
-             </div>
+             @if($Entidad->cantidad_de_dias > 0)
+              <div class="parrafo-class color-text-white mb-2">
+                {{$Entidad->cantidad_de_dias_texto_formateado_con_lenguaje}}
+                <b>{{$Entidad->cantidad_de_dias}}</b>.
+              </div>
+             @endif
             <p>
             <a href="{{$Route}}" class="d-block">
              {{$Entidad->call_to_action_lista_formateado_con_lenguaje}} <i class="fas fa-chevron-right"></i>
