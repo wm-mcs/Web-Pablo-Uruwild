@@ -199,7 +199,7 @@
             @if($Tour->precio != '' &&  $Tour->precio_redondeado != 0) El paquete completo tiene un precio de <strong> USD {{ $Tour->precio_redondeado }}</strong> por persona.
             @endif
 
-            @if($Tour->muestra_fecha == 'si')
+            @if($Tour->muestra_fecha == 'si' && $Tour->fecha_inicio != '')
               La fecha límite para reservar es <strong> {{ $Tour->fecha_limite_reserva->format('d-m-Y') }} </strong>.
             @endif
           </p>

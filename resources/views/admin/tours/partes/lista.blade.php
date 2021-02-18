@@ -52,15 +52,10 @@
                 @include('paginas.paginas_personalizadas.partials.editar_icono_desde_user')
             </div>
 
-             <div class="parrafo-class color-text-white mb-1">
-              {{$Entidad->descripcion_breve}}.
+             <div class="parrafo-class color-text-white mb-2">
+              {{$Entidad->descripcion_breve}}
              </div>
-             @if($Entidad->cantidad_de_dias > 0)
-              <div class="parrafo-class color-text-white mb-2">
-                {{$Entidad->cantidad_de_dias_texto_formateado_con_lenguaje}}
-                <b>{{$Entidad->cantidad_de_dias}}</b>.
-              </div>
-             @endif
+
             <p>
             <a href="{{$Route}}" class="d-block">
              {{$Entidad->call_to_action_lista_formateado_con_lenguaje}} <i class="fas fa-chevron-right"></i>
