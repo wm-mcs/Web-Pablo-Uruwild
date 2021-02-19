@@ -1,5 +1,4 @@
-
-@import "resources/assets/sass/Secciones_y_Helpers/Helper_Plug-flex"; 
+@import "resources/assets/sass/Secciones_y_Helpers/Helper_Plug-flex";
 @import "resources/assets/sass/Secciones_y_Helpers/Helper_mediCueris";
 @import "resources/assets/sass/Secciones_y_Helpers/Helper_AJUSTES_Y_MIXIN_GENERALES";
 @import "resources/assets/sass/Secciones_y_Helpers/Helper_botones";
@@ -7,102 +6,69 @@
 @import "resources/assets/sass/Secciones_y_Helpers/Helper_Inputs_Estilos";
 @import "resources/assets/sass/Secciones_y_Helpers/Helper_Imagenes_background";
 
-
-
-
-
-
-
-
 /* C L A S E S   D E   T A M A Ñ O  */
-.get_width_100{
-  width:100%;
+.get_width_100 {
+  width: 100%;
 }
 
-.get_height_100{
-  height:100%;
+.get_height_100 {
+  height: 100%;
 }
 
 /* C L A S E S   D E   L I S T A S  */
-.lista-class{
-    width: 100%;
-    margin-top: 4px;    
-    font-size: 14px;
-    letter-spacing: 1.4px;  
-    padding-left:20px;
-    line-height:1.7;
-    font-family:$font-secondary;
-      
+.lista-class {
+  width: 100%;
+  margin-top: 4px;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  padding-left: 20px;
+  line-height: 1.7;
+  font-family: $font-secondary;
 }
 
-.lista-class::before{
-    content: "\025cf";    
-    color:$color-3;  
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
+.lista-class::before {
+  content: "\025cf";
+  color: $color-3;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
-
 
 /* S i m u l a   u n   l i n k */
-.simula-link{
-  cursor:pointer;
-  color:$color-3;
+.simula-link {
+  cursor: pointer;
+  color: $color-3;
 }
-.simula-link:hover{    
-  color:$color-3-primary_hover;
+.simula-link:hover {
+  color: $color-3-primary_hover;
 }
 
 /* C u r s o r   p o i n t e r */
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 
 /* C a r g a d o r*/
 .lazy-hidden {
-    background: $Color-secondary url('loading.gif') no-repeat 50% 50%;
+  background: $Color-secondary url("loading.gif") no-repeat 50% 50%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: $BrackPoint-Secundario){
-.mostrar-solo-mobil{
-  display: none;
+.scroll-snap {
+  display: flex;
+  align-items: center;
 }
 
-.no-mostrar-en-mobil{
-  display:block;
+@media (min-width: $BrackPoint-Secundario) {
+  .mostrar-solo-mobil {
+    display: none;
+  }
+
+  .no-mostrar-en-mobil {
+    display: block;
+  }
+
+  .margin-botto-only-mobil {
+    margin-bottom: 0;
+  }
 }
-
-.margin-botto-only-mobil{
- margin-bottom: 0;
-}
-
-
-}  

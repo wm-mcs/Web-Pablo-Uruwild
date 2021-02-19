@@ -1,5 +1,9 @@
-<footer class="site-section background-gris-4 scroll-snap ">
-      <div class="container">
+<footer class="scroll-snap ">
+
+<div class="site-section background-gris-4 ">
+
+
+<div class="container">
 
 
 
@@ -146,9 +150,8 @@
         @yield('iconos-compartir')
 
       </div>
-    </footer>
-
-    <div class="p-5 background-gris-5">
+      </div>
+      <div class="p-5 background-gris-5">
       <p class="m-0 text-center color-text-white parrafo-class">
         <small>
          <span class="color-text-white">
@@ -167,6 +170,9 @@
         </small>
       </p>
     </div>
+
+    </footer>
+
 
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
