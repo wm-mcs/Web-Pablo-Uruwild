@@ -1,6 +1,6 @@
 <footer class="scroll-snap ">
 
-<div class="site-section background-gris-4 ">
+<div class="site-section background-gris-4 w-100 ">
 
 
 <div class="container">
@@ -151,7 +151,7 @@
 
       </div>
       </div>
-      <div class="p-5 background-gris-5">
+      <div class="p-5 background-gris-5  w-100">
       <p class="m-0 text-center color-text-white parrafo-class">
         <small>
          <span class="color-text-white">
