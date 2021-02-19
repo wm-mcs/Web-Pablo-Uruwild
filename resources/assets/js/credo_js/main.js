@@ -126,5 +126,5 @@ jQuery(document).ready(function($) {
   };
   siteScroll();
 
-  $("header, section, footer").SnapScroll();
+  $(".auto-scroll").SnapScroll();
 });
