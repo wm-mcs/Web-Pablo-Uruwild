@@ -127,7 +127,7 @@ jQuery(document).ready(function($) {
   siteScroll();*/
 
   $.scrollify({
-    section: ".scroll-snap,site-section",
+    section: ".scroll-snap,.site-section",
     sectionName: "section-name",
     interstitialSection: "",
     easing: "easeOutExpo",
