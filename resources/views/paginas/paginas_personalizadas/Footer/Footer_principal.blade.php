@@ -1,4 +1,4 @@
-<footer class="site-section background-gris-4 ">
+<footer class="site-section background-gris-4 scroll-snap ">
       <div class="container">
 
 

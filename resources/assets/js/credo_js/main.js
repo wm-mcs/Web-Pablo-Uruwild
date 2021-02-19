@@ -82,10 +82,10 @@ jQuery(document).ready(function($) {
   };
   siteMenuClone();
 
-  var siteSticky = function() {
+  /*var siteSticky = function() {
     $(".js-sticky-header").sticky({ topSpacing: 0 });
   };
-  siteSticky();
+  siteSticky();*/
 
   // navigation
   var OnePageNavigation = function() {
@@ -127,7 +127,7 @@ jQuery(document).ready(function($) {
   siteScroll();*/
 
   $.scrollify({
-    section: ".scroll-snap",
+    section: ".scroll-snap,site-section",
     sectionName: "section-name",
     interstitialSection: "",
     easing: "easeOutExpo",

@@ -9,7 +9,7 @@
 {{--*/ $UrlDeLaPagina         = route('get_pagina_quien_es') /*--}}
 
 @section('favicon')
- <link rel="shortcut icon" href="{{ asset('imagenes/Favicon/favicon.ico') }}"> 
+ <link rel="shortcut icon" href="{{ asset('imagenes/Favicon/favicon.ico') }}">
 @stop
 
 @section('og-tags')
@@ -17,10 +17,10 @@
  <meta property="og:title"              content="{{ $Titulo}} " />
  <meta property="og:description"        content="{{$DescriptionEtiqueta}}" />
  <meta property="og:image"              content="{{$ImagenParaTaG }}" />
- <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" /> 
+ <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" />
  <meta property="og:image:width"        content="250">
  <meta property="og:image:height"       content="250">
-@stop 
+@stop
 
 @section('pixcel-facebook')
 <!-- Facebook Pixel Code -->
@@ -59,7 +59,7 @@
             "@id": "{{$UrlDeLaPagina}}",
             "name": "{{$Titulo}}"
             }
-          }          
+          }
          ]
         }
 </script>
@@ -107,71 +107,71 @@
   {{--*/  $Portada   =  $Portada /*--}}
   {{--*/  $Route     = '' /*--}}
   {{--*/  $EsPortada = true /*--}}
-  @include('paginas.paginas_personalizadas.partials.portada_molde') 
+  @include('paginas.paginas_personalizadas.partials.portada_molde')
 @stop
 
 @section('contenido')
 
- <div class="site-section background-gris-4" id="sobre">
+ <div class="site-section background-gris-4 scroll-snap" id="sobre">
     <div class="container">
-      <h2 class="mb-4 sub-titulos-class text-center text-color-primary text-bold">        
+      <h2 class="mb-4 sub-titulos-class text-center text-color-primary text-bold">
         {{--*/ $Key  = 'sobre uruwild first title' /*--}}
-        @include('paginas.paginas_personalizadas.partials.textos') 
-      </h2> 
-      <p class="text-center text-color-primary m-0">  
+        @include('paginas.paginas_personalizadas.partials.textos')
+      </h2>
+      <p class="text-center text-color-primary m-0">
         {{--*/ $Key  = 'sobre uruwild empatia' /*--}}
-        @include('paginas.paginas_personalizadas.partials.textos')       
-      
-      </p>   
-      
+        @include('paginas.paginas_personalizadas.partials.textos')
+
+      </p>
+
     </div>
   </div>
 
 
 
-  <div  class="site-section" id="sobre-mi">
+  <div  class="site-section scroll-snap" id="sobre-mi">
       <div class="container">
         <div class="row align-items-center border border-primary p-5 mb-4">
 
           <h2 class="col-12 titulos-class  text-center text-color-secondary mb-2 font-primary">
             {{--*/ $Key  = 'sobre uruwild titulo contenido' /*--}}
-            @include('paginas.paginas_personalizadas.partials.textos')   
+            @include('paginas.paginas_personalizadas.partials.textos')
           </h2>
           <h3 class="col-12 text-color-primary text-bold sub-titulos-class text-center text-uppercase mb-5">
 
             {{--*/ $Key  = 'sobre uruwild sub titulo contenido' /*--}}
-            @include('paginas.paginas_personalizadas.partials.textos')  
-            
+            @include('paginas.paginas_personalizadas.partials.textos')
+
 
           </h3>
-         
+
 
           <div class="row align-items-center ">
-           <div class="col-lg-6 order-2 order-lg-2 flex-column p-4">         
-              
-           
+           <div class="col-lg-6 order-2 order-lg-2 flex-column p-4">
+
+
 
              {{--*/ $Key  = 'sobre uruwild contenido' /*--}}
-             @include('paginas.paginas_personalizadas.partials.textos')  
-           
-           
-                
-             
+             @include('paginas.paginas_personalizadas.partials.textos')
+
+
+
+
            </div>
            <div class="col-lg-6 order-3 pl-lg-5 order-lg-1">
             <img v-if="mostrar_para_celuar" class="img-fluid mb-4" data-src="{{url()}}/imagenes/Quien/sobre-uruwild-chica.jpg" alt="Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Somos un equipo joven multidisciplinario, capacitados y formados en diversas áreas, que en su conjunto buscamos ofrecer experiencias auténticas motivadas. ">
             <img v-else class="img-fluid mb-4" data-src="{{url()}}/imagenes/Quien/sobre-uruwild.jpg" alt="Uruwild es un emprendimiento turístico vinculado a la recreación y al esparcimiento en ambientes naturales únicos del Uruguay. Somos un equipo joven multidisciplinario, capacitados y formados en diversas áreas, que en su conjunto buscamos ofrecer experiencias auténticas motivadas. ">
            </div>
-            
-          </div>         
-         
+
+          </div>
+
         </div>
-         <a href="{{route('get_pagina_tours')}}" class="Boton-Fuente-Chica Boton-Primario-Relleno "> 
+         <a href="{{route('get_pagina_tours')}}" class="Boton-Fuente-Chica Boton-Primario-Relleno ">
 
            {{--*/ $Key  = 'sobre uruwild llamado a la accion' /*--}}
-           @include('paginas.paginas_personalizadas.partials.textos')  
+           @include('paginas.paginas_personalizadas.partials.textos')
            <i class="fas fa-fish"></i>
-            
+
          </a>
       </div>
 </div>
@@ -180,7 +180,7 @@
 
 
 
- <div class="site-section background-gris-1"> 
+ <div class="site-section background-gris-1 scroll-snap">
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center">
@@ -196,42 +196,42 @@
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.team.partes.lista_quienes_somos')
         @endforeach
-      </div>      
+      </div>
     </div>
   </div>
 
-  
-
-
-      
-
-
-
-   
-      
-   
- 
-
-    
-
-
-
-    
 
 
 
 
-    
-
-    
-
-   
 
 
-   
 
-    
 
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @stop
