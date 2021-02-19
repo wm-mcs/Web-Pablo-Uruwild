@@ -100,7 +100,7 @@
 
 @section('contenido')
 
-  <div class="p-5 background-gris-4 auto-scroll" id="">
+  <div class="p-5 background-gris-4 scroll-snap" id="">
     <div class="container">
       <p class="sub-titulos-class text-center text-color-primary text-bold mb-0 p-2 p-lg-5 ">
 
