@@ -54,7 +54,8 @@
   background: $Color-secondary url("loading.gif") no-repeat 50% 50%;
 }
 
-.scroll-snap {
+.scroll-snap,
+.site-section {
   display: flex;
   flex-direction: column;
   align-items: center;
