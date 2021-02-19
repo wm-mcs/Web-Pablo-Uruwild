@@ -37,7 +37,7 @@ elixir(function(mix) {
       /* 'credo_js/aos.js',
         'credo_js/jquery.fancybox.min.js',*/
       "credo_js/jquery.sticky.js",
-      "Plugins/Plug-snap-scroll.js",
+      "Plugins/scroll-sanpy.js",
       "credo_js/main.js",
       "Plugins/Plug-lazyLoadXT.js",
       "Plugins/Plug-Notify.js"

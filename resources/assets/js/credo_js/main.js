@@ -113,7 +113,7 @@ jQuery(document).ready(function($) {
   };
   OnePageNavigation();
 
-  var siteScroll = function() {
+  /*var siteScroll = function() {
     $(window).scroll(function() {
       var st = $(this).scrollTop();
 
@@ -124,7 +124,24 @@ jQuery(document).ready(function($) {
       }
     });
   };
-  siteScroll();
+  siteScroll();*/
 
-  $(".auto-scroll").SnapScroll();
+  $.scrollify({
+    section: ".scroll-snap",
+    sectionName: "section-name",
+    interstitialSection: "",
+    easing: "easeOutExpo",
+    scrollSpeed: 1100,
+    offset: 0,
+    scrollbars: true,
+    standardScrollElements: "",
+    setHeights: true,
+    overflowScroll: true,
+    updateHash: true,
+    touchScroll: true,
+    before: function() {},
+    after: function() {},
+    afterResize: function() {},
+    afterRender: function() {}
+  });
 });
