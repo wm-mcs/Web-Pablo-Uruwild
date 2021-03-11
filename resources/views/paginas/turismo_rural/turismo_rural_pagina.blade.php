@@ -12,7 +12,7 @@
 
 
 @section('favicon')
-<link rel="shortcut icon" href="{{ asset('imagenes/Favicon/favicon.ico') }}"> 
+<link rel="shortcut icon" href="{{ asset('imagenes/Favicon/favicon.ico') }}">
 @stop
 
 @section('og-tags')
@@ -20,10 +20,10 @@
  <meta property="og:title"              content="{{ $Titulo}} " />
  <meta property="og:description"        content="{{$DescriptionEtiqueta}}" />
  <meta property="og:image"              content="{{$ImagenParaTaG }}" />
- <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" /> 
+ <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" />
  <meta property="og:image:width"        content="250">
  <meta property="og:image:height"       content="250">
-@stop 
+@stop
 
 @section('pixcel-facebook')
 
@@ -46,7 +46,7 @@
       "@id": "{{$UrlDeLaPagina}}",
       "name": "{{$Titulo}}"
       }
-    }          
+    }
    ]
   }
 </script>
@@ -93,43 +93,43 @@
   {{--*/  $Portada   =  $Portada /*--}}
   {{--*/  $Route     = '' /*--}}
   {{--*/ $EsPortada  = true /*--}}
-  @include('paginas.paginas_personalizadas.partials.portada_molde') 
+  @include('paginas.paginas_personalizadas.partials.portada_molde')
 @stop
 
 
 
 @section('contenido')
 
-  
+
 
   @if(!Auth::guest())
   @if(Auth::user()->first_name = 'Mauricio')
 
 
-  
+
   @endif
   @endif
-  <div class="site-section background-gris-0" > 
+  <div class="site-section background-gris-0" >
     <div class="container">
       <div class="row p-3 p-lg-5">
         <p class="col-12  text-center">
           {{--*/ $Key  = 'bienvenida pagina turismo rural' /*--}}
-          @include('paginas.paginas_personalizadas.partials.textos') 
-          <i class="fas fa-hand-point-down"></i> 
+          @include('paginas.paginas_personalizadas.partials.textos')
+          <i class="fas fa-hand-point-down"></i>
         </p>
-      </div>     
+      </div>
     </div>
   </div>
 
 
   @if($Turismo_rural->count() > 0)
   {{-- Aquí poner contendio para probar --}}
-   <div class="site-section background-gris-1" id="turismo_rural"> 
+   <div class="site-section background-gris-1" id="turismo_rural">
     <div class="container">
       <div class="row">
-        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black"> 
+        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black">
           {{--*/ $Key  = 'titulo seccion listado de turismo rural' /*--}}
-          @include('paginas.paginas_personalizadas.partials.textos')           
+          @include('paginas.paginas_personalizadas.partials.textos')
         </div>
 
       </div>
@@ -140,48 +140,27 @@
           {{--*/ $Route    = $Entidad->route /*--}}
           @include('admin.turismo_rural.partes.lista')
         @endforeach
-      </div>      
-    </div>
-  </div>
-  @endif
-
-  @if($Cabañas->count() > 0)
-  {{-- Aquí poner contendio para probar --}}
-   <div class="site-section background-gris-0" id="contendio"> 
-    <div class="container">
-      <div class="row justify-content-lg-center">
-        <div class="col-12 col-lg-9 sub-titulos-class mb-5 text-bold text-color-black text-center">
-          
-          {{--*/ $Key  = 'titulo seccion listado de turismo rural estancias' /*--}}
-          @include('paginas.paginas_personalizadas.partials.textos')    
-          
-        </div>
       </div>
-      <div class="row ">
-        @foreach($Cabañas as $Entidad)
-          {{--*/ $Entidad  = $Entidad /*--}}
-          {{--*/ $Route    = $Entidad->route /*--}}
-          @include('admin.cabañas.partes.lista')
-        @endforeach
-      </div>      
     </div>
   </div>
   @endif
 
- 
 
 
-    
-
-    
-
-   
 
 
-   
 
-    
 
-   
+
+
+
+
+
+
+
+
+
+
+
 
 @stop

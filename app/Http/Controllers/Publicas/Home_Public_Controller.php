@@ -2,7 +2,6 @@
 namespace App\Http\Controllers\Publicas;
 
 use App\Http\Controllers\Controller;
-use App\Repositorios\CabañaRepo;
 use App\Repositorios\EmpresaRepo;
 use App\Repositorios\ImgHomeRepo;
 use App\Repositorios\NoticiasRepo;
@@ -19,7 +18,7 @@ class Home_Public_Controller extends Controller
     protected $EmpresaRepo;
     protected $NoticiasRepo;
     protected $TeamRepo;
-    protected $CabañaRepo;
+
     protected $TourRepo;
     protected $PortadaDePaginaRepo;
     protected $TextoRepo;
@@ -28,18 +27,18 @@ class Home_Public_Controller extends Controller
         EmpresaRepo $EmpresaRepo,
         NoticiasRepo $NoticiasRepo,
         TeamRepo $TeamRepo,
-        CabañaRepo $CabañaRepo,
+
         TourRepo $TourRepo,
         PortadaDePaginaRepo $PortadaDePaginaRepo,
         TextoRepo $TextoRepo) {
-        $this->ImgHomeRepo = $ImgHomeRepo;
-        $this->EmpresaRepo = $EmpresaRepo;
+        $this->ImgHomeRepo  = $ImgHomeRepo;
+        $this->EmpresaRepo  = $EmpresaRepo;
         $this->NoticiasRepo = $NoticiasRepo;
-        $this->TeamRepo = $TeamRepo;
-        $this->CabañaRepo = $CabañaRepo;
-        $this->TourRepo = $TourRepo;
+        $this->TeamRepo     = $TeamRepo;
+
+        $this->TourRepo            = $TourRepo;
         $this->PortadaDePaginaRepo = $PortadaDePaginaRepo;
-        $this->TextoRepo = $TextoRepo;
+        $this->TextoRepo           = $TextoRepo;
 
     }
 
