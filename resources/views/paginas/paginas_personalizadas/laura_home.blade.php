@@ -84,6 +84,7 @@
 @stop
 
 @section('footer')
+{{--*/ $ScrollSnap  = true /*--}}
 	@include('paginas.paginas_personalizadas.Footer.Footer_principal')
 @stop
 
