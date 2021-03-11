@@ -1,4 +1,4 @@
-<footer class="">
+<footer class="  @if(isset($ScrollSnap) && $ScrollSnap == true) scroll-snap @endif  ">
 
 <div class="site-section background-gris-4 w-100 ">
 

@@ -93,6 +93,9 @@
   {{--*/  $Portada   =  $Portada /*--}}
   {{--*/  $Route     = '' /*--}}
   {{--*/ $EsPortada  = true /*--}}
+  {{--*/ $ScrollSnap  = true /*--}}
+
+
   @include('paginas.paginas_personalizadas.partials.portada_molde')
 @stop
 
@@ -100,20 +103,21 @@
 
 @section('contenido')
 
-  <div class="p-5 background-gris-4 scroll-snap" id="">
+
+
+
+  <span id="circuitos"></span>
+  <div class="p-5 background-gris-4 scroll-snap " >
     <div class="container">
-      <p class="sub-titulos-class text-center text-color-primary text-bold mb-0 p-2 p-lg-5 ">
+      <p class="sub-titulos-class text-center text-color-primary text-bold mb-0 p-2 p-lg-5">
 
         {{--*/ $Key  = 'bienvenida' /*--}}
         @include('paginas.paginas_personalizadas.partials.textos')
 
       </p>
      </div>
-    </div>
+
   </div>
-
-
-  <span id="circuitos"></span>
   @include('paginas.paginas_personalizadas.home.tour_nuevo')
 
   {{-- I m a g e n   d e   p e s c a  --}}
@@ -166,7 +170,7 @@
     </div>
   </div>
 
-  <div class="site-section  scroll-snap">
+  <div class="site-section scroll-snap">
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center">

@@ -112,7 +112,7 @@
 
 @section('contenido')
 
- <div class="site-section background-gris-4 scroll-snap" id="sobre">
+ <div class="site-section background-gris-4 " id="sobre">
     <div class="container">
       <h2 class="mb-4 sub-titulos-class text-center text-color-primary text-bold">
         {{--*/ $Key  = 'sobre uruwild first title' /*--}}
@@ -129,7 +129,7 @@
 
 
 
-  <div  class="site-section scroll-snap" id="sobre-mi">
+  <div  class="site-section " id="sobre-mi">
       <div class="container">
         <div class="row align-items-center border border-primary p-5 mb-4">
 
@@ -180,7 +180,7 @@
 
 
 
- <div class="site-section background-gris-1 scroll-snap">
+ <div class="site-section background-gris-1 ">
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center">
