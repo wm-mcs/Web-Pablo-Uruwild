@@ -127,7 +127,7 @@ jQuery(document).ready(function($) {
   siteScroll();*/
 
   $.scrollify({
-    section: ".scroll-snap,.site-section",
+    section: ".scroll-snap",
     sectionName: "section-name",
     interstitialSection: "",
     easing: "easeOutExpo",
@@ -135,7 +135,7 @@ jQuery(document).ready(function($) {
     offset: 0,
     scrollbars: true,
     standardScrollElements: "",
-    setHeights: true,
+    setHeights: false,
     overflowScroll: true,
     updateHash: true,
     touchScroll: true,

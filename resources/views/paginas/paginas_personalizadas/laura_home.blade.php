@@ -137,7 +137,7 @@
 
   @include('paginas.paginas_personalizadas.home.turismo_rural')
 
-  <div class="site-section background-gris-1">
+  <div class="site-section scroll-snap background-gris-1">
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
@@ -166,7 +166,7 @@
     </div>
   </div>
 
-  <div class="site-section ">
+  <div class="site-section  scroll-snap">
     <div class="container">
       <div class="row">
         <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center">
