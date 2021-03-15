@@ -150,7 +150,7 @@ class Paginas_Controller extends Controller
             return redirect()->route('get_pagina_cabañas', HelpersSessionLenguaje::getAndPutSessionLenguaje(null, null));
         }
 
-        return view('paginas.cabañas.cabañas_pagina', compact('Entidades', 'Empresa', 'Portada', 'Textos'));
+        return view('paginas.destacados.destacados_pagina', compact('Entidades', 'Empresa', 'Portada', 'Textos'));
     }
 
     // P á g i n a   d e   P r o d u c t o s
