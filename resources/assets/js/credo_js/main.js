@@ -134,14 +134,18 @@ jQuery(document).ready(function($) {
     scrollSpeed: 150,
     offset: 0,
     scrollbars: false,
-    standardScrollElements: "",
-    setHeights: false,
+    standardScrollElements: ".standar-scroll",
+    setHeights: true,
     overflowScroll: true,
-    updateHash: true,
-    touchScroll: false,
+    updateHash: false,
+    touchScroll: true,
     before: function() {},
     after: function() {},
     afterResize: function() {},
     afterRender: function() {}
   });
+});
+
+$("body").on("click", ".next-scroll", function(e) {
+  $.scrollify.next();
 });

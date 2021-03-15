@@ -107,7 +107,7 @@
 
 
 
-  <span id="circuitos"></span>
+
   <div class="p-5 background-gris-4 scroll-snap " >
     <div class="container">
       <p class="sub-titulos-class text-center text-color-primary text-bold mb-0 p-2 p-lg-5">
@@ -116,14 +116,19 @@
         @include('paginas.paginas_personalizadas.partials.textos')
 
       </p>
+      <div class="col-12 d-flex flex-column align-items-center my-5">
+
+          <div class="next-scroll">
+
+          </div>
+        </div>
      </div>
 
   </div>
   @include('paginas.paginas_personalizadas.home.tour_nuevo')
 
   {{-- I m a g e n   d e   p e s c a  --}}
-
-  <div  class="background_img background_img_fixed home-pesca"></div>
+  {{-- <div  class="background_img background_img_fixed home-pesca"></div>--}}
 
   @include('paginas.paginas_personalizadas.home.ecoturismo')
 
@@ -136,19 +141,21 @@
 
 
   {{-- I m a g e n   d e  a c t i v i d a d e s  --}}
-
-  <div class="background_img background_img_fixed home-actividades"></div>
+  {{-- <div class="background_img background_img_fixed home-actividades"></div> --}}
 
 
   @include('paginas.paginas_personalizadas.home.turismo_rural')
 
-  <div class="site-section scroll-snap background-gris-1">
+  <span id="circuitos"></span>
+  <div class="site-section scroll-snap standar-scroll background-gris-1">
     <div class="container">
       <div class="row">
-        <div class="col-12 sub-titulos-class mb-4 text-bold text-color-black text-center text-lg-left">
+        <div class="col-12 titulos-class mb-5 text-bold text-color-black text-center ">
           {{--*/ $Key  = 'titulo seccion estancias y lodges' /*--}}
           @include('paginas.paginas_personalizadas.partials.textos')
+          <i class="fab fa-hotjar"></i>
         </div>
+
 
       </div>
       <div class="row">

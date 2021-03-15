@@ -157,7 +157,7 @@ class Paginas_Controller extends Controller
     public function get_pagina_productos($Lenguaje, Request $Request)
     {
         $Productos = Cache::remember('ProductosPagianaTorus', 2000, function () {
-            return $this->TourRepo->getEntidadesParaHomeTour(50, 'name', 'rank', 'producto');
+            return $this->TourRepo->getEntidadesParaHomeTour(50, 'rank', 'desc', 'producto');
         });
 
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
