@@ -108,7 +108,7 @@
 
 
 
-  <div class="p-5 background-gris-4 scroll-snap " >
+  <div class="p-5 background-gris-4 scroll-snap w-100-VH" >
     <div class="container">
       <p class="sub-titulos-class text-center text-color-primary text-bold mb-0 p-2 p-lg-5">
 

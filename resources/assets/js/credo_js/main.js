@@ -135,7 +135,7 @@ jQuery(document).ready(function($) {
     offset: 0,
     scrollbars: false,
     standardScrollElements: ".standar-scroll",
-    setHeights: true,
+    setHeights: false,
     overflowScroll: true,
     updateHash: false,
     touchScroll: true,
