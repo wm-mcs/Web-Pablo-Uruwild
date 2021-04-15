@@ -104,18 +104,11 @@
 
 @section('contenido')
 
+<div  class="site-blocks-cover overlay  scroll-snap " >
+<div class="container">
 
 
 
-
-  <div class="p-5 background-gris-4 scroll-snap w-100-VH" >
-    <div class="container">
-      <p class="sub-titulos-class text-center text-color-primary text-bold mb-0 p-2 p-lg-5">
-
-        {{--*/ $Key  = 'bienvenida' /*--}}
-        @include('paginas.paginas_personalizadas.partials.textos')
-
-      </p>
       <div class="col-12 d-flex flex-column align-items-center my-5">
 
           <div class="next-scroll">
@@ -124,7 +117,14 @@
         </div>
      </div>
 
-  </div>
+
+  <img class="imagen-portada-altura-100vh" style="position: absolute;top: 0; z-index:-2;" data-src="{{url()}}/imagenes/Backgrounds/garza-colorada.jpg" alt="">
+
+</div>
+
+
+
+
   @include('paginas.paginas_personalizadas.home.tour_nuevo')
 
   {{-- I m a g e n   d e   p e s c a  --}}
